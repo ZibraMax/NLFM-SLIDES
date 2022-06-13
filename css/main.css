@@ -72,6 +72,10 @@ body {
 	float: left;
 	width: 50%;
 }
+.two-column {
+	float: left;
+	width: 31%;
+}
 
 .content-indicator {
 	float: left;
@@ -123,4 +127,13 @@ a:hover {
 
 ul {
 	width: 100%;
+}
+tr td:last-child {
+	width: 1%;
+	white-space: nowrap;
+}
+table,
+tr,
+td {
+	border: none !important;
 }
