@@ -1,3 +1,4 @@
+<!-- <iframe class="iframe-3d " src="https://zibramax.github.io/masters-slides/docs/viewer/" scrolling="no" frameborder="0" ></iframe> para meter 3d por el momento-->
 <!DOCTYPE html lang="es-es">
 <html>
 	<head>
@@ -88,7 +89,7 @@
 						</div>
 					</section>
 
-					<section>
+					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item selected-ci">
 								<a
@@ -109,20 +110,83 @@
 							</div>
 						</div>
 						<div class="slide">
-							<p>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit. Sed nec ex odio. Etiam eu
-								dapibus est, eu maximus lacus. Vivamus eget
-								euismod leo.
-								<iframe class="iframe-3d " src="https://zibramax.github.io/masters-slides/docs/viewer/" scrolling="no" frameborder="0" ></iframe>
-								<iframe class="iframe-3d " src="https://zibramax.github.io/masters-slides/docs/viewer/?mesh=https://raw.githubusercontent.com/ZibraMax/FEM-C--/master/docs/resources/SPHERE_FERNANDO.json" scrolling="no" frameborder="0" ></iframe>
-								<p>Sed porta est non nulla iaculis,
-								non gravida augue mollis. Sed vitae mi sed mi
-								feugiat </p>
-							</p>
+							<h3>
+								<span style="color: var(--red)"
+									>Teoría no local</span
+								><span> integral</span>
+							</h3>
+
+							<div class="two-column">
+								<h5>Teoría Local</h5>
+								<p class="med-text">
+									Teoría clasica del medio continuo. Fuerzas
+									mecánicas
+								</p>
+								<img
+									src="https://imgs.xkcd.com/comics/file_extensions.png"
+								/>
+								\(\scriptsize{\sigma_{ij}=C_{ijkl}\varepsilon_{kls}}\)
+							</div>
+							<div class="two-column">
+								<h5>Teoría no Local</h5>
+								<p class="med-text">
+									Tener en cuenta las fuerzas de cohesion de
+									corto alcance entre particulas
+								</p>
+								<img
+									src="https://imgs.xkcd.com/comics/file_extensions.png"
+								/>
+								\(\scriptsize{\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\)
+							</div>
 						</div>
 					</section>
-					<section>Diapo 2</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item selected-ci">
+								<a
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a class="hidden-link" href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a class="hidden-link" href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>
+								<span>Teoría no local</span
+								><span style="color: var(--red)">
+									integral</span
+								>
+							</h3>
+							<ul>
+								<li class="med-text">Teoría integral</li>
+								<span
+									>\[\scriptsize{\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]</span
+								>
+								<li class="med-text">Teoría diferencial</li>
+								<span
+									>\[\scriptsize{\sigma_{ij}=ae_0\nabla^2C_{ijkl}\varepsilon'_{kl}dv'}\]</span
+								>
+								<li class="med-text">
+									Modelo integral de dos fases
+								</li>
+								<span
+									>\[\scriptsize{\sigma_{ij}=\zeta_1
+									C_{ijkl}\varepsilon_{kl} +
+									\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]</span
+								>
+							</ul>
+						</div>
+					</section>
 				</section>
 				<section>
 					<section id="metodos-title">Métodos</section>
@@ -143,6 +207,7 @@
 				<section>Cronograma</section>
 			</div>
 		</div>
+		<script src="plugin/math/math.js"></script>
 		<script src="js/main.js" type="module"></script>
 	</body>
 </html>

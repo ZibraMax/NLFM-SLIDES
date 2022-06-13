@@ -1,46 +1,40 @@
 :root {
-	
-	--shades-r-1: #DC2C41;
-	--shades-r-2: #CB2235;
-	--shades-r-3: #8F1625;
+	--shades-r-1: #dc2c41;
+	--shades-r-2: #cb2235;
+	--shades-r-3: #8f1625;
 	--red: var(--shades-r-1);
-	
-	
+
 	--shades-k-1: black;
-	
-	
+
 	--tint-w-1: #dcdcdc;
-	
+
 	--shades-w-1: #f3f3f3;
 	--shades-w-2: #757575;
 	--shades-w-3: #5c5c5c;
-	
+
 	--shades-gr-1: #757575;
 	--shades-gr-2: #5c5c5c;
 	--shades-gr-3: #474747;
 
-	
-	
 	--tint-r-1: #e35768;
 	--tint-r-2: #e87885;
 	--tint-r-3: #ed939e;
-	
+
 	--red-bg: var(--tint-r-3);
 	--tint-k-1: #411f1f;
 	--tint-k-2: #5d2d2d;
 	--tint-k-3: #6b3333;
-	
+
 	--tint-gr-1: #8c8c8c;
 	--tint-gr-2: #979797;
 	--tint-gr-3: #a1a1a1;
-	
+
 	--not-selected-color: var(--tint-w-1);
-	
-	
+
+	--medium-size-text: 1.5rem;
 }
 h1 {
-	text-align: left
-
+	text-align: left;
 }
 .vertical-aligned-title {
 	height: 73vh;
@@ -48,18 +42,30 @@ h1 {
 	align-items: center;
 }
 h2 {
-	text-align: left
+	text-align: left;
 }
 h3 {
-	text-align: left
+	text-align: left;
+}
+h4 {
+	text-align: left;
+}
+h5 {
+	text-align: left;
 }
 p {
-	text-align: left
+	text-align: left;
 }
-html, body {
+
+.med-text {
+	font-size: var(--medium-size-text);
+}
+
+html,
+body {
 	height: 100%;
 	margin: 0;
-	font-family: 'Times New Roman', Times, serif;
+	font-family: "Times New Roman", Times, serif;
 }
 
 .two-column {
@@ -80,7 +86,6 @@ html, body {
 	border-bottom-color: var(--not-selected-color);
 	border-style: solid;
 	color: var(--not-selected-color);
-
 }
 
 .selected-ci {
@@ -98,17 +103,14 @@ a:hover {
 	text-decoration: underline !important;
 }
 
-
 .slide {
 	float: left;
 	width: 92%;
 	height: 100%;
-	
 }
 
-
 .controls-arrow {
-	color: var(--red)
+	color: var(--red);
 }
 
 .iframe-3d {
@@ -117,4 +119,8 @@ a:hover {
 	position: relative;
 	height: 40vh;
 	width: 50%;
+}
+
+ul {
+	width: 100%;
 }
