@@ -1,5 +1,5 @@
 <!-- <iframe class="iframe-3d " src="https://zibramax.github.io/masters-slides/docs/viewer/" scrolling="no" frameborder="0" ></iframe> para meter 3d por el momento-->
-<!DOCTYPE html lang="es-es">
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -473,22 +473,29 @@
 							</h2>
 						</div>
 					</section>
-					<section>
+					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item selected-ci">
 								<a
+									data-id="animate1"
 									class="hidden-link"
 									href="#/introduccion-title"
 									>Introducción
 								</a>
 							</div>
 							<div class="content-indicator-item">
-								<a class="hidden-link" href="#/metodos-title"
+								<a
+									data-id="animate2"
+									class="hidden-link"
+									href="#/metodos-title"
 									>Métodos
 								</a>
 							</div>
 							<div class="content-indicator-item">
-								<a class="hidden-link" href="#/resultados-title"
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
 									>Resultados
 								</a>
 							</div>
@@ -502,22 +509,29 @@
 					</section>
 				</section>
 				<section>
-					<section id="metodos-title">
+					<section data-auto-animate id="metodos-title">
 						<div class="content-indicator">
 							<div class="content-indicator-item">
 								<a
+									data-id="animate1"
 									class="hidden-link"
 									href="#/introduccion-title"
 									>Introducción
 								</a>
 							</div>
 							<div class="content-indicator-item selected-ci">
-								<a class="hidden-link" href="#/metodos-title"
+								<a
+									data-id="animate2"
+									class="hidden-link"
+									href="#/metodos-title"
 									>Métodos
 								</a>
 							</div>
 							<div class="content-indicator-item">
-								<a class="hidden-link" href="#/resultados-title"
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
 									>Resultados
 								</a>
 							</div>
@@ -530,7 +544,79 @@
 							</h1>
 						</div>
 					</section>
-					<section>Diapo 1</section>
+					<section data-auto-animate data-auto-animate-restart>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Parámetros del modelo no local</h3>
+							<p data-id="a">
+								\[\scriptsize{\sigma_{ij}=\zeta_1
+								C_{ijkl}\varepsilon_{kl} +
+								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
+							</p>
+						</div>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Parámetros del modelo no local</h3>
+							<p>asdasdas</p>
+							<p data-id="a">
+								\[\scriptsize{\sigma_{ij}=\zeta_1
+								C_{ijkl}\varepsilon_{kl} +
+								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
+							</p>
+						</div>
+					</section>
 					<section>Diapo 2</section>
 				</section>
 				<section>
