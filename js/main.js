@@ -1,6 +1,4 @@
-import Reveal from "./reveal.esm.js";
-
-let deck = new Reveal({
+let config = {
 	history: true,
 	mathjax3: {
 		mathjax: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
@@ -22,8 +20,5 @@ let deck = new Reveal({
 		},
 	},
 	plugins: [RevealMath.MathJax3],
-});
-// deck.on("make-it-pop", () => {
-// 	console.log("✨");
-// });
-deck.initialize();
+};
+Reveal.initialize(config);
