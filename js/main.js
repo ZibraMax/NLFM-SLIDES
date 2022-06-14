@@ -32,6 +32,10 @@ const atenu1_div = document.getElementById("atenuacion1");
 const atenu2_div = document.getElementById("atenuacion2");
 const atenu3_div = document.getElementById("atenuacion3");
 
+const atenu4_div = document.getElementById("atenuacion4");
+const atenu5_div = document.getElementById("atenuacion5");
+const atenu6_div = document.getElementById("atenuacion6");
+
 const cmap = [
 	["0.0", "#f3f3f3)"],
 	["1.0", "#dc2c41"],
@@ -2698,8 +2702,27 @@ Plotly.newPlot(atenu1_div, [data_atenua_1], plots_layout, plots_config);
 Plotly.newPlot(atenu2_div, [data_atenua_2], plots_layout, plots_config);
 Plotly.newPlot(atenu3_div, [data_atenua_3], plots_layout, plots_config);
 
+Plotly.newPlot(atenu4_div, [{ ...data_atenua_1 }], plots_layout, plots_config);
+Plotly.newPlot(
+	atenu5_div,
+	[{ ...data_atenua_2, opacity: 0.2 }],
+	plots_layout,
+	plots_config
+);
+Plotly.newPlot(
+	atenu6_div,
+	[{ ...data_atenua_3, opacity: 0.2 }],
+	plots_layout,
+	plots_config
+);
+
 Reveal.on("graficas-pesadas", () => {
 	Plotly.update(atenu1_div);
 	Plotly.update(atenu2_div);
 	Plotly.update(atenu3_div);
+});
+Reveal.on("graficas-pesadas2", () => {
+	Plotly.update(atenu4_div);
+	Plotly.update(atenu5_div);
+	Plotly.update(atenu6_div);
 });
