@@ -130,9 +130,12 @@
 									mecánicas
 								</p>
 								<img
+									width="50%"
 									src="https://imgs.xkcd.com/comics/file_extensions.png"
 								/>
-								\(\scriptsize{\sigma_{ij}=C_{ijkl}\varepsilon_{kls}}\)
+								<p>
+									\[\scriptsize{\sigma_{ij}=C_{ijkl}\varepsilon_{kls}}\]
+								</p>
 							</div>
 							<div class="two-column">
 								<h5>Teoría no Local</h5>
@@ -141,9 +144,10 @@
 									corto alcance entre particulas
 								</p>
 								<img
+									width="50%"
 									src="https://imgs.xkcd.com/comics/file_extensions.png"
 								/>
-								\(\scriptsize{\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\)
+								\[\scriptsize{\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
 							</div>
 						</div>
 					</section>
@@ -232,34 +236,32 @@
 							<h3>Relevancia de teoría no local</h3>
 							<ul>
 								<li>
-									<span data-id="animate"
-										>Pandeo de nanotubos</span
-									>
+									<p data-id="animate">Pandeo de nanotubos</p>
 								</li>
 								<li>
-									<span data-id="animate2"
-										>Pandeo de placas de grafeno</span
-									>
+									<p data-id="animate2">
+										Pandeo de placas de grafeno
+									</p>
 								</li>
 								<li>
-									<span data-id="animate3"
-										>Soluciones para vigas</span
-									>
+									<p data-id="animate3">
+										Soluciones para vigas
+									</p>
 								</li>
 								<li>
-									<span data-id="animate4"
-										>Frecuencias de vigas</span
-									>
+									<p data-id="animate4">
+										Frecuencias de vigas
+									</p>
 								</li>
 								<li>
-									<span data-id="animate5"
-										>Frecuencias de placa</span
-									>
+									<p data-id="animate5">
+										Frecuencias de placa
+									</p>
 								</li>
 								<li>
-									<span data-id="animate6"
-										>Electromagnetismo no local</span
-									>
+									<p data-id="animate6">
+										Electromagnetismo no local
+									</p>
 								</li>
 							</ul>
 						</div>
@@ -296,36 +298,54 @@
 							<table style="height: 50vh">
 								<tr>
 									<td style="font-size: xx-large">
-										<span data-id="animate"
-											>Pandeo de nanotubos</span
+										<p
+											data-id="animate"
+											style="color: var(--shades-w-2)"
 										>
+											Pandeo de nanotubos
+										</p>
 									</td>
 									<td style="font-size: xx-large">
-										<span data-id="animate2"
-											>Pandeo de placas de grafeno</span
+										<p
+											data-id="animate2"
+											style="color: var(--shades-w-2)"
 										>
+											Pandeo de placas de grafeno
+										</p>
 									</td>
 									<td style="font-size: xx-large">
-										<span data-id="animate3"
-											>Soluciones para vigas</span
+										<p
+											data-id="animate3"
+											style="color: var(--shades-w-2)"
 										>
+											Soluciones para vigas
+										</p>
 									</td>
 								</tr>
 								<tr>
 									<td style="font-size: xx-large">
-										<span data-id="animate4"
-											>Frecuencias de vigas</span
+										<p
+											data-id="animate4"
+											style="color: var(--shades-w-2)"
 										>
+											Frecuencias de vigas
+										</p>
 									</td>
 									<td style="font-size: xx-large">
-										<span data-id="animate5"
-											>Frecuencias de placa</span
+										<p
+											data-id="animate5"
+											style="color: var(--shades-w-2)"
 										>
+											Frecuencias de placa
+										</p>
 									</td>
 									<td style="font-size: xx-large">
-										<span data-id="animate6"
-											>Electromagnetismo no local</span
+										<p
+											data-id="animate6"
+											style="color: var(--shades-w-2)"
 										>
+											Electromagnetismo no local
+										</p>
 									</td>
 								</tr>
 							</table>
@@ -573,11 +593,11 @@
 						</div>
 						<div class="slide">
 							<h3>Parámetros del modelo no local</h3>
-							<p data-id="a">
+							<div data-id="a">
 								\[\scriptsize{\sigma_{ij}=\zeta_1
 								C_{ijkl}\varepsilon_{kl} +
 								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
-							</p>
+							</div>
 						</div>
 					</section>
 					<section data-auto-animate>
@@ -609,15 +629,107 @@
 						</div>
 						<div class="slide">
 							<h3>Parámetros del modelo no local</h3>
-							<p>asdasdas</p>
-							<p data-id="a">
-								\[\scriptsize{\sigma_{ij}=\zeta_1
-								C_{ijkl}\varepsilon_{kl} +
-								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
-							</p>
+							<div data-id="a">
+								\[\scriptsize{\sigma_{ij}={\color{lightgray}
+								\zeta_1} C_{ijkl}\varepsilon_{kl}+
+								{\color{lightgray}
+								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
+							</div>
 						</div>
 					</section>
-					<section>Diapo 2</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Parámetros del modelo no local</h3>
+							<div data-id="a">
+								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
+								\zeta_1 C_{ijkl}\varepsilon_{kl}+
+								\zeta_2{\color{black}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}}\]
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Parámetros del modelo no local</h3>
+							<div data-id="a">
+								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
+								{\color{black}\zeta_1} C_{ijkl}\varepsilon_{kl}+
+								{\color{black}\zeta_2}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
+							</div>
+							<div class="two-column">
+								<p class="fragment">
+									Representa que tanta no localidad se tiene
+									en cuenta
+								</p>
+							</div>
+							<div class="two-column">
+								<div class="fragment">
+									\[\scriptsize{\zeta_1+\zeta_2=1}\]
+								</div>
+							</div>
+							<figure class="fragment">
+								<img
+									src="https://imgs.xkcd.com/comics/file_extensions.png"
+									style="height: 130px"
+								/>
+								<figcaption>
+									Gráfica/s que muestren el efecto que tiene
+									\(\zeta_1\) en la solución
+								</figcaption>
+							</figure>
+						</div>
+					</section>
 				</section>
 				<section>
 					<section id="resultados-title">Resultados</section>
