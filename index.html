@@ -81,11 +81,7 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h1>
-								<span class="vertical-aligned-title"
-									>Introducción</span
-								>
-							</h1>
+							<h1 class="vertical-aligned-title">Introducción</h1>
 						</div>
 					</section>
 
@@ -595,7 +591,7 @@
 						</div>
 						<div class="slide">
 							<h3>Parámetros del modelo no local</h3>
-							<div data-id="a">
+							<div data-id="a" class="vertical-aligned-eq">
 								\[\scriptsize{\sigma_{ij}=\zeta_1
 								C_{ijkl}\varepsilon_{kl} +
 								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
@@ -631,7 +627,7 @@
 						</div>
 						<div class="slide">
 							<h3>Parámetros del modelo no local</h3>
-							<div data-id="a">
+							<div data-id="a" class="vertical-aligned-eq">
 								\[\scriptsize{\sigma_{ij}={\color{lightgray}
 								\zeta_1} C_{ijkl}\varepsilon_{kl}+
 								{\color{lightgray}
@@ -668,7 +664,7 @@
 						</div>
 						<div class="slide">
 							<h3>Parámetros del modelo no local</h3>
-							<div data-id="a">
+							<div data-id="a" class="vertical-aligned-eq">
 								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
 								\zeta_1 C_{ijkl}\varepsilon_{kl}+
 								\zeta_2{\color{black}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}}\]
@@ -704,11 +700,18 @@
 						</div>
 						<div class="slide">
 							<h3>Parámetros del modelo no local</h3>
-							<div data-id="a">
+							<h6>Factor no local</h6>
+
+							<div
+								data-id="a"
+								class="vertical-aligned-eq"
+								style="top: 13%"
+							>
 								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
 								{\color{black}\zeta_1} C_{ijkl}\varepsilon_{kl}+
 								{\color{black}\zeta_2}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
 							</div>
+							<br />
 							<div class="two-column">
 								<p class="fragment">
 									Representa que tanta no localidad se tiene
@@ -730,7 +733,7 @@
 										height="220px"
 									></iframe>
 									<figcaption>
-										\(\zeta_1=1,\omega=F\)
+										\(\zeta_1=1,\eta=1.78\)
 									</figcaption>
 								</div>
 								<div class="three-column">
@@ -742,7 +745,7 @@
 										height="220px"
 									></iframe>
 									<figcaption>
-										\(\zeta_1=0.5,\omega=100\)
+										\(\zeta_1=0.5,\eta=1.73\)
 									</figcaption>
 								</div>
 								<div class="three-column">
@@ -754,7 +757,7 @@
 										height="220px"
 									></iframe>
 									<figcaption>
-										\(\zeta_1=0,\omega=WTF?!\)
+										\(\zeta_1=0,\eta=0.28\)
 									</figcaption>
 								</div>
 							</div>
@@ -789,20 +792,30 @@
 						</div>
 						<div class="slide">
 							<h3>Parámetros del modelo no local</h3>
-							<div data-id="a">
+							<h6>Función de atenuación</h6>
+							<div
+								data-id="a"
+								class="vertical-aligned-eq"
+								style="top: 13%"
+							>
 								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
 								\zeta_1 C_{ijkl}\varepsilon_{kl}+
-								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
+								\zeta_2\int_{\Omega}\color{black}A(\rho)\color{lightgray}C_{ijkl}\varepsilon'_{kl}dv'}}\]
 							</div>
-							<div class="two-column">
-								<p class="fragment">
-									Representa que tanta no localidad se tiene
-									en cuenta
-								</p>
-							</div>
-							<div class="two-column">
-								<div class="fragment">
-									\[\scriptsize{\zeta_1+\zeta_2=1}\]
+							<br />
+							<div class="fragment">
+								<div class="two-column">
+									<p>
+										Representa la relevancia de las fuerzas
+										de cohesión de largo alcance. Depende de
+										la distancia euclideana (\(|x-x'|\)) y
+										de la longitud interna (\(l\))
+									</p>
+								</div>
+								<div class="two-column">
+									<div>
+										\[\scriptsize{\rho=\frac{|x-x'|}{l}}\]
+									</div>
 								</div>
 							</div>
 						</div>
