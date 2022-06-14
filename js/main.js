@@ -19,6 +19,6 @@ let config = {
 			skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
 		},
 	},
-	plugins: [RevealMath.MathJax3],
+	plugins: [RevealMath.MathJax3, RevealNotes, RevealZoom],
 };
 Reveal.initialize(config);
