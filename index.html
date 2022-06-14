@@ -12,7 +12,7 @@
 			media="screen"
 			href="css/main.css"
 		/>
-
+		<script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
 		<link rel="stylesheet" href="css/reveal.css" />
 		<link rel="stylesheet" href="css/theme/white.css" />
 	</head>
@@ -114,7 +114,7 @@
 						</div>
 						<div class="slide">
 							<h3>
-								<span data-id="box" style="color: var(--red)"
+								<span data-id="box" class="text-focus"
 									>Teoría no local</span
 								><span data-id="box2"> integral</span>
 							</h3>
@@ -179,7 +179,7 @@
 						<div class="slide">
 							<h3>
 								<span data-id="box">Teoría no local</span
-								><span data-id="box2" style="color: var(--red)">
+								><span data-id="box2" class="text-focus">
 									integral</span
 								>
 							</h3>
@@ -727,7 +727,7 @@
 								<div class="three-column">
 									<iframe
 										class="iframe-3d"
-										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=50&mesh=./resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
+										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
 										scrolling="no"
 										frameborder="0"
 										height="220px"
@@ -739,7 +739,7 @@
 								<div class="three-column">
 									<iframe
 										class="iframe-3d"
-										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=50&mesh=./resources/CCube_l_2_000_z1_0_500_L_6_362_nx_8_o0_6.json"
+										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_500_L_6_362_nx_8_o0_6.json"
 										scrolling="no"
 										frameborder="0"
 										height="220px"
@@ -751,7 +751,7 @@
 								<div class="three-column">
 									<iframe
 										class="iframe-3d"
-										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=50&mesh=./resources/CCube_l_2_000_z1_0_000_L_6_362_nx_8_o0_6.json"
+										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=5&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_000_L_6_362_nx_8_o0_6.json"
 										scrolling="no"
 										frameborder="0"
 										height="220px"
@@ -816,6 +816,38 @@
 									<div>
 										\[\scriptsize{\rho=\frac{|x-x'|}{l}}\]
 									</div>
+								</div>
+							</div>
+							<div
+								class="fragment"
+								style="position: absolute; top: 53%"
+							>
+								<div
+									class="three-column"
+									style="height: 205px"
+									id="atenuacion1"
+								>
+									<p style="text-align: center">
+										\(A(\rho)=\lambda_0e^{-\rho}\)
+									</p>
+								</div>
+								<div
+									class="three-column"
+									style="height: 205px"
+									id="atenuacion2"
+								>
+									<p style="text-align: center">
+										\(A(\rho)=\lambda_0\left<1-\frac{\rho}{(1-\Omega_0)}\right>\)
+									</p>
+								</div>
+								<div
+									class="three-column"
+									style="height: 205px"
+									id="atenuacion3"
+								>
+									<p style="text-align: center">
+										\(A(\rho)=\lambda_0\left<1-\frac{\rho^2}{(1+\Omega_0)^2}\right>\)
+									</p>
 								</div>
 							</div>
 						</div>

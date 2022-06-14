@@ -31,9 +31,9 @@
 
 	--not-selected-color: var(--tint-w-1);
 
-	--medium-size-text: 1.5rem;
-	--small-size-text: 1rem;
-	--mid-size-text: 1.2rem;
+	--medium-size-text: 1.3rem;
+	--small-size-text: 0.9rem;
+	--mid-size-text: 1.1rem;
 }
 h1 {
 	text-align: left;
@@ -48,6 +48,10 @@ h1 {
 	position: absolute;
 	top: 40%;
 	left: 25%;
+}
+.text-focus {
+	/* text-decoration: underline; */
+	color: var(--red);
 }
 h2 {
 	text-align: left;
