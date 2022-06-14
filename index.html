@@ -147,7 +147,9 @@
 									width="50%"
 									src="https://imgs.xkcd.com/comics/file_extensions.png"
 								/>
-								\[\scriptsize{\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
+								<p>
+									\[\scriptsize{\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
+								</p>
 							</div>
 						</div>
 					</section>
@@ -718,16 +720,91 @@
 									\[\scriptsize{\zeta_1+\zeta_2=1}\]
 								</div>
 							</div>
-							<figure class="fragment">
-								<img
-									src="https://imgs.xkcd.com/comics/file_extensions.png"
-									style="height: 130px"
-								/>
-								<figcaption>
-									Gráfica/s que muestren el efecto que tiene
-									\(\zeta_1\) en la solución
-								</figcaption>
-							</figure>
+							<div class="fragment">
+								<div class="three-column">
+									<iframe
+										class="iframe-3d"
+										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=50&mesh=https://raw.githubusercontent.com/ZibraMax/masters-slides/main/results/SiCube_l2_0_1_000_L_14_999.json"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>
+										\(\zeta_1=1,\omega=F\)
+									</figcaption>
+								</div>
+								<div class="three-column">
+									<iframe
+										class="iframe-3d"
+										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=50&mesh=https://raw.githubusercontent.com/ZibraMax/masters-slides/main/results/SiCube_l2_0_0_500_L_14_999.json"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>
+										\(\zeta_1=0.5,\omega=100\)
+									</figcaption>
+								</div>
+								<div class="three-column">
+									<iframe
+										class="iframe-3d"
+										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=50&mesh=https://raw.githubusercontent.com/ZibraMax/masters-slides/main/results/SiCube_l2_0_0_000_L_14_999.json"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>
+										\(\zeta_1=0,\omega=WTF?!\)
+									</figcaption>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Parámetros del modelo no local</h3>
+							<div data-id="a">
+								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
+								\zeta_1 C_{ijkl}\varepsilon_{kl}+
+								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
+							</div>
+							<div class="two-column">
+								<p class="fragment">
+									Representa que tanta no localidad se tiene
+									en cuenta
+								</p>
+							</div>
+							<div class="two-column">
+								<div class="fragment">
+									\[\scriptsize{\zeta_1+\zeta_2=1}\]
+								</div>
+							</div>
 						</div>
 					</section>
 				</section>

@@ -88,7 +88,7 @@ body {
 }
 .three-column {
 	float: left;
-	width: 31%;
+	width: 33%;
 }
 
 .content-indicator {
@@ -133,10 +133,7 @@ a:hover {
 
 .iframe-3d {
 	display: block;
-	float: left;
 	position: relative;
-	height: 40vh;
-	width: 50%;
 }
 
 ul {
