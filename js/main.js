@@ -2695,7 +2695,11 @@ const data_atenua_3 = {
 };
 
 Plotly.newPlot(atenu1_div, [data_atenua_1], plots_layout, plots_config);
-
 Plotly.newPlot(atenu2_div, [data_atenua_2], plots_layout, plots_config);
-
 Plotly.newPlot(atenu3_div, [data_atenua_3], plots_layout, plots_config);
+
+Reveal.on("graficas-pesadas", () => {
+	Plotly.update(atenu1_div);
+	Plotly.update(atenu2_div);
+	Plotly.update(atenu3_div);
+});
