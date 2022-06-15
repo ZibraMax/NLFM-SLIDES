@@ -943,6 +943,97 @@
 							</div>
 						</div>
 					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Parámetros del modelo no local</h3>
+							<h6>Función de atenuación</h6>
+							<div
+								style="position: absolute; top: 10%; left: 30%"
+							>
+								\[A(x,x',l)=\lambda_0e^{-\frac{|x-x'|}{l}}\]
+							</div>
+							<br />
+							<div>
+								<div class="fragment">
+									<div class="two-column">
+										<p style="padding-top: 30px">
+											El factor \(\lambda_0\) es usado
+											para garantizar las propiedades de
+											la función. Este proceso es distinto
+											para dominios 2D y 3D.
+										</p>
+									</div>
+									<div class="two-column">
+										<div data-id="ro">
+											\[\scriptsize{\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=1}\]
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="two-column">
+										<h5
+											style="text-align: center"
+											class="fragment"
+										>
+											2D
+										</h5>
+										<p class="fragment">
+											\[\small\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=t\lambda_0\int_{0}^{\infty}\int_{0}^{2\pi}re^{\frac{-r}{l}}{d\theta}{dr}\]
+										</p>
+										<p class="fragment">
+											\[\small\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=\lambda_02\pi
+											l^2t\]
+										</p>
+										<p class="fragment">
+											\[\small\lambda_0=\frac{1}{2\pi
+											l^2t}\]
+										</p>
+									</div>
+									<div class="two-column">
+										<h5
+											style="text-align: center"
+											class="fragment"
+										>
+											3D
+										</h5>
+										<p class="fragment">
+											\[...=\lambda_0\int_{0}^{\infty}\int_{0}^{2\pi}\int_{0}^{\pi}r^2\sin(\phi)e^{\frac{-r}{l}}{d\phi}{d\theta}{dr}\]
+										</p>
+										<p class="fragment">\[...=8\pi l^3\]</p>
+										<p class="fragment">
+											\[\lambda_0=\frac{1}{8\pi l^3}\]
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
 				</section>
 				<section>
 					<section id="resultados-title">Resultados</section>

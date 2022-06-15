@@ -14,6 +14,7 @@ const config = {
 			],
 			processEscapes: false,
 			packages: { "[+]": ["color"] },
+			displayIndent: "0.2em",
 		},
 		options: {
 			skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
