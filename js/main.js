@@ -2728,13 +2728,19 @@ Reveal.on("fragmenthidden", (event) => {
 
 function updateGraphs() {
 	return new Promise((resolve) => {
-		// Plotly.update(atenu1_div);
-		// Plotly.update(atenu2_div);
-		// Plotly.update(atenu3_div);
-		// Plotly.update(atenu4_div);
-		// Plotly.update(atenu5_div);
-		// Plotly.update(atenu6_div);
+		Plotly.update(atenu1_div);
+		Plotly.update(atenu2_div);
+		Plotly.update(atenu3_div);
+
 		console.log("actualizado");
+		resolve("resolved");
+	});
+}
+function updateGraphs2() {
+	return new Promise((resolve) => {
+		Plotly.update(atenu4_div);
+		Plotly.update(atenu5_div);
+		Plotly.update(atenu6_div);
 		resolve("resolved");
 	});
 }
@@ -2742,5 +2748,5 @@ Reveal.on("graficas-pesadas", () => {
 	updateGraphs();
 });
 Reveal.on("graficas-pesadas2", () => {
-	updateGraphs();
+	updateGraphs2();
 });
