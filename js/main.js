@@ -47,6 +47,8 @@ const atenu4_div = document.getElementById("atenuacion4");
 const atenu5_div = document.getElementById("atenuacion5");
 const atenu6_div = document.getElementById("atenuacion6");
 
+const resultados_1 = document.getElementById("grafica_res_1");
+
 const cmap = [
 	["0.0", "#f3f3f3)"],
 	["1.0", "#dc2c41"],
@@ -579,6 +581,48 @@ const data_atenua_3 = {
 	],
 };
 
+const data_resultados_1 = [
+	{
+		type: "lines",
+		x: [
+			0.008059958, 0.016119915, 0.03223983, 0.062277527, 0.078879991,
+			0.107473265, 0.168512597,
+		],
+		y: [
+			1.708610266, 1.687043936, 1.639099303, 1.55190175, 1.505339596,
+			1.439068439, 1.352192685,
+		],
+		name: "Si",
+		line: { shape: "spline", color: "#dc2c41" },
+	},
+	{
+		type: "lines",
+		x: [
+			0.008059958, 0.016119915, 0.03223983, 0.062277527, 0.078879991,
+			0.107473265, 0.168512597,
+		],
+		y: [
+			1.708224011, 1.67788427, 1.640829469, 1.551334046, 1.504764992,
+			1.438544474, 1.351713789,
+		],
+		name: "C",
+		line: { shape: "spline", color: "black" },
+	},
+	{
+		type: "lines",
+		x: [
+			0.008059958, 0.016119915, 0.03223983, 0.078879991, 0.107473265,
+			0.168512597,
+		],
+		y: [
+			1.708571976, 1.678256832, 1.641270946, 1.505255822, 1.441538145,
+			1.358465777,
+		],
+		name: "Ge",
+		line: { shape: "spline", color: "#8c8c8c" },
+	},
+];
+
 Plotly.newPlot(atenu1_div, [data_atenua_1], plots_layout, plots_config);
 Plotly.newPlot(atenu2_div, [data_atenua_2], plots_layout, plots_config);
 Plotly.newPlot(atenu3_div, [data_atenua_3], plots_layout, plots_config);
@@ -586,14 +630,38 @@ Plotly.newPlot(atenu3_div, [data_atenua_3], plots_layout, plots_config);
 Plotly.newPlot(atenu4_div, [data_atenua_1], plots_layout, plots_config);
 Plotly.newPlot(atenu5_div, [data_atenua_2], plots_layout, plots_config);
 Plotly.newPlot(atenu6_div, [data_atenua_3], plots_layout, plots_config);
+Plotly.newPlot(
+	resultados_1,
+	data_resultados_1,
+	{
+		xaxis: {
+			title: "1/R",
+			gridcolor: "#dcdcdc",
+			zerolinecolor: "#dcdcdc",
+		},
+		yaxis: {
+			title: "η",
+			gridcolor: "#dcdcdc",
+			zerolinecolor: "#dcdcdc",
+		},
+		legend: {
+			x: 1,
+			y: 1,
+			orientation: "h",
+			xanchor: "right",
+		},
+		margin: { t: 0 },
+	},
+	plots_config
+);
 
 Reveal.on("fragmentshown", (event) => {
 	// event.fragment = the fragment DOM element
-	console.log(event);
+	// console.log(event);
 });
 Reveal.on("fragmenthidden", (event) => {
 	// event.fragment = the fragment DOM element
-	console.log(event);
+	// console.log(event);
 });
 
 function updateGraphs() {
@@ -601,8 +669,6 @@ function updateGraphs() {
 		Plotly.update(atenu1_div);
 		Plotly.update(atenu2_div);
 		Plotly.update(atenu3_div);
-
-		console.log("actualizado");
 		resolve("resolved");
 	});
 }
