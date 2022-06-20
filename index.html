@@ -1192,7 +1192,7 @@
 							</h4>
 							<p class="fragment">
 								Partiendo del modelo integral de dos fases
-								$$\color{gray}\sigma_{ij}=\zeta_1
+								$$\color{lightgray}\sigma_{ij}=\zeta_1
 								C_{ijkl}\varepsilon_{kl} +
 								\zeta_2\color{black}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'$$
 							</p>
@@ -1256,7 +1256,7 @@
 									<h5>Parte no local</h5>
 									<p>
 										$$K^{nm}_{nl} = \int_v\int_{v'}
-										B_n(x)^TCB_m(x')dv' dv$$
+										A(\rho)B_n(x)^TCB_m(x')dv' dv$$
 									</p>
 									<img
 										src="./resources/nolocal_cross.jpeg"
@@ -1327,6 +1327,86 @@
 							</div>
 						</div>
 					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">
+								Detección de elementos no locales
+							</h4>
+							<div style="text-align: center;">
+								<img data-id="imagen2d" src="./resources/deteccion_no_local.png" width="50%">
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">
+								Detección de elementos no locales
+							</h4>
+							<div  class="two-column" style="text-align: center; height: 400px;">
+								<img data-id="imagen2d" src="./resources/deteccion_no_local.png" >
+							</div>
+							<div  class="two-column" style="text-align: center; height: 400px;">
+								<img  src="./resources/deteccion_no_local_3D.png" >
+							</div>
+							<p>Para cada elemento \(n\), se encuentran los elementos adyacentes \(m\) cuyos centroides esten a una distancia menor a \(Lr \)</p>
+							<p>Sobre estos elementos se realizan las integrales no locales</p>
+						</div>
+					</section>
+					
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -1358,23 +1438,147 @@
 							<h4 data-id="titulito">
 								Ensamblaje de sistema de ecuaciones
 							</h4>
-							<div class="two-column">
+							<h5>Local</h5>
+							<div class="two-column" style="text-align: center ; height:160px">
+								<img src="./resources/conect_loc1.png">
+							</div>
+							<div class="two-column" style="text-align: center ; height:160px">
+								<p style="text-align: center;">$$\small K^n_l= \begin{bmatrix}
+									4280 & 5862 & 8947 & 853 \\
+									5862 & 4852 & 542 & 8947 \\
+									8947 & 542 & 6850 & 5862 \\
+									853 & 8947 & 5862 & 4274 
+									\end{bmatrix}  $$</p>
+							</div>
+							<div class="two-column" style="text-align: center ; height:240px">
+								<img src="./resources/conect_loc2.png">
+
+							</div>
+							
+							<div class="two-column" style="text-align: center ; height:240px">
+								<p style="text-align: center;">$$\small K=\begin{bmatrix}
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & 5862 & 5862 & {\color{lightgray}x} & 8947 & 853 & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & 5862 & 4852 & {\color{lightgray}x} & 542 & 8947 & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & 8947 & 542 & {\color{lightgray}x} & 6850 & 5862 & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & 853 & 8947 & {\color{lightgray}x} & 5862 & 4274 & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} 
+									\end{bmatrix} $$</p>
+
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">
+								Ensamblaje de sistema de ecuaciones
+							</h4>
+							<h5>No local</h5>
+							<div class="two-column" style="text-align: center ; height:160px">
+								<img src="./resources/conect_nloc1.png">
+							</div>
+							<div class="two-column" style="text-align: center ; height:160px">
+								<p style="text-align: center;">$$\small K^{nm}_{nl}=\begin{bmatrix}
+									300 & 125 & 425 & 28 \\
+									125 & 250 & 542 & 425 \\
+									425 & 542 & 250 & 125 \\
+									28 & 425 & 125 & 300 
+									\end{bmatrix}  $$</p>
+							</div>
+							<div class="two-column" style="text-align: center ; height:240px">
+								<img src="./resources/conect_nloc2.png">
+
+							</div>
+							
+							<div class="two-column" style="text-align: center ; height:240px">
+								<p style="text-align: center;">$$\small K=\begin{bmatrix}
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{black}300} & {\color{black}125} & {\color{lightgray}x} & {\color{black}425} & {\color{black}28} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{black}125} & {\color{black}250} & {\color{lightgray}x} & {\color{black}542} & {\color{black}425} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{black}425} & {\color{black}542} & {\color{lightgray}x} & {\color{black}250} & {\color{black}125} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{black}28} & {\color{black}425} & {\color{lightgray}x} & {\color{black}125} & {\color{black}300} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} 
+									\end{bmatrix} $$</p>
+
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">
+								Ensamblaje de sistema de ecuaciones
+							</h4>
+							<div class="two-column" style="text-align: center">
+								<h4>Local</h4>
 								<img
-									style="
-										display: flex;
-										justify-content: center;
-									"
-									height="460px"
+									height="430px"
 									src="./resources/df1.png"
 								/>
 							</div>
-							<div class="two-column">
+							<div class="two-column" style="text-align: center">
+								<h4>No Local</h4>
 								<img
-									style="
-										display: flex;
-										justify-content: center;
-									"
-									height="460px"
+									height="430px"
 									src="./resources/df2.png"
 								/>
 							</div>
@@ -1409,9 +1613,46 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h1>El proceso de integración es costoso</h1>
+							<h2>El proceso de integración es costoso y aumenta exponencialmente con el número de elementos</h2>
 						</div>
 					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h2>¿Desde que tamaño vale la pena tener en cuenta estos efectos?</h2>
+						</div>
+					</section>
+
+
+
+
+
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -1478,12 +1719,12 @@
 							</div>
 							<p>Con cada geometría:</p>
 							<ul>
-								<li>Se varían los parámetros no locales</li>
-								<li>
+								<li class="med-text">Se varían los parámetros no locales</li>
+								<li class="med-text">
 									Se cambia la distancia \(R\) en función de
 									\(l\)
 								</li>
-								<li>Se prueba con distintos materiales</li>
+								<li class="med-text">Se prueba con distintos materiales</li>
 							</ul>
 							<p>
 								Para cada caso se calcula la primera frecuencia
