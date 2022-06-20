@@ -1071,7 +1071,15 @@
 							</p>
 							<ol class="fragment">
 								<li>Enmallado (pre proceso)</li>
-								<li>Formulación variacional/Forma debil</li>
+								<li
+									data-id="titulito"
+									style="
+										text-transform: none;
+										font-size: var(--big-size-text);
+									"
+								>
+									Formulación variacional/Forma debil
+								</li>
 								<li>Matriz y vector de elemento</li>
 								<li>Ensamblaje de sistema de ecuaciones</li>
 								<li>Condiciones de borde</li>
@@ -1122,9 +1130,16 @@
 									Detección elementos no locales
 								</li>
 								<li style="color: var(--red)">
-									<p data-id="titulito">
+									<h4
+										data-id="titulito"
+										style="
+											text-transform: none;
+											font-size: var(--big-size-text);
+											color: var(--red);
+										"
+									>
 										Formulación variacional/Forma debil
-									</p>
+									</h4>
 								</li>
 								<li style="color: var(--red)">
 									Matriz y vector de elemento
@@ -1172,41 +1187,430 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>
-								<p data-id="titulito">
-									Formulación variacional/Forma debil
-								</p>
-							</h3>
-							<h6>FEM no local</h6>
-							<p>
-								Para implementar elementos finitos es necesario
-								seguir una serie de pasos
+							<h4 data-id="titulito">
+								Formulación variacional/Forma debil
+							</h4>
+							<p class="fragment">
+								Partiendo del modelo integral de dos fases
+								$$\color{gray}\sigma_{ij}=\zeta_1
+								C_{ijkl}\varepsilon_{kl} +
+								\zeta_2\color{black}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'$$
 							</p>
+							<p class="fragment">
+								El potencial de energía total puede escribirse
+								como $$\Pi=...+\frac{1}{2}\int_v\int_v A(\rho)
+								\nabla^2 U(x) D \nabla^2 U(x')dv'dv$$
+							</p>
+							<p class="fragment">
+								Por lo tanto, las matrices para cada elemento se
+								pueden calcular como $$K_{nl}=\int_v\int_{v'}
+								A(\rho) B^T(x) D B(x')dv'dv$$
+							</p>
+							<p class="fragment">
+								Existe una matriz cruzada entre elementos debido
+								a la doble integral. El peso de esta matriz esta
+								definido por la función de atenuación
+							</p>
+						</div>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">Matrices de elemento</h4>
+							<p>Cada elemento tiene dos fuentes de rigidez</p>
+							<div class="fragment">
+								<div class="two-column">
+									<h5>Parte local</h5>
+									<p>$$K^n_l = \int_v B_n(x)^TCB_n(x) dv$$</p>
+									<img
+										src="./resources/nolocal_cross.jpeg"
+										height="200px"
+									/>
+								</div>
+								<div class="two-column">
+									<h5>Parte no local</h5>
+									<p>
+										$$K^{nm}_{nl} = \int_v\int_{v'}
+										B_n(x)^TCB_m(x')dv' dv$$
+									</p>
+									<img
+										src="./resources/nolocal_cross.jpeg"
+										height="200px"
+									/>
+								</div>
+							</div>
+							<p class="fragment">
+								Cada elemento aporta a la matriz general
+								$$K=\zeta_1K^n_l+\zeta_2K^{nm}_{nl}$$
+							</p>
+						</div>
+					</section>
+					<section data-auto-animate data-state="graficas-atenu2d">
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">Matrices de elemento</h4>
+							<p>
+								La función de atenuación es pequeña para valores
+								de \(\rho\) grandes
+							</p>
+							<div
+								id="grafica-atenuacion-2d"
+								class="two-column"
+								style="height: 210px"
+							></div>
+							<div class="two-column" style="height: 210px">
+								<p>
+									Dado que \(\rho\) se calcula como la
+									distancia entre dos puntos, mientras mas
+									lejos esten, menos importancia tienen
+								</p>
+							</div>
+							<div class="two-column">
+								<p>
+									Elementos lejanos, tendrán \(\rho\approx
+									0\), solamente se necesitan tener en cuenta
+									los elementos a una distancia < \(Lr=6l\)
+								</p>
+							</div>
+							<div class="two-column">
+								<h3>MODELO 3D de distancia LR</h3>
+							</div>
+						</div>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">
+								Ensamblaje de sistema de ecuaciones
+							</h4>
+							<div class="two-column">
+								<img
+									style="
+										display: flex;
+										justify-content: center;
+									"
+									height="460px"
+									src="./resources/df1.png"
+								/>
+							</div>
+							<div class="two-column">
+								<img
+									style="
+										display: flex;
+										justify-content: center;
+									"
+									height="460px"
+									src="./resources/df2.png"
+								/>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h1>El proceso de integración es costoso</h1>
+						</div>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Simulaciones propuestas</h3>
+
+							<div class="three-column">
+								<iframe
+									class="iframe-3d"
+									src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
+									scrolling="no"
+									frameborder="0"
+									height="220px"
+								></iframe>
+								<figcaption>
+									Cubo de lado \(L\), \(R=L/1.61\)
+								</figcaption>
+							</div>
+							<div class="three-column">
+								<iframe
+									class="iframe-3d"
+									src="https://zibramax.github.io/masters-slides/docs/viewer/?mesh=https://raw.githubusercontent.com/ZibraMax/FEM/master/Examples/Mesh_tests/rect2.json&magnif=10"
+									scrolling="no"
+									frameborder="0"
+									height="220px"
+								></iframe>
+								<figcaption>
+									Placa rectangular de lado \(R\)
+								</figcaption>
+							</div>
+							<div class="three-column">
+								<iframe
+									class="iframe-3d"
+									src="https://zibramax.github.io/masters-slides/docs/viewer/?mesh=https://raw.githubusercontent.com/ZibraMax/FEM-C--/master/docs/resources/A.json&magnif=10"
+									scrolling="no"
+									frameborder="0"
+									height="220px"
+								></iframe>
+								<figcaption>Viga de longitud \(R\)</figcaption>
+							</div>
+							<p>Con cada geometría:</p>
+							<ul>
+								<li>Se varían los parámetros no locales</li>
+								<li>
+									Se cambia la distancia \(R\) en función de
+									\(l\)
+								</li>
+								<li>Se prueba con distintos materiales</li>
+							</ul>
+							<p>
+								Para cada caso se calcula la primera frecuencia
+								natural \(\omega\)
+							</p>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Materiales</h3>
+							<div class="three-column" style="height: 150px;"><h4>Carbono</h4><p>\(\rho=9.2\)</p></div>
+							<div class="three-column" style="height: 150px;"><h4>Carbono3D</h4></div>
+							<div class="three-column" style="height: 150px;"><p>$$\scriptsize\begin{bmatrix}
+								C11 & C12 & C13 & 0 & 0 & 0 \\
+								C21 & C22 & C23 & 0 & 0 & 0 \\
+								C31 & C32 & C33 & 0 & 0 & 0 \\
+								0 & 0 & 0 & C44 & 0 & 0 \\
+								0 & 0 & 0 & 0 & C55 & 0 \\
+								0 & 0 & 0 & 0 & 0 & C66 
+								\end{bmatrix}$$</p></div>
+
+							<div class="three-column" style="height: 150px;"><h4>Silicio</h4><p>\(\rho=9.2\)</p></div>
+							<div class="three-column" style="height: 150px;"><h4>Silicio3D</h4></div>
+							<div class="three-column" style="height: 150px;"><p>$$\scriptsize\begin{bmatrix}
+								C11 & C12 & C13 & 0 & 0 & 0 \\
+								C21 & C22 & C23 & 0 & 0 & 0 \\
+								C31 & C32 & C33 & 0 & 0 & 0 \\
+								0 & 0 & 0 & C44 & 0 & 0 \\
+								0 & 0 & 0 & 0 & C55 & 0 \\
+								0 & 0 & 0 & 0 & 0 & C66 
+								\end{bmatrix}$$</p></div>
+
+							<div class="three-column" style="height: 150px;"><h4>Germanio</h4><p>\(\rho=9.2\)</p></div>
+							<div class="three-column" style="height: 150px;"><h4>Germanio3D</h4></div>
+							<div class="three-column" style="height: 150px;"><p>$$\scriptsize\begin{bmatrix}
+								C11 & C12 & C13 & 0 & 0 & 0 \\
+								C21 & C22 & C23 & 0 & 0 & 0 \\
+								C31 & C32 & C33 & 0 & 0 & 0 \\
+								0 & 0 & 0 & C44 & 0 & 0 \\
+								0 & 0 & 0 & 0 & C55 & 0 \\
+								0 & 0 & 0 & 0 & 0 & C66 
+								\end{bmatrix}$$</p></div>
+
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Procedimiento</h3>
+							<p>
+								Para comparar entre resultados se usa la
+								frecuencia normalizada (\(\eta \) )
+								$$\eta=\frac{\omega R}{C_t}$$
+							</p>
+							<p>
+								Donde \(C_t\) es la velocidad de la onda de
+								corte
+							</p>
+							<p>Para cada simulación se realizan los siguientes pasos</p>
 							<ol>
-								<li style="color: var(--not-selected-color)">
-									Enmallado (pre proceso)
+								<li class="med-text">
+									Se calcula la frecuencia normalizada con la
+									teoría no local \(\eta_{nl}\)
 								</li>
-								<li style="color: var(--red)">
-									Detección elementos no locales
+								<li class="med-text">
+									Se calcula la frecuencia normalizada con la
+									teoría local \(\eta_{l}\)
 								</li>
-								<li style="color: var(--red)">
-									Formulación variacional/Forma debil
-								</li>
-								<li style="color: var(--red)">
-									Matriz y vector de elemento
-								</li>
-								<li style="color: var(--red)">
-									Ensamblaje de sistema de ecuaciones
-								</li>
-								<li style="color: var(--not-selected-color)">
-									Condiciones de borde
-								</li>
-								<li style="color: var(--not-selected-color)">
-									Solución del sistema de ecuaciones
-								</li>
-								<li style="color: var(--not-selected-color)">
-									Gráficas y productos (post proceso)
-								</li>
+								<li class="med-text">
+									Se calcula la diferencia relativa entre las
+									frecuencias
+								</li class="med-text">
+								<p>$$\Delta=\left|\frac{\eta_{nl}-\eta_{l}}{\eta_{l}}\right|$$</p>
+								<li class="med-text">Si \(\Delta>0.5\%\) aumentar el tamaño \(R\)</li>
 							</ol>
 						</div>
 					</section>

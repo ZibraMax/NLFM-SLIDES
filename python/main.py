@@ -17,6 +17,14 @@ def ate3(p):
     return y*(y > 0)
 
 
+x = np.linspace(-8, 8, 151)
+y = ate(abs(x))
+np.savetxt('./resources/atenuacion_2d.csv',
+           [x, y], delimiter=',', fmt='%.5f')
+plt.plot(x, y)
+plt.show()
+
+
 x = np.linspace(-5, 5, 21)
 y = np.linspace(-5, 5, 21)
 xx, yy = np.meshgrid(x, y)
