@@ -31,6 +31,7 @@
 
 	--not-selected-color: var(--tint-w-1);
 
+	--big-size-text: 1.8rem;
 	--medium-size-text: 1.3rem;
 	--small-size-text: 0.9rem;
 	--mid-size-text: 1.1rem;
@@ -80,7 +81,9 @@ p {
 	font-weight: normal !important;
 	font-size: var(--medium-size-text);
 }
-
+li {
+	font-size: var(--big-size-text);
+}
 figcaption {
 	text-align: center;
 	font-weight: normal !important;
@@ -152,7 +155,8 @@ a:hover {
 	position: relative;
 }
 
-ul {
+ul,
+ol {
 	width: 100%;
 }
 tr td:last-child {
