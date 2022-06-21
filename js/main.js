@@ -10,29 +10,12 @@ const config = {
 		],
 		ignoredTags: ["script", "noscript", "style", "textarea", "pre"],
 	},
-	// mathjax3: {
-	// 	mathjax: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js",
-	// 	loader: { load: ["[tex]/color"] },
-	// 	tex: {
-	// 		inlineMath: [
-	// 			["$", "$"],
-	// 			["\\(", "\\)"],
-	// 		],
-	// 		displayMath: [
-	// 			["$$", "$$"],
-	// 			["\\[", "\\]"],
-	// 		],
-	// 		processEscapes: false,
-	// 		packages: { "[+]": ["color"] },
-	// 		displayIndent: "0.2em",
-	// 	},
-	// 	options: {
-	// 		skipHtmlTags: ["script", "noscript", "style", "textarea", "pre"],
-	// 	},
-	// },
+	showNotes: true,
+	slideNumber: "c/t",
 	plugins: [RevealMath.KaTeX, RevealNotes, RevealZoom],
 };
 Reveal.initialize(config);
+// Reveal.configure({ pdfMaxPagesPerSlide: 1, showNotes: true });
 
 const plots_config = { responsive: true, displayModeBar: false };
 const plots_layout = {
