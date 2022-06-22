@@ -10,7 +10,7 @@ const config = {
 		],
 		ignoredTags: ["script", "noscript", "style", "textarea", "pre"],
 	},
-	showNotes: true,
+	// showNotes: true,
 	slideNumber: "c/t",
 	plugins: [RevealMath.KaTeX, RevealNotes, RevealZoom],
 };
