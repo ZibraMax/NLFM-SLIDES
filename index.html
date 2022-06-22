@@ -161,28 +161,33 @@
 
 							<div style="height: 300px">
 								<div class="two-column">
-									
 									<figure class="figure">
-										<img
-											src="./resources/Eringen.jpeg"
-										/>
+										<img src="./resources/Eringen.jpeg" />
 										<figcaption>
-											Comparación entre esfuerzos cortantes producidos por una carga puntual. Tomado de Eringen (1987)
+											Comparación entre esfuerzos
+											cortantes producidos por una carga
+											puntual. Tomado de Eringen (1987)
 										</figcaption>
 									</figure>
 								</div>
-								<div class="two-column" style="position: absolute;left: 54%;top:30%">
+								<div
+									class="two-column"
+									style="
+										position: absolute;
+										left: 54%;
+										top: 30%;
+									"
+								>
 									<p class="med-text">
-										Teoría clasica del medio continuo. Fuerzas
-										mecánicas
+										Teoría clasica del medio continuo.
+										Fuerzas mecánicas
 										\[{\Large\sigma_{ij}=C_{ijkl}\varepsilon_{kls}}\]
 									</p>
 									<p class="med-text">
-										Tener en cuenta las fuerzas de cohesion de
-										corto alcance entre particulas
+										Tener en cuenta las fuerzas de cohesion
+										de corto alcance entre particulas
 										\[{\Large\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
 									</p>
-									</figure>
 								</div>
 							</div>
 						</div>
@@ -2336,6 +2341,7 @@
 							<h4 data-id="titulito">
 								Proceso de elementos finitos completo
 							</h4>
+							<figure>
 								<img
 									height="430px"
 									src="./resources/dffem.svg"
@@ -2680,7 +2686,7 @@
 									$$\Delta=\left|\frac{\eta_{nl}-\eta_{l}}{\eta_{l}}\right|$$
 								</p>
 								<li class="med-text">
-									Si \(\Delta>0.5\%\) aumentar el tamaño \(R\)
+									Si \(\Delta>5\%\) aumentar el tamaño \(R\)
 								</li>
 							</ol>
 						</div>
@@ -2692,8 +2698,8 @@
 							\(R\), la frecuencia local se mantiene constante.<br />
 							Se busca evaluar la diferencia relativa entre la
 							frecuencia local y frecuencia no local hasta que la
-							diferencia relativa sea menor al 0.5%. Para
-							disminuir esa diferencia se aumentaá el tamaño de la
+							diferencia relativa sea menor al 5%. Para disminuir
+							esa diferencia se aumentaá el tamaño de la
 							nanopartícula hasta lograr el objetivo
 						</aside>
 					</section>
@@ -2727,8 +2733,13 @@
 						<div class="slide">
 							<h3>Procedimiento</h3>
 							<figure class="figure">
-								<img src="./resources/dfmetodos.svg" height="430px">
-								<figcaption>Diagrama de flujo completo</figcaption>
+								<img
+									src="./resources/dfmetodos.svg"
+									height="430px"
+								/>
+								<figcaption>
+									Diagrama de flujo completo
+								</figcaption>
 							</figure>
 						</div>
 						<aside class="notes">
@@ -2956,62 +2967,32 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>Frecuencias normalizadas para cubos</h3>
-							<div
-								id="grafica_res_1"
-								style="width: 100%; height: 450px"
-							></div>
-						</div>
-						<aside class="notes">
-							<strong>Resultados</strong><br /><br />
-							A partir de un tamaño de TANTO que equiavale a
-							TANTAS VECES l, se puede asegurar una diferencia
-							relativa de 0.5%, por lo tanto, desde ese tamaño no
-							es necesario tener en cuenta la no localidad.
-						</aside>
-					</section>
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="animate1"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="animate2"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>
+							<h4>
 								Diferencia relativa de frecuencias no locales
-							</h3>
-							<div
+							</h4>
+							<figure
 								id="grafica_res_1"
-								style="width: 100%; height: 450px"
-							></div>
+								style="width: 100%; height: 380px"
+							>
+								<img src="./resources/RESULTADOS.svg" />
+								<figcaption>
+									Resultados para frecuencias normalizadas de
+									cubos
+								</figcaption>
+							</figure>
 						</div>
 						<aside class="notes">
 							<strong>Resultados</strong><br /><br />
-							A partir de un tamaño de TANTO que equiavale a
-							TANTAS VECES l, se puede asegurar una diferencia
-							relativa de 0.5%, por lo tanto, desde ese tamaño no
-							es necesario tener en cuenta la no localidad.
+							Hablar del comportamiento de las frecuencas locales
+							vs las no locales. Explicar que la lina recta es
+							gracias a la normalización y que la linea punteada
+							es la obtenida por Fernando usando dinamica
+							molecular para el carbono.
+
+							<br />
+							Explicar que los ultimos dos puntos pertenecen a 60
+							veces l y 30 veces l, por lo que aproximadamente en
+							35 veces l se espera tener una variacion menor al 5%
 						</aside>
 					</section>
 					<section data-auto-animate>
@@ -3049,7 +3030,7 @@
 									text-transform: none;
 								"
 							>
-								Para R > \(18l\) <br />\(\Delta\) <0.5%
+								Para R > \(35l\) <br />\(\Delta\) <5%
 							</h1>
 						</div>
 						<aside class="notes">
