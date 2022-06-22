@@ -105,13 +105,10 @@ figcaption {
 	font-size: var(--small-size-text);
 }
 
-.figure figcaption:before {
-	content: "Figura " counter(figures) ". ";
-}
 .med-text {
 	font-size: var(--medium-size-text);
 }
-html {
+.slides {
 	counter-reset: figures;
 }
 body {
