@@ -159,33 +159,31 @@
 								><span data-id="box2"> integral</span>
 							</h3>
 
-							<div class="two-column">
-								<h5>Teoría Local</h5>
-								<p class="med-text">
-									Teoría clasica del medio continuo. Fuerzas
-									mecánicas
-								</p>
-								<img
-									width="50%"
-									src="https://imgs.xkcd.com/comics/file_extensions.png"
-								/>
-								<p>
-									\[\scriptsize{\sigma_{ij}=C_{ijkl}\varepsilon_{kls}}\]
-								</p>
-							</div>
-							<div class="two-column">
-								<h5>Teoría no Local</h5>
-								<p class="med-text">
-									Tener en cuenta las fuerzas de cohesion de
-									corto alcance entre particulas
-								</p>
-								<img
-									width="50%"
-									src="https://imgs.xkcd.com/comics/file_extensions.png"
-								/>
-								<p>
-									\[\scriptsize{\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
-								</p>
+							<div style="height: 300px">
+								<div class="two-column">
+									
+									<figure class="figure">
+										<img
+											src="./resources/Eringen.jpeg"
+										/>
+										<figcaption>
+											Comparación entre esfuerzos cortantes producidos por una carga puntual. Tomado de Eringen (1987)
+										</figcaption>
+									</figure>
+								</div>
+								<div class="two-column" style="position: absolute;left: 54%;top:30%">
+									<p class="med-text">
+										Teoría clasica del medio continuo. Fuerzas
+										mecánicas
+										\[{\Large\sigma_{ij}=C_{ijkl}\varepsilon_{kls}}\]
+									</p>
+									<p class="med-text">
+										Tener en cuenta las fuerzas de cohesion de
+										corto alcance entre particulas
+										\[{\Large\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
+									</p>
+									</figure>
+								</div>
 							</div>
 						</div>
 						<aside class="notes">
@@ -360,7 +358,7 @@
 								</li>
 								<li>
 									<p data-id="animate6">
-										Electromagnetismo no local
+										Soluciones para laminados
 									</p>
 								</li>
 							</ul>
@@ -453,7 +451,7 @@
 											data-id="animate6"
 											style="color: var(--shades-w-2)"
 										>
-											Electromagnetismo no local
+											Soluciones para laminados
 										</p>
 									</td>
 								</tr>
@@ -493,30 +491,60 @@
 						</div>
 						<div class="slide">
 							<h3>Relevancia de teoría no local</h3>
-							<img
-								width="250px"
-								src="https://imgs.xkcd.com/comics/file_extensions.png"
-							/>
-							<img
-								width="250px"
-								src="https://imgs.xkcd.com/comics/file_extensions.png"
-							/>
-							<img
-								width="250px"
-								src="https://imgs.xkcd.com/comics/file_extensions.png"
-							/>
-							<img
-								width="250px"
-								src="https://imgs.xkcd.com/comics/file_extensions.png"
-							/>
-							<img
-								width="250px"
-								src="https://imgs.xkcd.com/comics/file_extensions.png"
-							/>
-							<img
-								width="250px"
-								src="https://imgs.xkcd.com/comics/file_extensions.png"
-							/>
+							<figure class="three-column figure">
+								<img
+									height="150px"
+									src="./resources/GORMANI ET AL 2021.jpeg"
+								/>
+								<figcaption>
+									Tomado de Gormani et al. (2021)
+								</figcaption>
+							</figure>
+							<figure class="three-column figure">
+								<img
+									height="150px"
+									src="./resources/SAHMANI FATTHI 2018.png"
+								/>
+								<figcaption>
+									Tomado de Sahmani & Fatthi (2018)
+								</figcaption>
+							</figure>
+							<figure class="three-column figure">
+								<img
+									height="150px"
+									src="./resources/WANG ZHU AND DAI.jpeg"
+								/>
+								<figcaption>
+									Tomado de Wang et al. (2016)
+								</figcaption>
+							</figure>
+							<figure class="three-column figure">
+								<img
+									height="150px"
+									src="./resources/NAGHINEJAD AND OVEZY.jpeg"
+								/>
+								<figcaption>
+									Tomado de Naghinejad & Ovezy (2018)
+								</figcaption>
+							</figure>
+							<figure class="three-column figure">
+								<img
+									height="150px"
+									src="./resources/Shariati et al 2021.png"
+								/>
+								<figcaption>
+									Tomado de Shariati et al. (2021)
+								</figcaption>
+							</figure>
+							<figure class="three-column figure">
+								<img
+									height="150px"
+									src="./resources/NAZEMNEZHAD AND HOSSEINI 2014.jpeg"
+								/>
+								<figcaption>
+									Tomado de Nazemnezhad & Hosseini (2014)
+								</figcaption>
+							</figure>
 						</div>
 						<aside class="notes">
 							<strong>Aplicaciones</strong><br /><br />
@@ -932,46 +960,52 @@
 							</div>
 							<div class="fragment">
 								<div class="three-column">
-									<iframe
-										data-preload
-										loading="lazy"
-										class="iframe-3d"
-										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
-										scrolling="no"
-										frameborder="0"
-										height="220px"
-									></iframe>
-									<figcaption>
-										\(\zeta_1=1,\eta=1.78\)
-									</figcaption>
+									<figure class="figure">
+										<iframe
+											data-preload
+											loading="lazy"
+											class="iframe-3d"
+											src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
+											scrolling="no"
+											frameborder="0"
+											height="220px"
+										></iframe>
+										<figcaption>
+											\(\zeta_1=1,\eta=1.78\)
+										</figcaption>
+									</figure>
 								</div>
 								<div class="three-column">
-									<iframe
-										data-preload
-										loading="lazy"
-										class="iframe-3d"
-										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_500_L_6_362_nx_8_o0_6.json"
-										scrolling="no"
-										frameborder="0"
-										height="220px"
-									></iframe>
-									<figcaption>
-										\(\zeta_1=0.5,\eta=1.73\)
-									</figcaption>
+									<figure class="figure">
+										<iframe
+											data-preload
+											loading="lazy"
+											class="iframe-3d"
+											src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_500_L_6_362_nx_8_o0_6.json"
+											scrolling="no"
+											frameborder="0"
+											height="220px"
+										></iframe>
+										<figcaption>
+											\(\zeta_1=0.5,\eta=1.73\)
+										</figcaption>
+									</figure>
 								</div>
 								<div class="three-column">
-									<iframe
-										data-preload
-										loading="lazy"
-										class="iframe-3d"
-										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=5&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_000_L_6_362_nx_8_o0_6.json"
-										scrolling="no"
-										frameborder="0"
-										height="220px"
-									></iframe>
-									<figcaption>
-										\(\zeta_1=0,\eta=0.28\)
-									</figcaption>
+									<figure class="figure">
+										<iframe
+											data-preload
+											loading="lazy"
+											class="iframe-3d"
+											src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=5&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_000_L_6_362_nx_8_o0_6.json"
+											scrolling="no"
+											frameborder="0"
+											height="220px"
+										></iframe>
+										<figcaption>
+											\(\zeta_1=0,\eta=0.28\)
+										</figcaption>
+									</figure>
 								</div>
 							</div>
 						</div>
@@ -1063,33 +1097,33 @@
 								class="fragment"
 								style="position: absolute; top: 53%"
 							>
-								<div
-									class="three-column"
+								<figure
+									class="three-column figure"
 									style="height: 205px"
 									id="atenuacion1"
 								>
-									<p style="text-align: center">
+									<figcaption>
 										\(A(\rho)=\lambda_0e^{-\rho}\)
-									</p>
-								</div>
-								<div
-									class="three-column"
+									</figcaption>
+								</figure>
+								<figure
+									class="three-column figure"
 									style="height: 205px"
 									id="atenuacion2"
 								>
-									<p style="text-align: center">
+									<figcaption style="text-align: center">
 										\(A(\rho)=\lambda_0\left<1-\frac{\rho}{(1+\Omega_0)}\right>\)
-									</p>
-								</div>
-								<div
-									class="three-column"
+									</figcaption>
+								</figure>
+								<figure
+									class="three-column figure"
 									style="height: 205px"
 									id="atenuacion3"
 								>
-									<p style="text-align: center">
+									<figcaption style="text-align: center">
 										\(A(\rho)=\lambda_0\left<1-\frac{\rho^2}{(1+\Omega_0)^2}\right>\)
-									</p>
-								</div>
+									</figcaption>
+								</figure>
 							</div>
 						</div>
 						<aside class="notes">
@@ -1171,33 +1205,33 @@
 								</div>
 							</div>
 							<div style="position: absolute; top: 53%">
-								<div
-									class="three-column"
+								<figure
+									class="three-column figure"
 									style="height: 205px"
 									id="atenuacion4"
 								>
-									<p style="text-align: center">
+									<figcaption style="text-align: center">
 										\(A(\rho)=\lambda_0e^{-\rho}\)
-									</p>
-								</div>
-								<div
-									class="three-column"
+									</figcaption>
+								</figure>
+								<figure
+									class="three-column figure"
 									style="height: 205px; opacity: 0.4"
 									id="atenuacion5"
 								>
-									<p style="text-align: center">
+									<figcaption style="text-align: center">
 										\(\color{lightgray}A(\rho)=\lambda_0\left<1-\frac{\rho}{(1+\Omega_0)}\right>\)
-									</p>
-								</div>
-								<div
-									class="three-column"
+									</figcaption>
+								</figure>
+								<figure
+									class="three-column figure"
 									style="height: 205px; opacity: 0.4"
 									id="atenuacion6"
 								>
-									<p style="text-align: center">
+									<figcaption style="text-align: center">
 										\(\color{lightgray}A(\rho)=\lambda_0\left<1-\frac{\rho^2}{(1+\Omega_0)^2}\right>\)
-									</p>
-								</div>
+									</figcaption>
+								</figure>
 							</div>
 						</div>
 						<aside class="notes">
@@ -1261,41 +1295,27 @@
 									</div>
 								</div>
 								<div>
-									<div class="two-column">
-										<h5
-											style="text-align: center"
-											class="fragment"
-										>
-											2D
-										</h5>
-										<p class="fragment">
+									<div class="two-column fragment">
+										<h5 style="text-align: center">2D</h5>
+										<p>
 											\[\small\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=t\lambda_0\int_{0}^{\infty}\int_{0}^{2\pi}re^{\frac{-r}{l}}{d\theta}{dr}\]
 										</p>
-										<p class="fragment">
+										<p>
 											\[\small\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=\lambda_02\pi
 											l^2t\]
 										</p>
-										<p class="fragment">
+										<p>
 											\[\small\lambda_0=\frac{1}{2\pi
 											l^2t}\]
 										</p>
 									</div>
-									<div class="two-column">
-										<h5
-											style="text-align: center"
-											class="fragment"
-										>
-											3D
-										</h5>
-										<p class="fragment">
+									<div class="two-column fragment">
+										<h5 style="text-align: center">3D</h5>
+										<p>
 											\[...=\lambda_0\int_{0}^{\infty}\int_{0}^{2\pi}\int_{0}^{\pi}r^2\sin(\phi)e^{\frac{-r}{l}}{d\phi}{d\theta}{dr}\]
 										</p>
-										<p class="fragment">
-											\[...=\lambda_0 8\pi l^3\]
-										</p>
-										<p class="fragment">
-											\[\lambda_0=\frac{1}{8\pi l^3}\]
-										</p>
+										<p>\[...=\lambda_0 8\pi l^3\]</p>
+										<p>\[\lambda_0=\frac{1}{8\pi l^3}\]</p>
 									</div>
 								</div>
 							</div>
@@ -1357,7 +1377,7 @@
 						<div class="slide">
 							<h3>Modelo de elementos finitos</h3>
 							<h6>FEM general</h6>
-							<p class="fragment">
+							<p>
 								Para implementar elementos finitos es necesario
 								seguir una serie de pasos
 							</p>
@@ -1583,10 +1603,15 @@
 								<div class="two-column">
 									<h5>Parte local</h5>
 									<p>$$K^n_l = \int_v B_n(x)^TCB_n(x) dv$$</p>
-									<img
-										src="./resources/conect_loc1.png"
-										height="200px"
-									/>
+									<figure class="figure">
+										<img
+											src="./resources/conect_loc1.png"
+											height="160px"
+										/>
+										<figcaption>
+											Caso local, un solo elemento
+										</figcaption>
+									</figure>
 								</div>
 								<div class="two-column">
 									<h5>Parte no local</h5>
@@ -1594,10 +1619,15 @@
 										$$K^{nm}_{nl} = \int_v\int_{v'}
 										A(\rho)B_n(x)^TCB_m(x')dv' dv$$
 									</p>
-									<img
-										src="./resources/conect_nloc1.png"
-										height="200px"
-									/>
+									<figure class="figure">
+										<img
+											src="./resources/conect_nloc1.png"
+											height="160px"
+										/>
+										<figcaption>
+											Caso no local, elementos cruzados
+										</figcaption>
+									</figure>
 								</div>
 							</div>
 							<p class="fragment">
@@ -1650,11 +1680,15 @@
 								La función de atenuación es pequeña para valores
 								de \(\rho\) grandes
 							</p>
-							<div
+							<figure
 								id="grafica-atenuacion-2d"
-								class="two-column"
+								class="two-column figure"
 								style="height: 210px"
-							></div>
+							>
+								<figcaption>
+									Función de atenuacion biexponencial en 1D
+								</figcaption>
+							</figure>
 							<div class="two-column" style="height: 210px">
 								<p>
 									Dado que \(\rho\) se calcula como la
@@ -1669,9 +1703,12 @@
 									los elementos a una distancia < \(Lr=6l\)
 								</p>
 							</div>
-							<div class="two-column">
+							<figure class="two-column figure">
 								<h3>MODELO 3D de distancia LR</h3>
-							</div>
+								<figcaption>
+									Distancai Lr visualizada en un entorno 3D
+								</figcaption>
+							</figure>
 						</div>
 						<aside class="notes">
 							<strong>FEM no local</strong><br /><br />
@@ -1724,13 +1761,16 @@
 							<h4 data-id="titulito">
 								Detección de elementos no locales
 							</h4>
-							<div style="text-align: center">
+							<figure style="text-align: center" class="figure">
 								<img
 									data-id="imagen2d"
 									src="./resources/deteccion_no_local.png"
 									width="50%"
 								/>
-							</div>
+								<figcaption>
+									Distancia Lr a nivel de elementos 2D
+								</figcaption>
+							</figure>
 						</div>
 						<aside class="notes">
 							<strong>FEM no local</strong><br /><br />
@@ -1772,32 +1812,43 @@
 							<h4 data-id="titulito">
 								Detección de elementos no locales
 							</h4>
-							<div
-								class="two-column"
-								style="text-align: center; height: 400px"
+							<figure
+								class="two-column figure"
+								style="text-align: center"
 							>
 								<img
 									data-id="imagen2d"
+									height="300px"
 									src="./resources/deteccion_no_local.png"
 								/>
-							</div>
-							<div
-								class="two-column"
-								style="text-align: center; height: 400px"
+								<figcaption>
+									Distancia Lr a nivel de elementos 2D
+								</figcaption>
+							</figure>
+							<figure
+								class="two-column figure"
+								style="text-align: center"
 							>
 								<img
+									height="300px"
 									src="./resources/deteccion_no_local_3D.png"
 								/>
+								<figcaption>
+									Función de atenuación sobre elementos a una
+									distania Lr
+								</figcaption>
+							</figure>
+							<div style="position: absolute; top: 75%">
+								<p>
+									Para cada elemento \(n\), se encuentran los
+									elementos adyacentes \(m\) cuyos centroides
+									esten a una distancia menor a \(Lr \)
+								</p>
+								<p>
+									Sobre estos elementos se realizan las
+									integrales no locales
+								</p>
 							</div>
-							<p>
-								Para cada elemento \(n\), se encuentran los
-								elementos adyacentes \(m\) cuyos centroides
-								esten a una distancia menor a \(Lr \)
-							</p>
-							<p>
-								Sobre estos elementos se realizan las integrales
-								no locales
-							</p>
 						</div>
 						<aside class="notes">
 							<strong>FEM no local</strong><br /><br />
@@ -1842,82 +1893,145 @@
 							</h4>
 							<h5>Local</h5>
 							<div
-								class="two-column"
-								style="text-align: center; height: 160px"
+								style="
+									position: absolute;
+									top: 20%;
+									width: 100%;
+								"
 							>
-								<img src="./resources/conect_loc1.png" />
+								<figure
+									class="figure"
+									style="
+										text-align: center;
+										height: 100px;
+										width: 30%;
+										float: left;
+									"
+								>
+									<img
+										src="./resources/conect_loc1.png"
+										height="130px"
+									/>
+									<figcaption>Elemento local</figcaption>
+								</figure>
+								<div
+									style="
+										text-align: center;
+										height: 100px;
+										width: 70%;
+										float: left;
+									"
+								>
+									<p style="text-align: center">
+										$$\small K^n_l= \begin{bmatrix} 4280 &
+										5862 & 8947 & 853 \\ 5862 & 4852 & 542 &
+										8947 \\ 8947 & 542 & 6850 & 5862 \\ 853
+										& 8947 & 5862 & 4274 \end{bmatrix} $$
+									</p>
+								</div>
 							</div>
 							<div
-								class="two-column"
-								style="text-align: center; height: 160px"
+								style="
+									position: absolute;
+									top: 45%;
+									width: 100%;
+								"
 							>
-								<p style="text-align: center">
-									$$\small K^n_l= \begin{bmatrix} 4280 & 5862
-									& 8947 & 853 \\ 5862 & 4852 & 542 & 8947 \\
-									8947 & 542 & 6850 & 5862 \\ 853 & 8947 &
-									5862 & 4274 \end{bmatrix} $$
-								</p>
-							</div>
-							<div
-								class="two-column"
-								style="text-align: center; height: 240px"
-							>
-								<img src="./resources/conect_loc2.png" />
-							</div>
+								<figure
+									class="figure"
+									style="
+										text-align: center;
+										height: 240px;
+										width: 30%;
+										float: left;
+									"
+								>
+									<img
+										src="./resources/conect_loc2.png"
+										height="240px"
+									/>
+									<figcaption>
+										Dominio de elementos finitos de ejemplo
+									</figcaption>
+								</figure>
 
-							<div
-								class="two-column"
-								style="text-align: center; height: 240px"
-							>
-								<p style="text-align: center">
-									$$\small K=\begin{bmatrix}
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} \\
-									{\color{lightgray}x} & 5862 & 5862 &
-									{\color{lightgray}x} & 8947 & 853 &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} \\
-									{\color{lightgray}x} & 5862 & 4852 &
-									{\color{lightgray}x} & 542 & 8947 &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} \\
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} \\
-									{\color{lightgray}x} & 8947 & 542 &
-									{\color{lightgray}x} & 6850 & 5862 &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} \\
-									{\color{lightgray}x} & 853 & 8947 &
-									{\color{lightgray}x} & 5862 & 4274 &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} \\
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} \\
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} \\
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} \end{bmatrix} $$
-								</p>
+								<div
+									style="
+										text-align: center;
+										height: 240px;
+										width: 60%;
+										float: left;
+									"
+								>
+									<p style="text-align: center">
+										$$\small K=\begin{bmatrix}
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \\
+										{\color{lightgray}x} & 5862 & 5862 &
+										{\color{lightgray}x} & 8947 & 853 &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \\
+										{\color{lightgray}x} & 5862 & 4852 &
+										{\color{lightgray}x} & 542 & 8947 &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \\
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \\
+										{\color{lightgray}x} & 8947 & 542 &
+										{\color{lightgray}x} & 6850 & 5862 &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \\
+										{\color{lightgray}x} & 853 & 8947 &
+										{\color{lightgray}x} & 5862 & 4274 &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \\
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \\
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \\
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \end{bmatrix} $$
+									</p>
+								</div>
 							</div>
 						</div>
 						<aside class="notes">
@@ -1963,88 +2077,157 @@
 							<h4 data-id="titulito">
 								Ensamblaje de sistema de ecuaciones
 							</h4>
-							<h5>No local</h5>
+							<h5>Local</h5>
 							<div
-								class="two-column"
-								style="text-align: center; height: 160px"
+								style="
+									position: absolute;
+									top: 20%;
+									width: 100%;
+								"
 							>
-								<img src="./resources/conect_nloc1.png" />
+								<figure
+									class="figure"
+									style="
+										text-align: center;
+										height: 100px;
+										width: 30%;
+										float: left;
+									"
+								>
+									<img
+										src="./resources/conect_nloc1.png"
+										height="130px"
+									/>
+									<figcaption>
+										Elemento local y no local
+									</figcaption>
+								</figure>
+								<div
+									style="
+										text-align: center;
+										height: 100px;
+										width: 70%;
+										float: left;
+									"
+								>
+									<p style="text-align: center">
+										$$\small K^{nm}_{nl}=\begin{bmatrix} 300
+										& 125 & 425 & 28 \\ 125 & 250 & 542 &
+										425 \\ 425 & 542 & 250 & 125 \\ 28 & 425
+										& 125 & 300 \end{bmatrix} $$
+									</p>
+								</div>
 							</div>
 							<div
-								class="two-column"
-								style="text-align: center; height: 160px"
+								style="
+									position: absolute;
+									top: 45%;
+									width: 100%;
+								"
 							>
-								<p style="text-align: center">
-									$$\small K^{nm}_{nl}=\begin{bmatrix} 300 &
-									125 & 425 & 28 \\ 125 & 250 & 542 & 425 \\
-									425 & 542 & 250 & 125 \\ 28 & 425 & 125 &
-									300 \end{bmatrix} $$
-								</p>
-							</div>
-							<div
-								class="two-column"
-								style="text-align: center; height: 240px"
-							>
-								<img src="./resources/conect_nloc2.png" />
-							</div>
+								<figure
+									class="figure"
+									style="
+										text-align: center;
+										height: 240px;
+										width: 30%;
+										float: left;
+									"
+								>
+									<img
+										src="./resources/conect_nloc2.png"
+										height="240px"
+									/>
+									<figcaption>
+										Dominio de elementos finitos de ejemplo
+									</figcaption>
+								</figure>
 
-							<div
-								class="two-column"
-								style="text-align: center; height: 240px"
-							>
-								<p style="text-align: center">
-									$$\small K=\begin{bmatrix}
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} \\
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} & {\color{black}300}
-									& {\color{black}125} & {\color{lightgray}x}
-									& {\color{black}425} & {\color{black}28} &
-									{\color{lightgray}x} \\ {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{black}125} &
-									{\color{black}250} & {\color{lightgray}x} &
-									{\color{black}542} & {\color{black}425} &
-									{\color{lightgray}x} \\ {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} \\ {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{black}425} &
-									{\color{black}542} & {\color{lightgray}x} &
-									{\color{black}250} & {\color{black}125} &
-									{\color{lightgray}x} \\ {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{black}28} &
-									{\color{black}425} & {\color{lightgray}x} &
-									{\color{black}125} & {\color{black}300} &
-									{\color{lightgray}x} \\ {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} \\ {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} \\ {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} & {\color{lightgray}x}
-									& {\color{lightgray}x} &
-									{\color{lightgray}x} \end{bmatrix} $$
-								</p>
+								<div
+									style="
+										text-align: center;
+										height: 240px;
+										width: 60%;
+										float: left;
+									"
+								>
+									<p style="text-align: center">
+										$$\small K=\begin{bmatrix}
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \\
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{black}300} & {\color{black}125}
+										& {\color{lightgray}x} &
+										{\color{black}425} & {\color{black}28} &
+										{\color{lightgray}x} \\
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{black}125} & {\color{black}250}
+										& {\color{lightgray}x} &
+										{\color{black}542} & {\color{black}425}
+										& {\color{lightgray}x} \\
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \\
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{black}425} & {\color{black}542}
+										& {\color{lightgray}x} &
+										{\color{black}250} & {\color{black}125}
+										& {\color{lightgray}x} \\
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} & {\color{black}28}
+										& {\color{black}425} &
+										{\color{lightgray}x} &
+										{\color{black}125} & {\color{black}300}
+										& {\color{lightgray}x} \\
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \\
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \\
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} &
+										{\color{lightgray}x} \end{bmatrix} $$
+									</p>
+								</div>
 							</div>
 						</div>
 						<aside class="notes">
@@ -2089,16 +2272,30 @@
 						</div>
 						<div class="slide">
 							<h4 data-id="titulito">
-								Ensamblaje de sistema de ecuaciones
+								Proceso de elementos finitos completo
 							</h4>
-							<div class="two-column" style="text-align: center">
-								<h4>Local</h4>
+							<figure
+								class="two-column figure"
+								style="text-align: center"
+							>
+								<h5>Local</h5>
 								<img height="430px" src="./resources/df1.png" />
-							</div>
-							<div class="two-column" style="text-align: center">
-								<h4>No Local</h4>
+								<figcaption>
+									Diagrama de flujo del proceso de ensamblaje
+									normal
+								</figcaption>
+							</figure>
+							<figure
+								class="two-column figure"
+								style="text-align: center"
+							>
+								<h5>No Local</h5>
 								<img height="430px" src="./resources/df2.png" />
-							</div>
+								<figcaption>
+									Diagrama de flujo del proceso de ensamblaje
+									modificado
+								</figcaption>
+							</figure>
 						</div>
 						<aside class="notes">
 							<strong>FEM no local</strong><br /><br />
@@ -2139,21 +2336,20 @@
 							<h4 data-id="titulito">
 								Proceso de elementos finitos completo
 							</h4>
-							<div class="two-column" style="text-align: center">
-								<h4>Local</h4>
-								<img height="430px" src="./resources/df1.png" />
-							</div>
-							<div class="two-column" style="text-align: center">
-								<h4>No Local</h4>
-								<img height="430px" src="./resources/df2.png" />
-							</div>
+								<img
+									height="430px"
+									src="./resources/dffem.svg"
+								/>
+								<figcaption>
+									Diagrama de flujo del proceso de elementos
+									finitos no local
+								</figcaption>
+							</figure>
 						</div>
 						<aside class="notes">
 							<strong>FEM no local</strong><br /><br />
-							Esto quiere decir que el proceso de ensamblaje se
-							puede resumir en los siguientes diagramas de flujo
-							Mostrar la diferencia en el proceso de integración y
-							ensamblaje
+							El proceso de elementos finitos se resume en le
+							siguiente proceso
 						</aside>
 					</section>
 
@@ -2271,7 +2467,7 @@
 						<div class="slide">
 							<h3>Simulaciones propuestas</h3>
 
-							<div class="three-column">
+							<figure class="three-column figure">
 								<iframe
 									data-preload
 									loading="lazy"
@@ -2284,8 +2480,8 @@
 								<figcaption>
 									Cubo de lado \(L\), \(R=L/1.61\)
 								</figcaption>
-							</div>
-							<div class="three-column">
+							</figure>
+							<figure class="three-column figure">
 								<iframe
 									data-preload
 									loading="lazy"
@@ -2298,8 +2494,8 @@
 								<figcaption>
 									Placa rectangular de lado \(R\)
 								</figcaption>
-							</div>
-							<div class="three-column">
+							</figure>
+							<figure class="three-column figure">
 								<iframe
 									data-preload
 									loading="lazy"
@@ -2310,7 +2506,7 @@
 									height="220px"
 								></iframe>
 								<figcaption>Viga de longitud \(R\)</figcaption>
-							</div>
+							</figure>
 							<p>Con cada geometría:</p>
 							<ul>
 								<li class="med-text">
@@ -2373,52 +2569,46 @@
 							<h3>Materiales</h3>
 							<div class="three-column" style="height: 150px">
 								<h4>Carbono</h4>
-								<p>\(\rho=9.2\)</p>
+								<p>\(\rho=3.515\ g/cm^3\)</p>
 							</div>
-							<div class="three-column" style="height: 150px">
-								<h4>Carbono3D</h4>
-							</div>
-							<div class="three-column" style="height: 150px">
+							<div style="height: 150px; float: left; width: 60%">
 								<p>
-									$$\scriptsize\begin{bmatrix} C11 & C12 & C13
-									& 0 & 0 & 0 \\ C21 & C22 & C23 & 0 & 0 & 0
-									\\ C31 & C32 & C33 & 0 & 0 & 0 \\ 0 & 0 & 0
-									& C44 & 0 & 0 \\ 0 & 0 & 0 & 0 & C55 & 0 \\
-									0 & 0 & 0 & 0 & 0 & C66 \end{bmatrix}$$
+									$$\scriptsize C=\begin{bmatrix} 1280.0 &
+									124.0 & 124.0 & 0 & 0 & 0 \\ 124.0 & 1280.0
+									& 124.0 & 0 & 0 & 0 \\ 124.0 & 124.0 &
+									1280.0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 578.0 & 0
+									& 0 \\ 0 & 0 & 0 & 0 & 578.0 & 0 \\ 0 & 0 &
+									0 & 0 & 0 & 578.0 \end{bmatrix}\ MPa$$
 								</p>
 							</div>
 
 							<div class="three-column" style="height: 150px">
 								<h4>Silicio</h4>
-								<p>\(\rho=9.2\)</p>
+								<p>\(\rho=2.329\ g/cm^3\)</p>
 							</div>
-							<div class="three-column" style="height: 150px">
-								<h4>Silicio3D</h4>
-							</div>
-							<div class="three-column" style="height: 150px">
+							<div style="height: 150px; float: left; width: 60%">
 								<p>
-									$$\scriptsize\begin{bmatrix} C11 & C12 & C13
-									& 0 & 0 & 0 \\ C21 & C22 & C23 & 0 & 0 & 0
-									\\ C31 & C32 & C33 & 0 & 0 & 0 \\ 0 & 0 & 0
-									& C44 & 0 & 0 \\ 0 & 0 & 0 & 0 & C55 & 0 \\
-									0 & 0 & 0 & 0 & 0 & C66 \end{bmatrix}$$
+									$$\scriptsize C=\begin{bmatrix} 223.1 & 63.9
+									& 63.9 & 0 & 0 & 0 \\ 63.9 & 223.1 & 63.9 &
+									0 & 0 & 0 \\ 63.9 & 63.9 & 223.1 & 0 & 0 & 0
+									\\ 0 & 0 & 0 & 79.6 & 0 & 0 \\ 0 & 0 & 0 & 0
+									& 79.6 & 0 \\ 0 & 0 & 0 & 0 & 0 & 79.6
+									\end{bmatrix}\ MPa$$
 								</p>
 							</div>
 
 							<div class="three-column" style="height: 150px">
 								<h4>Germanio</h4>
-								<p>\(\rho=9.2\)</p>
+								<p>\(\rho=5.323\ g/cm^3\)</p>
 							</div>
-							<div class="three-column" style="height: 150px">
-								<h4>Germanio3D</h4>
-							</div>
-							<div class="three-column" style="height: 150px">
+							<div style="height: 150px; float: left; width: 60%">
 								<p>
-									$$\scriptsize\begin{bmatrix} C11 & C12 & C13
-									& 0 & 0 & 0 \\ C21 & C22 & C23 & 0 & 0 & 0
-									\\ C31 & C32 & C33 & 0 & 0 & 0 \\ 0 & 0 & 0
-									& C44 & 0 & 0 \\ 0 & 0 & 0 & 0 & C55 & 0 \\
-									0 & 0 & 0 & 0 & 0 & C66 \end{bmatrix}$$
+									$$\scriptsize C=\begin{bmatrix} 182.5 & 48.3
+									& 48.3 & 0 & 0 & 0 \\ 48.3 & 182.5 & 48.3 &
+									0 & 0 & 0 \\ 48.3 & 48.3 & 182.5 & 0 & 0 & 0
+									\\ 0 & 0 & 0 & 67.1 & 0 & 0 \\ 0 & 0 & 0 & 0
+									& 67.1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 67.1
+									\end{bmatrix}\ MPa$$
 								</p>
 							</div>
 						</div>
@@ -2426,7 +2616,8 @@
 							<strong>Metodología final</strong><br /><br />
 							Mencinar los 3 mateirales que se usarán para las
 							simulaciones. Mencionar que para replicabilidad se
-							proporciona el tensor de rigidez
+							proporciona el tensor de rigidez<br /><br />Quisiera
+							poner aqui modelos 3D del cristal para cada material
 						</aside>
 					</section>
 
@@ -2535,7 +2726,10 @@
 						</div>
 						<div class="slide">
 							<h3>Procedimiento</h3>
-							<p>Diagrama de flujo final</p>
+							<figure class="figure">
+								<img src="./resources/dfmetodos.svg" height="430px">
+								<figcaption>Diagrama de flujo completo</figcaption>
+							</figure>
 						</div>
 						<aside class="notes">
 							<strong>Metodología final</strong><br /><br />
@@ -2703,7 +2897,7 @@
 						</div>
 						<div class="slide">
 							<h3>
-								Parametros usados en las simulaciones de cubos
+								Parámetros usados en las simulaciones de cubos
 							</h3>
 							<ul>
 								<li class="med-text">Tamaño \(R\)</li>

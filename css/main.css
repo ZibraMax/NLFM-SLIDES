@@ -90,11 +90,30 @@ figcaption {
 	font-size: var(--small-size-text);
 }
 
+.figure {
+	margin: 0;
+}
+
+.figure img {
+	margin: 0 auto;
+}
+
+.figure figcaption {
+	counter-increment: figures;
+	text-align: center;
+	font-weight: normal !important;
+	font-size: var(--small-size-text);
+}
+
+.figure figcaption:before {
+	content: "Figura " counter(figures) ". ";
+}
 .med-text {
 	font-size: var(--medium-size-text);
 }
-
-html,
+html {
+	counter-reset: figures;
+}
 body {
 	height: 100%;
 	margin: 0;
