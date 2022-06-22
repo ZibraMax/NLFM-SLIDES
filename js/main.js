@@ -12,6 +12,8 @@ const config = {
 	},
 	// showNotes: true,
 	slideNumber: "c/t",
+	transition: "fade",
+	viewDistance: 50,
 	plugins: [RevealMath.KaTeX, RevealNotes, RevealZoom],
 };
 Reveal.initialize(config);
