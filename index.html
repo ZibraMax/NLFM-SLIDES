@@ -1,1928 +1,2885 @@
 <!-- <iframe data-preload loading="lazy" class="iframe-3d " src="https://zibramax.github.io/masters-slides/docs/viewer/" scrolling="no" frameborder="0" ></iframe> para meter 3d por el momento-->
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Tesis 1 - Arturo Rodriguez</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			media="screen"
+			href="css/main.css"
+		/>
+		<script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+		<link rel="stylesheet" href="css/reveal.css" />
+		<link rel="stylesheet" href="css/theme/white.css" />
+	</head>
 
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Tesis 1 - Arturo Rodriguez</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-	<script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
-	<link rel="stylesheet" href="css/reveal.css" />
-	<link rel="stylesheet" href="css/theme/white.css" />
-</head>
-
-<body>
-	<div class="reveal">
-		<div class="slides">
-			<section>
-				<div class="content-indicator">
-					<div class="content-indicator-item">
-						<a class="hidden-link" href="#/introduccion-title">Introducción
-						</a>
-					</div>
-					<div class="content-indicator-item">
-						<a class="hidden-link" href="#/metodos-title">Métodos
-						</a>
-					</div>
-					<div class="content-indicator-item">
-						<a class="hidden-link" href="#/resultados-title">Resultados
-						</a>
-					</div>
-				</div>
-				<div class="slide">
-					<h2 style="text-transform: none;">
-						Hola Fernando, esta diapositiva solo aparecerá el día de hoy.<br>
-						USAR LA TECLA ESPACIO PARA PASAR DIAPOSITIVAS!<br>Oprimir la tecla S para ver las notas de
-						las diapositivas!
-					</h2>
-				</div>
-				<aside class="notes">Aquí apareceran las notas de las diapositivas y el tiempo.</aside>
-			</section>
-			<section>
-				<div class="content-indicator">
-					<div class="content-indicator-item">
-						<a class="hidden-link" href="#/introduccion-title">Introducción
-						</a>
-					</div>
-					<div class="content-indicator-item">
-						<a class="hidden-link" href="#/metodos-title">Métodos
-						</a>
-					</div>
-					<div class="content-indicator-item">
-						<a class="hidden-link" href="#/resultados-title">Resultados
-						</a>
-					</div>
-				</div>
-				<div class="slide">
-					<h2>
-						Relevancia de la teoría de elasticidad no local
-						integral en el comportamiento de nanoestructuras
-						usando elementos finitos
-					</h2>
-					<p class="text-left two-column">
-						Arturo Rodriguez<br /><a href="mailto:da.rodriguezh@uniandes.edu.co"
-							style="font-size: 0.5em; color: #5c5c5c">da.rodriguezh@uniandes.edu.co</a>
-					</p>
-					<p class="text-left two-column">
-						Fernando Ramirez<br /><a href="mailto:f.ramirez@uniandes.edu.co"
-							style="font-size: 0.5em; color: #5c5c5c">f.ramirez@uniandes.edu.co</a>
-					</p>
-				</div>
-				<aside class="notes">Controles:<br>Abrir notas al lado: S<br>Poner pantalla en negro: B<br>Pantalla
-					completa: F11<br><br>Presentación: Decir nombre de los dos, presentar el título de la presentación y
-					seguir a la siguiente diapositiva</aside>
-			</section>
-			<section>
-				<section id="introduccion-title">
-					<div class="content-indicator">
-						<div class="content-indicator-item selected-ci">
-							<a class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h1 class="vertical-aligned-title">Introducción</h1>
-					</div>
-					<aside class="notes">Pasar diapositiva rápido</aside>
-
-				</section>
-
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>
-							<span data-id="box" class="text-focus">Teoría no local</span><span data-id="box2">
-								integral</span>
-						</h3>
-
-						<div class="two-column">
-							<h5>Teoría Local</h5>
-							<p class="med-text">
-								Teoría clasica del medio continuo. Fuerzas
-								mecánicas
-							</p>
-							<img width="50%" src="https://imgs.xkcd.com/comics/file_extensions.png" />
-							<p>
-								\[\scriptsize{\sigma_{ij}=C_{ijkl}\varepsilon_{kls}}\]
-							</p>
-						</div>
-						<div class="two-column">
-							<h5>Teoría no Local</h5>
-							<p class="med-text">
-								Tener en cuenta las fuerzas de cohesion de
-								corto alcance entre particulas
-							</p>
-							<img width="50%" src="https://imgs.xkcd.com/comics/file_extensions.png" />
-							<p>
-								\[\scriptsize{\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
-							</p>
-						</div>
-					</div>
-					<aside class="notes"><strong>Que es la teoría no local</strong><br><br>
-						El comportamiento mecánico de materiales en dimensiones muy pequeñas es diferente de su
-						comportamiento a macro escala. Por lo tanto, las teorías clásicas de elasticidad no pueden
-						predecir el comportamiento de los materiales a escala nanometrica. En consecuencia, se han
-						desarrollado varias teorías para predecir el comportamiento mecánico de materiales a nano
-						escala.
-						<br><br>
-						Una de estas teorías es la teoría no local de elasticidad, desarrollada principalmente por
-						Eringen en 1972. Esta teoría logra incluir los efectos de fuerzas cohesivas de largo alcance en
-						la modelación del medio continuo.
-						<br><br>
-						<strong>Descripción de imagenes</strong>
-						<br>
-						Foto 1: Muestra el comportamiento de algo pequeño por el modelo elastico<br>
-						Foto 2: Muestra el comportamiento de algo pequeño por el modelo no local
-						<br><br>
-						<strong>Frase obligatoria</strong>
-						<br><br>
-						No local es modificación a ley constitutiva.
-
-					</aside>
-
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>
-							<span data-id="box">Teoría no local</span><span data-id="box2" class="text-focus">
-								integral</span>
-						</h3>
-						<ul>
-							<li class="med-text">Teoría integral</li>
-							<span>\[\scriptsize{\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]</span>
-							<li class="med-text">Teoría diferencial</li>
-							<span>\[\scriptsize{(1-e_0a\nabla^2)\sigma_{ij}=C_{ijkl}\varepsilon_{kl}}\]</span>
-							<li class="med-text">
-								Modelo integral de dos fases
-							</li>
-							<span>\[\scriptsize{\sigma_{ij}=\zeta_1
-								C_{ijkl}\varepsilon_{kl} +
-								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]</span>
-						</ul>
-					</div>
-					<aside class="notes"><strong>Modelos constitutivos no locales</strong><br><br>
-						A lo largo de los años, la teoría no local de Eringen ha evolucionado, del modelo original de
-						elasticidad no local se derivan el modelo integral (EQ 1) y la teoría diferencial (EQ 2).
-						<br>
-						<br>
-						La teoría integral es básicamente la teoría original sin alteriaciones, la teoría diferencial es
-						un caso específico de la ecuación constitutiva orignal que permite una manipulación matemática
-						mas sencilla.
-						<br>
-						<br>
-						Esto ha llevado a que la mayoría de los estudios y comprobaciones de esta teoría se realizen
-						usando el modelo diferencial.
-						<br>
-						<br>
-						Recientemente, se propuso un modelo integral de dos fases, donde el material se modela como un
-						material compuesto que tiene una parte local y una parte no local. Dicho modelo tiene ventajas
-						en su implementación computacional
-						<br>
-						<br>
-						<strong>Frases obligatoria</strong>
-						<br>Las 3 ecuaciones son modelos distintos que provienen de una teoría mas grande<br>
-						<br>Los modelos hijos de no local nunca dan lo mismo. Son teorías distintas<br>
-
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Relevancia de teoría no local</h3>
-						<ul>
-							<li>
-								<p data-id="animate">Pandeo de nanotubos</p>
-							</li>
-							<li>
-								<p data-id="animate2">
-									Pandeo de placas de grafeno
-								</p>
-							</li>
-							<li>
-								<p data-id="animate3">
-									Soluciones para vigas
-								</p>
-							</li>
-							<li>
-								<p data-id="animate4">
-									Frecuencias de vigas
-								</p>
-							</li>
-							<li>
-								<p data-id="animate5">
-									Frecuencias de placa
-								</p>
-							</li>
-							<li>
-								<p data-id="animate6">
-									Electromagnetismo no local
-								</p>
-							</li>
-						</ul>
-					</div>
-					<aside class="notes"><strong>Aplicaciones</strong><br><br>
-						La teoría no local de elasticidad ha sido aplicada a distintas aplicaciones de ingeniería como:
-						<br><br>
-						<strong>Frases obligatorias</strong>
-						<br>
-						Decir cada uno de los items en la lista
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Relevancia de teoría no local</h3>
-						<table style="height: 50vh">
-							<tr>
-								<td style="font-size: xx-large">
-									<p data-id="animate" style="color: var(--shades-w-2)">
-										Pandeo de nanotubos
-									</p>
-								</td>
-								<td style="font-size: xx-large">
-									<p data-id="animate2" style="color: var(--shades-w-2)">
-										Pandeo de placas de grafeno
-									</p>
-								</td>
-								<td style="font-size: xx-large">
-									<p data-id="animate3" style="color: var(--shades-w-2)">
-										Soluciones para vigas
-									</p>
-								</td>
-							</tr>
-							<tr>
-								<td style="font-size: xx-large">
-									<p data-id="animate4" style="color: var(--shades-w-2)">
-										Frecuencias de vigas
-									</p>
-								</td>
-								<td style="font-size: xx-large">
-									<p data-id="animate5" style="color: var(--shades-w-2)">
-										Frecuencias de placa
-									</p>
-								</td>
-								<td style="font-size: xx-large">
-									<p data-id="animate6" style="color: var(--shades-w-2)">
-										Electromagnetismo no local
-									</p>
-								</td>
-							</tr>
-						</table>
-					</div>
-					<aside class="notes"><strong>Aplicaciones</strong><br><br>
-						Pasar diapositiva rápido
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Relevancia de teoría no local</h3>
-						<img width="250px" src="https://imgs.xkcd.com/comics/file_extensions.png" />
-						<img width="250px" src="https://imgs.xkcd.com/comics/file_extensions.png" />
-						<img width="250px" src="https://imgs.xkcd.com/comics/file_extensions.png" />
-						<img width="250px" src="https://imgs.xkcd.com/comics/file_extensions.png" />
-						<img width="250px" src="https://imgs.xkcd.com/comics/file_extensions.png" />
-						<img width="250px" src="https://imgs.xkcd.com/comics/file_extensions.png" />
-					</div>
-					<aside class="notes"><strong>Aplicaciones</strong><br><br>
-						En la figura 1 podemos apreciar un análisis de pandeo en nanotubos de carbono teniendo en cuenta
-						no local, realizado por AUTOR en AÑO. Se encontró que teniendo en cuenta la no localuidad
-						disminuía la carga crítica de pandeo de los nanotubos.
-						<br>
-						<br>
-						En la figura 2 podemos apreciar un análisis similar con placas de grafeno. Desarrollado por
-						AUTOR en AÑO demostro cambios en los modos de pandeo para placas.
-						<br>
-						<br>
-						Figura 3: Se han desarollado varias soluciones analíticas para vigas, obteniendo deflexiones
-						mayores bajo todas las condiciones de borde a excepcion de una viga simplemente apyada, donde se
-						encontraron deflexiones mayores. Entre los autores podemos encontrar a AUTORES.
-						<br>
-						<br>
-						Las figuras 4 y 5 muestran el comportamiento de frecuencias naturales para vigas (nanotubos) y
-						placas (grafeno). Varios estudios se han realizado sobre este tema, siempre limitando el
-						análisis a una y dos dimensiones.
-						<br>
-						<br>
-						La figura 6 es un ejemplo de aplicación con electromagnetismo, donde se encontró que el
-						potencial magnético cambia con respecto a la no localidad
-						<br>
-						<br>
-
-						<strong>Frases obligatorias</strong>
-						<br>
-						La no localidad DISMINUYE la rigidez.
-						<br>
-						Los estudios de frecuencias solo se han realizado en 2D y 3D.
-						<br>
-						La mayoría de estos estudios son analíticos.
-					</aside>
-				</section>
+	<body>
+		<div class="reveal">
+			<div class="slides">
 				<section>
 					<div class="content-indicator">
-						<div class="content-indicator-item selected-ci">
-							<a class="hidden-link" href="#/introduccion-title">Introducción
+						<div class="content-indicator-item">
+							<a class="hidden-link" href="#/introduccion-title"
+								>Introducción
 							</a>
 						</div>
 						<div class="content-indicator-item">
-							<a class="hidden-link" href="#/metodos-title">Métodos
+							<a class="hidden-link" href="#/metodos-title"
+								>Métodos
 							</a>
 						</div>
 						<div class="content-indicator-item">
-							<a class="hidden-link" href="#/resultados-title">Resultados
+							<a class="hidden-link" href="#/resultados-title"
+								>Resultados
 							</a>
 						</div>
 					</div>
 					<div class="slide">
 						<h2 style="text-transform: none">
-							La teoría no local permite modelar con medio
-							continuo a escala nanométrica, simulaciones que
-							anteriormente solo se podían hacer con dinámica
-							molecular
+							Hola Fernando, esta diapositiva solo aparecerá el
+							día de hoy.<br />
+							USAR LA TECLA ESPACIO PARA PASAR DIAPOSITIVAS!<br />Oprimir
+							la tecla S para ver las notas de las diapositivas!
 						</h2>
-					</div>
-					<aside class="notes"><strong>Conclusiones de la introducción</strong><br><br>
-						Conclusión 1 de la introducción. Posiblemente se quite esta diapositiva
-					</aside>
-				</section>
-				<section>
-					<div class="content-indicator">
-						<div class="content-indicator-item selected-ci">
-							<a class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h2 style="text-transform: none">
-							Calibrar el modelo no local permite modelar
-							nanoestructuras, ya que a dicha escala la teoría
-							local no coincide con los resultados
-							experimentales
-						</h2>
-					</div>
-					<aside class="notes"><strong>Conclusiones de la introducción</strong><br><br>
-						Conclusión 2 de la introducción. Posiblemente se quite esta diapositiva
-					</aside>
-				</section>
-				<section>
-					<div class="content-indicator">
-						<div class="content-indicator-item selected-ci">
-							<a class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h2 style="text-transform: none">
-							Los efectos de la no localidad dependen del
-							tamaño, mientras mayor sea el tamaño del dominio
-							a modelar, menor es la relevancia de la no
-							localidad y mayor el costo computacional
-						</h2>
-					</div>
-					<aside class="notes"><strong>Conclusiones de la introducción</strong><br><br>
-						Conclusión 3 de la introducción. Esta diapositiva hay que ejemplificarla con una imagen. Es
-						importante porque es la que genera la pregunta de la presentación
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item selected-ci">
-							<a data-id="animate1" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="animate2" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h1 style="text-transform: none">
-							¿Que tamaño es suficiente para no tener en
-							cuenta los efectos no locales?
-						</h1>
-					</div>
-					<aside class="notes"><strong>Conclusiones de la introducción</strong><br><br>
-						Pregunta de investigación.
-					</aside>
-				</section>
-			</section>
-			<section>
-				<section data-auto-animate id="metodos-title">
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="animate1" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="animate2" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h1>
-							<span class="vertical-aligned-title">Métodología</span>
-						</h1>
 					</div>
 					<aside class="notes">
-						Pasar rápido
+						Aquí apareceran las notas de las diapositivas y el
+						tiempo.
 					</aside>
 				</section>
-				<section data-auto-animate data-auto-animate-restart>
+				<section>
 					<div class="content-indicator">
 						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
+							<a class="hidden-link" href="#/introduccion-title"
+								>Introducción
 							</a>
 						</div>
 						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
+							<a class="hidden-link" href="#/metodos-title"
+								>Métodos
+							</a>
+						</div>
+						<div class="content-indicator-item">
+							<a class="hidden-link" href="#/resultados-title"
+								>Resultados
 							</a>
 						</div>
 					</div>
 					<div class="slide">
-						<h3>Parámetros del modelo no local</h3>
-						<div data-id="a" class="vertical-aligned-eq">
-							\[\scriptsize{\sigma_{ij}=\zeta_1
-							C_{ijkl}\varepsilon_{kl} +
-							\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
-						</div>
+						<h2>
+							Relevancia de la teoría de elasticidad no local
+							integral en el comportamiento de nanoestructuras
+							usando elementos finitos
+						</h2>
+						<p class="text-left two-column">
+							Arturo Rodriguez<br /><a
+								href="mailto:da.rodriguezh@uniandes.edu.co"
+								style="font-size: 0.5em; color: #5c5c5c"
+								>da.rodriguezh@uniandes.edu.co</a
+							>
+						</p>
+						<p class="text-left two-column">
+							Fernando Ramirez<br /><a
+								href="mailto:f.ramirez@uniandes.edu.co"
+								style="font-size: 0.5em; color: #5c5c5c"
+								>f.ramirez@uniandes.edu.co</a
+							>
+						</p>
 					</div>
-					<aside class="notes"><strong>Modelo no local</strong><br><br>
-						Decir: Esta es la ecuación constitutiva del modelo no local integral. Este es el modelo que
-						usaremos para este trabajo. Pasar diapositiva
+					<aside class="notes">
+						Controles:<br />Abrir notas al lado: S<br />Poner
+						pantalla en negro: B<br />Pantalla completa: F11<br /><br />Presentación:
+						Decir nombre de los dos, presentar el título de la
+						presentación y seguir a la siguiente diapositiva
 					</aside>
 				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
+				<section>
+					<section id="introduccion-title">
+						<div class="content-indicator">
+							<div class="content-indicator-item selected-ci">
+								<a
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a class="hidden-link" href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a class="hidden-link" href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
 						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
+						<div class="slide">
+							<h1 class="vertical-aligned-title">Introducción</h1>
 						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Parámetros del modelo no local</h3>
-						<div data-id="a" class="vertical-aligned-eq">
-							\[\scriptsize{\sigma_{ij}={\color{lightgray}
-							\zeta_1} C_{ijkl}\varepsilon_{kl}+
-							{\color{lightgray}
-							\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
-						</div>
-					</div>
-					<aside class="notes"><strong>Modelo no local</strong><br><br>
-						Decir: El modelo tiene un aporte local. Es la teoría de elasticidad de siempre sin ninguna
-						modificación. Pasar diapositiva
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Parámetros del modelo no local</h3>
-						<div data-id="a" class="vertical-aligned-eq">
-							\[{\color{lightgray}\scriptsize{\sigma_{ij}=
-							\zeta_1 C_{ijkl}\varepsilon_{kl}+
-							\zeta_2{\color{black}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}}\]
-						</div>
-					</div>
-					<aside class="notes"><strong>Modelo no local</strong><br><br>
-						Decir: El otro aporte del modelo es la parte no local. En esta ecuación constitutiva aparece una
-						integral sobre el volumen. Esto quiere decir que el estado de esfuerzos de un punto depende de
-						las deformaciones del punto y las deformaciones de todos los otros puntos aledaños del volumen.
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Parámetros del modelo no local</h3>
-						<h6>Factor no local</h6>
+						<aside class="notes">Pasar diapositiva rápido</aside>
+					</section>
 
-						<div data-id="a" class="vertical-aligned-eq" style="top: 13%">
-							\[{\color{lightgray}\scriptsize{\sigma_{ij}=
-							{\color{black}\zeta_1} C_{ijkl}\varepsilon_{kl}+
-							{\color{black}\zeta_2}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
 						</div>
-						<br />
-						<div class="two-column">
-							<p class="fragment">
-								Representa que tanta no localidad se tiene
-								en cuenta
-							</p>
+						<div class="slide">
+							<h3>
+								<span data-id="box" class="text-focus"
+									>Teoría no local</span
+								><span data-id="box2"> integral</span>
+							</h3>
+
+							<div class="two-column">
+								<h5>Teoría Local</h5>
+								<p class="med-text">
+									Teoría clasica del medio continuo. Fuerzas
+									mecánicas
+								</p>
+								<img
+									width="50%"
+									src="https://imgs.xkcd.com/comics/file_extensions.png"
+								/>
+								<p>
+									\[\scriptsize{\sigma_{ij}=C_{ijkl}\varepsilon_{kls}}\]
+								</p>
+							</div>
+							<div class="two-column">
+								<h5>Teoría no Local</h5>
+								<p class="med-text">
+									Tener en cuenta las fuerzas de cohesion de
+									corto alcance entre particulas
+								</p>
+								<img
+									width="50%"
+									src="https://imgs.xkcd.com/comics/file_extensions.png"
+								/>
+								<p>
+									\[\scriptsize{\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
+								</p>
+							</div>
 						</div>
-						<div class="two-column">
+						<aside class="notes">
+							<strong>Que es la teoría no local</strong
+							><br /><br />
+							El comportamiento mecánico de materiales en
+							dimensiones muy pequeñas es diferente de su
+							comportamiento a macro escala. Por lo tanto, las
+							teorías clásicas de elasticidad no pueden predecir
+							el comportamiento de los materiales a escala
+							nanometrica. En consecuencia, se han desarrollado
+							varias teorías para predecir el comportamiento
+							mecánico de materiales a nano escala.
+							<br /><br />
+							Una de estas teorías es la teoría no local de
+							elasticidad, desarrollada principalmente por Eringen
+							en 1972. Esta teoría logra incluir los efectos de
+							fuerzas cohesivas de largo alcance en la modelación
+							del medio continuo.
+							<br /><br />
+							<strong>Descripción de imagenes</strong>
+							<br />
+							Foto 1: Muestra el comportamiento de algo pequeño
+							por el modelo elastico<br />
+							Foto 2: Muestra el comportamiento de algo pequeño
+							por el modelo no local
+							<br /><br />
+							<strong>Frase obligatoria</strong>
+							<br /><br />
+							No local es modificación a ley constitutiva.
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>
+								<span data-id="box">Teoría no local</span
+								><span data-id="box2" class="text-focus">
+									integral</span
+								>
+							</h3>
+							<ul>
+								<li class="med-text">Teoría integral</li>
+								<span
+									>\[\scriptsize{\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]</span
+								>
+								<li class="med-text">Teoría diferencial</li>
+								<span
+									>\[\scriptsize{(1-e_0a\nabla^2)\sigma_{ij}=C_{ijkl}\varepsilon_{kl}}\]</span
+								>
+								<li class="med-text">
+									Modelo integral de dos fases
+								</li>
+								<span
+									>\[\scriptsize{\sigma_{ij}=\zeta_1
+									C_{ijkl}\varepsilon_{kl} +
+									\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]</span
+								>
+							</ul>
+						</div>
+						<aside class="notes">
+							<strong>Modelos constitutivos no locales</strong
+							><br /><br />
+							A lo largo de los años, la teoría no local de
+							Eringen ha evolucionado, del modelo original de
+							elasticidad no local se derivan el modelo integral
+							(EQ 1) y la teoría diferencial (EQ 2).
+							<br />
+							<br />
+							La teoría integral es básicamente la teoría original
+							sin alteriaciones, la teoría diferencial es un caso
+							específico de la ecuación constitutiva orignal que
+							permite una manipulación matemática mas sencilla.
+							<br />
+							<br />
+							Esto ha llevado a que la mayoría de los estudios y
+							comprobaciones de esta teoría se realizen usando el
+							modelo diferencial.
+							<br />
+							<br />
+							Recientemente, se propuso un modelo integral de dos
+							fases, donde el material se modela como un material
+							compuesto que tiene una parte local y una parte no
+							local. Dicho modelo tiene ventajas en su
+							implementación computacional
+							<br />
+							<br />
+							<strong>Frases obligatoria</strong>
+							<br />Las 3 ecuaciones son modelos distintos que
+							provienen de una teoría mas grande<br />
+							<br />Los modelos hijos de no local nunca dan lo
+							mismo. Son teorías distintas<br />
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Relevancia de teoría no local</h3>
+							<ul>
+								<li>
+									<p data-id="animate">Pandeo de nanotubos</p>
+								</li>
+								<li>
+									<p data-id="animate2">
+										Pandeo de placas de grafeno
+									</p>
+								</li>
+								<li>
+									<p data-id="animate3">
+										Soluciones para vigas
+									</p>
+								</li>
+								<li>
+									<p data-id="animate4">
+										Frecuencias de vigas
+									</p>
+								</li>
+								<li>
+									<p data-id="animate5">
+										Frecuencias de placa
+									</p>
+								</li>
+								<li>
+									<p data-id="animate6">
+										Electromagnetismo no local
+									</p>
+								</li>
+							</ul>
+						</div>
+						<aside class="notes">
+							<strong>Aplicaciones</strong><br /><br />
+							La teoría no local de elasticidad ha sido aplicada a
+							distintas aplicaciones de ingeniería como:
+							<br /><br />
+							<strong>Frases obligatorias</strong>
+							<br />
+							Decir cada uno de los items en la lista
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Relevancia de teoría no local</h3>
+							<table style="height: 50vh">
+								<tr>
+									<td style="font-size: xx-large">
+										<p
+											data-id="animate"
+											style="color: var(--shades-w-2)"
+										>
+											Pandeo de nanotubos
+										</p>
+									</td>
+									<td style="font-size: xx-large">
+										<p
+											data-id="animate2"
+											style="color: var(--shades-w-2)"
+										>
+											Pandeo de placas de grafeno
+										</p>
+									</td>
+									<td style="font-size: xx-large">
+										<p
+											data-id="animate3"
+											style="color: var(--shades-w-2)"
+										>
+											Soluciones para vigas
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td style="font-size: xx-large">
+										<p
+											data-id="animate4"
+											style="color: var(--shades-w-2)"
+										>
+											Frecuencias de vigas
+										</p>
+									</td>
+									<td style="font-size: xx-large">
+										<p
+											data-id="animate5"
+											style="color: var(--shades-w-2)"
+										>
+											Frecuencias de placa
+										</p>
+									</td>
+									<td style="font-size: xx-large">
+										<p
+											data-id="animate6"
+											style="color: var(--shades-w-2)"
+										>
+											Electromagnetismo no local
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<aside class="notes">
+							<strong>Aplicaciones</strong><br /><br />
+							Pasar diapositiva rápido
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Relevancia de teoría no local</h3>
+							<img
+								width="250px"
+								src="https://imgs.xkcd.com/comics/file_extensions.png"
+							/>
+							<img
+								width="250px"
+								src="https://imgs.xkcd.com/comics/file_extensions.png"
+							/>
+							<img
+								width="250px"
+								src="https://imgs.xkcd.com/comics/file_extensions.png"
+							/>
+							<img
+								width="250px"
+								src="https://imgs.xkcd.com/comics/file_extensions.png"
+							/>
+							<img
+								width="250px"
+								src="https://imgs.xkcd.com/comics/file_extensions.png"
+							/>
+							<img
+								width="250px"
+								src="https://imgs.xkcd.com/comics/file_extensions.png"
+							/>
+						</div>
+						<aside class="notes">
+							<strong>Aplicaciones</strong><br /><br />
+							En la figura 1 podemos apreciar un análisis de
+							pandeo en nanotubos de carbono teniendo en cuenta no
+							local, realizado por AUTOR en AÑO. Se encontró que
+							teniendo en cuenta la no localuidad disminuía la
+							carga crítica de pandeo de los nanotubos.
+							<br />
+							<br />
+							En la figura 2 podemos apreciar un análisis similar
+							con placas de grafeno. Desarrollado por AUTOR en AÑO
+							demostro cambios en los modos de pandeo para placas.
+							<br />
+							<br />
+							Figura 3: Se han desarollado varias soluciones
+							analíticas para vigas, obteniendo deflexiones
+							mayores bajo todas las condiciones de borde a
+							excepcion de una viga simplemente apyada, donde se
+							encontraron deflexiones mayores. Entre los autores
+							podemos encontrar a AUTORES.
+							<br />
+							<br />
+							Las figuras 4 y 5 muestran el comportamiento de
+							frecuencias naturales para vigas (nanotubos) y
+							placas (grafeno). Varios estudios se han realizado
+							sobre este tema, siempre limitando el análisis a una
+							y dos dimensiones.
+							<br />
+							<br />
+							La figura 6 es un ejemplo de aplicación con
+							electromagnetismo, donde se encontró que el
+							potencial magnético cambia con respecto a la no
+							localidad
+							<br />
+							<br />
+
+							<strong>Frases obligatorias</strong>
+							<br />
+							La no localidad DISMINUYE la rigidez.
+							<br />
+							Los estudios de frecuencias solo se han realizado en
+							2D y 3D.
+							<br />
+							La mayoría de estos estudios son analíticos.
+						</aside>
+					</section>
+					<section>
+						<div class="content-indicator">
+							<div class="content-indicator-item selected-ci">
+								<a
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a class="hidden-link" href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a class="hidden-link" href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h2 style="text-transform: none">
+								La teoría no local permite modelar con medio
+								continuo a escala nanométrica, simulaciones que
+								anteriormente solo se podían hacer con dinámica
+								molecular
+							</h2>
+						</div>
+						<aside class="notes">
+							<strong>Conclusiones de la introducción</strong
+							><br /><br />
+							Conclusión 1 de la introducción. Posiblemente se
+							quite esta diapositiva
+						</aside>
+					</section>
+					<section>
+						<div class="content-indicator">
+							<div class="content-indicator-item selected-ci">
+								<a
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a class="hidden-link" href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a class="hidden-link" href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h2 style="text-transform: none">
+								Calibrar el modelo no local permite modelar
+								nanoestructuras, ya que a dicha escala la teoría
+								local no coincide con los resultados
+								experimentales
+							</h2>
+						</div>
+						<aside class="notes">
+							<strong>Conclusiones de la introducción</strong
+							><br /><br />
+							Conclusión 2 de la introducción. Posiblemente se
+							quite esta diapositiva
+						</aside>
+					</section>
+					<section>
+						<div class="content-indicator">
+							<div class="content-indicator-item selected-ci">
+								<a
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a class="hidden-link" href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a class="hidden-link" href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h2 style="text-transform: none">
+								Los efectos de la no localidad dependen del
+								tamaño, mientras mayor sea el tamaño del dominio
+								a modelar, menor es la relevancia de la no
+								localidad y mayor el costo computacional
+							</h2>
+						</div>
+						<aside class="notes">
+							<strong>Conclusiones de la introducción</strong
+							><br /><br />
+							Conclusión 3 de la introducción. Esta diapositiva
+							hay que ejemplificarla con una imagen. Es importante
+							porque es la que genera la pregunta de la
+							presentación
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="animate1"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="animate2"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h1 style="text-transform: none">
+								¿Que tamaño es suficiente para no tener en
+								cuenta los efectos no locales?
+							</h1>
+						</div>
+						<aside class="notes">
+							<strong>Conclusiones de la introducción</strong
+							><br /><br />
+							Pregunta de investigación.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section data-auto-animate id="metodos-title">
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="animate1"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="animate2"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h1>
+								<span class="vertical-aligned-title"
+									>Métodología</span
+								>
+							</h1>
+						</div>
+						<aside class="notes">Pasar rápido</aside>
+					</section>
+					<section data-auto-animate data-auto-animate-restart>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Parámetros del modelo no local</h3>
+							<div data-id="a" class="vertical-aligned-eq">
+								\[\scriptsize{\sigma_{ij}=\zeta_1
+								C_{ijkl}\varepsilon_{kl} +
+								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
+							</div>
+						</div>
+						<aside class="notes">
+							<strong>Modelo no local</strong><br /><br />
+							Decir: Esta es la ecuación constitutiva del modelo
+							no local integral. Este es el modelo que usaremos
+							para este trabajo. Pasar diapositiva
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Parámetros del modelo no local</h3>
+							<div data-id="a" class="vertical-aligned-eq">
+								\[\scriptsize{\sigma_{ij}={\color{lightgray}
+								\zeta_1} C_{ijkl}\varepsilon_{kl}+
+								{\color{lightgray}
+								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
+							</div>
+						</div>
+						<aside class="notes">
+							<strong>Modelo no local</strong><br /><br />
+							Decir: El modelo tiene un aporte local. Es la teoría
+							de elasticidad de siempre sin ninguna modificación.
+							Pasar diapositiva
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Parámetros del modelo no local</h3>
+							<div data-id="a" class="vertical-aligned-eq">
+								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
+								\zeta_1 C_{ijkl}\varepsilon_{kl}+
+								\zeta_2{\color{black}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}}\]
+							</div>
+						</div>
+						<aside class="notes">
+							<strong>Modelo no local</strong><br /><br />
+							Decir: El otro aporte del modelo es la parte no
+							local. En esta ecuación constitutiva aparece una
+							integral sobre el volumen. Esto quiere decir que el
+							estado de esfuerzos de un punto depende de las
+							deformaciones del punto y las deformaciones de todos
+							los otros puntos aledaños del volumen.
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Parámetros del modelo no local</h3>
+							<h6>Factor no local</h6>
+
+							<div
+								data-id="a"
+								class="vertical-aligned-eq"
+								style="top: 13%"
+							>
+								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
+								{\color{black}\zeta_1} C_{ijkl}\varepsilon_{kl}+
+								{\color{black}\zeta_2}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
+							</div>
+							<br />
+							<div class="two-column">
+								<p class="fragment">
+									Representa que tanta no localidad se tiene
+									en cuenta
+								</p>
+							</div>
+							<div class="two-column">
+								<div class="fragment">
+									\[\scriptsize{\zeta_1+\zeta_2=1}\]
+								</div>
+							</div>
 							<div class="fragment">
-								\[\scriptsize{\zeta_1+\zeta_2=1}\]
+								<div class="three-column">
+									<iframe
+										data-preload
+										loading="lazy"
+										class="iframe-3d"
+										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>
+										\(\zeta_1=1,\eta=1.78\)
+									</figcaption>
+								</div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										loading="lazy"
+										class="iframe-3d"
+										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_500_L_6_362_nx_8_o0_6.json"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>
+										\(\zeta_1=0.5,\eta=1.73\)
+									</figcaption>
+								</div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										loading="lazy"
+										class="iframe-3d"
+										src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=5&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_000_L_6_362_nx_8_o0_6.json"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>
+										\(\zeta_1=0,\eta=0.28\)
+									</figcaption>
+								</div>
 							</div>
 						</div>
-						<div class="fragment">
-							<div class="three-column">
-								<iframe data-preload loading="lazy" class="iframe-3d"
-									src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
-									scrolling="no" frameborder="0" height="220px"></iframe>
-								<figcaption>
-									\(\zeta_1=1,\eta=1.78\)
-								</figcaption>
-							</div>
-							<div class="three-column">
-								<iframe data-preload loading="lazy" class="iframe-3d"
-									src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_500_L_6_362_nx_8_o0_6.json"
-									scrolling="no" frameborder="0" height="220px"></iframe>
-								<figcaption>
-									\(\zeta_1=0.5,\eta=1.73\)
-								</figcaption>
-							</div>
-							<div class="three-column">
-								<iframe data-preload loading="lazy" class="iframe-3d"
-									src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=5&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_000_L_6_362_nx_8_o0_6.json"
-									scrolling="no" frameborder="0" height="220px"></iframe>
-								<figcaption>
-									\(\zeta_1=0,\eta=0.28\)
-								</figcaption>
-							</div>
-						</div>
-					</div>
-					<aside class="notes"><strong>Modelo no local</strong><br><br>
+						<aside class="notes">
+							<strong>Modelo no local</strong><br /><br />
 
-						Dar la tecla espacio y decir: Dichos aportes son ponderados usando los factores zeta (no se
-						pronunciar zeta en griego, no hacer el ridículo.) Dar la tecla espacio
-						<br>
-						Estos facotres representan un material compuesto de dos fases, por lo tanto, la suma de los dos
-						factores debe ser 1. Dar espacio
-						<br>
-						Aqui deben salir los 3 modelos 3D. Mover uno de ellos con el mouse
-						<br><br>
-						En el modelo 1 se ve el primer modo de vibración de un cubo usando la teoría clásica (z1=1)<br>
-						En el modelo 2 se ve el primer modo de vibración de un cubo usando la teoría no local
-						(z1=0.5)<br>
-						En el modelo 3 se ve el primer modo de vibración de un cubo usando (z1=0)<br>
-						<br><br>
-						<strong>Frases obligatorias</strong>
-						El zeta es muy relevante en la implementación computacional, ya que, de solo tener en cuenta la
-						parte no local (z2=1) se llegan a irregularidades numéricas.
-					</aside>
-				</section>
-				<section data-auto-animate data-state="graficas-pesadas">
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Parámetros del modelo no local</h3>
-						<h6>Función de atenuación</h6>
-						<div data-id="a" class="vertical-aligned-eq" style="top: 13%">
-							\[{\color{lightgray}\scriptsize{\sigma_{ij}=
-							\zeta_1 C_{ijkl}\varepsilon_{kl}+
-							\zeta_2\int_{\Omega}\color{black}A(\rho)\color{lightgray}C_{ijkl}\varepsilon'_{kl}dv'}}\]
-						</div>
-						<br />
-						<div class="fragment">
-							<div class="two-column">
-								<p>
-									Representa la relevancia de las fuerzas
-									de cohesión de largo alcance. Depende de
-									la distancia euclideana (\(|x-x'|\)) y
-									de la longitud interna (\(l\))
-								</p>
+							Dar la tecla espacio y decir: Dichos aportes son
+							ponderados usando los factores zeta (no se
+							pronunciar zeta en griego, no hacer el ridículo.)
+							Dar la tecla espacio
+							<br />
+							Estos facotres representan un material compuesto de
+							dos fases, por lo tanto, la suma de los dos factores
+							debe ser 1. Dar espacio
+							<br />
+							Aqui deben salir los 3 modelos 3D. Mover uno de
+							ellos con el mouse
+							<br /><br />
+							En el modelo 1 se ve el primer modo de vibración de
+							un cubo usando la teoría clásica (z1=1)<br />
+							En el modelo 2 se ve el primer modo de vibración de
+							un cubo usando la teoría no local (z1=0.5)<br />
+							En el modelo 3 se ve el primer modo de vibración de
+							un cubo usando (z1=0)<br />
+							<br /><br />
+							<strong>Frases obligatorias</strong>
+							El zeta es muy relevante en la implementación
+							computacional, ya que, de solo tener en cuenta la
+							parte no local (z2=1) se llegan a irregularidades
+							numéricas.
+						</aside>
+					</section>
+					<section data-auto-animate data-state="graficas-pesadas">
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
 							</div>
-							<div class="two-column">
-								<div data-id="ro">
-									\[\scriptsize{\rho=\frac{|x-x'|}{l}}\]
-								</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
 							</div>
 						</div>
-						<div class="fragment" style="position: absolute; top: 53%">
-							<div class="three-column" style="height: 205px" id="atenuacion1">
-								<p style="text-align: center">
-									\(A(\rho)=\lambda_0e^{-\rho}\)
-								</p>
+						<div class="slide">
+							<h3>Parámetros del modelo no local</h3>
+							<h6>Función de atenuación</h6>
+							<div
+								data-id="a"
+								class="vertical-aligned-eq"
+								style="top: 13%"
+							>
+								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
+								\zeta_1 C_{ijkl}\varepsilon_{kl}+
+								\zeta_2\int_{\Omega}\color{black}A(\rho)\color{lightgray}C_{ijkl}\varepsilon'_{kl}dv'}}\]
 							</div>
-							<div class="three-column" style="height: 205px" id="atenuacion2">
-								<p style="text-align: center">
-									\(A(\rho)=\lambda_0\left<1-\frac{\rho}{(1+\Omega_0)}\right>\)
-								</p>
-							</div>
-							<div class="three-column" style="height: 205px" id="atenuacion3">
-								<p style="text-align: center">
-									\(A(\rho)=\lambda_0\left<1-\frac{\rho^2}{(1+\Omega_0)^2}\right>\)
-								</p>
-							</div>
-						</div>
-					</div>
-					<aside class="notes"><strong>Modelo no local</strong><br><br>
-						El siguiente parámetro importante del modelo no local es la función de atenuación. Dar tecla
-						espacio<br>
-						Dicho parámetro pondera la relevancia de los efectos con respecto a la distancia. La función
-						toma como parámetro la distancia euclideana entre dos puntos (local y no local) normalizada por
-						la longitud interna del material (parámetro no local del material). Dar tecla espacio<br>
-						Las funciones de atenuación toman valores bajos a medidas que el parámetro de distancia aumenta.
-						La idea es que modelen la atenuación de las interacciones entre puntos material a largas
-						distancias.
-					</aside>
-				</section>
-				<section data-auto-animate data-auto-animate-unmatched="false" data-transition="none"
-					data-state="graficas-pesadas2">
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Parámetros del modelo no local</h3>
-						<h6>Función de atenuación</h6>
-						<div data-id="a" class="vertical-aligned-eq" style="top: 13%">
-							\[{\color{lightgray}\scriptsize{\sigma_{ij}=
-							\zeta_1 C_{ijkl}\varepsilon_{kl}+
-							\zeta_2\int_{\Omega}\color{black}A(\rho)\color{lightgray}C_{ijkl}\varepsilon'_{kl}dv'}}\]
-						</div>
-						<br />
-						<div>
-							<div class="two-column">
-								<p>
-									Representa la relevancia de las fuerzas
-									de cohesión de largo alcance. Depende de
-									la distancia euclideana (\(|x-x'|\)) y
-									de la longitud interna (\(l\))
-								</p>
-							</div>
-							<div class="two-column">
-								<div data-id="ro">
-									\[\scriptsize{\rho=\frac{|x-x'|}{l}}\]
-								</div>
-							</div>
-						</div>
-						<div style="position: absolute; top: 53%">
-							<div class="three-column" style="height: 205px" id="atenuacion4">
-								<p style="text-align: center">
-									\(A(\rho)=\lambda_0e^{-\rho}\)
-								</p>
-							</div>
-							<div class="three-column" style="height: 205px; opacity: 0.4" id="atenuacion5">
-								<p style="text-align: center">
-									\(\color{lightgray}A(\rho)=\lambda_0\left<1-\frac{\rho}{(1+\Omega_0)}\right>\)
-								</p>
-							</div>
-							<div class="three-column" style="height: 205px; opacity: 0.4" id="atenuacion6">
-								<p style="text-align: center">
-									\(\color{lightgray}A(\rho)=\lambda_0\left<1-\frac{\rho^2}{(1+\Omega_0)^2}\right>\)
-								</p>
-							</div>
-						</div>
-					</div>
-					<aside class="notes"><strong>Modelo no local</strong><br><br>
-						Para este caso se usará la función de atenuación biexponencial, es la función mas adoptada en
-						los articulos revisados y se puede usar para la validación y replicabilidad de los resultados.
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Parámetros del modelo no local</h3>
-						<h6>Función de atenuación</h6>
-						<div style="position: absolute; top: 10%; left: 30%">
-							\[A(x,x',l)=\lambda_0e^{-\frac{|x-x'|}{l}}\]
-						</div>
-						<br />
-						<div>
+							<br />
 							<div class="fragment">
 								<div class="two-column">
-									<p style="padding-top: 30px">
-										El factor \(\lambda_0\) es usado
-										para garantizar las propiedades de
-										la función. Este proceso es distinto
-										para dominios 2D y 3D.
+									<p>
+										Representa la relevancia de las fuerzas
+										de cohesión de largo alcance. Depende de
+										la distancia euclideana (\(|x-x'|\)) y
+										de la longitud interna (\(l\))
 									</p>
 								</div>
 								<div class="two-column">
 									<div data-id="ro">
-										\[\scriptsize{\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=1}\]
+										\[\scriptsize{\rho=\frac{|x-x'|}{l}}\]
 									</div>
 								</div>
 							</div>
-							<div>
-								<div class="two-column">
-									<h5 style="text-align: center" class="fragment">
-										2D
-									</h5>
-									<p class="fragment">
-										\[\small\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=t\lambda_0\int_{0}^{\infty}\int_{0}^{2\pi}re^{\frac{-r}{l}}{d\theta}{dr}\]
-									</p>
-									<p class="fragment">
-										\[\small\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=\lambda_02\pi
-										l^2t\]
-									</p>
-									<p class="fragment">
-										\[\small\lambda_0=\frac{1}{2\pi
-										l^2t}\]
+							<div
+								class="fragment"
+								style="position: absolute; top: 53%"
+							>
+								<div
+									class="three-column"
+									style="height: 205px"
+									id="atenuacion1"
+								>
+									<p style="text-align: center">
+										\(A(\rho)=\lambda_0e^{-\rho}\)
 									</p>
 								</div>
-								<div class="two-column">
-									<h5 style="text-align: center" class="fragment">
-										3D
-									</h5>
-									<p class="fragment">
-										\[...=\lambda_0\int_{0}^{\infty}\int_{0}^{2\pi}\int_{0}^{\pi}r^2\sin(\phi)e^{\frac{-r}{l}}{d\phi}{d\theta}{dr}\]
+								<div
+									class="three-column"
+									style="height: 205px"
+									id="atenuacion2"
+								>
+									<p style="text-align: center">
+										\(A(\rho)=\lambda_0\left<1-\frac{\rho}{(1+\Omega_0)}\right>\)
 									</p>
-									<p class="fragment">\[...=\lambda_0 8\pi l^3\]</p>
-									<p class="fragment">
-										\[\lambda_0=\frac{1}{8\pi l^3}\]
+								</div>
+								<div
+									class="three-column"
+									style="height: 205px"
+									id="atenuacion3"
+								>
+									<p style="text-align: center">
+										\(A(\rho)=\lambda_0\left<1-\frac{\rho^2}{(1+\Omega_0)^2}\right>\)
 									</p>
 								</div>
 							</div>
 						</div>
-					</div>
-					<aside class="notes"><strong>Modelo no local</strong><br><br>
-						En resumen, la función de atenuación solamente depende de un punto local, un punto no local y la
-						longitud interna del material. Presionar tecla espacio<br>
-						Las funciones de atenuación tienen que cumplir con la condición de que la integral bajo un
-						dominio infinito sea 1. Esto garantiza la conservación de la engergia del método.<br>
-						Dado que esta condición no se cumple con la función biexponencial, es necesario aplicar un
-						factor de correción lambda0.<br>
-						El procedimiento de encontrar dicho factor depende de la dimensión del modelo. Para este caso se
-						muestra el proceso del caso bidimensional y tridimensional. Dar tecla espacio hasta terminar
-						diapositiva
-						<br>
-						<br>
-						<strong>Frases obligatorias</strong>
-						<br>
-						<br>
-						La integral es impropia por el dominio infinito y converge por la exponencial
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
+						<aside class="notes">
+							<strong>Modelo no local</strong><br /><br />
+							El siguiente parámetro importante del modelo no
+							local es la función de atenuación. Dar tecla
+							espacio<br />
+							Dicho parámetro pondera la relevancia de los efectos
+							con respecto a la distancia. La función toma como
+							parámetro la distancia euclideana entre dos puntos
+							(local y no local) normalizada por la longitud
+							interna del material (parámetro no local del
+							material). Dar tecla espacio<br />
+							Las funciones de atenuación toman valores bajos a
+							medidas que el parámetro de distancia aumenta. La
+							idea es que modelen la atenuación de las
+							interacciones entre puntos material a largas
+							distancias.
+						</aside>
+					</section>
+					<section
+						data-auto-animate
+						data-auto-animate-unmatched="false"
+						data-transition="none"
+						data-state="graficas-pesadas2"
+					>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
 						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
+						<div class="slide">
+							<h3>Parámetros del modelo no local</h3>
+							<h6>Función de atenuación</h6>
+							<div
+								data-id="a"
+								class="vertical-aligned-eq"
+								style="top: 13%"
+							>
+								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
+								\zeta_1 C_{ijkl}\varepsilon_{kl}+
+								\zeta_2\int_{\Omega}\color{black}A(\rho)\color{lightgray}C_{ijkl}\varepsilon'_{kl}dv'}}\]
+							</div>
+							<br />
+							<div>
+								<div class="two-column">
+									<p>
+										Representa la relevancia de las fuerzas
+										de cohesión de largo alcance. Depende de
+										la distancia euclideana (\(|x-x'|\)) y
+										de la longitud interna (\(l\))
+									</p>
+								</div>
+								<div class="two-column">
+									<div data-id="ro">
+										\[\scriptsize{\rho=\frac{|x-x'|}{l}}\]
+									</div>
+								</div>
+							</div>
+							<div style="position: absolute; top: 53%">
+								<div
+									class="three-column"
+									style="height: 205px"
+									id="atenuacion4"
+								>
+									<p style="text-align: center">
+										\(A(\rho)=\lambda_0e^{-\rho}\)
+									</p>
+								</div>
+								<div
+									class="three-column"
+									style="height: 205px; opacity: 0.4"
+									id="atenuacion5"
+								>
+									<p style="text-align: center">
+										\(\color{lightgray}A(\rho)=\lambda_0\left<1-\frac{\rho}{(1+\Omega_0)}\right>\)
+									</p>
+								</div>
+								<div
+									class="three-column"
+									style="height: 205px; opacity: 0.4"
+									id="atenuacion6"
+								>
+									<p style="text-align: center">
+										\(\color{lightgray}A(\rho)=\lambda_0\left<1-\frac{\rho^2}{(1+\Omega_0)^2}\right>\)
+									</p>
+								</div>
+							</div>
 						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
+						<aside class="notes">
+							<strong>Modelo no local</strong><br /><br />
+							Para este caso se usará la función de atenuación
+							biexponencial, es la función mas adoptada en los
+							articulos revisados y se puede usar para la
+							validación y replicabilidad de los resultados.
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
 						</div>
-					</div>
-					<div class="slide">
-						<h3>Modelo de elementos finitos</h3>
-						<h6>FEM general</h6>
-						<p class="fragment">
-							Para implementar elementos finitos es necesario
-							seguir una serie de pasos
-						</p>
-						<ol class="fragment">
-							<li>Enmallado (pre proceso)</li>
-							<li data-id="titulito" style="
+						<div class="slide">
+							<h3>Parámetros del modelo no local</h3>
+							<h6>Función de atenuación</h6>
+							<div
+								style="position: absolute; top: 10%; left: 30%"
+							>
+								\[A(x,x',l)=\lambda_0e^{-\frac{|x-x'|}{l}}\]
+							</div>
+							<br />
+							<div>
+								<div class="fragment">
+									<div class="two-column">
+										<p style="padding-top: 30px">
+											El factor \(\lambda_0\) es usado
+											para garantizar las propiedades de
+											la función. Este proceso es distinto
+											para dominios 2D y 3D.
+										</p>
+									</div>
+									<div class="two-column">
+										<div data-id="ro">
+											\[\scriptsize{\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=1}\]
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="two-column">
+										<h5
+											style="text-align: center"
+											class="fragment"
+										>
+											2D
+										</h5>
+										<p class="fragment">
+											\[\small\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=t\lambda_0\int_{0}^{\infty}\int_{0}^{2\pi}re^{\frac{-r}{l}}{d\theta}{dr}\]
+										</p>
+										<p class="fragment">
+											\[\small\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=\lambda_02\pi
+											l^2t\]
+										</p>
+										<p class="fragment">
+											\[\small\lambda_0=\frac{1}{2\pi
+											l^2t}\]
+										</p>
+									</div>
+									<div class="two-column">
+										<h5
+											style="text-align: center"
+											class="fragment"
+										>
+											3D
+										</h5>
+										<p class="fragment">
+											\[...=\lambda_0\int_{0}^{\infty}\int_{0}^{2\pi}\int_{0}^{\pi}r^2\sin(\phi)e^{\frac{-r}{l}}{d\phi}{d\theta}{dr}\]
+										</p>
+										<p class="fragment">
+											\[...=\lambda_0 8\pi l^3\]
+										</p>
+										<p class="fragment">
+											\[\lambda_0=\frac{1}{8\pi l^3}\]
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<aside class="notes">
+							<strong>Modelo no local</strong><br /><br />
+							En resumen, la función de atenuación solamente
+							depende de un punto local, un punto no local y la
+							longitud interna del material. Presionar tecla
+							espacio<br />
+							Las funciones de atenuación tienen que cumplir con
+							la condición de que la integral bajo un dominio
+							infinito sea 1. Esto garantiza la conservación de la
+							engergia del método.<br />
+							Dado que esta condición no se cumple con la función
+							biexponencial, es necesario aplicar un factor de
+							correción lambda0.<br />
+							El procedimiento de encontrar dicho factor depende
+							de la dimensión del modelo. Para este caso se
+							muestra el proceso del caso bidimensional y
+							tridimensional. Dar tecla espacio hasta terminar
+							diapositiva
+							<br />
+							<br />
+							<strong>Frases obligatorias</strong>
+							<br />
+							<br />
+							La integral es impropia por el dominio infinito y
+							converge por la exponencial
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Modelo de elementos finitos</h3>
+							<h6>FEM general</h6>
+							<p class="fragment">
+								Para implementar elementos finitos es necesario
+								seguir una serie de pasos
+							</p>
+							<ol class="fragment">
+								<li>Enmallado (pre proceso)</li>
+								<li
+									data-id="titulito"
+									style="
 										text-transform: none;
 										font-size: var(--big-size-text);
-									">
-								Formulación variacional/Forma debil
-							</li>
-							<li>Matriz y vector de elemento</li>
-							<li>Ensamblaje de sistema de ecuaciones</li>
-							<li>Condiciones de borde</li>
-							<li>Solución del sistema de ecuaciones</li>
-							<li>Gráficas y productos (post proceso)</li>
-						</ol>
-					</div>
-					<aside class="notes"><strong>FEM local</strong><br><br>
-						Pero ¿cómo implementamos este modelo constitutivo?. La respuesta es elementos finitos. Oprimir
-						tecla espacio<br>
-						En un caso general, elementos finitos tiene 7 pasos
-						<br>
-						<br>
-						<strong>Frases obligatorias</strong>
-						<br>
-						<br>
-						Especificar que la cantidad de pasos no es obligatoriamente esta, que depende del modelo y del
-						libro de donde se saque el método
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
+									"
+								>
+									Formulación variacional/Forma debil
+								</li>
+								<li>Matriz y vector de elemento</li>
+								<li>Ensamblaje de sistema de ecuaciones</li>
+								<li>Condiciones de borde</li>
+								<li>Solución del sistema de ecuaciones</li>
+								<li>Gráficas y productos (post proceso)</li>
+							</ol>
 						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
+						<aside class="notes">
+							<strong>FEM local</strong><br /><br />
+							Pero ¿cómo implementamos este modelo constitutivo?.
+							La respuesta es elementos finitos. Oprimir tecla
+							espacio<br />
+							En un caso general, elementos finitos tiene 7 pasos
+							<br />
+							<br />
+							<strong>Frases obligatorias</strong>
+							<br />
+							<br />
+							Especificar que la cantidad de pasos no es
+							obligatoriamente esta, que depende del modelo y del
+							libro de donde se saque el método
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
 						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Modelo de elementos finitos</h3>
-						<h6>FEM no local</h6>
-						<p>
-							Para implementar elementos finitos es necesario
-							seguir una serie de pasos
-						</p>
-						<ol>
-							<li style="color: var(--not-selected-color)">
-								Enmallado (pre proceso)
-							</li>
-							<li style="color: var(--red)">
-								Detección elementos no locales
-							</li>
-							<li style="color: var(--red)">
-								<h4 data-id="titulito" style="
+						<div class="slide">
+							<h3>Modelo de elementos finitos</h3>
+							<h6>FEM no local</h6>
+							<p>
+								Para implementar elementos finitos es necesario
+								seguir una serie de pasos
+							</p>
+							<ol>
+								<li style="color: var(--not-selected-color)">
+									Enmallado (pre proceso)
+								</li>
+								<li style="color: var(--red)">
+									Detección elementos no locales
+								</li>
+								<li style="color: var(--red)">
+									<h4
+										data-id="titulito"
+										style="
 											text-transform: none;
 											font-size: var(--big-size-text);
 											color: var(--red);
-										">
-									Formulación variacional/Forma debil
-								</h4>
-							</li>
-							<li style="color: var(--red)">
-								Matriz y vector de elemento
-							</li>
-							<li style="color: var(--red)">
-								Ensamblaje de sistema de ecuaciones
-							</li>
-							<li style="color: var(--not-selected-color)">
-								Condiciones de borde
-							</li>
-							<li style="color: var(--not-selected-color)">
-								Solución del sistema de ecuaciones
-							</li>
-							<li style="color: var(--not-selected-color)">
-								Gráficas y productos (post proceso)
-							</li>
-						</ol>
-					</div>
-					<aside class="notes"><strong>FEM no local</strong><br><br>
-						Para implementar elasticidad no local en elementos finitos solamente hace falta cambiar 3 pasos
-						del método y agregar uno.
-						<br>
-						<br>
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
+										"
+									>
+										Formulación variacional/Forma debil
+									</h4>
+								</li>
+								<li style="color: var(--red)">
+									Matriz y vector de elemento
+								</li>
+								<li style="color: var(--red)">
+									Ensamblaje de sistema de ecuaciones
+								</li>
+								<li style="color: var(--not-selected-color)">
+									Condiciones de borde
+								</li>
+								<li style="color: var(--not-selected-color)">
+									Solución del sistema de ecuaciones
+								</li>
+								<li style="color: var(--not-selected-color)">
+									Gráficas y productos (post proceso)
+								</li>
+							</ol>
 						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h4 data-id="titulito">
-							Formulación variacional/Forma debil
-						</h4>
-						<p>
-							Partiendo del modelo integral de dos fases
-							$$\color{lightgray}\sigma_{ij}=\zeta_1
-							C_{ijkl}\varepsilon_{kl} +
-							\zeta_2\color{black}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'$$
-						</p>
-						<p class="fragment">
-							El potencial de energía total puede escribirse
-							como $$\Pi=...+\frac{1}{2}\int_v\int_{v'} A(\rho)
-							\nabla^2 U(x) C \nabla^2 U(x')dv'dv$$
-						</p>
-						<p class="fragment">
-							Por lo tanto, las matrices para cada elemento se
-							pueden calcular como $$K_{nl}=\int_v\int_{v'}
-							A(\rho) B^T(x) C B(x')dv'dv$$
-							En esta expresión la matriz \(B\) hace referencia a las derivadas de las funciones de forma y la matríz \(C\) al tensor de elasticidad del material
-						</p>
-						<p class="fragment">
-							Existe una matriz cruzada entre elementos debido
-							a la doble integral. El peso de esta matriz esta
-							definido por la función de atenuación.
-						</p>
-					</div>
-					<aside class="notes"><strong>FEM no local</strong><br><br>
-						El proceso de formulación variacional para la parte local es la miisma que se realiza en la
-						teoría clásica, por lo tanto, aqui solo se mestra el proceso para la parte no local. Oprimir
-						tecla espacio
-						<br>
-						En este caso el proceso se realiza por medio del potencial de energía total, sin embargo, este
-						mismo proceso puede realizarse con la forma débil de la ecuación diferencial. Presionar tecla
-						espacio
-						<br>
-						De la parte no local se puede llegar a una expresión para una matriz de rigidez no local. Esta
-						doble integral quiere decir que la integral es cruzada entre el dominio local y el dominio no
-						local
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h4 data-id="titulito">Matrices de elemento</h4>
-						<p>Cada elemento tiene dos fuentes de rigidez</p>
-						<div >
-							<div class="two-column">
-								<h5>Parte local</h5>
-								<p>$$K^n_l = \int_v B_n(x)^TCB_n(x) dv$$</p>
-								<img src="./resources/conect_loc1.png" height="200px" />
+						<aside class="notes">
+							<strong>FEM no local</strong><br /><br />
+							Para implementar elasticidad no local en elementos
+							finitos solamente hace falta cambiar 3 pasos del
+							método y agregar uno.
+							<br />
+							<br />
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
 							</div>
-							<div class="two-column">
-								<h5>Parte no local</h5>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">
+								Formulación variacional/Forma debil
+							</h4>
+							<p>
+								Partiendo del modelo integral de dos fases
+								$$\color{lightgray}\sigma_{ij}=\zeta_1
+								C_{ijkl}\varepsilon_{kl} +
+								\zeta_2\color{black}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'$$
+							</p>
+							<p class="fragment">
+								El potencial de energía total puede escribirse
+								como $$\Pi=...+\frac{1}{2}\int_v\int_{v'}
+								A(\rho) \nabla^2 U(x) C \nabla^2 U(x')dv'dv$$
+							</p>
+							<p class="fragment">
+								Por lo tanto, las matrices para cada elemento se
+								pueden calcular como $$K_{nl}=\int_v\int_{v'}
+								A(\rho) B^T(x) C B(x')dv'dv$$ En esta expresión
+								la matriz \(B\) hace referencia a las derivadas
+								de las funciones de forma y la matríz \(C\) al
+								tensor de elasticidad del material
+							</p>
+							<p class="fragment">
+								Existe una matriz cruzada entre elementos debido
+								a la doble integral. El peso de esta matriz esta
+								definido por la función de atenuación.
+							</p>
+						</div>
+						<aside class="notes">
+							<strong>FEM no local</strong><br /><br />
+							El proceso de formulación variacional para la parte
+							local es la miisma que se realiza en la teoría
+							clásica, por lo tanto, aqui solo se mestra el
+							proceso para la parte no local. Oprimir tecla
+							espacio
+							<br />
+							En este caso el proceso se realiza por medio del
+							potencial de energía total, sin embargo, este mismo
+							proceso puede realizarse con la forma débil de la
+							ecuación diferencial. Presionar tecla espacio
+							<br />
+							De la parte no local se puede llegar a una expresión
+							para una matriz de rigidez no local. Esta doble
+							integral quiere decir que la integral es cruzada
+							entre el dominio local y el dominio no local
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">Matrices de elemento</h4>
+							<p>Cada elemento tiene dos fuentes de rigidez</p>
+							<div>
+								<div class="two-column">
+									<h5>Parte local</h5>
+									<p>$$K^n_l = \int_v B_n(x)^TCB_n(x) dv$$</p>
+									<img
+										src="./resources/conect_loc1.png"
+										height="200px"
+									/>
+								</div>
+								<div class="two-column">
+									<h5>Parte no local</h5>
+									<p>
+										$$K^{nm}_{nl} = \int_v\int_{v'}
+										A(\rho)B_n(x)^TCB_m(x')dv' dv$$
+									</p>
+									<img
+										src="./resources/conect_nloc1.png"
+										height="200px"
+									/>
+								</div>
+							</div>
+							<p class="fragment">
+								Cada elemento aporta a la matriz general
+								$$K=\zeta_1K^n_l+\zeta_2K^{nm}_{nl}$$
+							</p>
+						</div>
+						<aside class="notes">
+							<strong>FEM no local</strong><br /><br />
+							Al momento de traducir esto a nivel de elemento,
+							esto se traduce a que existen dos aportes de
+							rigidez. Un aporte local que es el aporte clásico y
+							un aporte no local que se realiza entre la integral
+							cruzada de dos elementos. Oprimir tecla espacio<br />
+							<br />
+							Estos aportes son ponderados con el factor zeta
+							siguiendo con el proceso del modelo constitutivo
+						</aside>
+					</section>
+					<section data-auto-animate data-state="graficas-atenu2d">
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">Matrices de elemento</h4>
+							<p>
+								La función de atenuación es pequeña para valores
+								de \(\rho\) grandes
+							</p>
+							<div
+								id="grafica-atenuacion-2d"
+								class="two-column"
+								style="height: 210px"
+							></div>
+							<div class="two-column" style="height: 210px">
 								<p>
-									$$K^{nm}_{nl} = \int_v\int_{v'}
-									A(\rho)B_n(x)^TCB_m(x')dv' dv$$
+									Dado que \(\rho\) se calcula como la
+									distancia entre dos puntos, mientras mas
+									lejos esten, menos importancia tienen
 								</p>
-								<img src="./resources/conect_nloc1.png" height="200px" />
+							</div>
+							<div class="two-column">
+								<p>
+									Elementos lejanos, tendrán \(\rho\approx
+									0\), solamente se necesitan tener en cuenta
+									los elementos a una distancia < \(Lr=6l\)
+								</p>
+							</div>
+							<div class="two-column">
+								<h3>MODELO 3D de distancia LR</h3>
 							</div>
 						</div>
-						<p class="fragment">
-							Cada elemento aporta a la matriz general
-							$$K=\zeta_1K^n_l+\zeta_2K^{nm}_{nl}$$
-						</p>
-					</div>
-					<aside class="notes"><strong>FEM no local</strong><br><br>
-						Al momento de traducir esto a nivel de elemento, esto se traduce a que existen dos aportes de rigidez. Un aporte local que es el aporte clásico y un aporte no local que se realiza entre la integral cruzada de dos elementos. Oprimir tecla espacio<br>
-						<br>
-						Estos aportes son ponderados con el factor zeta siguiendo con el proceso del modelo constitutivo
+						<aside class="notes">
+							<strong>FEM no local</strong><br /><br />
+							La función de atenuación multiplica a la matriz no
+							local. Dado que las matrices se realizan entre
+							elementos, se puede conocer cuales elementos son
+							relevantes al momento de realizar las integrales
+							cruzadas
 
-					</aside>
-				</section>
-				<section data-auto-animate data-state="graficas-atenu2d">
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
+							<br />
+							<br />
+							<strong>Frases obligatorias</strong>
+							<br />
+							<br />
+							En la literatura suelen reportar que con un valor de
+							rho=6 es suficiente para que la función de
+							atenuación deje de ser relevante para el proceso de
+							integración
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
 						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
+						<div class="slide">
+							<h4 data-id="titulito">
+								Detección de elementos no locales
+							</h4>
+							<div style="text-align: center">
+								<img
+									data-id="imagen2d"
+									src="./resources/deteccion_no_local.png"
+									width="50%"
+								/>
+							</div>
 						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
+						<aside class="notes">
+							<strong>FEM no local</strong><br /><br />
+							Para un elemento local (rojo) se deben detectar los
+							elementos no locales que se encuentren a distancias
+							menores a Lr (grices), solamente sobre estos
+							elementos se tendrá en cuenta la no localidad.
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
 						</div>
-					</div>
-					<div class="slide">
-						<h4 data-id="titulito">Matrices de elemento</h4>
-						<p>
-							La función de atenuación es pequeña para valores
-							de \(\rho\) grandes
-						</p>
-						<div id="grafica-atenuacion-2d" class="two-column" style="height: 210px"></div>
-						<div class="two-column" style="height: 210px">
+						<div class="slide">
+							<h4 data-id="titulito">
+								Detección de elementos no locales
+							</h4>
+							<div
+								class="two-column"
+								style="text-align: center; height: 400px"
+							>
+								<img
+									data-id="imagen2d"
+									src="./resources/deteccion_no_local.png"
+								/>
+							</div>
+							<div
+								class="two-column"
+								style="text-align: center; height: 400px"
+							>
+								<img
+									src="./resources/deteccion_no_local_3D.png"
+								/>
+							</div>
 							<p>
-								Dado que \(\rho\) se calcula como la
-								distancia entre dos puntos, mientras mas
-								lejos esten, menos importancia tienen
+								Para cada elemento \(n\), se encuentran los
+								elementos adyacentes \(m\) cuyos centroides
+								esten a una distancia menor a \(Lr \)
+							</p>
+							<p>
+								Sobre estos elementos se realizan las integrales
+								no locales
 							</p>
 						</div>
-						<div class="two-column">
+						<aside class="notes">
+							<strong>FEM no local</strong><br /><br />
+							Al poner la función de atenuación sobre esta región,
+							se puede observar que dicha fuinción casi no tiene
+							relevancia en los elementos mas lejanos, por lo que
+							las matrices de dichos elementos son cercanas a cero
+							y no aportan efectos no locales
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">
+								Ensamblaje de sistema de ecuaciones
+							</h4>
+							<h5>Local</h5>
+							<div
+								class="two-column"
+								style="text-align: center; height: 160px"
+							>
+								<img src="./resources/conect_loc1.png" />
+							</div>
+							<div
+								class="two-column"
+								style="text-align: center; height: 160px"
+							>
+								<p style="text-align: center">
+									$$\small K^n_l= \begin{bmatrix} 4280 & 5862
+									& 8947 & 853 \\ 5862 & 4852 & 542 & 8947 \\
+									8947 & 542 & 6850 & 5862 \\ 853 & 8947 &
+									5862 & 4274 \end{bmatrix} $$
+								</p>
+							</div>
+							<div
+								class="two-column"
+								style="text-align: center; height: 240px"
+							>
+								<img src="./resources/conect_loc2.png" />
+							</div>
+
+							<div
+								class="two-column"
+								style="text-align: center; height: 240px"
+							>
+								<p style="text-align: center">
+									$$\small K=\begin{bmatrix}
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} \\
+									{\color{lightgray}x} & 5862 & 5862 &
+									{\color{lightgray}x} & 8947 & 853 &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} \\
+									{\color{lightgray}x} & 5862 & 4852 &
+									{\color{lightgray}x} & 542 & 8947 &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} \\
+									{\color{lightgray}x} & 8947 & 542 &
+									{\color{lightgray}x} & 6850 & 5862 &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} \\
+									{\color{lightgray}x} & 853 & 8947 &
+									{\color{lightgray}x} & 5862 & 4274 &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} \end{bmatrix} $$
+								</p>
+							</div>
+						</div>
+						<aside class="notes">
+							<strong>FEM no local</strong><br /><br />
+							La versión de elementos finitos en su versión
+							clásica ensambla la matriz de rigidez global con los
+							grados de libertad del elemento, por ejemplo, el
+							segundo elemento que tiene grados de libertad
+							2,3,5,6 y la matriz de rigidez local mostrada, se
+							ensambla en un sistema de 4 elementos en las
+							siguientes posiciones del sistema de ecuaciones
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">
+								Ensamblaje de sistema de ecuaciones
+							</h4>
+							<h5>No local</h5>
+							<div
+								class="two-column"
+								style="text-align: center; height: 160px"
+							>
+								<img src="./resources/conect_nloc1.png" />
+							</div>
+							<div
+								class="two-column"
+								style="text-align: center; height: 160px"
+							>
+								<p style="text-align: center">
+									$$\small K^{nm}_{nl}=\begin{bmatrix} 300 &
+									125 & 425 & 28 \\ 125 & 250 & 542 & 425 \\
+									425 & 542 & 250 & 125 \\ 28 & 425 & 125 &
+									300 \end{bmatrix} $$
+								</p>
+							</div>
+							<div
+								class="two-column"
+								style="text-align: center; height: 240px"
+							>
+								<img src="./resources/conect_nloc2.png" />
+							</div>
+
+							<div
+								class="two-column"
+								style="text-align: center; height: 240px"
+							>
+								<p style="text-align: center">
+									$$\small K=\begin{bmatrix}
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} \\
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} & {\color{black}300}
+									& {\color{black}125} & {\color{lightgray}x}
+									& {\color{black}425} & {\color{black}28} &
+									{\color{lightgray}x} \\ {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{black}125} &
+									{\color{black}250} & {\color{lightgray}x} &
+									{\color{black}542} & {\color{black}425} &
+									{\color{lightgray}x} \\ {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} \\ {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{black}425} &
+									{\color{black}542} & {\color{lightgray}x} &
+									{\color{black}250} & {\color{black}125} &
+									{\color{lightgray}x} \\ {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{black}28} &
+									{\color{black}425} & {\color{lightgray}x} &
+									{\color{black}125} & {\color{black}300} &
+									{\color{lightgray}x} \\ {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} \\ {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} \\ {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} & {\color{lightgray}x}
+									& {\color{lightgray}x} &
+									{\color{lightgray}x} \end{bmatrix} $$
+								</p>
+							</div>
+						</div>
+						<aside class="notes">
+							<strong>FEM no local</strong><br /><br />
+							En el caso no local, dado que las integrales se
+							realizan cruzadas entre elementos, el ensamblaje de
+							la matriz se realiza con los grados de libertad del
+							elemento local y los grados de libertad del elemento
+							no local. En este caso, los grados de libertad
+							2,3,5,6 y 4,5,7,8. Las matrices son simétricas, por
+							lo que los datos que aparecen en la segunda matriz
+							se repetiran en el sentido contrario.
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">
+								Ensamblaje de sistema de ecuaciones
+							</h4>
+							<div class="two-column" style="text-align: center">
+								<h4>Local</h4>
+								<img height="430px" src="./resources/df1.png" />
+							</div>
+							<div class="two-column" style="text-align: center">
+								<h4>No Local</h4>
+								<img height="430px" src="./resources/df2.png" />
+							</div>
+						</div>
+						<aside class="notes">
+							<strong>FEM no local</strong><br /><br />
+							Esto quiere decir queel proceso de ensamblaje se
+							puede resumir en los siguientes diagramas de flujo.
+							Mostrar la diferencia entre los dos ciclos
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4 data-id="titulito">
+								Proceso de elementos finitos completo
+							</h4>
+							<div class="two-column" style="text-align: center">
+								<h4>Local</h4>
+								<img height="430px" src="./resources/df1.png" />
+							</div>
+							<div class="two-column" style="text-align: center">
+								<h4>No Local</h4>
+								<img height="430px" src="./resources/df2.png" />
+							</div>
+						</div>
+						<aside class="notes">
+							<strong>FEM no local</strong><br /><br />
+							Esto quiere decir que el proceso de ensamblaje se
+							puede resumir en los siguientes diagramas de flujo
+							Mostrar la diferencia en el proceso de integración y
+							ensamblaje
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h2 class="vertical-aligned-title">
+								El proceso de integración es costoso y aumenta
+								exponencialmente con el número de elementos
+							</h2>
+						</div>
+						<aside class="notes">
+							<strong>FEM no local</strong><br /><br />
+							Es importante decir que se demora y como hay que
+							integrar cruzadamente aumenta exponencialmente. En
+							el caso de remplazar esto por una imagen, lo mejor
+							sería poner algo que muestre la cantidad de matrices
+							cruzadas entre un problema con 5 elementos y otro
+							con el doble.
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h2 class="vertical-aligned-title">
+								¿Desde que tamaño vale la pena tener en cuenta
+								estos efectos?
+							</h2>
+						</div>
+						<aside class="notes">
+							<strong>FEM no local</strong><br /><br />
+							Pregunta de investigación de nuevo. No se que tan
+							relevante sea aquí
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Simulaciones propuestas</h3>
+
+							<div class="three-column">
+								<iframe
+									data-preload
+									loading="lazy"
+									class="iframe-3d"
+									src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
+									scrolling="no"
+									frameborder="0"
+									height="220px"
+								></iframe>
+								<figcaption>
+									Cubo de lado \(L\), \(R=L/1.61\)
+								</figcaption>
+							</div>
+							<div class="three-column">
+								<iframe
+									data-preload
+									loading="lazy"
+									class="iframe-3d"
+									src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
+									scrolling="no"
+									frameborder="0"
+									height="220px"
+								></iframe>
+								<figcaption>
+									Placa rectangular de lado \(R\)
+								</figcaption>
+							</div>
+							<div class="three-column">
+								<iframe
+									data-preload
+									loading="lazy"
+									class="iframe-3d"
+									src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
+									scrolling="no"
+									frameborder="0"
+									height="220px"
+								></iframe>
+								<figcaption>Viga de longitud \(R\)</figcaption>
+							</div>
+							<p>Con cada geometría:</p>
+							<ul>
+								<li class="med-text">
+									Se varían los parámetros no locales \(l\) y
+									\(\zeta_1\)
+								</li>
+								<li class="med-text">
+									Se cambia la distancia \(R\)
+								</li>
+								<li class="med-text">
+									Se prueba con distintos materiales
+								</li>
+							</ul>
 							<p>
-								Elementos lejanos, tendrán \(\rho\approx
-								0\), solamente se necesitan tener en cuenta
-								los elementos a una distancia < \(Lr=6l\) </p>
-						</div>
-						<div class="two-column">
-							<h3>MODELO 3D de distancia LR</h3>
-						</div>
-					</div>
-					<aside class="notes"><strong>FEM no local</strong><br><br>
-						La función de atenuación multiplica a la matriz no local. Dado que las matrices se realizan entre elementos, se puede conocer cuales elementos son relevantes al momento de realizar las integrales cruzadas
-
-
-						<br>
-						<br>
-						<strong>Frases obligatorias</strong>
-						<br>
-						<br>
-						En la literatura suelen reportar que con un valor de rho=6 es suficiente para que la función de atenuación deje de ser relevante para el proceso de integración
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h4 data-id="titulito">
-							Detección de elementos no locales
-						</h4>
-						<div style="text-align: center;">
-							<img data-id="imagen2d" src="./resources/deteccion_no_local.png" width="50%">
-						</div>
-					</div>
-					<aside class="notes"><strong>FEM no local</strong><br><br>
-						Para un elemento local (rojo) se deben detectar los elementos no locales que se encuentren a distancias menores a Lr (grices), solamente sobre estos elementos se tendrá en cuenta la no localidad.
-
-
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h4 data-id="titulito">
-							Detección de elementos no locales
-						</h4>
-						<div class="two-column" style="text-align: center; height: 400px;">
-							<img data-id="imagen2d" src="./resources/deteccion_no_local.png">
-						</div>
-						<div class="two-column" style="text-align: center; height: 400px;">
-							<img src="./resources/deteccion_no_local_3D.png">
-						</div>
-						<p>Para cada elemento \(n\), se encuentran los elementos adyacentes \(m\) cuyos centroides esten
-							a una distancia menor a \(Lr \)</p>
-						<p>Sobre estos elementos se realizan las integrales no locales</p>
-					</div>
-					<aside class="notes"><strong>FEM no local</strong><br><br>
-						Al poner la función de atenuación sobre esta región, se puede observar que dicha fuinción casi no tiene relevancia en los elementos mas lejanos, por lo que las matrices de dichos elementos son cercanas a cero y no aportan efectos no locales
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h4 data-id="titulito">
-							Ensamblaje de sistema de ecuaciones
-						</h4>
-						<h5>Local</h5>
-						<div class="two-column" style="text-align: center ; height:160px">
-							<img src="./resources/conect_loc1.png">
-						</div>
-						<div class="two-column" style="text-align: center ; height:160px">
-							<p style="text-align: center;">$$\small K^n_l= \begin{bmatrix}
-								4280 & 5862 & 8947 & 853 \\
-								5862 & 4852 & 542 & 8947 \\
-								8947 & 542 & 6850 & 5862 \\
-								853 & 8947 & 5862 & 4274
-								\end{bmatrix} $$</p>
-						</div>
-						<div class="two-column" style="text-align: center ; height:240px">
-							<img src="./resources/conect_loc2.png">
-
-						</div>
-
-						<div class="two-column" style="text-align: center ; height:240px">
-							<p style="text-align: center;">$$\small K=\begin{bmatrix}
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
-								{\color{lightgray}x} & 5862 & 5862 & {\color{lightgray}x} & 8947 & 853 &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
-								{\color{lightgray}x} & 5862 & 4852 & {\color{lightgray}x} & 542 & 8947 &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
-								{\color{lightgray}x} & 8947 & 542 & {\color{lightgray}x} & 6850 & 5862 &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
-								{\color{lightgray}x} & 853 & 8947 & {\color{lightgray}x} & 5862 & 4274 &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x}
-								\end{bmatrix} $$</p>
-
-						</div>
-					</div>
-					<aside class="notes"><strong>FEM no local</strong><br><br>
-						La versión de elementos finitos en su versión clásica ensambla la matriz de rigidez global con los grados de libertad del elemento, por ejemplo, el segundo elemento que tiene grados de libertad 2,3,5,6 y la matriz de rigidez local mostrada, se ensambla en un sistema de 4 elementos en las siguientes posiciones del sistema de ecuaciones
-
-
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h4 data-id="titulito">
-							Ensamblaje de sistema de ecuaciones
-						</h4>
-						<h5>No local</h5>
-						<div class="two-column" style="text-align: center ; height:160px">
-							<img src="./resources/conect_nloc1.png">
-						</div>
-						<div class="two-column" style="text-align: center ; height:160px">
-							<p style="text-align: center;">$$\small K^{nm}_{nl}=\begin{bmatrix}
-								300 & 125 & 425 & 28 \\
-								125 & 250 & 542 & 425 \\
-								425 & 542 & 250 & 125 \\
-								28 & 425 & 125 & 300
-								\end{bmatrix} $$</p>
-						</div>
-						<div class="two-column" style="text-align: center ; height:240px">
-							<img src="./resources/conect_nloc2.png">
-
-						</div>
-
-						<div class="two-column" style="text-align: center ; height:240px">
-							<p style="text-align: center;">$$\small K=\begin{bmatrix}
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{black}300}
-								& {\color{black}125} & {\color{lightgray}x} & {\color{black}425} & {\color{black}28} &
-								{\color{lightgray}x} \\
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{black}125}
-								& {\color{black}250} & {\color{lightgray}x} & {\color{black}542} & {\color{black}425} &
-								{\color{lightgray}x} \\
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{black}425}
-								& {\color{black}542} & {\color{lightgray}x} & {\color{black}250} & {\color{black}125} &
-								{\color{lightgray}x} \\
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} & {\color{black}28} &
-								{\color{black}425} & {\color{lightgray}x} & {\color{black}125} & {\color{black}300} &
-								{\color{lightgray}x} \\
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} \\
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x} &
-								{\color{lightgray}x} & {\color{lightgray}x} & {\color{lightgray}x}
-								\end{bmatrix} $$</p>
-
-						</div>
-					</div>
-					<aside class="notes"><strong>FEM no local</strong><br><br>
-						En el caso no local, dado que las integrales se realizan cruzadas entre elementos, el ensamblaje de la matriz se realiza con los grados de libertad del elemento local y los grados de libertad del elemento no local. En este caso, los grados de libertad 2,3,5,6 y 4,5,7,8. Las matrices son simétricas, por lo que los datos que aparecen en la segunda matriz se repetiran en el sentido contrario.
-
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h4 data-id="titulito">
-							Ensamblaje de sistema de ecuaciones
-						</h4>
-						<div class="two-column" style="text-align: center">
-							<h4>Local</h4>
-							<img height="430px" src="./resources/df1.png" />
-						</div>
-						<div class="two-column" style="text-align: center">
-							<h4>No Local</h4>
-							<img height="430px" src="./resources/df2.png" />
-						</div>
-					</div>
-					<aside class="notes"><strong>FEM no local</strong><br><br>
-						Esto quiere decir queel proceso de ensamblaje se puede resumir en los siguientes diagramas de flujo.
-						Mostrar la diferencia entre los dos ciclos
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h4 data-id="titulito">
-							Proceso de elementos finitos completo
-						</h4>
-						<div class="two-column" style="text-align: center">
-							<h4>Local</h4>
-							<img height="430px" src="./resources/df1.png" />
-						</div>
-						<div class="two-column" style="text-align: center">
-							<h4>No Local</h4>
-							<img height="430px" src="./resources/df2.png" />
-						</div>
-					</div>
-					<aside class="notes"><strong>FEM no local</strong><br><br>
-						Esto quiere decir que el proceso de ensamblaje se puede resumir en los siguientes diagramas de flujo
-						Mostrar la diferencia en el proceso de integración y ensamblaje
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h2 class="vertical-aligned-title">El proceso de integración es costoso y aumenta exponencialmente con el número de elementos
-						</h2>
-					</div>
-					<aside class="notes"><strong>FEM no local</strong><br><br>
-						Es importante decir que se demora y como hay que integrar cruzadamente aumenta exponencialmente. En el caso de remplazar esto por una imagen, lo mejor sería poner algo que muestre la cantidad de matrices cruzadas entre un problema con 5 elementos y otro con el doble.
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h2 class="vertical-aligned-title">¿Desde que tamaño vale la pena tener en cuenta estos efectos?</h2>
-					</div>
-					<aside class="notes"><strong>FEM no local</strong><br><br>
-						Pregunta de investigación de nuevo. No se que tan relevante sea aquí
-
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Simulaciones propuestas</h3>
-
-						<div class="three-column">
-							<iframe data-preload loading="lazy" class="iframe-3d"
-								src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
-								scrolling="no" frameborder="0" height="220px"></iframe>
-							<figcaption>
-								Cubo de lado \(L\), \(R=L/1.61\)
-							</figcaption>
-						</div>
-						<div class="three-column">
-							<iframe data-preload loading="lazy" class="iframe-3d"
-								src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
-								scrolling="no" frameborder="0" height="220px"></iframe>
-							<figcaption>
-								Placa rectangular de lado \(R\)
-							</figcaption>
-						</div>
-						<div class="three-column">
-							<iframe data-preload loading="lazy" class="iframe-3d"
-								src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
-								scrolling="no" frameborder="0" height="220px"></iframe>
-							<figcaption>Viga de longitud \(R\)</figcaption>
-						</div>
-						<p>Con cada geometría:</p>
-						<ul>
-							<li class="med-text">Se varían los parámetros no locales \(l\) y \(\zeta_1\)</li>
-							<li class="med-text">
-								Se cambia la distancia \(R\)
-							</li>
-							<li class="med-text">Se prueba con distintos materiales</li>
-						</ul>
-						<p>
-							Para cada caso se calcula la primera frecuencia
-							natural \(\omega\)
-						</p>
-					</div>
-					<aside class="notes"><strong>Metodología final</strong><br><br>
-						Recalcar que se busca encontrar la frecuencia natural de nanoestructuras de distintas geometrías. Mostrar las distintas geometrías (modelos 3D) y especificar donde se encuentra la longitud del dominio.
-						<br>
-						Mencionar que los parámetros a variar se especificarán en la sección de resultados
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Materiales</h3>
-						<div class="three-column" style="height: 150px;">
-							<h4>Carbono</h4>
-							<p>\(\rho=9.2\)</p>
-						</div>
-						<div class="three-column" style="height: 150px;">
-							<h4>Carbono3D</h4>
-						</div>
-						<div class="three-column" style="height: 150px;">
-							<p>$$\scriptsize\begin{bmatrix}
-								C11 & C12 & C13 & 0 & 0 & 0 \\
-								C21 & C22 & C23 & 0 & 0 & 0 \\
-								C31 & C32 & C33 & 0 & 0 & 0 \\
-								0 & 0 & 0 & C44 & 0 & 0 \\
-								0 & 0 & 0 & 0 & C55 & 0 \\
-								0 & 0 & 0 & 0 & 0 & C66
-								\end{bmatrix}$$</p>
-						</div>
-
-						<div class="three-column" style="height: 150px;">
-							<h4>Silicio</h4>
-							<p>\(\rho=9.2\)</p>
-						</div>
-						<div class="three-column" style="height: 150px;">
-							<h4>Silicio3D</h4>
-						</div>
-						<div class="three-column" style="height: 150px;">
-							<p>$$\scriptsize\begin{bmatrix}
-								C11 & C12 & C13 & 0 & 0 & 0 \\
-								C21 & C22 & C23 & 0 & 0 & 0 \\
-								C31 & C32 & C33 & 0 & 0 & 0 \\
-								0 & 0 & 0 & C44 & 0 & 0 \\
-								0 & 0 & 0 & 0 & C55 & 0 \\
-								0 & 0 & 0 & 0 & 0 & C66
-								\end{bmatrix}$$</p>
-						</div>
-
-						<div class="three-column" style="height: 150px;">
-							<h4>Germanio</h4>
-							<p>\(\rho=9.2\)</p>
-						</div>
-						<div class="three-column" style="height: 150px;">
-							<h4>Germanio3D</h4>
-						</div>
-						<div class="three-column" style="height: 150px;">
-							<p>$$\scriptsize\begin{bmatrix}
-								C11 & C12 & C13 & 0 & 0 & 0 \\
-								C21 & C22 & C23 & 0 & 0 & 0 \\
-								C31 & C32 & C33 & 0 & 0 & 0 \\
-								0 & 0 & 0 & C44 & 0 & 0 \\
-								0 & 0 & 0 & 0 & C55 & 0 \\
-								0 & 0 & 0 & 0 & 0 & C66
-								\end{bmatrix}$$</p>
-						</div>
-
-					</div>
-					<aside class="notes"><strong>Metodología final</strong><br><br>
-						Mencinar los 3 mateirales que se usarán para las simulaciones. Mencionar que para replicabilidad se proporciona el tensor de rigidez
-					</aside>
-				</section>
-
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Procedimiento</h3>
-						<p>
-							Para comparar entre resultados se usa la
-							frecuencia normalizada (\(\eta \) )
-							$$\eta=\frac{\omega R}{C_t}$$
-						</p>
-						<p>
-							Donde \(C_t\) es la velocidad de la onda de
-							corte
-						</p>
-						<p>Para cada simulación se realizan los siguientes pasos</p>
-						<ol>
-							<li class="med-text">
-								Se calcula la frecuencia normalizada con la
-								teoría no local \(\eta_{nl}\)
-							</li>
-							<li class="med-text">
-								Se calcula la frecuencia normalizada con la
-								teoría local \(\eta_{l}\)
-							</li>
-							<li class="med-text">
-								Se calcula la diferencia relativa entre las
-								frecuencias
-							</li class="med-text">
-							<p>$$\Delta=\left|\frac{\eta_{nl}-\eta_{l}}{\eta_{l}}\right|$$</p>
-							<li class="med-text">Si \(\Delta>0.5\%\) aumentar el tamaño \(R\)</li>
-						</ol>
-					</div>
-					<aside class="notes"><strong>Metodología final</strong><br><br>
-						Para poder comparar entre resultados se usa una normalización de la frecuencia. Esta normalización asegura que cambiando el tamaño de la nanoestructura \(R\), la frecuencia local se mantiene constante.<br> Se busca evaluar la diferencia relativa entre la frecuencia local y frecuencia no local hasta que la diferencia relativa sea menor al 0.5%. Para disminuir esa diferencia se aumentaá el tamaño de la nanopartícula hasta lograr el objetivo
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Procedimiento</h3>
-						<p>Diagrama de flujo final</p>
-					</div>
-					<aside class="notes"><strong>Metodología final</strong><br><br>
-						Mostar el resumen del proceso en el diagrama de flujo completo
-					</aside>
-				</section>
-			</section>
-			<section>
-				<section data-auto-animate id="resultados-title">
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="animate1" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="animate2" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h1>
-							<span class="vertical-aligned-title">Resultados</span>
-						</h1>
-					</div>
-					<aside class="notes"><strong>Resultados</strong><br><br>
-						Pasar rápido
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="animate1" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="animate2" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>Frecuencias normalizadas para cubos</h3>
-						<div id="grafica_res_1" style="width: 100%; height: 450px"></div>
-					</div>
-					<aside class="notes"><strong>Resultados</strong><br><br>
-						En esta gráfica apreciamos el comportamiento de las frecuencias naturales normalizadas para los tres materiales mencionados anteriormente. Se muestra la frecuencia local.
-
-						<strong>Frase oligatoria</strong>
-						Al normalizar las frecuencia naturales, los tres materiales presentan el mismo comportamiento, por lo tanto, se puede asegurar que: Pasar a la siguiente diapositiva
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="animate1" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="animate2" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h1>
-							<span class="vertical-aligned-title">Independencia del material</span>
-						</h1>
-					</div>
-					<aside class="notes"><strong>Resultados</strong><br><br>
-						:)<br>
-						Explicar que esto se debe al tipo de interacciones que se presentan en la teoría de elasticidad no local de Eringen
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="animate1" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
-						</div>
-						<div class="content-indicator-item">
-							<a data-id="animate2" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
-						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
-						</div>
-					</div>
-					<div class="slide">
-						<h3>
-							Parametros usados en las simulaciones de cubos
-						</h3>
-						<ul>
-							<li class="med-text">Tamaño \(R\)</li>
-							<p>
-								Se usan valores de \(R =
-								10,15,20,50,100,200\)
+								Para cada caso se calcula la primera frecuencia
+								natural \(\omega\)
 							</p>
-							<li class="med-text">Longitud interna \(l\)</li>
-							<p>Se usan valores de \(l = 0.1,0.5,1,2,5\)</p>
-							<li class="med-text">
-								Factor no local \(\zeta_1\)
-							</li>
+						</div>
+						<aside class="notes">
+							<strong>Metodología final</strong><br /><br />
+							Recalcar que se busca encontrar la frecuencia
+							natural de nanoestructuras de distintas geometrías.
+							Mostrar las distintas geometrías (modelos 3D) y
+							especificar donde se encuentra la longitud del
+							dominio.
+							<br />
+							Mencionar que los parámetros a variar se
+							especificarán en la sección de resultados
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Materiales</h3>
+							<div class="three-column" style="height: 150px">
+								<h4>Carbono</h4>
+								<p>\(\rho=9.2\)</p>
+							</div>
+							<div class="three-column" style="height: 150px">
+								<h4>Carbono3D</h4>
+							</div>
+							<div class="three-column" style="height: 150px">
+								<p>
+									$$\scriptsize\begin{bmatrix} C11 & C12 & C13
+									& 0 & 0 & 0 \\ C21 & C22 & C23 & 0 & 0 & 0
+									\\ C31 & C32 & C33 & 0 & 0 & 0 \\ 0 & 0 & 0
+									& C44 & 0 & 0 \\ 0 & 0 & 0 & 0 & C55 & 0 \\
+									0 & 0 & 0 & 0 & 0 & C66 \end{bmatrix}$$
+								</p>
+							</div>
+
+							<div class="three-column" style="height: 150px">
+								<h4>Silicio</h4>
+								<p>\(\rho=9.2\)</p>
+							</div>
+							<div class="three-column" style="height: 150px">
+								<h4>Silicio3D</h4>
+							</div>
+							<div class="three-column" style="height: 150px">
+								<p>
+									$$\scriptsize\begin{bmatrix} C11 & C12 & C13
+									& 0 & 0 & 0 \\ C21 & C22 & C23 & 0 & 0 & 0
+									\\ C31 & C32 & C33 & 0 & 0 & 0 \\ 0 & 0 & 0
+									& C44 & 0 & 0 \\ 0 & 0 & 0 & 0 & C55 & 0 \\
+									0 & 0 & 0 & 0 & 0 & C66 \end{bmatrix}$$
+								</p>
+							</div>
+
+							<div class="three-column" style="height: 150px">
+								<h4>Germanio</h4>
+								<p>\(\rho=9.2\)</p>
+							</div>
+							<div class="three-column" style="height: 150px">
+								<h4>Germanio3D</h4>
+							</div>
+							<div class="three-column" style="height: 150px">
+								<p>
+									$$\scriptsize\begin{bmatrix} C11 & C12 & C13
+									& 0 & 0 & 0 \\ C21 & C22 & C23 & 0 & 0 & 0
+									\\ C31 & C32 & C33 & 0 & 0 & 0 \\ 0 & 0 & 0
+									& C44 & 0 & 0 \\ 0 & 0 & 0 & 0 & C55 & 0 \\
+									0 & 0 & 0 & 0 & 0 & C66 \end{bmatrix}$$
+								</p>
+							</div>
+						</div>
+						<aside class="notes">
+							<strong>Metodología final</strong><br /><br />
+							Mencinar los 3 mateirales que se usarán para las
+							simulaciones. Mencionar que para replicabilidad se
+							proporciona el tensor de rigidez
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Procedimiento</h3>
 							<p>
-								Se usan valores de \(\zeta_1 =
-								0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.9,1.0\)
+								Para comparar entre resultados se usa la
+								frecuencia normalizada (\(\eta \) )
+								$$\eta=\frac{\omega R}{C_t}$$
 							</p>
-							<li class="med-text">Material</li>
 							<p>
-								Se puede usar cualquiera, en este caso,
-								carbono.
+								Donde \(C_t\) es la velocidad de la onda de
+								corte
 							</p>
-						</ul>
-					</div>
-					<aside class="notes"><strong>Resultados</strong><br><br>
-						Quitando el material como variable, se planea realizar simulaciones de cubos usando los siguientes parámetros no locales.
-					</aside>
+							<p>
+								Para cada simulación se realizan los siguientes
+								pasos
+							</p>
+							<ol>
+								<li class="med-text">
+									Se calcula la frecuencia normalizada con la
+									teoría no local \(\eta_{nl}\)
+								</li>
+								<li class="med-text">
+									Se calcula la frecuencia normalizada con la
+									teoría local \(\eta_{l}\)
+								</li>
+								<li class="med-text">
+									Se calcula la diferencia relativa entre las
+									frecuencias
+								</li>
+								<p>
+									$$\Delta=\left|\frac{\eta_{nl}-\eta_{l}}{\eta_{l}}\right|$$
+								</p>
+								<li class="med-text">
+									Si \(\Delta>0.5\%\) aumentar el tamaño \(R\)
+								</li>
+							</ol>
+						</div>
+						<aside class="notes">
+							<strong>Metodología final</strong><br /><br />
+							Para poder comparar entre resultados se usa una
+							normalización de la frecuencia. Esta normalización
+							asegura que cambiando el tamaño de la nanoestructura
+							\(R\), la frecuencia local se mantiene constante.<br />
+							Se busca evaluar la diferencia relativa entre la
+							frecuencia local y frecuencia no local hasta que la
+							diferencia relativa sea menor al 0.5%. Para
+							disminuir esa diferencia se aumentaá el tamaño de la
+							nanopartícula hasta lograr el objetivo
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Procedimiento</h3>
+							<p>Diagrama de flujo final</p>
+						</div>
+						<aside class="notes">
+							<strong>Metodología final</strong><br /><br />
+							Mostar el resumen del proceso en el diagrama de
+							flujo completo
+						</aside>
+					</section>
 				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="animate1" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
+				<section>
+					<section data-auto-animate id="resultados-title">
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="animate1"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="animate2"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
 						</div>
-						<div class="content-indicator-item">
-							<a data-id="animate2" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
+						<div class="slide">
+							<h1>
+								<span class="vertical-aligned-title"
+									>Resultados</span
+								>
+							</h1>
 						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
+						<aside class="notes">
+							<strong>Resultados</strong><br /><br />
+							Pasar rápido
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="animate1"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="animate2"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
 						</div>
-					</div>
-					<div class="slide">
-						<h3>Frecuencias normalizadas para cubos</h3>
-						<div id="grafica_res_1" style="width: 100%; height: 450px"></div>
-					</div>
-					<aside class="notes"><strong>Resultados</strong><br><br>
-						A partir de un tamaño de TANTO que equiavale a TANTAS VECES l, se puede asegurar una diferencia relativa de 0.5%, por lo tanto, desde ese tamaño no es necesario tener en cuenta la no localidad.
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="animate1" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
+						<div class="slide">
+							<h3>Frecuencias normalizadas para cubos</h3>
+							<div
+								id="grafica_res_1"
+								style="width: 100%; height: 450px"
+							></div>
 						</div>
-						<div class="content-indicator-item">
-							<a data-id="animate2" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
+						<aside class="notes">
+							<strong>Resultados</strong><br /><br />
+							En esta gráfica apreciamos el comportamiento de las
+							frecuencias naturales normalizadas para los tres
+							materiales mencionados anteriormente. Se muestra la
+							frecuencia local.
+
+							<strong>Frase oligatoria</strong>
+							Al normalizar las frecuencia naturales, los tres
+							materiales presentan el mismo comportamiento, por lo
+							tanto, se puede asegurar que: Pasar a la siguiente
+							diapositiva
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="animate1"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="animate2"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
 						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
+						<div class="slide">
+							<h1>
+								<span class="vertical-aligned-title"
+									>Independencia del material</span
+								>
+							</h1>
 						</div>
-					</div>
-					<div class="slide">
-						<h3>
-							Diferencia relativa de frecuencias no locales
-						</h3>
-						<div id="grafica_res_1" style="width: 100%; height: 450px"></div>
-					</div>
-					<aside class="notes"><strong>Resultados</strong><br><br>
-						A partir de un tamaño de TANTO que equiavale a TANTAS VECES l, se puede asegurar una diferencia relativa de 0.5%, por lo tanto, desde ese tamaño no es necesario tener en cuenta la no localidad.
-					</aside>
-				</section>
-				<section data-auto-animate>
-					<div class="content-indicator">
-						<div class="content-indicator-item">
-							<a data-id="animate1" class="hidden-link" href="#/introduccion-title">Introducción
-							</a>
+						<aside class="notes">
+							<strong>Resultados</strong><br /><br />
+							:)<br />
+							Explicar que esto se debe al tipo de interacciones
+							que se presentan en la teoría de elasticidad no
+							local de Eringen
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="animate1"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="animate2"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
 						</div>
-						<div class="content-indicator-item">
-							<a data-id="animate2" class="hidden-link" href="#/metodos-title">Métodos
-							</a>
+						<div class="slide">
+							<h3>
+								Parametros usados en las simulaciones de cubos
+							</h3>
+							<ul>
+								<li class="med-text">Tamaño \(R\)</li>
+								<p>
+									Se usan valores de \(R =
+									10,15,20,50,100,200\)
+								</p>
+								<li class="med-text">Longitud interna \(l\)</li>
+								<p>Se usan valores de \(l = 0.1,0.5,1,2,5\)</p>
+								<li class="med-text">
+									Factor no local \(\zeta_1\)
+								</li>
+								<p>
+									Se usan valores de \(\zeta_1 =
+									0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.9,1.0\)
+								</p>
+								<li class="med-text">Material</li>
+								<p>
+									Se puede usar cualquiera, en este caso,
+									carbono.
+								</p>
+							</ul>
 						</div>
-						<div class="content-indicator-item selected-ci">
-							<a data-id="not-animate" class="hidden-link" href="#/resultados-title">Resultados
-							</a>
+						<aside class="notes">
+							<strong>Resultados</strong><br /><br />
+							Quitando el material como variable, se planea
+							realizar simulaciones de cubos usando los siguientes
+							parámetros no locales.
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="animate1"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="animate2"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
 						</div>
-					</div>
-					<div class="slide">
-						<h1 style="
+						<div class="slide">
+							<h3>Frecuencias normalizadas para cubos</h3>
+							<div
+								id="grafica_res_1"
+								style="width: 100%; height: 450px"
+							></div>
+						</div>
+						<aside class="notes">
+							<strong>Resultados</strong><br /><br />
+							A partir de un tamaño de TANTO que equiavale a
+							TANTAS VECES l, se puede asegurar una diferencia
+							relativa de 0.5%, por lo tanto, desde ese tamaño no
+							es necesario tener en cuenta la no localidad.
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="animate1"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="animate2"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>
+								Diferencia relativa de frecuencias no locales
+							</h3>
+							<div
+								id="grafica_res_1"
+								style="width: 100%; height: 450px"
+							></div>
+						</div>
+						<aside class="notes">
+							<strong>Resultados</strong><br /><br />
+							A partir de un tamaño de TANTO que equiavale a
+							TANTAS VECES l, se puede asegurar una diferencia
+							relativa de 0.5%, por lo tanto, desde ese tamaño no
+							es necesario tener en cuenta la no localidad.
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="animate1"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="animate2"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h1
+								style="
 									position: absolute;
 									top: 25%;
 									text-transform: none;
-								">
-							Para R > \(18l\) <br />\(\Delta\) <0.5% </h1>
-					</div>
-					<aside class="notes"><strong>Conclusión</strong><br><br>
-						Gran conclusión del estudio, sin embargo, esta diapositiva no debería estar en Tesis 1 sino en Tesis 2. Algo bueno sería mencionar que este es un aproximado sacado con pocas simulaciones y que en tesis 2 se realizarán todas las simulaciones para tener uan respueta mas refinada.
-					</aside>
+								"
+							>
+								Para R > \(18l\) <br />\(\Delta\) <0.5%
+							</h1>
+						</div>
+						<aside class="notes">
+							<strong>Conclusión</strong><br /><br />
+							Gran conclusión del estudio, sin embargo, esta
+							diapositiva no debería estar en Tesis 1 sino en
+							Tesis 2. Algo bueno sería mencionar que este es un
+							aproximado sacado con pocas simulaciones y que en
+							tesis 2 se realizarán todas las simulaciones para
+							tener uan respueta mas refinada.
+						</aside>
+					</section>
 				</section>
-			</section>
-			<section>Cronograma<br>No he definido un cronograma todavía, ayuda :(</section>
-			<section>Referencias</section>
+				<section>
+					Cronograma<br />No he definido un cronograma todavía, ayuda
+					:(
+				</section>
+				<section>Referencias</section>
+			</div>
 		</div>
-	</div>
-	<script src="plugin/math/math.js" type="text/javascript" s></script>
-	<script src="plugin/notes/notes.js"></script>
-	<script src="plugin/zoom/zoom.js"></script>
-	<script src="js/reveal.js" type="text/javascript"></script>
-	<script src="js/main.js" type="text/javascript"></script>
-</body>
-
+		<script src="plugin/math/math.js" type="text/javascript" s></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="js/reveal.js" type="text/javascript"></script>
+		<script src="js/main.js" type="text/javascript"></script>
+	</body>
 </html>
