@@ -33,7 +33,7 @@
 
 	--big-size-text: 1.8rem;
 	--medium-size-text: 1.3rem;
-	--small-size-text: 0.9rem;
+	--small-size-text: 1.1rem;
 	--mid-size-text: 1.1rem;
 }
 h1 {
@@ -99,6 +99,7 @@ figcaption {
 }
 
 .figure figcaption {
+	padding: 18px;
 	counter-increment: figures;
 	text-align: center;
 	font-weight: normal !important;

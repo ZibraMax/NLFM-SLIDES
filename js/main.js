@@ -1,3 +1,9 @@
+const elems = document.body.getElementsByTagName("figcaption");
+for (let i = 0; i < elems.length; i++) {
+	const element = elems[i];
+	element.innerHTML = `<strong>Fig ${i + 1}. </strong>` + element.innerHTML;
+}
+
 const config = {
 	history: true,
 	katex: {
@@ -764,10 +770,4 @@ window.onload = () => {
 	updateGraphs();
 	updateGraphs2();
 	updateGraphs3();
-	const elems = document.body.getElementsByTagName("figcaption");
-	for (let i = 0; i < elems.length; i++) {
-		const element = elems[i];
-		element.innerHTML =
-			`<strong>Figura ${i + 1}. </strong>` + element.innerHTML;
-	}
 };
