@@ -1,4 +1,4 @@
-<!-- <iframe data-preload loading="lazy" class="iframe-3d " src="https://zibramax.github.io/masters-slides/docs/viewer/" scrolling="no" frameborder="0" ></iframe> para meter 3d por el momento-->
+<!-- <iframe data-preload loading="lazy" class="iframe-3d " data-src="https://zibramax.github.io/masters-slides/docs/viewer/" scrolling="no" frameborder="0" ></iframe> para meter 3d por el momento-->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -84,14 +84,14 @@
 						<p class="text-left two-column">
 							Arturo Rodriguez<br /><a
 								href="mailto:da.rodriguezh@uniandes.edu.co"
-								style="font-size: 0.5em; color: #5c5c5c"
+								style="color: #5c5c5c"
 								>da.rodriguezh@uniandes.edu.co</a
 							>
 						</p>
 						<p class="text-left two-column">
 							Fernando Ramirez<br /><a
 								href="mailto:f.ramirez@uniandes.edu.co"
-								style="font-size: 0.5em; color: #5c5c5c"
+								style="color: #5c5c5c"
 								>f.ramirez@uniandes.edu.co</a
 							>
 						</p>
@@ -186,7 +186,7 @@
 									<p class="med-text">
 										Teoría clasica del medio continuo.
 										Fuerzas mecánicas
-										\[{\Large\sigma_{ij}=C_{ijkl}\varepsilon_{kls}}\]
+										\[{\Large\sigma_{ij}=C_{ijkl}\varepsilon_{kl}}\]
 									</p>
 									<p class="med-text">
 										Tener en cuenta las fuerzas de cohesion
@@ -213,13 +213,6 @@
 							en 1972. Esta teoría logra incluir los efectos de
 							fuerzas cohesivas de largo alcance en la modelación
 							del medio continuo.
-							<br /><br />
-							<strong>Descripción de imagenes</strong>
-							<br />
-							Foto 1: Muestra el comportamiento de algo pequeño
-							por el modelo elastico<br />
-							Foto 2: Muestra el comportamiento de algo pequeño
-							por el modelo no local
 							<br /><br />
 							<strong>Frase obligatoria</strong>
 							<br /><br />
@@ -975,7 +968,7 @@
 											data-preload
 											loading="lazy"
 											class="iframe-3d"
-											src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
+											data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
 											scrolling="no"
 											frameborder="0"
 											height="220px"
@@ -991,7 +984,7 @@
 											data-preload
 											loading="lazy"
 											class="iframe-3d"
-											src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_500_L_6_362_nx_8_o0_6.json"
+											data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_500_L_6_362_nx_8_o0_6.json"
 											scrolling="no"
 											frameborder="0"
 											height="220px"
@@ -1007,7 +1000,7 @@
 											data-preload
 											loading="lazy"
 											class="iframe-3d"
-											src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=5&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_000_L_6_362_nx_8_o0_6.json"
+											data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=5&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_000_L_6_362_nx_8_o0_6.json"
 											scrolling="no"
 											frameborder="0"
 											height="220px"
@@ -1699,7 +1692,7 @@
 									Función de atenuacion biexponencial en 1D
 								</figcaption>
 							</figure>
-							<div class="two-column" style="height: 210px">
+							<div class="two-column" style="height: 270px">
 								<p>
 									Dado que \(\rho\) se calcula como la
 									distancia entre dos puntos, mientras mas
@@ -1716,7 +1709,7 @@
 							<figure class="two-column figure">
 								<h3>MODELO 3D de distancia LR</h3>
 								<figcaption>
-									Distancai Lr visualizada en un entorno 3D
+									Distancia Lr visualizada en un entorno 3D
 								</figcaption>
 							</figure>
 						</div>
@@ -1848,7 +1841,7 @@
 									distania Lr
 								</figcaption>
 							</figure>
-							<div style="position: absolute; top: 75%">
+							<div style="position: absolute; top: 80%">
 								<p>
 									Para cada elemento \(n\), se encuentran los
 									elementos adyacentes \(m\) cuyos centroides
@@ -1922,7 +1915,9 @@
 										src="./resources/conect_loc1.png"
 										height="130px"
 									/>
-									<figcaption>Elemento local</figcaption>
+									<figcaption style="padding: 0px">
+										Elemento local
+									</figcaption>
 								</figure>
 								<div
 									style="
@@ -1960,7 +1955,7 @@
 										src="./resources/conect_loc2.png"
 										height="240px"
 									/>
-									<figcaption>
+									<figcaption style="padding: 0px">
 										Dominio de elementos finitos de ejemplo
 									</figcaption>
 								</figure>
@@ -2108,7 +2103,7 @@
 										src="./resources/conect_nloc1.png"
 										height="130px"
 									/>
-									<figcaption>
+									<figcaption style="padding: 0px">
 										Elemento local y no local
 									</figcaption>
 								</figure>
@@ -2148,7 +2143,7 @@
 										src="./resources/conect_nloc2.png"
 										height="240px"
 									/>
-									<figcaption>
+									<figcaption style="padding: 0px">
 										Dominio de elementos finitos de ejemplo
 									</figcaption>
 								</figure>
@@ -2346,7 +2341,7 @@
 							<h4 data-id="titulito">
 								Proceso de elementos finitos completo
 							</h4>
-							<figure>
+							<figure class="figure">
 								<img
 									height="430px"
 									src="./resources/dffem.svg"
@@ -2408,7 +2403,7 @@
 										height="150px"
 										src="./resources/Dominio.jpeg"
 									/>
-									<figcaption>
+									<figcaption style="padding: 0px">
 										Modelo objetivo. Adaptado de Pisano et
 										al. (2009)
 									</figcaption>
@@ -2420,7 +2415,7 @@
 										height="150px"
 										src="./resources/def.jpeg"
 									/>
-									<figcaption>
+									<figcaption style="padding: 0px">
 										Solución para \(\varepsilon_x\)
 									</figcaption>
 								</figure>
@@ -2431,7 +2426,7 @@
 										height="150px"
 										src="./resources/y_2519.jpeg"
 									/>
-									<figcaption>
+									<figcaption style="padding: 0px">
 										Compración de resultados para
 										\(y=2.519\)
 									</figcaption>
@@ -2443,7 +2438,7 @@
 										height="150px"
 										src="./resources/x_0019.jpeg"
 									/>
-									<figcaption>
+									<figcaption style="padding: 0px">
 										Comparación de resultados para
 										\(x=0.019\)
 									</figcaption>
@@ -2575,7 +2570,7 @@
 									data-preload
 									loading="lazy"
 									class="iframe-3d"
-									src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
+									data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
 									scrolling="no"
 									frameborder="0"
 									height="220px"
@@ -2589,7 +2584,7 @@
 									data-preload
 									loading="lazy"
 									class="iframe-3d"
-									src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
+									data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
 									scrolling="no"
 									frameborder="0"
 									height="220px"
@@ -2603,30 +2598,32 @@
 									data-preload
 									loading="lazy"
 									class="iframe-3d"
-									src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
+									data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
 									scrolling="no"
 									frameborder="0"
 									height="220px"
 								></iframe>
 								<figcaption>Viga de longitud \(R\)</figcaption>
 							</figure>
-							<p>Con cada geometría:</p>
-							<ul>
-								<li class="med-text">
-									Se varían los parámetros no locales \(l\) y
-									\(\zeta_1\)
-								</li>
-								<li class="med-text">
-									Se cambia la distancia \(R\)
-								</li>
-								<li class="med-text">
-									Se prueba con distintos materiales
-								</li>
-							</ul>
-							<p>
-								Para cada caso se calcula la primera frecuencia
-								natural \(\omega\)
-							</p>
+							<div style="position: absolute; top: 60%">
+								<p>Con cada geometría:</p>
+								<ul>
+									<li class="med-text">
+										Se varían los parámetros no locales
+										\(l\) y \(\zeta_1\)
+									</li>
+									<li class="med-text">
+										Se cambia la distancia \(R\)
+									</li>
+									<li class="med-text">
+										Se prueba con distintos materiales
+									</li>
+								</ul>
+								<p>
+									Para cada caso se calcula la primera
+									frecuencia natural \(\omega\)
+								</p>
+							</div>
 						</div>
 						<aside class="notes">
 							<strong>Metodología final</strong><br /><br />

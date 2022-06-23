@@ -1,3 +1,9 @@
+const elems = document.body.getElementsByTagName("figcaption");
+for (let i = 0; i < elems.length; i++) {
+	const element = elems[i];
+	element.innerHTML = `<strong>Fig ${i + 1}. </strong>` + element.innerHTML;
+}
+
 const config = {
 	history: true,
 	katex: {
@@ -12,6 +18,8 @@ const config = {
 	},
 	// showNotes: true,
 	slideNumber: "c/t",
+	transition: "fade",
+	preloadIframes: true,
 	plugins: [RevealMath.KaTeX, RevealNotes, RevealZoom],
 };
 Reveal.initialize(config);
@@ -784,3 +792,9 @@ Reveal.on("graficas-pesadas2", () => {
 Reveal.on("graficas-atenu2d", () => {
 	updateGraphs3();
 });
+
+window.onload = () => {
+	updateGraphs();
+	updateGraphs2();
+	updateGraphs3();
+};
