@@ -22,17 +22,17 @@ const plots_layout = {
 	margin: { autoexpand: false, b: 0, l: 0, pad: 0, r: 0, t: 0 },
 };
 
-const atenu1_div = document.getElementById("atenuacion1");
-const atenu2_div = document.getElementById("atenuacion2");
-const atenu3_div = document.getElementById("atenuacion3");
+const atenu1_div = [...document.querySelectorAll("[id=atenuacion1]")];
+const atenu2_div = [...document.querySelectorAll("[id=atenuacion2]")];
+const atenu3_div = [...document.querySelectorAll("[id=atenuacion3]")];
 
-const atenu4_div = document.getElementById("atenuacion4");
-const atenu5_div = document.getElementById("atenuacion5");
-const atenu6_div = document.getElementById("atenuacion6");
+const atenu4_div = [...document.querySelectorAll("[id=atenuacion4]")];
+const atenu5_div = [...document.querySelectorAll("[id=atenuacion5]")];
+const atenu6_div = [...document.querySelectorAll("[id=atenuacion6]")];
 
-const atenu2d = document.getElementById("grafica-atenuacion-2d");
+const atenu2d = [...document.querySelectorAll("[id=grafica-atenuacion-2d]")];
 
-const resultados_1 = document.getElementById("grafica_res_1");
+const resultados_1 = [...document.querySelectorAll("[id=grafica_res_1]")];
 
 const cmap = [
 	["0.0", "#f3f3f3)"],
@@ -663,55 +663,70 @@ const data_atenuacion_2d = [
 	},
 ];
 
-Plotly.newPlot(atenu1_div, [data_atenua_1], plots_layout, plots_config);
-Plotly.newPlot(atenu2_div, [data_atenua_2], plots_layout, plots_config);
-Plotly.newPlot(atenu3_div, [data_atenua_3], plots_layout, plots_config);
-
-Plotly.newPlot(atenu4_div, [data_atenua_1], plots_layout, plots_config);
-Plotly.newPlot(atenu5_div, [data_atenua_2], plots_layout, plots_config);
-Plotly.newPlot(atenu6_div, [data_atenua_3], plots_layout, plots_config);
-Plotly.newPlot(
-	resultados_1,
-	data_resultados_1,
-	{
-		xaxis: {
-			title: "1/R",
-			gridcolor: "#dcdcdc",
-			zerolinecolor: "#dcdcdc",
-		},
-		yaxis: {
-			title: "η",
-			gridcolor: "#dcdcdc",
-			zerolinecolor: "#dcdcdc",
-		},
-		legend: {
-			x: 1,
-			y: 1,
-			orientation: "h",
-			xanchor: "right",
-		},
-		margin: { t: 0 },
-	},
-	plots_config
+atenu1_div.map((x) =>
+	Plotly.newPlot(x, [data_atenua_1], plots_layout, plots_config)
+);
+atenu2_div.map((x) =>
+	Plotly.newPlot(x, [data_atenua_2], plots_layout, plots_config)
+);
+atenu3_div.map((x) =>
+	Plotly.newPlot(x, [data_atenua_3], plots_layout, plots_config)
+);
+atenu4_div.map((x) =>
+	Plotly.newPlot(x, [data_atenua_1], plots_layout, plots_config)
+);
+atenu5_div.map((x) =>
+	Plotly.newPlot(x, [data_atenua_2], plots_layout, plots_config)
+);
+atenu6_div.map((x) =>
+	Plotly.newPlot(x, [data_atenua_3], plots_layout, plots_config)
 );
 
-Plotly.newPlot(
-	atenu2d,
-	data_atenuacion_2d,
-	{
-		xaxis: {
-			title: "ρ",
-			gridcolor: "#dcdcdc",
-			zerolinecolor: "#dcdcdc",
+resultados_1.map((x) =>
+	Plotly.newPlot(
+		x,
+		data_resultados_1,
+		{
+			xaxis: {
+				title: "1/R",
+				gridcolor: "#dcdcdc",
+				zerolinecolor: "#dcdcdc",
+			},
+			yaxis: {
+				title: "η",
+				gridcolor: "#dcdcdc",
+				zerolinecolor: "#dcdcdc",
+			},
+			legend: {
+				x: 1,
+				y: 1,
+				orientation: "h",
+				xanchor: "right",
+			},
+			margin: { t: 0 },
 		},
-		yaxis: {
-			title: "A(ρ)",
-			gridcolor: "#dcdcdc",
-			zerolinecolor: "#dcdcdc",
+		plots_config
+	)
+);
+atenu2d.map((x) =>
+	Plotly.newPlot(
+		x,
+		data_atenuacion_2d,
+		{
+			xaxis: {
+				title: "ρ",
+				gridcolor: "#dcdcdc",
+				zerolinecolor: "#dcdcdc",
+			},
+			yaxis: {
+				title: "A(ρ)",
+				gridcolor: "#dcdcdc",
+				zerolinecolor: "#dcdcdc",
+			},
+			margin: { t: 0, pad: 0, r: 20, b: 40, l: 40 },
 		},
-		margin: { t: 0, pad: 0, r: 20, b: 40, l: 40 },
-	},
-	plots_config
+		plots_config
+	)
 );
 
 Reveal.on("fragmentshown", (event) => {
@@ -725,24 +740,36 @@ Reveal.on("fragmenthidden", (event) => {
 
 function updateGraphs() {
 	return new Promise((resolve) => {
-		Plotly.update(atenu1_div);
-		Plotly.update(atenu2_div);
-		Plotly.update(atenu3_div);
+		atenu1_div.map((x) =>
+			Plotly.newPlot(x, [data_atenua_1], plots_layout, plots_config)
+		);
+		atenu2_div.map((x) =>
+			Plotly.newPlot(x, [data_atenua_2], plots_layout, plots_config)
+		);
+		atenu3_div.map((x) =>
+			Plotly.newPlot(x, [data_atenua_3], plots_layout, plots_config)
+		);
 		resolve("resolved");
 	});
 }
 function updateGraphs2() {
 	return new Promise((resolve) => {
-		Plotly.update(atenu4_div);
-		Plotly.update(atenu5_div);
-		Plotly.update(atenu6_div);
+		atenu4_div.map((x) =>
+			Plotly.newPlot(x, [data_atenua_1], plots_layout, plots_config)
+		);
+		atenu5_div.map((x) =>
+			Plotly.newPlot(x, [data_atenua_2], plots_layout, plots_config)
+		);
+		atenu6_div.map((x) =>
+			Plotly.newPlot(x, [data_atenua_3], plots_layout, plots_config)
+		);
 		resolve("resolved");
 	});
 }
 
 function updateGraphs3() {
 	return new Promise((resolve) => {
-		Plotly.update(atenu2d);
+		atenu2d.map((x) => Plotly.update(x));
 		resolve("resolved");
 	});
 }
