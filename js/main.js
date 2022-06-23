@@ -781,6 +781,12 @@ function updateGraphs3() {
 		resolve("resolved");
 	});
 }
+function updateGraphs4() {
+	return new Promise((resolve) => {
+		resultados_1.map((x) => Plotly.update(x));
+		resolve("resolved");
+	});
+}
 
 Reveal.on("graficas-pesadas", () => {
 	updateGraphs();
@@ -793,8 +799,10 @@ Reveal.on("graficas-atenu2d", () => {
 	updateGraphs3();
 });
 
+Reveal.on("graficas-resultados-1", () => {
+	updateGraphs4();
+});
+
 window.onload = () => {
-	updateGraphs();
-	updateGraphs2();
 	updateGraphs3();
 };
