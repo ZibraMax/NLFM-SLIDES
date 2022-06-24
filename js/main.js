@@ -22,6 +22,7 @@ const config = {
 	preloadIframes: true,
 	viewDistance: 5,
 	touch: false,
+	navigationMode: "linear",
 	plugins: [RevealMath.KaTeX, RevealNotes, RevealZoom],
 };
 Reveal.initialize(config);
