@@ -895,7 +895,9 @@
 									style="height: 205px"
 									id="atenuacion1"
 								>
-									<figcaption>
+									<figcaption
+										style="text-align: center; padding: 0px"
+									>
 										\(A(\rho)=\lambda_0e^{-\rho}\)
 									</figcaption>
 								</figure>
@@ -904,7 +906,9 @@
 									style="height: 205px"
 									id="atenuacion2"
 								>
-									<figcaption style="text-align: center">
+									<figcaption
+										style="text-align: center; padding: 0px"
+									>
 										\(A(\rho)=\lambda_0\left<1-\frac{\rho}{(1+\Omega_0)}\right>\)
 									</figcaption>
 								</figure>
@@ -913,7 +917,9 @@
 									style="height: 205px"
 									id="atenuacion3"
 								>
-									<figcaption style="text-align: center">
+									<figcaption
+										style="text-align: center; padding: 0px"
+									>
 										\(A(\rho)=\lambda_0\left<1-\frac{\rho^2}{(1+\Omega_0)^2}\right>\)
 									</figcaption>
 								</figure>
@@ -1003,7 +1009,9 @@
 									style="height: 205px"
 									id="atenuacion4"
 								>
-									<figcaption style="text-align: center">
+									<figcaption
+										style="text-align: center; padding: 0px"
+									>
 										\(A(\rho)=\lambda_0e^{-\rho}\)
 									</figcaption>
 								</figure>
@@ -1012,7 +1020,9 @@
 									style="height: 205px; opacity: 0.4"
 									id="atenuacion5"
 								>
-									<figcaption style="text-align: center">
+									<figcaption
+										style="text-align: center; padding: 0px"
+									>
 										\(\color{lightgray}A(\rho)=\lambda_0\left<1-\frac{\rho}{(1+\Omega_0)}\right>\)
 									</figcaption>
 								</figure>
@@ -1021,7 +1031,9 @@
 									style="height: 205px; opacity: 0.4"
 									id="atenuacion6"
 								>
-									<figcaption style="text-align: center">
+									<figcaption
+										style="text-align: center; padding: 0px"
+									>
 										\(\color{lightgray}A(\rho)=\lambda_0\left<1-\frac{\rho^2}{(1+\Omega_0)^2}\right>\)
 									</figcaption>
 								</figure>
@@ -1335,9 +1347,7 @@
 								A(\rho) B^T(x) C B(x')dv'dv$$ En esta expresión
 								la matriz \(B\) hace referencia a las derivadas
 								de las funciones de forma y la matríz \(C\) al
-								tensor de elasticidad del material
-							</p>
-							<p class="fragment">
+								tensor de elasticidad del material<br /><br />
 								Existe una matriz cruzada entre elementos debido
 								a la doble integral. El peso de esta matriz esta
 								definido por la función de atenuación.
@@ -1520,57 +1530,6 @@
 							rho=6 es suficiente para que la función de
 							atenuación deje de ser relevante para el proceso de
 							integración
-						</aside>
-					</section>
-
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h4 data-id="titulito">
-								Detección de elementos no locales
-							</h4>
-							<figure style="text-align: center" class="figure">
-								<img
-									data-id="imagen2d"
-									src="./resources/deteccion_no_local.png"
-									width="50%"
-								/>
-								<figcaption>
-									Distancia Lr a nivel de elementos 2D
-								</figcaption>
-							</figure>
-						</div>
-						<aside class="notes">
-							<strong>FEM no local</strong><br /><br />
-							Para un elemento local (rojo) se deben detectar los
-							elementos no locales que se encuentren a distancias
-							menores a Lr (grices), solamente sobre estos
-							elementos se tendrá en cuenta la no localidad.
 						</aside>
 					</section>
 
