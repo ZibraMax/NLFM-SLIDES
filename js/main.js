@@ -21,6 +21,7 @@ const config = {
 	transition: "fade",
 	preloadIframes: true,
 	viewDistance: 5,
+	touch: false,
 	plugins: [RevealMath.KaTeX, RevealNotes, RevealZoom],
 };
 Reveal.initialize(config);
@@ -615,6 +616,13 @@ const data_resultados_1 = [
 		name: "Ge",
 		line: { shape: "spline", color: "#8c8c8c" },
 	},
+	{
+		mode: "lines",
+		x: [0.008059958, 0.168512597],
+		y: [1.775616523, 1.775616523],
+		name: "Local",
+		line: { shape: "spline", color: "gray", dash: "dash" },
+	},
 ];
 
 const data_atenuacion_2d = [
@@ -707,11 +715,14 @@ resultados_1.map((x) =>
 				zerolinecolor: "#dcdcdc",
 			},
 			legend: {
-				x: 1,
-				y: 1,
+				x: 0.02,
+				y: 0.15,
 				orientation: "h",
-				xanchor: "right",
+				xanchor: "left",
+				borderwidth: 2,
+				bordercolor: "lightgray",
 			},
+			font: { size: 20 },
 			margin: { t: 0 },
 		},
 		plots_config

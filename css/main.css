@@ -144,13 +144,24 @@ body {
 
 .selected-ci {
 	background-color: var(--shades-w-1);
-	color: var(--red);
+	color: var(--red) !important;
 }
 .hidden-link:link {
-	color: inherit;
+	color: inherit !important;
 }
 .hidden-link:visited {
-	color: inherit;
+	color: inherit !important;
+}
+.hidden-link:hover {
+	color: var(--tint-r-1) !important;
+	text-decoration: underline !important;
+}
+
+a:link {
+	color: var(--red) !important;
+}
+a:visited {
+	color: var(--red) !important;
 }
 a:hover {
 	color: var(--tint-r-1) !important;
@@ -184,4 +195,8 @@ table,
 tr,
 td {
 	border: none !important;
+}
+.csl-entry {
+	font-size: var(--small-size-text);
+	text-align: left;
 }
