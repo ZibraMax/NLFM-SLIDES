@@ -43,6 +43,7 @@ const atenu6_div = [...document.querySelectorAll("[id=atenuacion6]")];
 const atenu2d = [...document.querySelectorAll("[id=grafica-atenuacion-2d]")];
 
 const resultados_1 = [...document.querySelectorAll("[id=grafica_res_1]")];
+const resultados_2 = [...document.querySelectorAll("[id=grafica_res_2]")];
 
 const cmap = [
 	["0.0", "#f3f3f3)"],
@@ -625,6 +626,42 @@ const data_resultados_1 = [
 	},
 ];
 
+const data_resultados_2 = [
+	{
+		type: "lines",
+		x: [
+			0.008059958, 0.016119915, 0.03223983, 0.062277527, 0.078879991,
+			0.107473265, 0.168512597, 0.253378104,
+		],
+		y: [
+			1.708224011, 1.67788427, 1.640829469, 1.551334046, 1.504764992,
+			1.438544474, 1.351713789, 1.308241897,
+		],
+		name: "No local",
+		line: { shape: "spline", color: "#dc2c41" },
+	},
+	{
+		mode: "lines",
+		x: [
+			0.008059958, 0.016119915, 0.03223983, 0.062277527, 0.078879991,
+			0.107473265, 0.168512597, 0.253378104,
+		],
+		y: [
+			1.775616523, 1.775616523, 1.775616523, 1.775616523, 1.775616523,
+			1.775616523, 1.775616523, 1.775616523,
+		],
+		name: "Local",
+		line: { shape: "spline", color: "black", dash: "dash" },
+	},
+	{
+		type: "lines",
+		x: [0.09397463, 0.118498943, 0.161627907, 0.253382664],
+		y: [1.464757709, 1.416299559, 1.323788546, 1.015418502],
+		name: "Ramirez (2006)",
+		line: { shape: "spline", color: "#8c8c8c" },
+	},
+];
+
 const data_atenuacion_2d = [
 	{
 		type: "lines",
@@ -728,6 +765,76 @@ resultados_1.map((x) =>
 		plots_config
 	)
 );
+
+resultados_2.map((x) =>
+	Plotly.newPlot(
+		x,
+		data_resultados_2,
+		{
+			xaxis: {
+				title: "1/R",
+				gridcolor: "#dcdcdc",
+				zerolinecolor: "#dcdcdc",
+				tickvals: [
+					0.008059958, 0.016119915, 0.03223983, 0.062277527,
+					0.078879991, 0.107473265, 0.168512597, 0.253378104,
+				],
+				ticktext: [
+					"1/62ℓ",
+					"1/31ℓ",
+					"1/16ℓ",
+					"1/8ℓ",
+					"1/6ℓ",
+					"1/5ℓ",
+					"1/3ℓ",
+					"1/2ℓ",
+				],
+				tickangle: 90,
+			},
+			yaxis: {
+				title: "η",
+				gridcolor: "#dcdcdc",
+				zerolinecolor: "#dcdcdc",
+			},
+			legend: {
+				x: 0.02,
+				y: 0.15,
+				orientation: "h",
+				xanchor: "left",
+				borderwidth: 2,
+				bordercolor: "lightgray",
+			},
+			font: { size: 20 },
+			margin: { t: 0 },
+			annotations: [
+				{
+					x: 0.008059958,
+					y: 1.708224011,
+					xref: "x",
+					yref: "y",
+					text: "Δ=3.80%",
+					showarrow: true,
+					arrowhead: 3,
+					ax: 20,
+					ay: 60,
+				},
+				{
+					x: 0.016119915,
+					y: 1.67788427,
+					xref: "x",
+					yref: "y",
+					text: "Δ=5.50%",
+					showarrow: true,
+					arrowhead: 3,
+					ax: 120,
+					ay: -20,
+				},
+			],
+		},
+		plots_config
+	)
+);
+
 atenu2d.map((x) =>
 	Plotly.newPlot(
 		x,
@@ -800,6 +907,13 @@ function updateGraphs4() {
 	});
 }
 
+function updateGraphs5() {
+	return new Promise((resolve) => {
+		resultados_2.map((x) => Plotly.update(x));
+		resolve("resolved");
+	});
+}
+
 Reveal.on("graficas-pesadas", () => {
 	updateGraphs();
 });
@@ -813,6 +927,10 @@ Reveal.on("graficas-atenu2d", () => {
 
 Reveal.on("graficas-resultados-1", () => {
 	updateGraphs4();
+});
+
+Reveal.on("graficas-pesadas-res-2", () => {
+	updateGraphs5();
 });
 
 window.onload = () => {
