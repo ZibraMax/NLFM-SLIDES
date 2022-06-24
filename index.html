@@ -26,7 +26,7 @@
 				src="https://uniandes.edu.co/sites/default/files/logo-uniandes.png"
 			/>
 			<div class="slides">
-				<section>
+				<section data-auto-animate>
 					<div class="content-indicator">
 						<div class="content-indicator-item">
 							<a class="hidden-link" href="#/introduccion-title"
@@ -57,7 +57,7 @@
 						tiempo.
 					</aside>
 				</section>
-				<section>
+				<section data-auto-animate>
 					<div class="content-indicator">
 						<div class="content-indicator-item">
 							<a class="hidden-link" href="#/introduccion-title"
@@ -103,7 +103,7 @@
 						presentación y seguir a la siguiente diapositiva
 					</aside>
 				</section>
-				<section>
+				<section data-auto-animate>
 					<section id="introduccion-title">
 						<div class="content-indicator">
 							<div class="content-indicator-item selected-ci">
@@ -180,17 +180,22 @@
 									style="
 										position: absolute;
 										left: 54%;
-										top: 30%;
+										top: 20%;
 									"
 								>
 									<p class="med-text">
-										Teoría clasica del medio continuo.
-										Fuerzas mecánicas
+										Ecuación constitutiva de la teoría
+										clásica (Ley de Hook)
 										\[{\Large\sigma_{ij}=C_{ijkl}\varepsilon_{kl}}\]
+										La teoría clásica no logra predecir el
+										comportamiento a escala nanométrica
+										(Fleck et al., 1994; Stölken & Evans
+										,1998; Lam et al., 2003)
 									</p>
 									<p class="med-text">
 										Tener en cuenta las fuerzas de cohesion
 										de corto alcance entre particulas
+										(Eringen, 1983)
 										\[{\Large\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
 									</p>
 								</div>
@@ -249,10 +254,11 @@
 						<div class="slide">
 							<h3>Relevancia de teoría no local</h3>
 							<figure class="three-column figure">
-								<img
-									height="150px"
-									src="./resources/GORMANI ET AL 2021.jpeg"
-								/>
+								<div style="width: 100%; height: 204px">
+									<img
+										src="./resources/GORMANI ET AL 2021.jpeg"
+									/>
+								</div>
 								<figcaption>
 									Pandeo de nanotubos. Tomado de Gormani et
 									al. (2021)
@@ -392,16 +398,21 @@
 								>
 							</h3>
 							<ul>
-								<li class="med-text">Teoría integral</li>
+								<li class="med-text">
+									Teoría integral (Eringen & Edelen, 1972)
+								</li>
 								<span
 									>\[\scriptsize{\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]</span
 								>
-								<li class="med-text">Teoría diferencial</li>
+								<li class="med-text">
+									Teoría diferencial (Eringen, 1983)
+								</li>
 								<span
 									>\[\scriptsize{(1-e_0a\nabla^2)\sigma_{ij}=C_{ijkl}\varepsilon_{kl}}\]</span
 								>
 								<li class="med-text">
-									Modelo integral de dos fases
+									Modelo integral de dos fases (Polizzotto,
+									2001)
 								</li>
 								<span
 									>\[\scriptsize{\sigma_{ij}=\zeta_1
@@ -444,7 +455,7 @@
 							mismo. Son teorías distintas<br />
 						</aside>
 					</section>
-					<section>
+					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item selected-ci">
 								<a
@@ -466,80 +477,10 @@
 						</div>
 						<div class="slide">
 							<h2 style="text-transform: none">
-								La teoría no local permite modelar con medio
-								continuo a escala nanométrica, simulaciones que
-								anteriormente solo se podían hacer con dinámica
-								molecular
-							</h2>
-						</div>
-						<aside class="notes">
-							<strong>Conclusiones de la introducción</strong
-							><br /><br />
-							Conclusión 1 de la introducción. Posiblemente se
-							quite esta diapositiva
-						</aside>
-					</section>
-					<section>
-						<div class="content-indicator">
-							<div class="content-indicator-item selected-ci">
-								<a
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a class="hidden-link" href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a class="hidden-link" href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h2 style="text-transform: none">
-								Calibrar el modelo no local permite modelar
-								nanoestructuras, ya que a dicha escala la teoría
-								local no coincide con los resultados
-								experimentales
-							</h2>
-						</div>
-						<aside class="notes">
-							<strong>Conclusiones de la introducción</strong
-							><br /><br />
-							Conclusión 2 de la introducción. Posiblemente se
-							quite esta diapositiva
-						</aside>
-					</section>
-					<section>
-						<div class="content-indicator">
-							<div class="content-indicator-item selected-ci">
-								<a
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a class="hidden-link" href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a class="hidden-link" href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h2 style="text-transform: none">
-								Los efectos de la no localidad dependen del
-								tamaño, mientras mayor sea el tamaño del dominio
-								a modelar, menor es la relevancia de la no
-								localidad y mayor el costo computacional
+								En la teoría no local el tamaño importa.<br />
+								Mientras mayor sea el tamaño del dominio, menor
+								es la relevancia de la no localidad y mayor el
+								costo computacional (Nguyen et al., 2015)
 							</h2>
 						</div>
 						<aside class="notes">
@@ -591,7 +532,7 @@
 						</aside>
 					</section>
 				</section>
-				<section>
+				<section data-auto-animate>
 					<section data-auto-animate id="metodos-title">
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -2692,7 +2633,7 @@
 						</aside>
 					</section>
 				</section>
-				<section>
+				<section data-auto-animate>
 					<section data-auto-animate id="resultados-title">
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -2987,11 +2928,11 @@
 						</aside>
 					</section>
 				</section>
-				<section>
+				<section data-auto-animate>
 					Cronograma<br />No he definido un cronograma todavía, ayuda
 					:(
 				</section>
-				<section>Referencias</section>
+				<section data-auto-animate>Referencias</section>
 			</div>
 		</div>
 		<script src="plugin/math/math.js" type="text/javascript" s></script>
