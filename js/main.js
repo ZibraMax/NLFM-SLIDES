@@ -20,6 +20,7 @@ const config = {
 	slideNumber: "c/t",
 	transition: "fade",
 	preloadIframes: true,
+	viewDistance: 5,
 	plugins: [RevealMath.KaTeX, RevealNotes, RevealZoom],
 };
 Reveal.initialize(config);
