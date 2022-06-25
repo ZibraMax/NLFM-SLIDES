@@ -658,6 +658,21 @@ const data_resultados_2 = [
 		name: "Ramirez (2006)",
 		line: { shape: "spline", color: "#8c8c8c" },
 	},
+	{
+		mode: "lines",
+		x: [
+			0.00001, 0.0001, 0.0005, 0.00075, 0.001, 0.01, 0.02, 0.03, 0.07,
+			0.09, 0.15, 0.2,
+		],
+		y: [
+			1.728727324, 1.728471896, 1.727336661, 1.726627138, 1.725917616,
+			1.700374815, 1.671993925, 1.643613035, 1.530089474, 1.473327694,
+			1.303042353, 1.161137902,
+		],
+
+		name: "Ajuste lineal",
+		line: { shape: "spline", color: "#8c8c8c", dash: "dash" },
+	},
 ];
 
 const data_atenuacion_2d = [
@@ -786,12 +801,13 @@ resultados_2.map((x) =>
 				zerolinecolor: "#dcdcdc",
 			},
 			legend: {
-				x: 0.02,
-				y: 0.15,
+				x: 0.05,
+				y: 0.21,
 				orientation: "h",
 				xanchor: "left",
 				borderwidth: 2,
 				bordercolor: "lightgray",
+				font: { size: 15 },
 			},
 			font: { size: 20 },
 			margin: { t: 0 },
@@ -804,8 +820,8 @@ resultados_2.map((x) =>
 					text: "Δ=3.80%",
 					showarrow: true,
 					arrowhead: 3,
-					ax: 20,
-					ay: 60,
+					ax: 30,
+					ay: 70,
 				},
 				{
 					x: 0.016119915,

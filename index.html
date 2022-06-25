@@ -1324,7 +1324,7 @@
 						</aside>
 					</section>
 
-					<section data-auto-animate>
+					<section data-auto-animate data-state="graficas-atenu2d">
 						<div class="content-indicator">
 							<div class="content-indicator-item">
 								<a
@@ -1358,7 +1358,7 @@
 							<figure
 								id="grafica-atenuacion-2d"
 								class="three-column figure"
-								style="height: 230px"
+								style="height: 245px"
 							>
 								<figcaption>
 									Función de atenuacion biexponencial en 1D
@@ -1783,12 +1783,48 @@
 							</div>
 						</div>
 						<div class="slide">
-							<div class="three-column">As</div>
-							<div class="three-column">As</div>
-							<div class="three-column">As</div>
-							<h4>
-								¿Desde que tamaño vale la pena tener en cuenta
-								los efectos no locales?
+							<div class="three-column">
+								<figure class="figure">
+									<img
+										src="./resources/deteccion_no_local1.png"
+									/>
+									<figcaption
+										style="padding: 0px; margin-top: -30px"
+									>
+										Elementos no locales de un dominio de 5
+										elementos por lado
+									</figcaption>
+								</figure>
+							</div>
+							<div class="three-column">
+								<figure class="figure">
+									<img
+										src="./resources/deteccion_no_local3.png"
+									/>
+									<figcaption
+										style="padding: 0px; margin-top: -30px"
+									>
+										Elementos no locales de un dominio de 15
+										elementos por lado
+									</figcaption>
+								</figure>
+							</div>
+							<div class="three-column">
+								<figure class="figure">
+									<img
+										src="./resources/deteccion_no_local5.png"
+									/>
+									<figcaption
+										style="padding: 0px; margin-top: -30px"
+									>
+										Elementos no locales de un dominio de 25
+										elementos por lado
+									</figcaption>
+								</figure>
+							</div>
+							<h4 style="text-transform: none; margin-top: 380px">
+								¿Que tamaño hace que los efectos no locales sean
+								despreciables?
 							</h4>
 						</div>
 						<aside class="notes">
@@ -1797,166 +1833,6 @@
 							relevante sea aquí
 						</aside>
 					</section>
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>Materiales</h3>
-							<div class="three-column" style="height: 150px">
-								<h4>Carbono</h4>
-								<p>\(\rho=3.515\ g/cm^3\)</p>
-							</div>
-							<div style="height: 150px; float: left; width: 60%">
-								<p>
-									$$\scriptsize C=\begin{bmatrix} 1280.0 &
-									124.0 & 124.0 & 0 & 0 & 0 \\ 124.0 & 1280.0
-									& 124.0 & 0 & 0 & 0 \\ 124.0 & 124.0 &
-									1280.0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 578.0 & 0
-									& 0 \\ 0 & 0 & 0 & 0 & 578.0 & 0 \\ 0 & 0 &
-									0 & 0 & 0 & 578.0 \end{bmatrix}\ MPa$$
-								</p>
-							</div>
-
-							<div class="three-column" style="height: 150px">
-								<h4>Silicio</h4>
-								<p>\(\rho=2.329\ g/cm^3\)</p>
-							</div>
-							<div style="height: 150px; float: left; width: 60%">
-								<p>
-									$$\scriptsize C=\begin{bmatrix} 223.1 & 63.9
-									& 63.9 & 0 & 0 & 0 \\ 63.9 & 223.1 & 63.9 &
-									0 & 0 & 0 \\ 63.9 & 63.9 & 223.1 & 0 & 0 & 0
-									\\ 0 & 0 & 0 & 79.6 & 0 & 0 \\ 0 & 0 & 0 & 0
-									& 79.6 & 0 \\ 0 & 0 & 0 & 0 & 0 & 79.6
-									\end{bmatrix}\ MPa$$
-								</p>
-							</div>
-
-							<div class="three-column" style="height: 150px">
-								<h4>Germanio</h4>
-								<p>\(\rho=5.323\ g/cm^3\)</p>
-							</div>
-							<div style="height: 150px; float: left; width: 60%">
-								<p>
-									$$\scriptsize C=\begin{bmatrix} 182.5 & 48.3
-									& 48.3 & 0 & 0 & 0 \\ 48.3 & 182.5 & 48.3 &
-									0 & 0 & 0 \\ 48.3 & 48.3 & 182.5 & 0 & 0 & 0
-									\\ 0 & 0 & 0 & 67.1 & 0 & 0 \\ 0 & 0 & 0 & 0
-									& 67.1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 67.1
-									\end{bmatrix}\ MPa$$
-								</p>
-							</div>
-						</div>
-						<aside class="notes">
-							<strong>Metodología final</strong><br /><br />
-							Mencinar los 3 mateirales que se usarán para las
-							simulaciones. Mencionar que para replicabilidad se
-							proporciona el tensor de rigidez<br /><br />Quisiera
-							poner aqui modelos 3D del cristal para cada material
-						</aside>
-					</section>
-
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>Análisis de frecuencias normalizadas</h3>
-							<p>
-								Para comparar entre resultados se usa la
-								frecuencia normalizada (\(\eta \) )
-								$$\eta=\frac{\omega R}{C_t}$$
-							</p>
-							<p>
-								Donde \(C_t\) es la velocidad de la onda de
-								corte
-							</p>
-							<p>
-								Para cada simulación se realizan los siguientes
-								pasos
-							</p>
-							<ol>
-								<li class="med-text">
-									Se calcula la frecuencia normalizada con la
-									teoría no local \(\eta_{nl}\)
-								</li>
-								<li class="med-text">
-									Se calcula la frecuencia normalizada con la
-									teoría local \(\eta_{l}\)
-								</li>
-								<li class="med-text">
-									Se calcula la diferencia relativa entre las
-									frecuencias
-								</li>
-								<p>
-									$$\Delta=\left|\frac{\eta_{nl}-\eta_{l}}{\eta_{l}}\right|$$
-								</p>
-								<li class="med-text">
-									Si \(\Delta>5\%\) aumentar el tamaño \(R\)
-								</li>
-							</ol>
-						</div>
-						<aside class="notes">
-							<strong>Metodología final</strong><br /><br />
-							Para poder comparar entre resultados se usa una
-							normalización de la frecuencia. Esta normalización
-							asegura que cambiando el tamaño de la nanoestructura
-							\(R\), la frecuencia local se mantiene constante.<br />
-							Se busca evaluar la diferencia relativa entre la
-							frecuencia local y frecuencia no local hasta que la
-							diferencia relativa sea menor al 5%. Para disminuir
-							esa diferencia se aumentaá el tamaño de la
-							nanopartícula hasta lograr el objetivo
-						</aside>
-					</section>
-
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -2040,7 +1916,8 @@
 								</ul>
 								<p>
 									Para cada caso se calcula la primera
-									frecuencia natural \(\omega\)
+									frecuencia natural \(\omega\) usando teoría
+									no local
 								</p>
 							</div>
 						</div>
@@ -2054,6 +1931,165 @@
 							<br />
 							Mencionar que los parámetros a variar se
 							especificarán en la sección de resultados
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Análisis de frecuencias normalizadas</h3>
+							<p>
+								Para comparar entre resultados se usa la
+								frecuencia normalizada (\(\eta \) )
+								$$\eta=\frac{\omega R}{C_t}$$
+							</p>
+							<p>
+								Donde \(C_t\) es la velocidad de la onda de
+								corte
+							</p>
+							<p>
+								Para cada simulación se realizan los siguientes
+								pasos
+							</p>
+							<ol>
+								<li class="med-text">
+									Se calcula la frecuencia normalizada con la
+									teoría no local \(\eta_{nl}\)
+								</li>
+								<li class="med-text">
+									Se calcula la frecuencia normalizada con la
+									teoría local \(\eta_{l}\)
+								</li>
+								<li class="med-text">
+									Se calcula la diferencia relativa entre las
+									frecuencias
+								</li>
+								<p>
+									$$\Delta=\left|\frac{\eta_{nl}-\eta_{l}}{\eta_{l}}\right|$$
+								</p>
+								<li class="med-text">
+									Si \(\Delta>5\%\) aumentar el tamaño \(R\)
+								</li>
+							</ol>
+						</div>
+						<aside class="notes">
+							<strong>Metodología final</strong><br /><br />
+							Para poder comparar entre resultados se usa una
+							normalización de la frecuencia. Esta normalización
+							asegura que cambiando el tamaño de la nanoestructura
+							\(R\), la frecuencia local se mantiene constante.<br />
+							Se busca evaluar la diferencia relativa entre la
+							frecuencia local y frecuencia no local hasta que la
+							diferencia relativa sea menor al 5%. Para disminuir
+							esa diferencia se aumentaá el tamaño de la
+							nanopartícula hasta lograr el objetivo
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Materiales</h3>
+							<div class="three-column" style="height: 150px">
+								<h4>Carbono</h4>
+								<p>\(\rho=3.515\ g/cm^3\)</p>
+							</div>
+							<div style="height: 150px; float: left; width: 60%">
+								<p>
+									$$\scriptsize C=\begin{bmatrix} 1280.0 &
+									124.0 & 124.0 & 0 & 0 & 0 \\ 124.0 & 1280.0
+									& 124.0 & 0 & 0 & 0 \\ 124.0 & 124.0 &
+									1280.0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 578.0 & 0
+									& 0 \\ 0 & 0 & 0 & 0 & 578.0 & 0 \\ 0 & 0 &
+									0 & 0 & 0 & 578.0 \end{bmatrix}\ MPa$$
+								</p>
+							</div>
+
+							<div class="three-column" style="height: 150px">
+								<h4>Silicio</h4>
+								<p>\(\rho=2.329\ g/cm^3\)</p>
+							</div>
+							<div style="height: 150px; float: left; width: 60%">
+								<p>
+									$$\scriptsize C=\begin{bmatrix} 223.1 & 63.9
+									& 63.9 & 0 & 0 & 0 \\ 63.9 & 223.1 & 63.9 &
+									0 & 0 & 0 \\ 63.9 & 63.9 & 223.1 & 0 & 0 & 0
+									\\ 0 & 0 & 0 & 79.6 & 0 & 0 \\ 0 & 0 & 0 & 0
+									& 79.6 & 0 \\ 0 & 0 & 0 & 0 & 0 & 79.6
+									\end{bmatrix}\ MPa$$
+								</p>
+							</div>
+
+							<div class="three-column" style="height: 150px">
+								<h4>Germanio</h4>
+								<p>\(\rho=5.323\ g/cm^3\)</p>
+							</div>
+							<div style="height: 150px; float: left; width: 60%">
+								<p>
+									$$\scriptsize C=\begin{bmatrix} 182.5 & 48.3
+									& 48.3 & 0 & 0 & 0 \\ 48.3 & 182.5 & 48.3 &
+									0 & 0 & 0 \\ 48.3 & 48.3 & 182.5 & 0 & 0 & 0
+									\\ 0 & 0 & 0 & 67.1 & 0 & 0 \\ 0 & 0 & 0 & 0
+									& 67.1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 67.1
+									\end{bmatrix}\ MPa$$
+								</p>
+							</div>
+						</div>
+						<aside class="notes">
+							<strong>Metodología final</strong><br /><br />
+							Mencinar los 3 mateirales que se usarán para las
+							simulaciones. Mencionar que para replicabilidad se
+							proporciona el tensor de rigidez<br /><br />Quisiera
+							poner aqui modelos 3D del cristal para cada material
 						</aside>
 					</section>
 
@@ -2294,20 +2330,38 @@
 							<h4>
 								Diferencia relativa de frecuencias no locales
 							</h4>
-							<figure style="width: 100%; height: 380px">
-								<div
-									id="grafica_res_2"
-									style="width: 100%; height: 430px"
-								></div>
-								<figcaption>
-									Resultados para frecuencias normalizadas de
-									cubos (\(l=2,\zeta_1=0.5\))
-								</figcaption>
-							</figure>
+							<div style="width: 70%; float: left">
+								<figure style="width: 100%">
+									<div
+										id="grafica_res_2"
+										style="width: 100%"
+									></div>
+									<figcaption>
+										Resultados para frecuencias normalizadas
+										de cubos (\(l=2,\zeta_1=0.5\))
+									</figcaption>
+								</figure>
+							</div>
+							<div
+								style="
+									width: 30%;
+									position: absolute;
+									top: 25%;
+									left: 75%;
+								"
+							>
+								<p>
+									Ajuste lineal con los primeros 5 puntos
+									$$\eta=1.73-2.84\frac{1}{R}$$ Por lo tanto:
+									$$\Delta=\left|\frac{1.73-2.84\frac{1}{R}-1.78}{1.78}\right|\%$$
+									Para conseguir $\Delta=5\%$ es necesario:
+									$$R=34l$$
+								</p>
+							</div>
 						</div>
 						<aside class="notes">
 							<strong>Resultados</strong><br /><br />
-							Hablar del comportamiento de las frecuencas locales
+							Hablar del comportamiento de las frecuencias locales
 							vs las no locales. Explicar que la lina recta es
 							gracias a la normalización y que la linea punteada
 							es la obtenida por Fernando usando dinamica
@@ -2319,58 +2373,55 @@
 							35 veces l se espera tener una variacion menor al 5%
 						</aside>
 					</section>
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="animate1"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="animate2"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
+					<section
+					data-auto-animate
+					data-state="graficas-pesadas-res-2"
+				>
+					<div class="content-indicator">
+						<div class="content-indicator-item">
+							<a
+								data-id="animate1"
+								class="hidden-link"
+								href="#/introduccion-title"
+								>Introducción
+							</a>
 						</div>
-						<div class="slide">
-							<h1
-								style="
-									position: absolute;
-									top: 25%;
-									text-transform: none;
-								"
-							>
-								Para R > \(35l\) <br />\(\Delta\) <5%
-							</h1>
+						<div class="content-indicator-item">
+							<a
+								data-id="animate2"
+								class="hidden-link"
+								href="#/metodos-title"
+								>Métodos
+							</a>
 						</div>
-						<aside class="notes">
-							<strong>Conclusión</strong><br /><br />
-							Gran conclusión del estudio, sin embargo, esta
-							diapositiva no debería estar en Tesis 1 sino en
-							Tesis 2. Algo bueno sería mencionar que este es un
-							aproximado sacado con pocas simulaciones y que en
-							tesis 2 se realizarán todas las simulaciones para
-							tener uan respueta mas refinada.
-						</aside>
-					</section>
-				</section>
-				<section data-auto-animate>
-					Cronograma<br />No he definido un cronograma todavía, ayuda
-					:(
+						<div class="content-indicator-item selected-ci">
+							<a
+								data-id="not-animate"
+								class="hidden-link"
+								href="#/resultados-title"
+								>Resultados
+							</a>
+						</div>
+					</div>
+					<div class="slide">
+						<h4>
+							Avance
+						</h4>
+						<ol>
+							<li>Programa<span class="fragment">✅</span></li>
+							<li>Validación<span class="fragment">✅</span></li>
+							<li>Simulaciones para frecuencias <span class="fragment" style="color:var(--red)">(1 mes)</span>
+								<ul>
+									<li>Cubos<span class="fragment">✅</span></li>
+									<li>Tetraedros</li>
+									<li>Esferas</li>
+									<li>Placas</li>
+									<li>Vigas</li>
+								</ul>
+							</li>
+							<li>Documento <span class="fragment" style="color:var(--red)">(1 mes)</span></li>
+						</ol>
+					</div>
 				</section>
 				<section data-auto-animate>
 					<div class="content-indicator">

@@ -73,8 +73,8 @@ ncolors = 256
 color_array = plt.get_cmap('Reds')(range(ncolors))
 
 # change alpha values
-color_array[:, -1] = 1.0-np.logspace(np.log10(0.00001),
-                                 np.log10(1), ncolors, base=10)[::-1]
+color_array[:, -1] = 1.0-np.logspace(np.log10(0.000001),
+                                     np.log10(1), ncolors, base=10)[::-1]
 
 # create a colormap object
 map_object = LinearSegmentedColormap.from_list(
