@@ -29,6 +29,9 @@
 				<section data-auto-animate>
 					<div class="content-indicator">
 						<div class="content-indicator-item">
+							<a class="hidden-link" style="color:var(--not-selected-color);font-size: 0.8rem;position: fixed;top: 2%;left: -1%;" onclick="simulateKey(83)">Abrir ventana de notas</a>
+							<a class="hidden-link" style="color:var(--not-selected-color);font-size: 0.8rem;position: fixed;top: 41%;left: -1%;" onclick="toogleNotes()">Activar notas al lado</a>
+
 							<a class="hidden-link" href="#/introduccion-title"
 								>Introducción
 							</a>
@@ -45,25 +48,33 @@
 						</div>
 					</div>
 					<div class="slide">
-						<h2>
-							Relevancia de la teoría de elasticidad no local
-							integral en el comportamiento de nanoestructuras
-							usando elementos finitos
-						</h2>
-						<p class="text-left two-column">
+						<div>
+
+						<h3>
+							Aplicabilidad de la teoría de elasticidad no local
+							en comportamiento mecánico de solidos usando FEM
+						</h3>
+						<p
+							class="text-left two-column"
+							style="font-size: var(--big-size-text);position: absolute;bottom: 0%;"
+						>
 							Arturo Rodriguez<br /><a
 								href="mailto:da.rodriguezh@uniandes.edu.co"
 								style="color: #5c5c5c"
 								>da.rodriguezh@uniandes.edu.co</a
 							>
 						</p>
-						<p class="text-left two-column">
+						<p
+							class="text-left two-column"
+							style="font-size: var(--big-size-text);position: absolute;bottom: 0%;left:53%"
+						>
 							Fernando Ramirez<br /><a
 								href="mailto:f.ramirez@uniandes.edu.co"
 								style="color: #5c5c5c"
 								>f.ramirez@uniandes.edu.co</a
 							>
 						</p>
+						
 					</div>
 					<aside class="notes">
 						Controles:<br />Abrir notas al lado: S<br />Poner
@@ -236,36 +247,6 @@
 							<figure class="three-column figure">
 								<img
 									height="170px"
-									src="./resources/SAHMANI FATTHI 2018.png"
-								/>
-								<figcaption style="margin-top: -50px">
-									Pandeo 2D grafeno. Tomado de Sahmani &
-									Fatthi (2018)
-								</figcaption>
-							</figure>
-							<figure class="three-column figure">
-								<img
-									height="170px"
-									src="./resources/WANG ZHU AND DAI.jpeg"
-								/>
-								<figcaption style="margin-top: -50px">
-									Soluciones para vigas. Tomado de Wang et al.
-									(2016)
-								</figcaption>
-							</figure>
-							<figure class="three-column figure">
-								<img
-									height="170px"
-									src="./resources/NAGHINEJAD AND OVEZY.jpeg"
-								/>
-								<figcaption style="margin-top: -50px">
-									Frecuencias de vigas. Tomado de Naghinejad &
-									Ovezy (2018)
-								</figcaption>
-							</figure>
-							<figure class="three-column figure">
-								<img
-									height="170px"
 									src="./resources/Shariati et al 2021.png"
 								/>
 								<figcaption style="margin-top: -50px">
@@ -276,11 +257,11 @@
 							<figure class="three-column figure">
 								<img
 									height="170px"
-									src="./resources/NAZEMNEZHAD AND HOSSEINI 2014.jpeg"
+									src="./resources/WANG ZHU AND DAI.jpeg"
 								/>
 								<figcaption style="margin-top: -50px">
-									Laminados. Tomado de Nazemnezhad & Hosseini
-									(2014)
+									Soluciones para vigas. Tomado de Wang et al.
+									(2016)
 								</figcaption>
 							</figure>
 						</div>
@@ -360,6 +341,115 @@
 							</div>
 						</div>
 						<div class="slide">
+							<h1 style="text-transform: none">
+								¿Que tamaño es suficiente para no tener en
+								cuenta los efectos no locales?
+							</h1>
+						</div>
+						<aside class="notes">
+							<strong>Conclusiones de la introducción</strong
+							><br /><br />
+							Pregunta de investigación.
+						</aside>
+					</section>
+				</section>
+				<section data-auto-animate>
+					<div class="content-indicator">
+						<div class="content-indicator-item selected-ci">
+							<a
+								data-id="not-animate"
+								class="hidden-link"
+								href="#/introduccion-title"
+								>Introducción
+							</a>
+						</div>
+						<div class="content-indicator-item">
+							<a
+								data-id="not-animate"
+								class="hidden-link"
+								href="#/metodos-title"
+								>Métodos
+							</a>
+						</div>
+						<div class="content-indicator-item">
+							<a
+								data-id="not-animate"
+								class="hidden-link"
+								href="#/resultados-title"
+								>Resultados
+							</a>
+						</div>
+					</div>
+					<div class="slide">
+						<h1 style="text-transform: none">3D frecuencias</h1>
+					</div>
+					<aside class="notes"></aside>
+				</section>
+				<section data-auto-animate>
+					<section data-auto-animate id="metodos-title">
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h1>
+								<span class="vertical-aligned-title"
+									>Metodología</span
+								>
+							</h1>
+						</div>
+						<aside class="notes">Pasar rápido</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
 							<h3>
 								<span data-id="box">Teoría no local</span
 								><span data-id="box2" class="text-focus">
@@ -383,11 +473,15 @@
 									Modelo integral de dos fases (Polizzotto,
 									2001)
 								</li>
-								<span
-									>\[\scriptsize{\sigma_{ij}=\zeta_1
-									C_{ijkl}\varepsilon_{kl} +
-									\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]</span
+								<div
+									data-id="a"
+									class="vertical-aligned-eq"
+									style="top: 76%"
 								>
+									\[\scriptsize{\sigma_{ij}=\zeta_1
+									C_{ijkl}\varepsilon_{kl} +
+									\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
+								</div>
 							</ul>
 						</div>
 						<aside class="notes">
@@ -425,120 +519,6 @@
 						</aside>
 					</section>
 					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item selected-ci">
-								<a
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a class="hidden-link" href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a class="hidden-link" href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h2 style="text-transform: none">
-								En la teoría no local el tamaño importa.<br />
-								Mientras mayor sea el tamaño del dominio, menor
-								es la relevancia de la no localidad y mayor el
-								costo computacional (Nguyen et al., 2015)
-							</h2>
-						</div>
-						<aside class="notes">
-							<strong>Conclusiones de la introducción</strong
-							><br /><br />
-							Conclusión 3 de la introducción. Esta diapositiva
-							hay que ejemplificarla con una imagen. Es importante
-							porque es la que genera la pregunta de la
-							presentación
-						</aside>
-					</section>
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="animate1"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="animate2"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h1 style="text-transform: none">
-								¿Que tamaño es suficiente para no tener en
-								cuenta los efectos no locales?
-							</h1>
-						</div>
-						<aside class="notes">
-							<strong>Conclusiones de la introducción</strong
-							><br /><br />
-							Pregunta de investigación.
-						</aside>
-					</section>
-				</section>
-				<section data-auto-animate>
-					<section data-auto-animate id="metodos-title">
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="animate1"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="animate2"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h1>
-								<span class="vertical-aligned-title"
-									>Métodología</span
-								>
-							</h1>
-						</div>
-						<aside class="notes">Pasar rápido</aside>
-					</section>
-					<section data-auto-animate data-auto-animate-restart>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
 								<a
@@ -710,15 +690,13 @@
 							</div>
 							<br />
 							<div class="two-column">
-								<p class="fragment">
+								<p>
 									Representa que tanta no localidad se tiene
 									en cuenta
 								</p>
 							</div>
 							<div class="two-column">
-								<div class="fragment">
-									\[\scriptsize{\zeta_1+\zeta_2=1}\]
-								</div>
+								<div>\[\scriptsize{\zeta_1+\zeta_2=1}\]</div>
 							</div>
 							<div class="fragment">
 								<div class="three-column">
@@ -837,7 +815,7 @@
 								\zeta_2\int_{\Omega}\color{black}A(\rho)\color{lightgray}C_{ijkl}\varepsilon'_{kl}dv'}}\]
 							</div>
 							<br />
-							<div class="fragment">
+							<div>
 								<div class="two-column">
 									<p>
 										Representa la relevancia de las fuerzas
@@ -909,110 +887,6 @@
 							distancias.
 						</aside>
 					</section>
-					<section
-						data-auto-animate
-						data-auto-animate-unmatched="false"
-						data-transition="none"
-						data-state="graficas-pesadas2"
-					>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>Parámetros del modelo no local</h3>
-							<h6>Función de atenuación</h6>
-							<div
-								data-id="a"
-								class="vertical-aligned-eq"
-								style="top: 13%"
-							>
-								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
-								\zeta_1 C_{ijkl}\varepsilon_{kl}+
-								\zeta_2\int_{\Omega}\color{black}A(\rho)\color{lightgray}C_{ijkl}\varepsilon'_{kl}dv'}}\]
-							</div>
-							<br />
-							<div>
-								<div class="two-column">
-									<p>
-										Representa la relevancia de las fuerzas
-										de cohesión de largo alcance. Depende de
-										la distancia euclideana (\(|x-x'|\)) y
-										de la longitud interna (\(l\))
-									</p>
-								</div>
-								<div class="two-column">
-									<div data-id="ro">
-										\[\scriptsize{\rho=\frac{|x-x'|}{l}}\]
-									</div>
-								</div>
-							</div>
-							<div style="position: absolute; top: 53%">
-								<figure
-									class="three-column figure"
-									style="height: 205px"
-									id="atenuacion4"
-								>
-									<figcaption
-										style="text-align: center; padding: 0px"
-									>
-										\(A(\rho)=\lambda_0e^{-\rho}\)
-									</figcaption>
-								</figure>
-								<figure
-									class="three-column figure"
-									style="height: 205px; opacity: 0.4"
-									id="atenuacion5"
-								>
-									<figcaption
-										style="text-align: center; padding: 0px"
-									>
-										\(\color{lightgray}A(\rho)=\lambda_0\left<1-\frac{\rho}{(1+\Omega_0)}\right>\)
-									</figcaption>
-								</figure>
-								<figure
-									class="three-column figure"
-									style="height: 205px; opacity: 0.4"
-									id="atenuacion6"
-								>
-									<figcaption
-										style="text-align: center; padding: 0px"
-									>
-										\(\color{lightgray}A(\rho)=\lambda_0\left<1-\frac{\rho^2}{(1+\Omega_0)^2}\right>\)
-									</figcaption>
-								</figure>
-							</div>
-						</div>
-						<aside class="notes">
-							<strong>Modelo no local</strong><br /><br />
-							Para este caso se usará la función de atenuación
-							biexponencial, es la función mas adoptada en los
-							articulos revisados y se puede usar para la
-							validación y replicabilidad de los resultados.
-						</aside>
-					</section>
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -1050,7 +924,7 @@
 							</div>
 							<br />
 							<div>
-								<div class="fragment">
+								<div>
 									<div class="two-column">
 										<p style="padding-top: 30px">
 											El factor \(\lambda_0\) es usado
@@ -1060,7 +934,7 @@
 										</p>
 									</div>
 									<div class="two-column">
-										<div data-id="ro">
+										<div>
 											\[\scriptsize{\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=1}\]
 										</div>
 									</div>
@@ -1163,7 +1037,7 @@
 								>
 									Formulación variacional/Forma debil
 								</li>
-								<li>Matriz y vector de elemento</li>
+								<li>Matrices y vectores de elementos</li>
 								<li>Ensamblaje de sistema de ecuaciones</li>
 								<li>Condiciones de borde</li>
 								<li>Solución del sistema de ecuaciones</li>
@@ -1236,11 +1110,11 @@
 											color: var(--red);
 										"
 									>
-										Formulación variacional/Forma debil
+										Formulación variacional/Forma débil
 									</h4>
 								</li>
 								<li style="color: var(--red)">
-									Matriz y vector de elemento
+									Matrices y vectores de elementos
 								</li>
 								<li style="color: var(--red)">
 									Ensamblaje de sistema de ecuaciones

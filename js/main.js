@@ -3,7 +3,7 @@ for (let i = 0; i < elems.length; i++) {
 	const element = elems[i];
 	element.innerHTML = `<strong>Fig ${i + 1}. </strong>` + element.innerHTML;
 }
-
+let notes = false;
 const config = {
 	history: true,
 	katex: {
@@ -20,6 +20,7 @@ const config = {
 	slideNumber: "c/t",
 	transition: "fade",
 	preloadIframes: true,
+	showNotes: notes,
 	viewDistance: 5,
 	touch: false,
 	navigationMode: "linear",
@@ -36,10 +37,6 @@ const plots_layout = {
 const atenu1_div = [...document.querySelectorAll("[id=atenuacion1]")];
 const atenu2_div = [...document.querySelectorAll("[id=atenuacion2]")];
 const atenu3_div = [...document.querySelectorAll("[id=atenuacion3]")];
-
-const atenu4_div = [...document.querySelectorAll("[id=atenuacion4]")];
-const atenu5_div = [...document.querySelectorAll("[id=atenuacion5]")];
-const atenu6_div = [...document.querySelectorAll("[id=atenuacion6]")];
 
 const atenu2d = [...document.querySelectorAll("[id=grafica-atenuacion-2d]")];
 
@@ -727,15 +724,6 @@ atenu2_div.map((x) =>
 atenu3_div.map((x) =>
 	Plotly.newPlot(x, [data_atenua_3], plots_layout, plots_config)
 );
-atenu4_div.map((x) =>
-	Plotly.newPlot(x, [data_atenua_1], plots_layout, plots_config)
-);
-atenu5_div.map((x) =>
-	Plotly.newPlot(x, [data_atenua_2], plots_layout, plots_config)
-);
-atenu6_div.map((x) =>
-	Plotly.newPlot(x, [data_atenua_3], plots_layout, plots_config)
-);
 
 resultados_1.map((x) =>
 	Plotly.newPlot(
@@ -868,29 +856,9 @@ Reveal.on("fragmenthidden", (event) => {
 
 function updateGraphs() {
 	return new Promise((resolve) => {
-		atenu1_div.map((x) =>
-			Plotly.newPlot(x, [data_atenua_1], plots_layout, plots_config)
-		);
-		atenu2_div.map((x) =>
-			Plotly.newPlot(x, [data_atenua_2], plots_layout, plots_config)
-		);
-		atenu3_div.map((x) =>
-			Plotly.newPlot(x, [data_atenua_3], plots_layout, plots_config)
-		);
-		resolve("resolved");
-	});
-}
-function updateGraphs2() {
-	return new Promise((resolve) => {
-		atenu4_div.map((x) =>
-			Plotly.newPlot(x, [data_atenua_1], plots_layout, plots_config)
-		);
-		atenu5_div.map((x) =>
-			Plotly.newPlot(x, [data_atenua_2], plots_layout, plots_config)
-		);
-		atenu6_div.map((x) =>
-			Plotly.newPlot(x, [data_atenua_3], plots_layout, plots_config)
-		);
+		atenu1_div.map((x) => Plotly.update(x));
+		atenu2_div.map((x) => Plotly.update(x));
+		atenu3_div.map((x) => Plotly.update(x));
 		resolve("resolved");
 	});
 }
@@ -918,9 +886,6 @@ function updateGraphs5() {
 Reveal.on("graficas-pesadas", () => {
 	updateGraphs();
 });
-Reveal.on("graficas-pesadas2", () => {
-	updateGraphs2();
-});
 
 Reveal.on("graficas-atenu2d", () => {
 	updateGraphs3();
@@ -937,3 +902,22 @@ Reveal.on("graficas-pesadas-res-2", () => {
 window.onload = () => {
 	updateGraphs3();
 };
+
+function toogleNotes() {
+	notes = !notes;
+	Reveal.configure({ showNotes: notes });
+}
+function simulateKey(keyCode, type, modifiers) {
+	var evtName = typeof type === "string" ? "key" + type : "keydown";
+	var modifier = typeof modifiers === "object" ? modifier : {};
+
+	var event = document.createEvent("HTMLEvents");
+	event.initEvent(evtName, true, false);
+	event.keyCode = keyCode;
+
+	for (var i in modifiers) {
+		event[i] = modifiers[i];
+	}
+
+	document.dispatchEvent(event);
+}
