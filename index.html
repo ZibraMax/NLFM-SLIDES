@@ -29,8 +29,30 @@
 				<section data-auto-animate>
 					<div class="content-indicator">
 						<div class="content-indicator-item">
-							<a class="hidden-link" style="color:var(--not-selected-color);font-size: 0.8rem;position: fixed;top: 2%;left: -1%;" onclick="simulateKey(83)">Abrir ventana de notas</a>
-							<a class="hidden-link" style="color:var(--not-selected-color);font-size: 0.8rem;position: fixed;top: 41%;left: -1%;" onclick="toogleNotes()">Activar notas al lado</a>
+							<a
+								class="hidden-link"
+								style="
+									color: var(--not-selected-color);
+									font-size: 0.8rem;
+									position: fixed;
+									top: 2%;
+									left: -1%;
+								"
+								onclick="simulateKey(83)"
+								>Abrir ventana de notas</a
+							>
+							<a
+								class="hidden-link"
+								style="
+									color: var(--not-selected-color);
+									font-size: 0.8rem;
+									position: fixed;
+									top: 41%;
+									left: -1%;
+								"
+								onclick="toogleNotes()"
+								>Activar notas al lado</a
+							>
 
 							<a class="hidden-link" href="#/introduccion-title"
 								>Introducción
@@ -49,32 +71,41 @@
 					</div>
 					<div class="slide">
 						<div>
-
-						<h3>
-							Aplicabilidad de la teoría de elasticidad no local
-							en comportamiento mecánico de solidos usando FEM
-						</h3>
-						<p
-							class="text-left two-column"
-							style="font-size: var(--big-size-text);position: absolute;bottom: 0%;"
-						>
-							Arturo Rodriguez<br /><a
-								href="mailto:da.rodriguezh@uniandes.edu.co"
-								style="color: #5c5c5c"
-								>da.rodriguezh@uniandes.edu.co</a
+							<h3>
+								Aplicabilidad de la teoría de elasticidad no
+								local en comportamiento mecánico de solidos
+								usando FEM
+							</h3>
+							<p
+								class="text-left two-column"
+								style="
+									font-size: var(--big-size-text);
+									position: absolute;
+									bottom: 0%;
+								"
 							>
-						</p>
-						<p
-							class="text-left two-column"
-							style="font-size: var(--big-size-text);position: absolute;bottom: 0%;left:53%"
-						>
-							Fernando Ramirez<br /><a
-								href="mailto:f.ramirez@uniandes.edu.co"
-								style="color: #5c5c5c"
-								>f.ramirez@uniandes.edu.co</a
+								Arturo Rodriguez<br /><a
+									href="mailto:da.rodriguezh@uniandes.edu.co"
+									style="color: #5c5c5c"
+									>da.rodriguezh@uniandes.edu.co</a
+								>
+							</p>
+							<p
+								class="text-left two-column"
+								style="
+									font-size: var(--big-size-text);
+									position: absolute;
+									bottom: 0%;
+									left: 53%;
+								"
 							>
-						</p>
-						
+								Fernando Ramirez<br /><a
+									href="mailto:f.ramirez@uniandes.edu.co"
+									style="color: #5c5c5c"
+									>f.ramirez@uniandes.edu.co</a
+								>
+							</p>
+						</div>
 					</div>
 					<aside class="notes">
 						Controles:<br />Abrir notas al lado: S<br />Poner
@@ -141,7 +172,7 @@
 							<h3>
 								<span data-id="box" class="text-focus"
 									>Teoría no local</span
-								><span data-id="box2"> integral</span>
+								>
 							</h3>
 
 							<div style="height: 300px">
@@ -232,7 +263,7 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>Relevancia de teoría no local</h3>
+							<h3>Teoría no local</h3>
 							<figure class="three-column figure">
 								<div style="width: 100%; height: 224px">
 									<img
@@ -264,6 +295,33 @@
 									(2016)
 								</figcaption>
 							</figure>
+							<div class="three-column">
+								<p style="text-align: center">
+									Se encontró que la carga crítica de pandeo
+									disminuye cuando se tienen en cuenta los
+									efectos no locales
+								</p>
+							</div>
+							<div class="three-column">
+								<p style="text-align: center">
+									Se compararon las frecuencias de vibración
+									no locales con las encontradas usando
+									dinámica molecular
+								</p>
+							</div>
+							<div class="three-column">
+								<p style="text-align: center">
+									Soluciones analíticas para vigas con
+									distintas condiciones de apoyo. Los
+									desplazamientos aumentan al tener en cuenta
+									no local
+								</p>
+							</div>
+							<h5
+								style="text-transform: none; text-align: center"
+							>
+								Gran costo computacional!
+							</h5>
 						</div>
 						<aside class="notes">
 							<strong>Aplicaciones</strong><br /><br />
@@ -381,9 +439,58 @@
 						</div>
 					</div>
 					<div class="slide">
-						<h1 style="text-transform: none">3D frecuencias</h1>
+						<h3>Objetivo</h3>
+						<h5 style="text-transform: none">
+							Encontrar el tamaño para el cual no es relevante
+							usar la teoría no local
+						</h5>
+						<div>
+							<figure class="three-column figure">
+								<iframe
+									data-preload
+									class="iframe-3d"
+									data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json"
+									scrolling="no"
+									frameborder="0"
+									height="220px"
+								></iframe>
+							</figure>
+							<figure class="three-column figure">
+								<iframe
+									data-preload
+									class="iframe-3d"
+									data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/placa.json"
+									scrolling="no"
+									frameborder="0"
+									height="220px"
+								></iframe>
+							</figure>
+							<figure class="three-column figure">
+								<iframe
+									data-preload
+									class="iframe-3d"
+									data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/viga.json"
+									scrolling="no"
+									frameborder="0"
+									height="220px"
+								></iframe>
+							</figure>
+						</div>
+						<div style="position: absolute; top: 70%">
+							<p>¿Cómo?</p>
+							<ul>
+								<li style="font-size: 1.3rem">
+									Frecuencias para nanoparticulas (cubos)
+								</li>
+								<li style="font-size: 1.3rem">
+									Frecuencias para placas
+								</li>
+								<li style="font-size: 1.3rem">
+									Frecuencias para vigas
+								</li>
+							</ul>
+						</div>
 					</div>
-					<aside class="notes"></aside>
 				</section>
 				<section data-auto-animate>
 					<section data-auto-animate id="metodos-title">
@@ -1171,26 +1278,30 @@
 								Formulación variacional/Forma debil
 							</h4>
 							<p>
-								Partiendo del modelo integral de dos fases
-								$$\color{lightgray}\sigma_{ij}=\zeta_1
+								Se parte del modelo integral de dos fases y la
+								ecuación de movimiento:
+								$$\small\sigma_{ij}=\zeta_1
 								C_{ijkl}\varepsilon_{kl} +
-								\zeta_2\color{black}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'$$
+								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'\\
+								\sigma_{ij,j}+f_i=0$$
 							</p>
 							<p class="fragment">
-								El potencial de energía total puede escribirse
-								como $$\Pi=...+\frac{1}{2}\int_v\int_{v'}
-								A(\rho) \nabla^2 U(x) C \nabla^2 U(x')dv'dv$$
+								Susituyendo el modelo constitutivo en la
+								ecuación de movimiento e integrando sobre el
+								volumen ponderadamente (FEM) se obtiene:
+								$$\small\int_{v}w\left(\frac{\partial}{\partial
+								x_j}\left(\zeta_1 C_{ijkl}\varepsilon_{kl} +
+								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'\right)+f_i\right)dv=0$$
 							</p>
 							<p class="fragment">
-								Por lo tanto, las matrices para cada elemento se
-								pueden calcular como $$K_{nl}=\int_v\int_{v'}
-								A(\rho) B^T(x) C B(x')dv'dv$$ En esta expresión
-								la matriz \(B\) hace referencia a las derivadas
-								de las funciones de forma y la matríz \(C\) al
-								tensor de elasticidad del material<br /><br />
-								Existe una matriz cruzada entre elementos debido
-								a la doble integral. El peso de esta matriz esta
-								definido por la función de atenuación.
+								Integrando por partes se puede llegar a
+								expresiones para la matriz de rigidez de un
+								elemento: $$\small K^e=\zeta_1\int_v B^T(x) C
+								B(x)dv+\zeta_2\int_v\int_{v'} A(\rho) B^T(x) C
+								B(x')dv'dv$$ En esta expresión la matriz \(B\)
+								hace referencia a las derivadas de las funciones
+								de forma y la matríz \(C\) al tensor de
+								elasticidad del material
 							</p>
 						</div>
 						<aside class="notes">
@@ -1210,159 +1321,6 @@
 							para una matriz de rigidez no local. Esta doble
 							integral quiere decir que la integral es cruzada
 							entre el dominio local y el dominio no local
-						</aside>
-					</section>
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h4 data-id="titulito">Matrices de elemento</h4>
-							<p>Cada elemento tiene dos fuentes de rigidez</p>
-							<div>
-								<div class="two-column">
-									<h5>Parte local</h5>
-									<p>$$K^n_l = \int_v B_n(x)^TCB_n(x) dv$$</p>
-									<figure class="figure">
-										<img
-											src="./resources/conect_loc1.png"
-											height="160px"
-										/>
-										<figcaption>
-											Caso local, un solo elemento
-										</figcaption>
-									</figure>
-								</div>
-								<div class="two-column">
-									<h5>Parte no local</h5>
-									<p>
-										$$K^{nm}_{nl} = \int_v\int_{v'}
-										A(\rho)B_n(x)^TCB_m(x')dv' dv$$
-									</p>
-									<figure class="figure">
-										<img
-											src="./resources/conect_nloc1.png"
-											height="160px"
-										/>
-										<figcaption>
-											Caso no local, elementos cruzados
-										</figcaption>
-									</figure>
-								</div>
-							</div>
-							<p class="fragment">
-								Cada elemento aporta a la matriz general
-								$$K=\zeta_1K^n_l+\zeta_2K^{nm}_{nl}$$
-							</p>
-						</div>
-						<aside class="notes">
-							<strong>FEM no local</strong><br /><br />
-							Al momento de traducir esto a nivel de elemento,
-							esto se traduce a que existen dos aportes de
-							rigidez. Un aporte local que es el aporte clásico y
-							un aporte no local que se realiza entre la integral
-							cruzada de dos elementos. Oprimir tecla espacio<br />
-							<br />
-							Estos aportes son ponderados con el factor zeta
-							siguiendo con el proceso del modelo constitutivo
-						</aside>
-					</section>
-					<section data-auto-animate data-state="graficas-atenu2d">
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h4 data-id="titulito">Matrices de elemento</h4>
-							<p>
-								La función de atenuación es pequeña para valores
-								de \(\rho\) grandes
-							</p>
-							<figure
-								id="grafica-atenuacion-2d"
-								class="two-column figure"
-								style="height: 210px; width: 100%"
-							>
-								<figcaption>
-									Función de atenuacion biexponencial en 1D
-								</figcaption>
-							</figure>
-							<div style="position: absolute; top: 65%">
-								<p>
-									Dado que \(\rho\) se calcula como la
-									distancia entre dos puntos, mientras mas
-									lejos esten, menos importancia tienen
-								</p>
-								<p>
-									Elementos lejanos, tendrán \(\rho\approx
-									0\), solamente se necesitan tener en cuenta
-									los elementos a una distancia < \(Lr=6l\)
-									(Plizzotto, 2001)
-								</p>
-							</div>
-						</div>
-						<aside class="notes">
-							<strong>FEM no local</strong><br /><br />
-							La función de atenuación multiplica a la matriz no
-							local. Dado que las matrices se realizan entre
-							elementos, se puede conocer cuales elementos son
-							relevantes al momento de realizar las integrales
-							cruzadas
-
-							<br />
-							<br />
-							<strong>Frases obligatorias</strong>
-							<br />
-							<br />
-							En la literatura suelen reportar que con un valor de
-							rho=6 es suficiente para que la función de
-							atenuación deje de ser relevante para el proceso de
-							integración
 						</aside>
 					</section>
 
@@ -1398,12 +1356,21 @@
 								Detección de elementos no locales
 							</h4>
 							<figure
-								class="two-column figure"
+								id="grafica-atenuacion-2d"
+								class="three-column figure"
+								style="height: 230px"
+							>
+								<figcaption>
+									Función de atenuacion biexponencial en 1D
+								</figcaption>
+							</figure>
+							<figure
+								class="three-column figure"
 								style="text-align: center"
 							>
 								<img
 									data-id="imagen2d"
-									height="300px"
+									height="230px"
 									src="./resources/deteccion_no_local.png"
 								/>
 								<figcaption style="margin-top: -40px">
@@ -1411,11 +1378,11 @@
 								</figcaption>
 							</figure>
 							<figure
-								class="two-column figure"
+								class="three-column figure"
 								style="text-align: center"
 							>
 								<img
-									height="300px"
+									height="230px"
 									src="./resources/deteccion_no_local_3D.png"
 								/>
 								<figcaption style="margin-top: -40px">
@@ -1423,15 +1390,17 @@
 									distania Lr
 								</figcaption>
 							</figure>
-							<div style="position: absolute; top: 75%">
+							<div style="position: absolute; top: 65%">
 								<p>
-									Para cada elemento \(n\), se encuentran los
-									elementos adyacentes \(m\) cuyos centroides
-									esten a una distancia menor a \(Lr \)
+									Dado que \(\rho\) se calcula como la
+									distancia entre dos puntos, mientras mas
+									lejos esten, menos importancia tienen
 								</p>
 								<p>
-									Sobre estos elementos se realizan las
-									integrales no locales
+									Elementos lejanos, tendrán \(\rho\approx
+									0\), por lo tanto, al integrar solamente se
+									necesitan tener en cuenta los elementos a
+									una distancia < \(Lr=6l\) (Polizzotto, 2001)
 								</p>
 							</div>
 						</div>
@@ -1476,218 +1445,21 @@
 							<h4 data-id="titulito">
 								Ensamblaje de sistema de ecuaciones
 							</h4>
-							<h5>Local</h5>
 							<div
-								style="
-									position: absolute;
-									top: 20%;
-									width: 100%;
-								"
+								style="position: absolute; top: 8%; width: 100%"
 							>
 								<figure
 									class="figure"
 									style="
 										text-align: center;
-										height: 100px;
-										width: 30%;
-										float: left;
-									"
-								>
-									<img
-										src="./resources/conect_loc1.png"
-										height="130px"
-									/>
-									<figcaption
-										style="padding: 0px; margin-top: -25px"
-									>
-										Elemento local
-									</figcaption>
-								</figure>
-								<div
-									style="
-										text-align: center;
-										height: 100px;
-										width: 70%;
-										float: left;
-									"
-								>
-									<p style="text-align: center">
-										$$\small K^n_l= \begin{bmatrix} 4280 &
-										5862 & 8947 & 853 \\ 5862 & 4852 & 542 &
-										8947 \\ 8947 & 542 & 6850 & 5862 \\ 853
-										& 8947 & 5862 & 4274 \end{bmatrix} $$
-									</p>
-								</div>
-							</div>
-							<div
-								style="
-									position: absolute;
-									top: 45%;
-									width: 100%;
-								"
-							>
-								<figure
-									class="figure"
-									style="
-										text-align: center;
-										height: 240px;
-										width: 30%;
-										float: left;
-									"
-								>
-									<img
-										src="./resources/conect_loc2.png"
-										height="240px"
-									/>
-									<figcaption
-										style="padding: 0px; margin-top: -25px"
-									>
-										Dominio de elementos finitos de ejemplo
-									</figcaption>
-								</figure>
-
-								<div
-									style="
-										text-align: center;
-										height: 240px;
-										width: 60%;
-										float: left;
-									"
-								>
-									<p style="text-align: center">
-										$$\small K=\begin{bmatrix}
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \\
-										{\color{lightgray}x} & 5862 & 5862 &
-										{\color{lightgray}x} & 8947 & 853 &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \\
-										{\color{lightgray}x} & 5862 & 4852 &
-										{\color{lightgray}x} & 542 & 8947 &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \\
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \\
-										{\color{lightgray}x} & 8947 & 542 &
-										{\color{lightgray}x} & 6850 & 5862 &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \\
-										{\color{lightgray}x} & 853 & 8947 &
-										{\color{lightgray}x} & 5862 & 4274 &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \\
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \\
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \\
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \end{bmatrix} $$
-									</p>
-								</div>
-							</div>
-						</div>
-						<aside class="notes">
-							<strong>FEM no local</strong><br /><br />
-							La versión de elementos finitos en su versión
-							clásica ensambla la matriz de rigidez global con los
-							grados de libertad del elemento, por ejemplo, el
-							segundo elemento que tiene grados de libertad
-							2,3,5,6 y la matriz de rigidez local mostrada, se
-							ensambla en un sistema de 4 elementos en las
-							siguientes posiciones del sistema de ecuaciones
-						</aside>
-					</section>
-
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h4 data-id="titulito">
-								Ensamblaje de sistema de ecuaciones
-							</h4>
-							<h5>Local</h5>
-							<div
-								style="
-									position: absolute;
-									top: 20%;
-									width: 100%;
-								"
-							>
-								<figure
-									class="figure"
-									style="
-										text-align: center;
-										height: 100px;
+										height: 280px;
 										width: 30%;
 										float: left;
 									"
 								>
 									<img
 										src="./resources/conect_nloc1.png"
-										height="130px"
+										height="200px"
 									/>
 									<figcaption
 										style="padding: 0px; margin-top: -25px"
@@ -1697,9 +1469,10 @@
 								</figure>
 								<div
 									style="
+										padding-top: 45px;
 										text-align: center;
-										height: 100px;
-										width: 70%;
+										height: 240px;
+										width: 60%;
 										float: left;
 									"
 								>
@@ -1714,7 +1487,7 @@
 							<div
 								style="
 									position: absolute;
-									top: 45%;
+									top: 48%;
 									width: 100%;
 								"
 							>
@@ -1835,68 +1608,6 @@
 							2,3,5,6 y 4,5,7,8. Las matrices son simétricas, por
 							lo que los datos que aparecen en la segunda matriz
 							se repetiran en el sentido contrario.
-						</aside>
-					</section>
-
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h4 data-id="titulito">
-								Ensamblaje de elementos finitos
-							</h4>
-							<figure
-								class="two-column figure"
-								style="text-align: center"
-							>
-								<h6>Local</h6>
-								<img height="430px" src="./resources/df1.svg" />
-								<figcaption style="margin-top: -30px">
-									Diagrama de flujo del proceso de ensamblaje
-									normal
-								</figcaption>
-							</figure>
-							<figure
-								class="two-column figure"
-								style="text-align: center"
-							>
-								<h6>No Local</h6>
-								<img height="430px" src="./resources/df2.svg" />
-								<figcaption style="margin-top: -30px">
-									Diagrama de flujo del proceso de ensamblaje
-									modificado
-								</figcaption>
-							</figure>
-						</div>
-						<aside class="notes">
-							<strong>FEM no local</strong><br /><br />
-							Esto quiere decir queel proceso de ensamblaje se
-							puede resumir en los siguientes diagramas de flujo.
-							Mostrar la diferencia entre los dos ciclos
 						</aside>
 					</section>
 
@@ -2072,54 +1783,13 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h2 class="vertical-aligned-title">
-								El proceso de integración es costoso y aumenta
-								exponencialmente con el número de elementos
-							</h2>
-						</div>
-						<aside class="notes">
-							<strong>FEM no local</strong><br /><br />
-							Es importante decir que se demora y como hay que
-							integrar cruzadamente aumenta exponencialmente. En
-							el caso de remplazar esto por una imagen, lo mejor
-							sería poner algo que muestre la cantidad de matrices
-							cruzadas entre un problema con 5 elementos y otro
-							con el doble.
-						</aside>
-					</section>
-
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h2 class="vertical-aligned-title">
+							<div class="three-column">As</div>
+							<div class="three-column">As</div>
+							<div class="three-column">As</div>
+							<h4>
 								¿Desde que tamaño vale la pena tener en cuenta
-								estos efectos?
-							</h2>
+								los efectos no locales?
+							</h4>
 						</div>
 						<aside class="notes">
 							<strong>FEM no local</strong><br /><br />
@@ -2528,48 +2198,6 @@
 							materiales presentan el mismo comportamiento, por lo
 							tanto, se puede asegurar que: Pasar a la siguiente
 							diapositiva
-						</aside>
-					</section>
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="animate1"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="animate2"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h1>
-								<span class="vertical-aligned-title"
-									>Independencia del material</span
-								>
-							</h1>
-						</div>
-						<aside class="notes">
-							<strong>Resultados</strong><br /><br />
-							:)<br />
-							Explicar que esto se debe al tipo de interacciones
-							que se presentan en la teoría de elasticidad no
-							local de Eringen
 						</aside>
 					</section>
 					<section data-auto-animate>
