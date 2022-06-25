@@ -174,42 +174,40 @@
 									>Teoría no local</span
 								>
 							</h3>
-
-							<div style="height: 300px">
-								<div class="two-column">
-									<figure class="figure">
-										<img src="./resources/Eringen.jpeg" />
-										<figcaption>
-											Comparación entre esfuerzos
-											cortantes producidos por una carga
-											puntual. Tomado de Eringen (1987)
-										</figcaption>
-									</figure>
-								</div>
-								<div
-									class="two-column"
-									style="
-										position: absolute;
-										left: 54%;
-										top: 20%;
-									"
-								>
-									<p class="med-text">
-										Ecuación constitutiva de la teoría
-										clásica (Ley de Hook)
-										\[{\Large\sigma_{ij}=C_{ijkl}\varepsilon_{kl}}\]
-										La teoría clásica no logra predecir el
-										comportamiento a escala nanométrica
-										(Fleck et al., 1994; Stölken & Evans
-										,1998; Lam et al., 2003)
-									</p>
-									<p class="med-text">
-										Tener en cuenta las fuerzas de cohesion
-										de corto alcance entre particulas
-										(Eringen, 1983)
-										\[{\Large\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
-									</p>
-								</div>
+							<div class="two-column">
+								<figure class="figure">
+									<img height="220px" src="./resources/nolocal_cross.jpeg" />
+									<figcaption style="margin-top: -40px;">
+										Interacción de largo alcance entre elementos. Tomado de Pisano et al. (2009)
+									</figcaption>
+								</figure>
+							</div>
+							<div class="two-column">
+								<figure class="figure">
+									<img height="220px" src="./resources/Eringen.jpeg" />
+									<figcaption style="margin-top: -40px;">
+										Comparación entre esfuerzos
+										cortantes producidos por una carga
+										puntual. Tomado de Eringen (1987)
+									</figcaption>
+								</figure>
+							</div>
+							<div class="two-column">
+								<p class="med-text">
+									La teoría clásica no logra predecir el
+									comportamiento a escala nanométrica
+									(Fleck et al., 1994; Stölken & Evans
+									,1998; Lam et al., 2003)
+									\[{\Large\sigma_{ij}=C_{ijkl}\varepsilon_{kl}}\]
+								</p>
+							</div>
+							<div class="two-column">
+								<p class="med-text">
+									Tener en cuenta las fuerzas de cohesion
+									de corto alcance entre particulas
+									(Eringen, 1983)
+									\[{\Large\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
+								</p>
 							</div>
 						</div>
 						<aside class="notes">
@@ -2144,7 +2142,7 @@
 						<div class="content-indicator">
 							<div class="content-indicator-item">
 								<a
-									data-id="animate1"
+									data-id="not-animate"
 									class="hidden-link"
 									href="#/introduccion-title"
 									>Introducción
@@ -2152,7 +2150,7 @@
 							</div>
 							<div class="content-indicator-item">
 								<a
-									data-id="animate2"
+									data-id="not-animate"
 									class="hidden-link"
 									href="#/metodos-title"
 									>Métodos
@@ -2186,7 +2184,7 @@
 						<div class="content-indicator">
 							<div class="content-indicator-item">
 								<a
-									data-id="animate1"
+									data-id="not-animate"
 									class="hidden-link"
 									href="#/introduccion-title"
 									>Introducción
@@ -2194,7 +2192,7 @@
 							</div>
 							<div class="content-indicator-item">
 								<a
-									data-id="animate2"
+									data-id="not-animate"
 									class="hidden-link"
 									href="#/metodos-title"
 									>Métodos
@@ -2240,7 +2238,7 @@
 						<div class="content-indicator">
 							<div class="content-indicator-item">
 								<a
-									data-id="animate1"
+									data-id="not-animate"
 									class="hidden-link"
 									href="#/introduccion-title"
 									>Introducción
@@ -2248,7 +2246,7 @@
 							</div>
 							<div class="content-indicator-item">
 								<a
-									data-id="animate2"
+									data-id="not-animate"
 									class="hidden-link"
 									href="#/metodos-title"
 									>Métodos
@@ -2303,7 +2301,7 @@
 						<div class="content-indicator">
 							<div class="content-indicator-item">
 								<a
-									data-id="animate1"
+									data-id="not-animate"
 									class="hidden-link"
 									href="#/introduccion-title"
 									>Introducción
@@ -2311,7 +2309,7 @@
 							</div>
 							<div class="content-indicator-item">
 								<a
-									data-id="animate2"
+									data-id="not-animate"
 									class="hidden-link"
 									href="#/metodos-title"
 									>Métodos
@@ -2374,13 +2372,79 @@
 						</aside>
 					</section>
 					<section
+						data-auto-animate
+						data-state="graficas-resultados-3"
+					>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h4>
+								Costo computacional
+							</h4>
+							<div style="width: 70%; float: left">
+								<figure style="width: 100%">
+									<div
+										id="grafica_res_3"
+										style="width: 100%"
+									></div>
+									<figcaption>
+										Tiempo de correr el programa
+									</figcaption>
+								</figure>
+							</div>
+							<div
+								style="
+									width: 30%;
+									position: absolute;
+									top: 25%;
+									left: 75%;
+								"
+							>
+							<p>
+								Ajuste lineal con los primeros 5 puntos
+								$$\eta=1.73-2.84\frac{1}{R}$$ Por lo tanto:
+								$$\Delta=\left|\frac{1.73-2.84\frac{1}{R}-1.78}{1.78}\right|\%$$
+								Para conseguir $\Delta=5\%$ es necesario:
+								$$R=34l$$
+							</p>
+							</div>
+						</div>
+						<aside class="notes">
+						</aside>
+					</section>
+					<section
 					data-auto-animate
 					data-state="graficas-pesadas-res-2"
 				>
 					<div class="content-indicator">
 						<div class="content-indicator-item">
 							<a
-								data-id="animate1"
+								data-id="not-animate"
+								data-id="not-animate"
 								class="hidden-link"
 								href="#/introduccion-title"
 								>Introducción
@@ -2388,7 +2452,8 @@
 						</div>
 						<div class="content-indicator-item">
 							<a
-								data-id="animate2"
+								data-id="not-animate"
+								data-id="not-animate"
 								class="hidden-link"
 								href="#/metodos-title"
 								>Métodos
@@ -2408,18 +2473,18 @@
 							Avance
 						</h4>
 						<ol>
-							<li>Programa<span class="fragment">✅</span></li>
-							<li>Validación<span class="fragment">✅</span></li>
-							<li>Simulaciones para frecuencias <span class="fragment" style="color:var(--red)">(1 mes)</span>
+							<li>Programa<span class="fragment" data-fragment-index="1">✅</span></li>
+							<li>Validación<span class="fragment" data-fragment-index="2">✅</span></li>
+							<li>Simulaciones para frecuencias <span class="fragment" style="color:var(--red)" data-fragment-index="4">(1 mes)</span>
 								<ul>
-									<li>Cubos<span class="fragment">✅</span></li>
+									<li>Cubos<span class="fragment" data-fragment-index="3">✅</span></li>
 									<li>Tetraedros</li>
 									<li>Esferas</li>
 									<li>Placas</li>
 									<li>Vigas</li>
 								</ul>
 							</li>
-							<li>Documento <span class="fragment" style="color:var(--red)">(1 mes)</span></li>
+							<li>Documento <span class="fragment" style="color:var(--red)" data-fragment-index="5">(1 mes)</span></li>
 						</ol>
 					</div>
 				</section>

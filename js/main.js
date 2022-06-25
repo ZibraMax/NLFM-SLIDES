@@ -42,6 +42,7 @@ const atenu2d = [...document.querySelectorAll("[id=grafica-atenuacion-2d]")];
 
 const resultados_1 = [...document.querySelectorAll("[id=grafica_res_1]")];
 const resultados_2 = [...document.querySelectorAll("[id=grafica_res_2]")];
+const resultados_3 = [...document.querySelectorAll("[id=grafica_res_3]")];
 
 const cmap = [
 	["0.0", "#f3f3f3)"],
@@ -675,6 +676,24 @@ const data_resultados_2 = [
 	},
 ];
 
+const data_resultados_3 = [
+	{
+		mode: "markers",
+		x: [
+			0.64, 0.978665101, 1.200080005, 1.672590424, 0.36, 0.2, 2.090738031,
+			1.333422228, 0.772678102, 0.32, 0.293605277, 1.400112009,
+			0.927220887, 1.02761847,
+		],
+		y: [
+			0.163854179, 11.7696193, 15.28335007, 15.96660176, 0.926659534,
+			0.226584675, 26.9367296, 18.6262577, 7.675771, 0.578404053,
+			0.985252638, 13.21251782, 14.94388027, 18.12613338,
+		],
+
+		name: "No local",
+	},
+];
+
 const data_atenuacion_2d = [
 	{
 		type: "lines",
@@ -840,6 +859,29 @@ resultados_2.map((x) =>
 	)
 );
 
+resultados_3.map((x) =>
+	Plotly.newPlot(
+		x,
+		data_resultados_3,
+		{
+			xaxis: {
+				title: "R/(nℓ)",
+				gridcolor: "#dcdcdc",
+				zerolinecolor: "#dcdcdc",
+			},
+			yaxis: {
+				title: "t/n³",
+				gridcolor: "#dcdcdc",
+				zerolinecolor: "#dcdcdc",
+			},
+			legend: {},
+			font: { size: 20 },
+			margin: { t: 0 },
+		},
+		plots_config
+	)
+);
+
 atenu2d.map((x) =>
 	Plotly.newPlot(
 		x,
@@ -875,6 +917,13 @@ function updateGraphs() {
 		atenu1_div.map((x) => Plotly.update(x));
 		atenu2_div.map((x) => Plotly.update(x));
 		atenu3_div.map((x) => Plotly.update(x));
+		resolve("resolved");
+	});
+}
+
+function updateGraphs2() {
+	return new Promise((resolve) => {
+		resultados_3.map((x) => Plotly.update(x));
 		resolve("resolved");
 	});
 }
@@ -915,10 +964,9 @@ Reveal.on("graficas-pesadas-res-2", () => {
 	updateGraphs5();
 });
 
-window.onload = () => {
-	updateGraphs3();
-};
-
+Reveal.on("graficas-resultados-3", () => {
+	updateGraphs2();
+});
 function toogleNotes() {
 	notes = !notes;
 	Reveal.configure({ showNotes: notes });
