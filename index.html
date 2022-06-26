@@ -29,7 +29,7 @@
 				<section data-auto-animate>
 					<div class="content-indicator">
 						<div class="content-indicator-item">
-							<a
+							<a 
 								class="hidden-link"
 								style="
 									color: var(--not-selected-color);
@@ -41,7 +41,7 @@
 								onclick="simulateKey(83)"
 								>Abrir ventana de notas</a
 							>
-							<a
+							<a  
 								class="hidden-link"
 								style="
 									color: var(--not-selected-color);
@@ -54,17 +54,17 @@
 								>Activar notas al lado</a
 							>
 
-							<a class="hidden-link" href="#/introduccion-title"
+							<a  class="hidden-link" href="#/introduccion-title"
 								>Introducción
 							</a>
 						</div>
 						<div class="content-indicator-item">
-							<a class="hidden-link" href="#/metodos-title"
+							<a  class="hidden-link" href="#/metodos-title"
 								>Métodos
 							</a>
 						</div>
 						<div class="content-indicator-item">
-							<a class="hidden-link" href="#/resultados-title"
+							<a  class="hidden-link" href="#/resultados-title"
 								>Resultados
 							</a>
 						</div>
@@ -115,22 +115,22 @@
 					</aside>
 				</section>
 				<section data-auto-animate>
-					<section id="introduccion-title">
+					<section data-auto-animate id="introduccion-title">
 						<div class="content-indicator">
 							<div class="content-indicator-item selected-ci">
-								<a
+								<a data-id="not-animate"
 									class="hidden-link"
 									href="#/introduccion-title"
 									>Introducción
 								</a>
 							</div>
 							<div class="content-indicator-item">
-								<a class="hidden-link" href="#/metodos-title"
+								<a data-id="not-animate" class="hidden-link" href="#/metodos-title"
 									>Métodos
 								</a>
 							</div>
 							<div class="content-indicator-item">
-								<a class="hidden-link" href="#/resultados-title"
+								<a data-id="not-animate" class="hidden-link" href="#/resultados-title"
 									>Resultados
 								</a>
 							</div>
@@ -197,7 +197,7 @@
 									La teoría clásica no logra predecir el
 									comportamiento a escala nano métrica
 									(Fleck et al., 1994; Stölken & Evans
-									,1998; Lam et al., 2003)
+									,1998; Ramirez, 2006)
 									\[{\Large\sigma_{ij}=C_{ijkl}\varepsilon_{kl}}\]
 								</p>
 							</div>
@@ -398,7 +398,7 @@
 						</div>
 						<div class="slide">
 							<h1 style="text-transform: none">
-								¿Que tamaño es suficiente para no tener en
+								¿Qué tamaño es suficiente para no tener en
 								cuenta los efectos no locales?
 							</h1>
 						</div>
@@ -478,7 +478,7 @@
 							<p>¿Cómo?</p>
 							<ul>
 								<li style="font-size: 1.3rem">
-									Frecuencias para nanopartículas (cubos)
+									Frecuencias para nanopartículas (cubos, esferas o tetraedros)
 								</li>
 								<li style="font-size: 1.3rem">
 									Frecuencias para placas
@@ -1396,7 +1396,7 @@
 								</p>
 								<p>
 									Elementos lejanos, tendrán \(\rho\approx
-									0\), por lo tanto, al integrar solamente se
+									0\), por lo tanto, solamente se
 									necesitan tener en cuenta los elementos a
 									una distancia < \(Lr=6l\) (Polizzotto, 2001)
 								</p>
@@ -1456,7 +1456,7 @@
 									"
 								>
 									<img
-										src="./resources/conect_nloc1.png"
+										src="./resources/conect_nloc1.svg"
 										height="200px"
 									/>
 									<figcaption
@@ -1499,7 +1499,7 @@
 									"
 								>
 									<img
-										src="./resources/conect_nloc2.png"
+										src="./resources/conect_nloc2.svg"
 										height="240px"
 									/>
 									<figcaption
@@ -1821,7 +1821,7 @@
 								</figure>
 							</div>
 							<h4 style="text-transform: none; margin-top: 380px">
-								¿Que tamaño hace que los efectos no locales sean
+								¿Qué tamaño hace que los efectos no locales sean
 								despreciables?
 							</h4>
 						</div>
@@ -1871,7 +1871,7 @@
 									height="220px"
 								></iframe>
 								<figcaption>
-									Cubo de lado \(L\), \(R=L/1.61\)
+									Cubo de lado \(R\)
 								</figcaption>
 							</figure>
 							<figure class="three-column figure">
@@ -1884,7 +1884,7 @@
 									height="220px"
 								></iframe>
 								<figcaption>
-									Placa rectangular de lado \(R\)
+									Placa cuadrada de lado \(R\)
 								</figcaption>
 							</figure>
 							<figure class="three-column figure">
@@ -1915,7 +1915,7 @@
 								<p>
 									Para cada caso se calcula la primera
 									frecuencia natural \(\omega\) usando teoría
-									no local
+									no local y la teoría no local
 								</p>
 							</div>
 						</div>
