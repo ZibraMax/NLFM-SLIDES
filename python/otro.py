@@ -4,9 +4,9 @@ import matplotlib.patches as mpatches
 
 h = 9
 l = 0.5
-for aaa in [1, 3, 5, 7]:
-    nx = 5*(aaa)
-    ny = 5*(aaa)
+for aaa in [1, 3, 5, 9/5]:
+    nx = int(5*(aaa))
+    ny = int(5*(aaa))
 
     hx = h/nx
     hy = h/ny
@@ -70,5 +70,5 @@ for aaa in [1, 3, 5, 7]:
     plt.axis('off')
     plt.tight_layout()
     plt.savefig(
-        f"./resources/deteccion_no_local{aaa}.png", bbox_inches='tight')
+        f"./resources/deteccion_no_local{aaa}.svg", bbox_inches='tight')
     plt.show()
