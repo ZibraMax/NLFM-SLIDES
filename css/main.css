@@ -195,6 +195,8 @@ table,
 tr,
 td {
 	border: none !important;
+	text-align: left;
+	font-size: var(--medium-size-text);
 }
 .csl-entry {
 	font-size: var(--small-size-text);
