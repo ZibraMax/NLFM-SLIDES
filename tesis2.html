@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>Tesis 1 - NL FEM</title>
+		<title>Tesis - NL FEM</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link
 			rel="stylesheet"
@@ -168,7 +168,6 @@
 						</div>
 						<aside class="notes">Pasar diapositiva rápido</aside>
 					</section>
-
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item selected-ci">
@@ -278,140 +277,7 @@
 							No local es modificación a ley constitutiva.
 						</aside>
 					</section>
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>Teoría no local</h3>
-							<figure class="three-column figure">
-								<div style="width: 100%; height: 224px">
-									<img
-										src="./resources/GORMANI ET AL 2021.jpeg"
-									/>
-								</div>
-								<figcaption style="margin-top: -50px">
-									Pandeo de nanotubos. Tomado de Gormani et
-									al. (2021)
-								</figcaption>
-							</figure>
-							<figure class="three-column figure">
-								<img
-									height="170px"
-									src="./resources/Shariati et al 2021.png"
-								/>
-								<figcaption style="margin-top: -50px">
-									Frecuencias de placa. Tomado de Shariati et
-									al. (2021)
-								</figcaption>
-							</figure>
-							<figure class="three-column figure">
-								<img
-									height="170px"
-									src="./resources/WANG ZHU AND DAI.jpeg"
-								/>
-								<figcaption style="margin-top: -50px">
-									Soluciones para vigas. Tomado de Wang et al.
-									(2016)
-								</figcaption>
-							</figure>
-							<div class="three-column">
-								<p style="text-align: center">
-									Se encontró que la carga crítica de pandeo
-									disminuye cuando se tienen en cuenta los
-									efectos no locales
-								</p>
-							</div>
-							<div class="three-column">
-								<p style="text-align: center">
-									Se compararon las frecuencias de vibración
-									no locales con las encontradas usando
-									dinámica molecular
-								</p>
-							</div>
-							<div class="three-column">
-								<p style="text-align: center">
-									Soluciones analíticas para vigas con
-									distintas condiciones de apoyo. Los
-									desplazamientos aumentan al tener en cuenta
-									no local
-								</p>
-							</div>
-							<h5
-								style="text-transform: none; text-align: center"
-							>
-								Gran costo computacional!
-							</h5>
-						</div>
-						<aside class="notes">
-							<strong>Notas presentación</strong><br />
 
-							- Análisis 1D y 2D<br />
-							- Disminución de rigidez<br />
-							- Dinámica molecular<br />
-							- Costo computacional menor al de DM pero mayor
-							comparado con análisis normal<br />
-							- Los efecto no locales disminuyen aumentando el
-							tamaño del dominio<br />
-
-							<br /><br />
-							<strong>Notas extendido</strong><br />
-							<strong>Aplicaciones</strong><br /><br />
-							La teoría no local de elasticidad ha sido usada en
-							distintas aplicaciones de ingeniería como: En la
-							figura 3 podemos apreciar un análisis de pandeo en
-							nanotubos de carbono teniendo en cuenta no local,
-							realizado por Gormani en 2021. Se encontró que
-							teniendo en cuenta la no localidad disminuía la
-							carga crítica de pandeo de los nanotubos.
-							<br />
-							<br />
-							Figura 4: Análisis de frecuencias en placa de
-							grafeno redonda comparando los resultados con
-							dinámica molecular.
-							<br />
-							<br />
-							Figura 5: Se han desarrollado varias soluciones
-							analíticas para vigas, obteniendo deflexiones
-							mayores bajo todas las condiciones de borde a
-							excepción de una viga simplemente apoyada, donde se
-							encontraron deflexiones menores.
-							<br />
-							<br />
-
-							<strong>Frases obligatorias</strong>
-							<br />
-							La no localidad DISMINUYE la rigidez.
-							<br />
-							Los estudios de frecuencias solo se han realizado en
-							2D y 3D.
-							<br />
-							La mayoría de estos estudios son analíticos.
-						</aside>
-					</section>
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item selected-ci">
@@ -626,116 +492,7 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>
-								<span data-id="box">Teoría no local</span
-								><span data-id="box2" class="text-focus">
-									integral</span
-								>
-							</h3>
-							<ul>
-								<li class="med-text">
-									Teoría integral (Eringen & Edelen, 1972)
-								</li>
-								<span
-									>\[\scriptsize{\sigma_{ij}=\int_{\Omega}\alpha(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]</span
-								>
-								<li class="med-text">
-									Teoría diferencial (Eringen, 1983)
-								</li>
-								<span
-									>\[\scriptsize{(1-e_0a\nabla^2)\sigma_{ij}=C_{ijkl}\varepsilon_{kl}}\]</span
-								>
-								<li class="med-text">
-									Modelo integral de dos fases (Polizzotto,
-									2001)
-								</li>
-								<div
-									data-id="a"
-									class="vertical-aligned-eq"
-									style="top: 76%"
-								>
-									\[\scriptsize{\sigma_{ij}=\zeta_1
-									C_{ijkl}\varepsilon_{kl} +
-									\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
-								</div>
-							</ul>
-						</div>
-						<aside class="notes">
-							<strong>Notas presentación</strong><br />
-
-							- Modelo original (integral) 1972, Eringen<br />
-							- Modelo diferencial 1983, Eringen. Facilitar
-							manipulación algebraica<br />
-							- Soluciones analíticas generalmente diferencial<br />
-
-							- Modelo dos fases 2001, Polizzotto. Facilita la
-							implementación numérica. <br />
-							- Usar modelo dos fases<br />
-
-							<br /><br />
-							<strong>Notas extendido</strong><br />
-							<strong>Modelos constitutivos no locales</strong
-							><br /><br />
-							A lo largo de los años, la teoría no local de
-							Eringen ha evolucionado, del modelo original de
-							elasticidad no local se derivan el modelo integral
-							(EQ 1) y la teoría diferencial (EQ 2).
-							<br />
-							<br />
-							La teoría integral es básicamente la teoría original
-							sin aliteraciones, la teoría diferencial es un caso
-							específico de la ecuación constitutiva original que
-							permite una manipulación matemática mas sencilla.
-							<br />
-							<br />
-							Esto ha llevado a que la mayoría de los estudios y
-							comprobaciones de esta teoría se realicen usando el
-							modelo diferencial.
-							<br />
-							<br />
-							Recientemente, se propuso un modelo integral de dos
-							fases, donde el material se modela como un material
-							compuesto que tiene una parte local y una parte no
-							local. Dicho modelo tiene ventajas en su
-							implementación computacional
-							<br />
-							<br />
-							<strong>Frases obligatoria</strong>
-							<br />Las 3 ecuaciones son modelos distintos que
-							provienen de una teoría mas grande<br />
-							<br />Los modelos hijos de no local nunca dan lo
-							mismo. Son teorías distintas<br />
-						</aside>
-					</section>
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>Parámetros del modelo no local</h3>
+							<h3>Modelo no local de 2 fases</h3>
 							<div data-id="a" class="vertical-aligned-eq">
 								\[\scriptsize{\sigma_{ij}=\zeta_1
 								C_{ijkl}\varepsilon_{kl} +
@@ -784,7 +541,7 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>Parámetros del modelo no local</h3>
+							<h3>Modelo no local de 2 fases</h3>
 							<div data-id="a" class="vertical-aligned-eq">
 								\[\scriptsize{\sigma_{ij}={\color{lightgray}
 								\zeta_1} C_{ijkl}\varepsilon_{kl}+
@@ -832,7 +589,7 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>Parámetros del modelo no local</h3>
+							<h3>Modelo no local de 2 fases</h3>
 							<div data-id="a" class="vertical-aligned-eq">
 								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
 								\zeta_1 C_{ijkl}\varepsilon_{kl}+
@@ -882,73 +639,72 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>Parámetros del modelo no local</h3>
-							<h6>Factor no local</h6>
+							<h3>Modelo no local de 2 fases</h3>
 
 							<div
 								data-id="a"
 								class="vertical-aligned-eq"
-								style="top: 13%"
+								style="top: 5%"
 							>
-								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
+								\[{\color{blacks}\scriptsize{\sigma_{ij}=
 								{\color{black}\zeta_1} C_{ijkl}\varepsilon_{kl}+
 								{\color{black}\zeta_2}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
 							</div>
 							<br />
-							<div class="two-column">
-								<p>
-									Representa que tanta no localidad se tiene
-									en cuenta
-								</p>
-							</div>
-							<div class="two-column">
-								<div>\[\scriptsize{\zeta_1+\zeta_2=1}\]</div>
-							</div>
 							<div class="fragment">
-								<div class="three-column">
-									<figure class="figure">
-										<iframe
-											data-preload
-											class="iframe-3d"
-											data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
-											scrolling="no"
-											frameborder="0"
-											height="220px"
-										></iframe>
-										<figcaption>
-											\(\zeta_1=1,\eta=1.78\)
-										</figcaption>
-									</figure>
+								<div class="two-column">
+									<p>
+										Representa que tanta no localidad se
+										tiene en cuenta
+									</p>
 								</div>
-								<div class="three-column">
-									<figure class="figure">
-										<iframe
-											data-preload
-											class="iframe-3d"
-											data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_500_L_6_362_nx_8_o0_6.json&menu=1"
-											scrolling="no"
-											frameborder="0"
-											height="220px"
-										></iframe>
-										<figcaption>
-											\(\zeta_1=0.5,\eta=1.73\)
-										</figcaption>
-									</figure>
+								<div class="two-column">
+									<div>
+										\(\scriptsize{\zeta_1+\zeta_2=1}\)
+									</div>
 								</div>
-								<div class="three-column">
-									<figure class="figure">
-										<iframe
-											data-preload
-											class="iframe-3d"
-											data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=5&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_0_000_L_6_362_nx_8_o0_6.json&menu=1"
-											scrolling="no"
-											frameborder="0"
-											height="220px"
-										></iframe>
-										<figcaption>
-											\(\zeta_1=0,\eta=0.28\)
-										</figcaption>
-									</figure>
+							</div>
+							<br />
+							<br />
+							<div class="fragment">
+								<div class="two-column">
+									<p>
+										<br />
+										<br />
+
+										Pondera los efectos efectos no locales
+										entre puntos del dominio
+									</p>
+								</div>
+								<figure
+									class="two-column figure"
+									style="height: 200px"
+									id="atenuacion1"
+								>
+									<figcaption
+										style="text-align: center; padding: 0px"
+									>
+										\(A\left(\frac{|x-x'|}{l}\right)=\lambda_0e^{-\frac{|x-x'|}{l}}\)
+									</figcaption>
+								</figure>
+							</div>
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<div class="fragment">
+								<div class="two-column">
+									<p>
+										Esfuerzos planos (2D):
+										\(\small\lambda_0=\frac{1}{2\pi l^2t}\)
+									</p>
+								</div>
+								<div class="two-column">
+									<p>
+										Elasticidad (3D):
+										\(\lambda_0=\frac{1}{8\pi l^3}\)
+									</p>
 								</div>
 							</div>
 						</div>
@@ -989,322 +745,7 @@
 							numéricas.
 						</aside>
 					</section>
-					<section data-auto-animate data-state="graficas-pesadas">
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>Parámetros del modelo no local</h3>
-							<h6>Función de atenuación</h6>
-							<div
-								data-id="a"
-								class="vertical-aligned-eq"
-								style="top: 13%"
-							>
-								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
-								\zeta_1 C_{ijkl}\varepsilon_{kl}+
-								\zeta_2\int_{\Omega}\color{black}A(\rho)\color{lightgray}C_{ijkl}\varepsilon'_{kl}dv'}}\]
-							</div>
-							<br />
-							<div>
-								<div class="two-column">
-									<p>
-										Representa la relevancia de las fuerzas
-										de cohesión de largo alcance. Depende de
-										la distancia euclidiana (\(|x-x'|\)) y
-										de la longitud interna (\(l\))
-									</p>
-								</div>
-								<div class="two-column">
-									<div data-id="ro">
-										\[\scriptsize{\rho=\frac{|x-x'|}{l}}\]
-									</div>
-								</div>
-							</div>
-							<div
-								class="fragment"
-								style="position: absolute; top: 53%"
-							>
-								<figure
-									class="three-column figure"
-									style="height: 205px"
-									id="atenuacion1"
-								>
-									<figcaption
-										style="text-align: center; padding: 0px"
-									>
-										\(A(\rho)=\lambda_0e^{-\rho}\)
-									</figcaption>
-								</figure>
-								<figure
-									class="three-column figure"
-									style="height: 205px"
-									id="atenuacion2"
-								>
-									<figcaption
-										style="text-align: center; padding: 0px"
-									>
-										\(A(\rho)=\lambda_0\left<1-\frac{\rho}{(1+\Omega_0)}\right>\)
-									</figcaption>
-								</figure>
-								<figure
-									class="three-column figure"
-									style="height: 205px"
-									id="atenuacion3"
-								>
-									<figcaption
-										style="text-align: center; padding: 0px"
-									>
-										\(A(\rho)=\lambda_0\left<1-\frac{\rho^2}{(1+\Omega_0)^2}\right>\)
-									</figcaption>
-								</figure>
-							</div>
-						</div>
-						<aside class="notes">
-							<strong>Notas presentación</strong><br />
 
-							- La parte no local depende de una función de
-							atenuación<br />
-							- Pondera las interacciones de largo alcance<br />
-							- Depende de las distancias entre dos puntos del
-							material<br />
-							- Normalizada con la longitud interna<br />
-							- Hay varios tipos<br />
-							- A(0)=1<br />
-							- A(oo)=0<br />
-							- Función de probabilidad<br />
-
-							<br /><br />
-							<strong>Notas extendido</strong><br />
-							<strong>Modelo no local</strong><br /><br />
-							El siguiente parámetro importante del modelo no
-							local es la función de atenuación. Dar tecla
-							espacio<br />
-							Dicho parámetro pondera la relevancia de los efectos
-							con respecto a la distancia. La función toma como
-							parámetro la distancia euclidiana entre dos puntos
-							(local y no local) normalizada por la longitud
-							interna del material (parámetro no local del
-							material). Dar tecla espacio<br />
-							Las funciones de atenuación toman valores bajos a
-							medidas que el parámetro de distancia aumenta. La
-							idea es que modelen la atenuación de las
-							interacciones entre puntos material a largas
-							distancias.
-						</aside>
-					</section>
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>Parámetros del modelo no local</h3>
-							<h6>Función de atenuación</h6>
-							<div
-								style="position: absolute; top: 10%; left: 30%"
-							>
-								\[A(x,x',l)=\lambda_0e^{-\frac{|x-x'|}{l}}\]
-							</div>
-							<br />
-							<div>
-								<div>
-									<div class="two-column">
-										<p style="padding-top: 30px">
-											El factor \(\lambda_0\) es usado
-											para garantizar las propiedades de
-											la función. Este proceso es distinto
-											para dominios 2D y 3D.
-										</p>
-									</div>
-									<div class="two-column">
-										<div>
-											\[\scriptsize{\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=1}\]
-										</div>
-									</div>
-								</div>
-								<div>
-									<div class="two-column fragment">
-										<h5 style="text-align: center">2D</h5>
-										<p>
-											\[\small\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=t\lambda_0\int_{0}^{\infty}\int_{0}^{2\pi}re^{\frac{-r}{l}}{d\theta}{dr}\]
-										</p>
-										<p>
-											\[\small\lambda_0\int_{\Omega_{\infty}}e^{\frac{-|x-x'|}{l}}d\Omega'=\lambda_02\pi
-											l^2t\]
-										</p>
-										<p>
-											\[\small\lambda_0=\frac{1}{2\pi
-											l^2t}\]
-										</p>
-									</div>
-									<div class="two-column fragment">
-										<h5 style="text-align: center">3D</h5>
-										<p>
-											\[...=\lambda_0\int_{0}^{\infty}\int_{0}^{2\pi}\int_{0}^{\pi}r^2\sin(\phi)e^{\frac{-r}{l}}{d\phi}{d\theta}{dr}\]
-										</p>
-										<p>\[...=\lambda_0 8\pi l^3\]</p>
-										<p>\[\lambda_0=\frac{1}{8\pi l^3}\]</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<aside class="notes">
-							<strong>Notas presentación</strong><br />
-
-							- Parámetros finales<br />
-							- Función debe cumplir condición de la integral
-							energía<br />
-							- Distinto en 2D y 3D<br />
-							- 2D: Polares y 3D: Esféricas<br />
-
-							<br /><br />
-							<strong>Notas extendido</strong><br />
-							<strong>Modelo no local</strong><br /><br />
-							En resumen, la función de atenuación solamente
-							depende de un punto local, un punto no local y la
-							longitud interna del material. Presionar tecla
-							espacio<br />
-							Las funciones de atenuación tienen que cumplir con
-							la condición de que la integral bajo un dominio
-							infinito sea 1. Esto garantiza la conservación de la
-							energía del método.<br />
-							Dado que esta condición no se cumple con la función
-							bi exponencial, es necesario aplicar un factor de
-							corrección lambda0.<br />
-							El procedimiento de encontrar dicho factor depende
-							de la dimensión del modelo. Para este caso se
-							muestra el proceso del caso bidimensional y
-							tridimensional. Dar tecla espacio hasta terminar
-							diapositiva
-							<br />
-							<br />
-							<strong>Frases obligatorias</strong>
-							<br />
-							<br />
-							La integral es impropia por el dominio infinito y
-							converge por la exponencial
-						</aside>
-					</section>
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>Modelo de elementos finitos</h3>
-							<h6>FEM general</h6>
-							<p>
-								Para implementar elementos finitos es necesario
-								seguir una serie de pasos
-							</p>
-							<ol class="fragment">
-								<li>Enmallado (pre proceso)</li>
-								<li
-									data-id="titulito"
-									style="
-										text-transform: none;
-										font-size: var(--big-size-text);
-									"
-								>
-									Formulación variacional/Forma débil
-								</li>
-								<li>Matrices y vectores de elementos</li>
-								<li>Ensamblaje de sistema de ecuaciones</li>
-								<li>Condiciones de borde</li>
-								<li>Solución del sistema de ecuaciones</li>
-								<li>Gráficas y productos (post proceso)</li>
-							</ol>
-						</div>
-						<aside class="notes">
-							<strong>Notas presentación</strong><br />
-
-							- Decir los pasos<br />
-
-							<br /><br />
-							<strong>Notas extendido</strong><br />
-							<strong>FEM local</strong><br /><br />
-							Pero ¿cómo implementamos este modelo constitutivo?.
-							La respuesta es elementos finitos. Oprimir tecla
-							espacio<br />
-							En un caso general, elementos finitos tiene 7 pasos
-							<br />
-							<br />
-							<strong>Frases obligatorias</strong>
-							<br />
-							<br />
-							Especificar que la cantidad de pasos no es
-							obligatoriamente esta, que depende del modelo y del
-							libro de donde se saque el método
-						</aside>
-					</section>
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -1368,7 +809,8 @@
 									Condiciones de borde
 								</li>
 								<li style="color: var(--not-selected-color)">
-									Solución del sistema de ecuaciones
+									Solución del sistema de
+									ecuaciones/eigenvalues
 								</li>
 								<li style="color: var(--not-selected-color)">
 									Gráficas y productos (post proceso)
@@ -1488,324 +930,6 @@
 							expresión para matriz de elemento tendrá dos
 							integrales. Esto obliga a realizar una doble
 							integral sobre el dominio.
-						</aside>
-					</section>
-
-					<section data-auto-animate data-state="graficas-atenu2d">
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h4 data-id="titulito">
-								Detección de elementos no locales
-							</h4>
-							<figure
-								id="grafica-atenuacion-2d"
-								class="three-column figure"
-								style="height: 245px"
-							>
-								<figcaption>
-									Función de atenuación biexponencial en 1D
-								</figcaption>
-							</figure>
-							<figure
-								class="three-column figure"
-								style="text-align: center"
-							>
-								<img
-									data-id="imagen2d"
-									height="230px"
-									src="./resources/deteccion_no_local1.8.svg"
-								/>
-								<figcaption style="margin-top: -40px">
-									Distancia Lr a nivel de elementos 2D
-								</figcaption>
-							</figure>
-							<figure
-								class="three-column figure"
-								style="text-align: center"
-							>
-								<img
-									height="230px"
-									src="./resources/deteccion_no_local_3D.svg"
-								/>
-								<figcaption style="margin-top: -40px">
-									Función de atenuación sobre elementos a una
-									distancia Lr
-								</figcaption>
-							</figure>
-							<div style="position: absolute; top: 65%">
-								<p>
-									Dado que \(\rho\) se calcula como la
-									distancia entre dos puntos, mientras mas
-									lejos estén, menos importancia tienen
-								</p>
-								<p>
-									Elementos lejanos, tendrán \(\rho\approx
-									0\), por lo tanto, solamente se necesitan
-									tener en cuenta los elementos a una
-									distancia < \(Lr=6l\) (Polizzotto, 2001)
-								</p>
-							</div>
-						</div>
-						<aside class="notes">
-							<strong>Notas presentación</strong><br />
-
-							- Distancia grande poca interacción<br />
-							- A una distancia de influencia (Lr) ya no es
-							necesario tener en cuenta<br />
-							- Numéricamente no hay que tener en cuenta dichos
-							elementos para la matriz<br />
-
-							- La parte no local no se integra sobre todo el
-							dominio sino en una parte reducida<br />
-
-							<br /><br />
-							<strong>Notas extendido</strong><br />
-							<strong>FEM no local</strong><br /><br />
-							Al poner la función de atenuación sobre esta región,
-							se puede observar que dicha función casi no tiene
-							relevancia en los elementos mas lejanos, por lo que
-							las matrices de dichos elementos son cercanas a cero
-							y no aportan efectos no locales
-						</aside>
-					</section>
-
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h4 data-id="titulito">
-								Ensamblaje de sistema de ecuaciones
-							</h4>
-							<div
-								style="position: absolute; top: 8%; width: 100%"
-							>
-								<figure
-									class="figure"
-									style="
-										text-align: center;
-										height: 280px;
-										width: 30%;
-										float: left;
-									"
-								>
-									<img
-										src="./resources/conect_nloc1.svg"
-										height="200px"
-									/>
-									<figcaption
-										style="padding: 0px; margin-top: -25px"
-									>
-										Elemento local y no local
-									</figcaption>
-								</figure>
-								<div
-									style="
-										padding-top: 45px;
-										text-align: center;
-										height: 240px;
-										width: 60%;
-										float: left;
-									"
-								>
-									<p style="text-align: center">
-										$$\small K^{nm}_{nl}=\begin{bmatrix} 300
-										& 125 & 425 & 28 \\ 125 & 250 & 542 &
-										425 \\ 425 & 542 & 250 & 125 \\ 28 & 425
-										& 125 & 300 \end{bmatrix} $$
-									</p>
-								</div>
-							</div>
-							<div
-								style="
-									position: absolute;
-									top: 48%;
-									width: 100%;
-								"
-							>
-								<figure
-									class="figure"
-									style="
-										text-align: center;
-										height: 240px;
-										width: 30%;
-										float: left;
-									"
-								>
-									<img
-										src="./resources/conect_nloc2.svg"
-										height="240px"
-									/>
-									<figcaption
-										style="padding: 0px; margin-top: -25px"
-									>
-										Dominio de elementos finitos de ejemplo
-									</figcaption>
-								</figure>
-
-								<div
-									style="
-										text-align: center;
-										height: 240px;
-										width: 60%;
-										float: left;
-									"
-								>
-									<p style="text-align: center">
-										$$\small K=\begin{bmatrix}
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \\
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{black}300} & {\color{black}125}
-										& {\color{lightgray}x} &
-										{\color{black}425} & {\color{black}28} &
-										{\color{lightgray}x} \\
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{black}125} & {\color{black}250}
-										& {\color{lightgray}x} &
-										{\color{black}542} & {\color{black}425}
-										& {\color{lightgray}x} \\
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \\
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{black}425} & {\color{black}542}
-										& {\color{lightgray}x} &
-										{\color{black}250} & {\color{black}125}
-										& {\color{lightgray}x} \\
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} & {\color{black}28}
-										& {\color{black}425} &
-										{\color{lightgray}x} &
-										{\color{black}125} & {\color{black}300}
-										& {\color{lightgray}x} \\
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \\
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \\
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} &
-										{\color{lightgray}x} \end{bmatrix} $$
-									</p>
-								</div>
-							</div>
-						</div>
-						<aside class="notes">
-							<strong>Notas presentación</strong><br />
-
-							- Para un elemento local existe varios elementos no
-							locales<br />
-							- Entre dos elementos (local y no local) existe un
-							aporte<br />
-							- El aporte no local de cada elemento al sistema es
-							una matriz de multiples grados de libertad<br />
-							- Se ensambla con los gdl de los dos elementos<br />
-							- Aumenta el ancho de banda<br />
-							- Disminuye la dispersion de la matriz (matriz se
-							vuelve mas densa)<br />
-							- Disminuye la dispersion de la matriz (matriz se
-							vuelve mas densa)<br />
-							- Mayor tiempo para solucionar<br />
-
-							<br /><br />
-							<strong>Notas extendido</strong><br />
-							<strong>FEM no local</strong><br /><br />
-							En el caso no local, dado que las integrales se
-							realizan cruzadas entre elementos, el ensamblaje de
-							la matriz se realiza con los grados de libertad del
-							elemento local y los grados de libertad del elemento
-							no local. En este caso, los grados de libertad
-							2,3,5,6 y 4,5,7,8. Las matrices son simétricas, por
-							lo que los datos que aparecen en la segunda matriz
-							se repetirán en el sentido contrario.
 						</aside>
 					</section>
 
@@ -1998,60 +1122,143 @@
 							</div>
 						</div>
 						<div class="slide">
-							<div class="three-column">
-								<figure class="figure">
-									<img
-										src="./resources/deteccion_no_local1.svg"
-									/>
-									<figcaption
-										style="padding: 0px; margin-top: -30px"
-									>
-										Elementos no locales de un dominio de 5
-										elementos por lado
-									</figcaption>
-								</figure>
-							</div>
-							<div class="three-column">
-								<figure class="figure">
-									<img
-										src="./resources/deteccion_no_local3.svg"
-									/>
-									<figcaption
-										style="padding: 0px; margin-top: -30px"
-									>
-										Elementos no locales de un dominio de 15
-										elementos por lado
-									</figcaption>
-								</figure>
-							</div>
-							<div class="three-column">
-								<figure class="figure">
-									<img
-										src="./resources/deteccion_no_local5.svg"
-									/>
-									<figcaption
-										style="padding: 0px; margin-top: -30px"
-									>
-										Elementos no locales de un dominio de 25
-										elementos por lado
-									</figcaption>
-								</figure>
-							</div>
-							<h4 style="text-transform: none; margin-top: 380px">
-								¿Qué tamaño hace que los efectos no locales sean
-								despreciables?
+							<h4 data-id="titulito">
+								Validación de frecuencias naturales
 							</h4>
+							<div style="float: left; width: 100%">
+								<figure class="figure">
+									<img
+										height="170px"
+										src="./resources/Dominio.jpeg"
+									/>
+									<figcaption
+										style="padding: 0px; margin-top: -30px"
+									>
+										Modelo objetivo. Adaptado de Pisano et
+										al. (2009)
+									</figcaption>
+								</figure>
+							</div>
+							<div style="float: left; width: 100%">
+								<div class="two-column">
+									<figure class="figure">
+										<img
+											width="350px"
+											src="./resources/y_2519.jpeg"
+										/>
+										<figcaption
+											style="
+												padding: 0px;
+												margin-top: -30px;
+											"
+										>
+											Comparación de \(\varepsilon_x\)
+											para \(y=2.519\)
+										</figcaption>
+									</figure>
+								</div>
+								<div class="two-column">
+									<figure class="figure">
+										<img
+											width="350px"
+											src="./resources/x_0019.jpeg"
+										/>
+										<figcaption
+											style="
+												padding: 0px;
+												margin-top: -30px;
+											"
+										>
+											Comparación de \(\varepsilon_x\)
+											para \(x=0.019\)
+										</figcaption>
+									</figure>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Simulaciones propuestas</h3>
+							<div style="width: 100%; float: left">
+								<figure class="three-column figure">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>Cubo de lado \(R\)</figcaption>
+								</figure>
+								<div class="three-column"><p>a</p></div>
+								<div class="three-column"><p>a</p></div>
+							</div>
+							<div style="width: 100%; float: left">
+								<figure class="three-column figure">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/placa.json&menu=1"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>
+										Placa cuadrada de lado \(R\)
+									</figcaption>
+								</figure>
+								<div class="three-column"><p>a</p></div>
+								<div class="three-column"><p>a</p></div>
+							</div>
 						</div>
 						<aside class="notes">
 							<strong>Notas presentación</strong><br />
 
-							- El proceso de integración cruzada es costoso<br />
-							- Mas elementos, aumenta exponencial<br />
+							- Análisis de frecuencias naturales de vibración<br />
+							- Probar con distintas geometrías<br />
+							- Se cambiarán los parámetros no locales<br />
+							- Se usarán distintos materiales<br />
 
 							<br /><br />
 							<strong>Notas extendido</strong><br />
-							<strong>FEM no local</strong><br /><br />
-							Pregunta de investigación de nuevo.
+							<strong>Metodología</strong><br /><br />
+							Recalcar que se busca encontrar la frecuencia
+							natural de nanoestructuras de distintas geometrías.
+							Mostrar las distintas geometrías (modelos 3D) y
+							especificar donde se encuentra la longitud del
+							dominio.
+							<br />
+							Mencionar que los parámetros a variar se
+							especificarán en la sección de resultados
 						</aside>
 					</section>
 					<section data-auto-animate>
@@ -2084,60 +1291,122 @@
 						<div class="slide">
 							<h3>Simulaciones propuestas</h3>
 
-							<figure class="three-column figure">
-								<iframe
-									data-preload
-									class="iframe-3d"
-									data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
-									scrolling="no"
-									frameborder="0"
-									height="220px"
-								></iframe>
-								<figcaption>Cubo de lado \(R\)</figcaption>
-							</figure>
-							<figure class="three-column figure">
-								<iframe
-									data-preload
-									class="iframe-3d"
-									data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/placa.json&menu=1"
-									scrolling="no"
-									frameborder="0"
-									height="220px"
-								></iframe>
-								<figcaption>
-									Placa cuadrada de lado \(R\)
-								</figcaption>
-							</figure>
-							<figure class="three-column figure">
-								<iframe
-									data-preload
-									class="iframe-3d"
-									data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/viga.json&menu=1"
-									scrolling="no"
-									frameborder="0"
-									height="220px"
-								></iframe>
-								<figcaption>Viga de longitud \(R\)</figcaption>
-							</figure>
-							<div style="position: absolute; top: 60%">
-								<p>Con cada geometría:</p>
-								<ul>
-									<li class="med-text">
-										Se varían los parámetros no locales
-										\(l\) y \(\zeta_1\)
-									</li>
-									<li class="med-text">
-										Se cambia la distancia \(R\)
-									</li>
-									<li class="med-text">
-										Se prueba con distintos materiales
-									</li>
-								</ul>
-								<p>
-									Para cada caso se calcula la primera
-									frecuencia natural \(\omega\) usando teoría
-									no local y la teoría no local
-								</p>
+							<div style="width: 100%; float: left">
+								<figure class="three-column figure">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/viga.json&menu=1"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>
+										Viga de longitud \(R\)
+									</figcaption>
+								</figure>
+								<div class="three-column"><p>a</p></div>
+								<div class="three-column"><p>a</p></div>
+							</div>
+							<div style="width: 100%; float: left">
+								<figure class="three-column figure">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/placa.json&menu=1"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>
+										Placa cuadrada de lado \(R\)
+									</figcaption>
+								</figure>
+								<div class="three-column"><p>a</p></div>
+								<div class="three-column"><p>a</p></div>
+							</div>
+						</div>
+						<aside class="notes">
+							<strong>Notas presentación</strong><br />
+
+							- Análisis de frecuencias naturales de vibración<br />
+							- Probar con distintas geometrías<br />
+							- Se cambiarán los parámetros no locales<br />
+							- Se usarán distintos materiales<br />
+
+							<br /><br />
+							<strong>Notas extendido</strong><br />
+							<strong>Metodología</strong><br /><br />
+							Recalcar que se busca encontrar la frecuencia
+							natural de nanoestructuras de distintas geometrías.
+							Mostrar las distintas geometrías (modelos 3D) y
+							especificar donde se encuentra la longitud del
+							dominio.
+							<br />
+							Mencionar que los parámetros a variar se
+							especificarán en la sección de resultados
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Simulaciones propuestas</h3>
+							<div style="width: 100%; float: left">
+								<figure class="three-column figure">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>Cubo de lado \(R\)</figcaption>
+								</figure>
+								<div class="three-column"><p>a</p></div>
+								<div class="three-column"><p>a</p></div>
+							</div>
+							<div style="width: 100%; float: left">
+								<figure class="three-column figure">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/placa.json&menu=1"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>
+										Placa cuadrada de lado \(R\)
+									</figcaption>
+								</figure>
+								<div class="three-column"><p>a</p></div>
+								<div class="three-column"><p>a</p></div>
 							</div>
 						</div>
 						<aside class="notes">
@@ -2248,148 +1517,6 @@
 							nanopartícula hasta lograr el objetivo
 						</aside>
 					</section>
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>Materiales</h3>
-							<div class="three-column" style="height: 150px">
-								<h4>Carbono</h4>
-								<p>\(\rho=3.515\ g/cm^3\)</p>
-							</div>
-							<div style="height: 150px; float: left; width: 60%">
-								<p>
-									$$\scriptsize C=\begin{bmatrix} 1280.0 &
-									124.0 & 124.0 & 0 & 0 & 0 \\ 124.0 & 1280.0
-									& 124.0 & 0 & 0 & 0 \\ 124.0 & 124.0 &
-									1280.0 & 0 & 0 & 0 \\ 0 & 0 & 0 & 578.0 & 0
-									& 0 \\ 0 & 0 & 0 & 0 & 578.0 & 0 \\ 0 & 0 &
-									0 & 0 & 0 & 578.0 \end{bmatrix}\ MPa$$
-								</p>
-							</div>
-
-							<div class="three-column" style="height: 150px">
-								<h4>Silicio</h4>
-								<p>\(\rho=2.329\ g/cm^3\)</p>
-							</div>
-							<div style="height: 150px; float: left; width: 60%">
-								<p>
-									$$\scriptsize C=\begin{bmatrix} 223.1 & 63.9
-									& 63.9 & 0 & 0 & 0 \\ 63.9 & 223.1 & 63.9 &
-									0 & 0 & 0 \\ 63.9 & 63.9 & 223.1 & 0 & 0 & 0
-									\\ 0 & 0 & 0 & 79.6 & 0 & 0 \\ 0 & 0 & 0 & 0
-									& 79.6 & 0 \\ 0 & 0 & 0 & 0 & 0 & 79.6
-									\end{bmatrix}\ MPa$$
-								</p>
-							</div>
-
-							<div class="three-column" style="height: 150px">
-								<h4>Germanio</h4>
-								<p>\(\rho=5.323\ g/cm^3\)</p>
-							</div>
-							<div style="height: 150px; float: left; width: 60%">
-								<p>
-									$$\scriptsize C=\begin{bmatrix} 182.5 & 48.3
-									& 48.3 & 0 & 0 & 0 \\ 48.3 & 182.5 & 48.3 &
-									0 & 0 & 0 \\ 48.3 & 48.3 & 182.5 & 0 & 0 & 0
-									\\ 0 & 0 & 0 & 67.1 & 0 & 0 \\ 0 & 0 & 0 & 0
-									& 67.1 & 0 \\ 0 & 0 & 0 & 0 & 0 & 67.1
-									\end{bmatrix}\ MPa$$
-								</p>
-							</div>
-						</div>
-						<aside class="notes">
-							<strong>Notas presentación</strong><br />
-
-							- Estudio del profesor Fernando frecuencias
-							partículas materiales<br />
-							- Usar estos materiales con estas características
-							para comparar<br />
-
-							<br /><br />
-							<strong>Notas extendido</strong><br />
-							<strong>Metodología</strong><br /><br />
-							Mencionar los 3 materiales que se usarán para las
-							simulaciones. Mencionar que para replicabilidad se
-							proporciona el tensor de rigidez
-						</aside>
-					</section>
-
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>Procedimiento</h3>
-							<figure class="figure">
-								<img
-									src="./resources/dfmetodos.svg"
-									height="430px"
-								/>
-								<figcaption>
-									Diagrama de flujo completo
-								</figcaption>
-							</figure>
-						</div>
-						<aside class="notes">
-							<strong>Notas presentación</strong><br />
-
-							- Resumen
-
-							<br /><br />
-							<strong>Notas extendido</strong><br />
-							<strong>Metodología </strong><br /><br />
-							Mostar el resumen del proceso en el diagrama de
-							flujo completo
-						</aside>
-					</section>
 				</section>
 				<section data-auto-animate>
 					<section data-auto-animate id="resultados-title">
@@ -2422,7 +1549,7 @@
 						<div class="slide">
 							<h1>
 								<span class="vertical-aligned-title"
-									>Resultados Preliminares</span
+									>Resultados</span
 								>
 							</h1>
 						</div>
@@ -2466,7 +1593,7 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>Frecuencias normalizadas para cubos</h3>
+							<h3>Independencia del material</h3>
 							<figure class="figure">
 								<div
 									id="grafica_res_1"
@@ -2504,7 +1631,10 @@
 							diapositiva
 						</aside>
 					</section>
-					<section data-auto-animate>
+					<section
+						data-auto-animate
+						data-state="graficas-resultados-1"
+					>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
 								<a
@@ -2532,47 +1662,44 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>
-								Parámetros que se usarán en simulaciones de
-								cubos
+							<h3 style="text-transform: none">
+								FRECUENCIAS CAMBIANDO \(l\)
 							</h3>
-							<ul>
-								<li class="med-text">Longitud interna \(l\)</li>
-								<p>Se usan valores de \(l = 0.1,0.5,1,2,5\)</p>
-								<li class="med-text">Tamaño \(R\)</li>
-								<p>
-									Se usan valores de \(R =
-									10l,15l,20l,50l,100l\)
-								</p>
-								<li class="med-text">
-									Factor no local \(\zeta_1\)
-								</li>
-								<p>
-									Se usan valores de \(\zeta_1 =
-									0.0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.9,1.0\)
-								</p>
-								<li class="med-text">Material</li>
-								<p>
-									Se puede usar cualquiera, en este caso,
-									carbono.
-								</p>
-							</ul>
+							<figure class="figure">
+								<div
+									id="grafica_res_1"
+									style="width: 100%; height: 430px"
+								></div>
+								<figcaption>
+									Frecuencias para cubos usando teoría no
+									local con \(l=2,\zeta_1=0.5\)
+								</figcaption>
+							</figure>
 						</div>
 						<aside class="notes">
 							<strong>Notas presentación</strong><br />
 
-							- Valores de l en el rango de valores de la
-							literatura<br />
-							- Tamaño dominio en función de l<br />
-							- Todos los z1<br />
-							- Cualquier material<br />
+							- Tres materiales distintos<br />
+							- Mismos parámetros no locales<br />
+							- Análisis de sensibilidad para llegar a
+							convergencia<br />
+							- Independencia de material<br />
+							- El modelo constitutivo es el mismo para todos los
+							materiales<br />
 
 							<br /><br />
 							<strong>Notas extendido</strong><br />
 							<strong>Resultados</strong><br /><br />
-							Quitando el material como variable, se planea
-							realizar simulaciones de cubos usando los siguientes
-							parámetros no locales.
+							En esta gráfica apreciamos el comportamiento de las
+							frecuencias naturales normalizadas para los tres
+							materiales mencionados anteriormente. Se muestra la
+							frecuencia local.
+
+							<strong>Frase oligatoria</strong>
+							Al normalizar las frecuencia naturales, los tres
+							materiales presentan el mismo comportamiento, por lo
+							tanto, se puede asegurar que: Pasar a la siguiente
+							diapositiva
 						</aside>
 					</section>
 					<section

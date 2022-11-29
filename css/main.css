@@ -41,7 +41,7 @@ h1 {
 	font-weight: normal !important;
 }
 .vertical-aligned-title {
-	height: 73vh;
+	height: 60vh;
 	display: flex;
 	align-items: center;
 }
