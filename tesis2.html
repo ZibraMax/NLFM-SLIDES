@@ -611,7 +611,7 @@
 							puntos aledaños del volumen.
 						</aside>
 					</section>
-					<section data-auto-animate>
+					<section data-auto-animate data-state="graficas-pesadas">
 						<div class="content-indicator">
 							<div class="content-indicator-item">
 								<a
@@ -682,7 +682,10 @@
 									id="atenuacion1"
 								>
 									<figcaption
-										style="text-align: center; padding: 0px"
+										style="
+											text-align: center;
+											padding: 10px;
+										"
 									>
 										\(A\left(\frac{|x-x'|}{l}\right)=\lambda_0e^{-\frac{|x-x'|}{l}}\)
 									</figcaption>
@@ -1122,90 +1125,6 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h4 data-id="titulito">
-								Validación de frecuencias naturales
-							</h4>
-							<div style="float: left; width: 100%">
-								<figure class="figure">
-									<img
-										height="170px"
-										src="./resources/Dominio.jpeg"
-									/>
-									<figcaption
-										style="padding: 0px; margin-top: -30px"
-									>
-										Modelo objetivo. Adaptado de Pisano et
-										al. (2009)
-									</figcaption>
-								</figure>
-							</div>
-							<div style="float: left; width: 100%">
-								<div class="two-column">
-									<figure class="figure">
-										<img
-											width="350px"
-											src="./resources/y_2519.jpeg"
-										/>
-										<figcaption
-											style="
-												padding: 0px;
-												margin-top: -30px;
-											"
-										>
-											Comparación de \(\varepsilon_x\)
-											para \(y=2.519\)
-										</figcaption>
-									</figure>
-								</div>
-								<div class="two-column">
-									<figure class="figure">
-										<img
-											width="350px"
-											src="./resources/x_0019.jpeg"
-										/>
-										<figcaption
-											style="
-												padding: 0px;
-												margin-top: -30px;
-											"
-										>
-											Comparación de \(\varepsilon_x\)
-											para \(x=0.019\)
-										</figcaption>
-									</figure>
-								</div>
-							</div>
-						</div>
-					</section>
-
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
 							<h3>Simulaciones propuestas</h3>
 							<div style="width: 100%; float: left">
 								<figure class="three-column figure">
@@ -1219,8 +1138,12 @@
 									></iframe>
 									<figcaption>Cubo de lado \(R\)</figcaption>
 								</figure>
-								<div class="three-column"><p>a</p></div>
-								<div class="three-column"><p>a</p></div>
+								<div class="three-column">
+									\[\scriptsize l=[0.5,5]\]
+								</div>
+								<div class="three-column">
+									\[\scriptsize R=[1,50]\]
+								</div>
 							</div>
 							<div style="width: 100%; float: left">
 								<figure class="three-column figure">
@@ -1236,8 +1159,12 @@
 										Placa cuadrada de lado \(R\)
 									</figcaption>
 								</figure>
-								<div class="three-column"><p>a</p></div>
-								<div class="three-column"><p>a</p></div>
+								<div class="three-column">
+									\[\scriptsize l=[0.5,5]\]
+								</div>
+								<div class="three-column">
+									\[\scriptsize R=[1,50]\]
+								</div>
 							</div>
 						</div>
 						<aside class="notes">
@@ -1305,25 +1232,33 @@
 										Viga de longitud \(R\)
 									</figcaption>
 								</figure>
-								<div class="three-column"><p>a</p></div>
-								<div class="three-column"><p>a</p></div>
+								<div class="three-column">
+									\[\scriptsize l=[0.5,5]\]
+								</div>
+								<div class="three-column">
+									\[\scriptsize R=[1,50]\]
+								</div>
 							</div>
 							<div style="width: 100%; float: left">
 								<figure class="three-column figure">
 									<iframe
 										data-preload
 										class="iframe-3d"
-										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/placa.json&menu=1"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/esfera.json&menu=1"
 										scrolling="no"
 										frameborder="0"
 										height="220px"
 									></iframe>
 									<figcaption>
-										Placa cuadrada de lado \(R\)
+										Esfera de radio \(R\)
 									</figcaption>
 								</figure>
-								<div class="three-column"><p>a</p></div>
-								<div class="three-column"><p>a</p></div>
+								<div class="three-column">
+									\[\scriptsize l=[0.5,5]\]
+								</div>
+								<div class="three-column">
+									\[\scriptsize R=[1,50]\]
+								</div>
 							</div>
 						</div>
 						<aside class="notes">
@@ -1381,32 +1316,42 @@
 									<iframe
 										data-preload
 										class="iframe-3d"
-										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/voladizo.json&menu=1"
 										scrolling="no"
 										frameborder="0"
 										height="220px"
 									></iframe>
-									<figcaption>Cubo de lado \(R\)</figcaption>
+									<figcaption>
+										Viga en voladizo de longitud \(R\)
+									</figcaption>
 								</figure>
-								<div class="three-column"><p>a</p></div>
-								<div class="three-column"><p>a</p></div>
+								<div class="three-column">
+									\[\scriptsize l=[0.5,5]\]
+								</div>
+								<div class="three-column">
+									\[\scriptsize R=[1,50]\]
+								</div>
 							</div>
 							<div style="width: 100%; float: left">
 								<figure class="three-column figure">
 									<iframe
 										data-preload
 										class="iframe-3d"
-										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/placa.json&menu=1"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/empotrada.json&menu=1"
 										scrolling="no"
 										frameborder="0"
 										height="220px"
 									></iframe>
 									<figcaption>
-										Placa cuadrada de lado \(R\)
+										Viga empotrada de longitud \(R\)
 									</figcaption>
 								</figure>
-								<div class="three-column"><p>a</p></div>
-								<div class="three-column"><p>a</p></div>
+								<div class="three-column">
+									\[\scriptsize l=[0.5,5]\]
+								</div>
+								<div class="three-column">
+									\[\scriptsize R=[1,50]\]
+								</div>
 							</div>
 						</div>
 						<aside class="notes">
