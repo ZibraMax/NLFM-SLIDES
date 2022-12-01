@@ -1986,32 +1986,27 @@
 						<div class="slide">
 							<h3>Resultados para cubos</h3>
 							<div>
-								<div class="two-column">
+								<div class="two-column" style="width: 70%">
 									<figure class="figure">
-										<img
-											style="width: 100%"
-											src="resources/Figure_2-1.png"
-										/>
+										<div
+											style="width: 100%; height: 450px"
+											id="resultados-frecuencias-cubos-reg"
+										></div>
 										<figcaption>
 											Regresión de mínimos cuadrados para
-											cubos (<!-- TODO FIGURA -->, SE
-											CAMBIARÁ POR GRÁFICA NATIVA)
+											cubos
 										</figcaption>
 									</figure>
 								</div>
-								<div class="two-column">
+								<div class="two-column" style="width: 30%">
 									<p>
-										Para evaluar el comportamiento de las
-										frecuencias se plantea una regresión de
-										mínimos cuadrados
-										<br />
-										\[\eta\left(\frac{l}{R},\zeta\right)=\eta_l+a1\frac{l}{R}+a2\frac{l}{R}\zeta_1\]
+										\[\eta_{nl}\left(\frac{l}{R},\zeta_1\right)=\eta_l+a1\frac{l}{R}(\zeta_1-1)\]
 										La regresión esta restringida a la
 										frecuencia local. Con ello se cumple
 										que: \[\lim_{R\to \infty}
 										\eta\left(\frac{l}{R},\zeta\right)=\eta_l\]
-										Para cubos se obtiene
-										\(a_1=-2.785,a_2=3.015\)
+										\[\eta\left(\frac{l}{R},0\right)=\eta_l\]
+										Para cubos se obtiene \(a_1=2.6475 \)
 									</p>
 								</div>
 							</div>
