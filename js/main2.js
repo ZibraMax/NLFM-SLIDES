@@ -1504,7 +1504,7 @@ function createGraph3() {
 			JSON.parse(JSON.stringify(data_resultados_3)),
 			{
 				xaxis: {
-					title: "ℓ/R",
+					title: "1/R",
 					gridcolor: "#dcdcdc",
 					zerolinecolor: "#dcdcdc",
 				},
@@ -1769,7 +1769,10 @@ function animacion_l_back() {
 			{
 				data: data_resultados_3,
 				layout: {
-					xaxis: { range: [0.05568738506436567, 0.1751027389356343] },
+					xaxis: {
+						range: [0.05568738506436567, 0.1751027389356343],
+						title: "1/R",
+					},
 					yaxis: { range: [1.2585550940853658, 1.5708633209146343] },
 				},
 			},
