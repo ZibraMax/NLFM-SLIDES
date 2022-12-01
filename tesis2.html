@@ -1864,6 +1864,11 @@
 								class="fragment"
 								style="visibility: none !important"
 							></p>
+							<p
+								id="activador2"
+								class="fragment"
+								style="visibility: none !important"
+							></p>
 						</div>
 						<aside class="notes">
 							<strong>Notas presentación</strong><br />
@@ -1906,7 +1911,10 @@
 						</div>
 					</section>
 
-					<section data-auto-animate>
+					<section
+						data-auto-animate
+						data-state="graficas-pesadas-res-5"
+					>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
 								<a
@@ -1936,14 +1944,11 @@
 						<div class="slide">
 							<h3>Resultados para cubos</h3>
 							<figure class="figure">
-								<img
+								<div
 									style="width: 100%; height: 430px"
-									src="resources/Figure_1-1.png"
-								/>
-								<figcaption>
-									Frecuencias para cubos (<!-- TODO FIGURA -->,
-									SE CAMBIARÁ POR GRÁFICA NATIVA)
-								</figcaption>
+									id="resultados-frecuencias-cubos"
+								></div>
+								<figcaption>Frecuencias para cubos</figcaption>
 							</figure>
 						</div>
 						<aside class="notes">
@@ -2016,7 +2021,10 @@
 						</aside>
 					</section>
 
-					<section data-auto-animate>
+					<section
+						data-auto-animate
+						data-state="graficas-pesadas-res-6"
+					>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
 								<a
@@ -2047,38 +2055,36 @@
 							<h3>Resultados para cubos</h3>
 							<div>
 								<div class="two-column">
-									<h5 style="text-decoration: none">
-										Criterio para rango inferior
-									</h5>
 									<p>
 										Valor de \(\frac{l}{R}\) para el cual la
 										curva de \(\zeta_1=0\) esta por debajo
 										del 5% de la frecuencia local
 									</p>
 									<figure class="figure">
-										<img
-											style="height: 170px"
-											src="resources/cubos_zoom_peque.png"
-										/>
+										<div
+											style="width: 100%; height: 320px"
+											id="resultados-frecuencias-cubos"
+										></div>
 									</figure>
-									<p>\[\frac{l}{R}=1/50\]</p>
+									<p class="fragment" id="activador3">
+										\[\frac{l}{R}=1/50\]
+									</p>
 								</div>
 								<div class="two-column">
-									<h5 style="text-decoration: none">
-										Criterio para rango superior
-									</h5>
 									<p>
 										Valor de \(\frac{l}{R}\) para el cual la
 										pendiente numérica de \(\zeta_1=0.5\)
 										esta por debajo del 5%
 									</p>
 									<figure class="figure">
-										<img
-											style="height: 170px"
-											src="resources/cubez_zoom_grande.png"
-										/>
+										<div
+											style="width: 100%; height: 320px"
+											id="resultados-frecuencias-cubos"
+										></div>
 									</figure>
-									<p>\[\frac{l}{R}=1\]</p>
+									<p class="fragment" id="activador4">
+										\[\frac{l}{R}=1\]
+									</p>
 								</div>
 							</div>
 						</div>
