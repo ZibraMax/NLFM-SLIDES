@@ -41,13 +41,14 @@ const resultados_2 = [...document.querySelectorAll("[id=grafica_res_2]")];
 const resultados_3 = [
 	...document.querySelectorAll("[id=resultados-frecuencias-cambiando-l]"),
 ];
-
 const resultados_5 = [
 	...document.querySelectorAll("[id=resultados-frecuencias-cubos]"),
 ];
-
 const resultados_7 = [
 	...document.querySelectorAll("[id=resultados-frecuencias-cubos-reg]"),
+];
+const resultados_8 = [
+	...document.querySelectorAll("[id=resultados-frecuencias-esferas]"),
 ];
 
 const cmap = [
@@ -1393,6 +1394,133 @@ const data_resultados_7 = [
 	},
 ];
 
+const data_resultados_8 = [
+	{
+		type: "lines",
+		x: [
+			0.100409842949641, 0.133333333333333, 0.133333333333333,
+			0.203847577293368, 0.203847577293368,
+		],
+		y: [
+			2.07166261522709, 1.94645370523797, 1.94645370523795,
+			1.65233008571914, 1.65233008571915,
+		],
+		name: "ζ=0.1",
+		line: { shape: "spline" },
+	},
+	{
+		type: "lines",
+		x: [
+			0.100409842949641, 0.133333333333333, 0.133333333333333,
+			0.203847577293368, 0.203847577293368,
+		],
+		y: [
+			2.12494263027864, 2.02048126828174, 2.02048126828178,
+			1.77247437591487, 1.77247437591486,
+		],
+		name: "ζ=0.2",
+		line: { shape: "spline" },
+	},
+	{
+		type: "lines",
+		x: [
+			0.100409842949641, 0.133333333333333, 0.133333333333333,
+			0.203847577293368, 0.203847577293368,
+		],
+		y: [
+			2.17644722841971, 2.09108884432347, 2.09108884432339,
+			1.88300253412717, 1.88300253412716,
+		],
+		name: "ζ=0.3",
+		line: { shape: "spline" },
+	},
+	{
+		type: "lines",
+		x: [
+			0.100409842949641, 0.133333333333333, 0.133333333333333,
+			0.203847577293368, 0.203847577293368,
+		],
+		y: [
+			2.22656278022879, 2.15909020495396, 2.15909020495403,
+			1.98667464040361, 1.9866746404035,
+		],
+		name: "ζ=0.4",
+		line: { shape: "spline" },
+	},
+	{
+		type: "lines",
+		x: [
+			0.100409842949641, 0.133333333333333, 0.133333333333333,
+			0.203847577293368, 0.203847577293368,
+		],
+		y: [
+			2.27546973956936, 2.22486890072294, 2.22486890072265,
+			2.08485595532832, 2.08485595532826,
+		],
+		name: "ζ=0.5",
+		line: { shape: "spline" },
+	},
+	{
+		type: "lines",
+		x: [
+			0.100409842949641, 0.133333333333333, 0.133333333333333,
+			0.203847577293368, 0.203847577293368,
+		],
+		y: [
+			2.32328412213884, 2.28867619472375, 2.28867619472375,
+			2.17842828360655, 2.17842828360651,
+		],
+		name: "ζ=0.6",
+		line: { shape: "spline" },
+	},
+	{
+		type: "lines",
+		x: [
+			0.100409842949641, 0.133333333333333, 0.133333333333333,
+			0.203847577293368, 0.203847577293368,
+		],
+		y: [
+			2.37009279559451, 2.35070177623851, 2.35070177624019,
+			2.26802931310474, 2.26802931310469,
+		],
+		name: "ζ=0.7",
+		line: { shape: "spline" },
+	},
+	{
+		type: "lines",
+		x: [
+			0.100409842949641, 0.133333333333333, 0.133333333333333,
+			0.203847577293368, 0.203847577293368,
+		],
+		y: [
+			2.41596620584038, 2.41109908979225, 2.41109908979275, 2.35414872365,
+			2.3541487236503,
+		],
+		name: "ζ=0.8",
+		line: { shape: "spline" },
+	},
+	{
+		type: "lines",
+		x: [
+			0.100409842949641, 0.133333333333333, 0.133333333333333,
+			0.203847577293368, 0.203847577293368,
+		],
+		y: [
+			2.46096410009779, 2.46999701996382, 2.46999701996344,
+			2.43717673243413, 2.43717673243419,
+		],
+		name: "ζ=0.9",
+		line: { shape: "spline" },
+	},
+	{
+		mode: "lines",
+		x: [0.1, 0.21],
+		y: [2.505747455, 2.505747455],
+		name: "Local",
+		line: { shape: "spline", color: "black", dash: "dash" },
+	},
+];
+
 atenu1_div.map((x) =>
 	Plotly.newPlot(x, [data_atenua_1], plots_layout, plots_config)
 );
@@ -1600,6 +1728,37 @@ resultados_7.map((x) =>
 	)
 );
 
+resultados_8.map((x) =>
+	Plotly.newPlot(
+		x,
+		data_resultados_8,
+		{
+			xaxis: {
+				title: "ℓ/R",
+				gridcolor: "#dcdcdc",
+				zerolinecolor: "#dcdcdc",
+			},
+			yaxis: {
+				title: "η",
+				gridcolor: "#dcdcdc",
+				zerolinecolor: "#dcdcdc",
+			},
+			legend: {
+				x: 1 - 0.15,
+				y: 0.9,
+				orientation: "v",
+				xanchor: "left",
+				borderwidth: 2,
+				bordercolor: "lightgray",
+				font: { size: 15 },
+			},
+			font: { size: 20 },
+			margin: { t: 0 },
+		},
+		plots_config
+	)
+);
+
 const activador = document.getElementById("activador");
 const activador2 = document.getElementById("activador2");
 const activador3 = document.getElementById("activador3");
@@ -1658,6 +1817,20 @@ function update_resultado_5(b) {
 	});
 }
 
+function update_resultado_7() {
+	return new Promise((resolve) => {
+		resultados_7.map((x) => Plotly.update(x));
+		resolve("resolved");
+	});
+}
+
+function update_resultado_8() {
+	return new Promise((resolve) => {
+		resultados_8.map((x) => Plotly.update(x));
+		resolve("resolved");
+	});
+}
+
 Reveal.on("graficas-pesadas", () => {
 	updateGraphs();
 });
@@ -1687,6 +1860,14 @@ Reveal.on("graficas-pesadas-res-5", () => {
 
 Reveal.on("graficas-pesadas-res-6", () => {
 	update_resultado_5(false);
+});
+
+Reveal.on("graficas-pesadas-res-7", () => {
+	update_resultado_7();
+});
+
+Reveal.on("graficas-pesadas-res-8", () => {
+	update_resultado_8();
 });
 
 function toogleNotes() {
@@ -1795,7 +1976,7 @@ function animacion_zoom_1() {
 		{
 			data: data_resultados_6,
 			layout: {
-				xaxis: { range: [0.02, 0.08] },
+				xaxis: { range: [0.015, 0.08] },
 				yaxis: { range: [1.5, 1.8] },
 			},
 		},
@@ -1816,7 +1997,7 @@ function animacion_zoom_2() {
 		{
 			data: data_resultados_6,
 			layout: {
-				xaxis: { range: [0.2, 1.5] },
+				xaxis: { range: [0.0, 1.5] },
 				yaxis: { range: [0.75, 1.5] },
 			},
 		},
