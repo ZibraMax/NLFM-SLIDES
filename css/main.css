@@ -3,6 +3,7 @@
 	--shades-r-2: #cb2235;
 	--shades-r-3: #8f1625;
 	--red: var(--shades-r-1);
+	--rednt: rgb(255, 255, 255);
 
 	--shades-k-1: black;
 
@@ -40,11 +41,15 @@ h1 {
 	text-align: left;
 	font-weight: normal !important;
 }
+
 .vertical-aligned-title {
 	height: 60vh;
 	display: flex;
 	align-items: center;
+	color: var(--rednt);
+	mix-blend-mode: difference;
 }
+
 .vertical-aligned-eq {
 	position: absolute;
 	top: 40%;
@@ -172,6 +177,7 @@ a:hover {
 	float: left;
 	width: 92%;
 	height: 100%;
+	background-color: white;
 }
 
 .controls-arrow {
