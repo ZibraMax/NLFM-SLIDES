@@ -43,7 +43,7 @@ h1 {
 }
 
 .vertical-aligned-title {
-	height: 60vh;
+	height: 40vh;
 	display: flex;
 	align-items: center;
 	color: var(--rednt);
