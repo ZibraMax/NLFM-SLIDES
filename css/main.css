@@ -85,8 +85,6 @@ p {
 	text-align: left;
 	font-weight: normal !important;
 	font-size: var(--medium-size-text);
-	word-break: break-all;
-	white-space: normal;
 }
 li {
 	font-size: var(--big-size-text);
