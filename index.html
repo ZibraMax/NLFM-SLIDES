@@ -40,7 +40,7 @@
 	<body>
 		<div class="reveal">
 			<img
-				style="position: absolute; left: 84%; top: -30px"
+				style="position: absolute; left: 84%; top: -30px; z-index: 10"
 				width="200px"
 				src="https://uniandes.edu.co/sites/default/files/logo-uniandes.png"
 			/>
@@ -1421,6 +1421,7 @@
 					</section>
 				</section>
 				<section data-auto-animate>
+					<!-- Titulo -->
 					<section data-auto-animate id="resultados-title">
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -1464,6 +1465,8 @@
 							Pasar rápido
 						</aside>
 					</section>
+
+					<!-- Independencia del material -->
 					<section
 						data-auto-animate
 						data-state="graficas-resultados-1"
@@ -1533,6 +1536,8 @@
 							diapositiva
 						</aside>
 					</section>
+
+					<!-- Diferencias relativas entre frecuencias no locales -->
 					<section
 						data-auto-animate
 						data-state="graficas-pesadas-res-2"
@@ -1620,6 +1625,8 @@
 							35 veces l se espera tener una variacion menor al 5%
 						</aside>
 					</section>
+
+					<!-- Cambiando l -->
 					<section
 						data-auto-animate
 						data-state="graficas-pesadas-res-3"
@@ -1774,6 +1781,7 @@
 						</aside>
 					</section>
 
+					<!-- Nueva normalización gráfica -->
 					<section
 						data-auto-animate
 						data-state="graficas-pesadas-res-4"
@@ -1832,6 +1840,7 @@
 						</aside>
 					</section>
 
+					<!-- Título cubos -->
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -1868,6 +1877,7 @@
 						</div>
 					</section>
 
+					<!-- Gráfica cubos -->
 					<section
 						data-auto-animate
 						data-state="graficas-pesadas-res-5"
@@ -1913,6 +1923,7 @@
 						</aside>
 					</section>
 
+					<!-- Regresión cubos -->
 					<section
 						data-auto-animate
 						data-state="graficas-pesadas-res-7"
@@ -1976,6 +1987,7 @@
 						</aside>
 					</section>
 
+					<!-- Rango cubos -->
 					<section
 						data-auto-animate
 						data-state="graficas-pesadas-res-6"
@@ -2048,6 +2060,7 @@
 						</aside>
 					</section>
 
+					<!-- Título esferas -->
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -2084,6 +2097,7 @@
 						</div>
 					</section>
 
+					<!-- Gráfica esferas -->
 					<section
 						data-auto-animate
 						data-state="graficas-pesadas-res-8"
@@ -2131,6 +2145,7 @@
 						</aside>
 					</section>
 
+					<!-- Título placas -->
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -2167,6 +2182,7 @@
 						</div>
 					</section>
 
+					<!-- Gráfica placas -->
 					<section
 						data-auto-animate
 						data-state="graficas-pesadas-res-9"
@@ -2212,6 +2228,7 @@
 						</aside>
 					</section>
 
+					<!-- Título vigas 1 -->
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -2248,6 +2265,7 @@
 						</div>
 					</section>
 
+					<!-- Gráfica vigas 1 -->
 					<section
 						data-auto-animate
 						data-state="graficas-pesadas-res-10"
@@ -2295,6 +2313,7 @@
 						</aside>
 					</section>
 
+					<!-- Título vigas 2 -->
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -2346,6 +2365,7 @@
 						</div>
 					</section>
 
+					<!-- Gráfica vigas 2 -->
 					<section
 						data-auto-animate
 						data-state="graficas-pesadas-res-11"
@@ -2393,6 +2413,8 @@
 						</aside>
 					</section>
 
+					<!-- Rangos -->
+
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
@@ -2428,8 +2450,9 @@
 									<tr>
 										<th>Geometría</th>
 										<th>\(\pmb{\eta}\)</th>
-										<th>\(\pmb{a_1}\)</th>
-										<th>\(\pmb{a_2}\)</th>
+										<th>
+											Regresión para \(\pmb{\eta_{nl}}\)
+										</th>
 										<th>\(\pmb{R^2}\)</th>
 										<th>\(\pmb{l/R_{min}}\)</th>
 										<th>\(\pmb{l/R_{max}}\)</th>
@@ -2438,39 +2461,53 @@
 								<tbody>
 									<tr>
 										<td>Cubos</td>
-										<td>1.778</td>
-										<td>-2.785</td>
-										<td>3.015</td>
-										<td>0.867</td>
+										<td>1.776</td>
+										<td>
+											\(1.776+2.648\frac{l}{R}(\zeta_1-1)\)
+										</td>
+										<td>0.845</td>
 										<td>1/50</td>
 										<td>1</td>
 									</tr>
 									<tr>
 										<td>Esferas</td>
-										<td>2.506</td>
-										<td>-4.718</td>
-										<td>4.967</td>
-										<td>0.991</td>
-										<td>-</td>
-										<td>-</td>
+										<td>2.505</td>
+										<td>
+											\(2.505+3.414\frac{l}{R}(\zeta_1-1)\)
+										</td>
+										<td>0.883</td>
+										<td>1/52</td>
+										<td>1</td>
 									</tr>
 									<tr>
 										<td>Placas</td>
 										<td>1.126</td>
-										<td>-0.618</td>
-										<td>0.702</td>
-										<td>0.928</td>
-										<td>-</td>
-										<td>-</td>
+										<td>
+											\(1.126+0.389\frac{l}{R}(\zeta_1-1)\)
+										</td>
+										<td>0.954</td>
+										<td>1/10</td>
+										<td>2.5</td>
 									</tr>
 									<tr>
-										<td>Vigas</td>
+										<td>Vigas voladizo</td>
 										<td>3.493</td>
-										<td>-44.07</td>
-										<td>46.94</td>
-										<td>0.884</td>
-										<td>-</td>
-										<td>-</td>
+										<td>
+											\(3.493+43.21\frac{l}{R}(\zeta_1-1)\)
+										</td>
+										<td>0.886</td>
+										<td>1/425</td>
+										<td>0.1</td>
+									</tr>
+									<tr>
+										<td>Vigas empotradas</td>
+										<td>21.064</td>
+										<td>
+											\(21.06+290.9\frac{l}{R}(\zeta_1-1)\)
+										</td>
+										<td>0.890</td>
+										<td>1/460</td>
+										<td>0.1</td>
 									</tr>
 								</tbody>
 							</table>
@@ -2480,6 +2517,7 @@
 						</aside>
 					</section>
 
+					<!-- Conclusiones -->
 					<section data-auto-animate>
 						<div class="content-indicator">
 							<div class="content-indicator-item">
