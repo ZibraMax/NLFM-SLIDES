@@ -39,16 +39,21 @@
 
 	<body>
 		<div class="reveal">
-			<img
-				style="position: absolute; left: 84%; top: -30px; z-index: 10"
-				width="200px"
-				src="https://uniandes.edu.co/sites/default/files/logo-uniandes.png"
-			/>
 			<div class="slides">
 				<section data-auto-animate>
+					<img
+						style="
+							position: absolute;
+							right: 25px;
+							top: -10px;
+							z-index: 100;
+						"
+						width="150px"
+						src="https://educacion.uniandes.edu.co/sites/default/files/Uniandes.png"
+					/>
 					<div class="content-indicator">
 						<div class="content-indicator-item">
-							<b
+							<span
 								class="hidden-link"
 								style="
 									color: var(--not-selected-color);
@@ -58,9 +63,9 @@
 									left: -1%;
 								"
 								onclick="simulateKey(83)"
-								>Abrir ventana de notas</b
+								>Abrir ventana de notas</span
 							>
-							<b
+							<span
 								class="hidden-link"
 								style="
 									color: var(--not-selected-color);
@@ -70,7 +75,20 @@
 									left: -1%;
 								"
 								onclick="toogleNotes()"
-								>Activar notas al lado</b
+								>Activar notas al lado</span
+							>
+							<a
+								class="hidden-link"
+								style="
+									color: var(--not-selected-color);
+									font-size: 0.8rem;
+									position: fixed;
+									top: 68%;
+									left: -1%;
+								"
+								href="https://zibramax.github.io/NLFM-SLIDES/tesis1.html"
+								target="_blank"
+								>Diapositivas Tesis 1</a
 							>
 
 							<a class="hidden-link" href="#/introduccion-title"
@@ -347,17 +365,17 @@
 								</figure>
 							</div>
 							<div style="position: absolute; top: 70%">
-								<p>¿Cómo?</p>
+								<p>
+									¿Cómo? <br />
+									Frecuencias naturales de vibración para:
+								</p>
 								<ul>
 									<li style="font-size: 1.3rem">
-										Frecuencias para nanopartículas (cubos,
-										esferas o tetraedros)
+										Nanopartículas (cubos y esferas)
 									</li>
+									<li style="font-size: 1.3rem">Placas</li>
 									<li style="font-size: 1.3rem">
-										Frecuencias para placas
-									</li>
-									<li style="font-size: 1.3rem">
-										Frecuencias para vigas
+										Vigas (voladizo y empotradas)
 									</li>
 								</ul>
 							</div>
@@ -365,7 +383,8 @@
 						<aside class="notes">
 							<strong>Notas presentación</strong><br />
 
-							- Análisis de frecuencias en 3D (principalmente)<br />
+							- Análisis de frecuencias naturales de vibración en
+							3D (principalmente)<br />
 							- Usando FEM<br />
 							- Buscar el tamaño para el cual no es relevante usar
 							la teoría no local<br />
@@ -608,6 +627,7 @@
 								{\color{black}\zeta_2}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
 							</div>
 							<br />
+							<br />
 							<div class="fragment">
 								<div class="two-column">
 									<p>
@@ -661,7 +681,7 @@
 									</p>
 								</div>
 								<div class="two-column">
-									<p>
+									<p style="text-align: center">
 										Elasticidad (3D):
 										\(\lambda_0=\frac{1}{8\pi l^3}\)
 									</p>
@@ -1082,286 +1102,7 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>Simulaciones propuestas</h3>
-							<div style="width: 100%; float: left">
-								<figure class="three-column figure">
-									<iframe
-										data-preload
-										class="iframe-3d"
-										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
-										scrolling="no"
-										frameborder="0"
-										height="220px"
-									></iframe>
-									<figcaption>Cubo de lado \(R\)</figcaption>
-								</figure>
-								<div class="three-column">
-									\[\scriptsize l=[0.5,5]\]
-								</div>
-								<div class="three-column">
-									\[\scriptsize R=[1,50]\]
-								</div>
-							</div>
-							<div style="width: 100%; float: left">
-								<figure class="three-column figure">
-									<iframe
-										data-preload
-										class="iframe-3d"
-										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/placa.json&menu=1"
-										scrolling="no"
-										frameborder="0"
-										height="220px"
-									></iframe>
-									<figcaption>
-										Placa cuadrada de lado \(R\)
-									</figcaption>
-								</figure>
-								<div class="three-column">
-									\[\scriptsize l=[0.5,5]\]
-								</div>
-								<div class="three-column">
-									\[\scriptsize R=[1,50]\]
-								</div>
-							</div>
-						</div>
-						<aside class="notes">
-							<strong>Notas presentación</strong><br />
-
-							- Análisis de frecuencias naturales de vibración<br />
-							- Probar con distintas geometrías<br />
-							- Se cambiarán los parámetros no locales<br />
-							- Se usarán distintos materiales<br />
-
-							<br /><br />
-							<strong>Notas extendido</strong><br />
-							<strong>Metodología</strong><br /><br />
-							Recalcar que se busca encontrar la frecuencia
-							natural de nanoestructuras de distintas geometrías.
-							Mostrar las distintas geometrías (modelos 3D) y
-							especificar donde se encuentra la longitud del
-							dominio.
-							<br />
-							Mencionar que los parámetros a variar se
-							especificarán en la sección de resultados
-						</aside>
-					</section>
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>Simulaciones propuestas</h3>
-
-							<div style="width: 100%; float: left">
-								<figure class="three-column figure">
-									<iframe
-										data-preload
-										class="iframe-3d"
-										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/viga.json&menu=1"
-										scrolling="no"
-										frameborder="0"
-										height="220px"
-									></iframe>
-									<figcaption>
-										Viga de longitud \(R\)
-									</figcaption>
-								</figure>
-								<div class="three-column">
-									\[\scriptsize l=[0.5,5]\]
-								</div>
-								<div class="three-column">
-									\[\scriptsize R=[1,50]\]
-								</div>
-							</div>
-							<div style="width: 100%; float: left">
-								<figure class="three-column figure">
-									<iframe
-										data-preload
-										class="iframe-3d"
-										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/esfera.json&menu=1"
-										scrolling="no"
-										frameborder="0"
-										height="220px"
-									></iframe>
-									<figcaption>
-										Esfera de radio \(R\)
-									</figcaption>
-								</figure>
-								<div class="three-column">
-									\[\scriptsize l=[0.5,5]\]
-								</div>
-								<div class="three-column">
-									\[\scriptsize R=[1,50]\]
-								</div>
-							</div>
-						</div>
-						<aside class="notes">
-							<strong>Notas presentación</strong><br />
-
-							- Análisis de frecuencias naturales de vibración<br />
-							- Probar con distintas geometrías<br />
-							- Se cambiarán los parámetros no locales<br />
-							- Se usarán distintos materiales<br />
-
-							<br /><br />
-							<strong>Notas extendido</strong><br />
-							<strong>Metodología</strong><br /><br />
-							Recalcar que se busca encontrar la frecuencia
-							natural de nanoestructuras de distintas geometrías.
-							Mostrar las distintas geometrías (modelos 3D) y
-							especificar donde se encuentra la longitud del
-							dominio.
-							<br />
-							Mencionar que los parámetros a variar se
-							especificarán en la sección de resultados
-						</aside>
-					</section>
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>Simulaciones propuestas</h3>
-							<div style="width: 100%; float: left">
-								<figure class="three-column figure">
-									<iframe
-										data-preload
-										class="iframe-3d"
-										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=2&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/voladizo.json&menu=1&mode=16"
-										scrolling="no"
-										frameborder="0"
-										height="220px"
-									></iframe>
-									<figcaption>
-										Viga en voladizo de longitud \(R\)
-									</figcaption>
-								</figure>
-								<div class="three-column">
-									\[\scriptsize l=[0.5,5]\]
-								</div>
-								<div class="three-column">
-									\[\scriptsize R=[1,50]\]
-								</div>
-							</div>
-							<div style="width: 100%; float: left">
-								<figure class="three-column figure">
-									<iframe
-										data-preload
-										class="iframe-3d"
-										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/empotrada.json&menu=1&mode=7"
-										scrolling="no"
-										frameborder="0"
-										height="220px"
-									></iframe>
-									<figcaption>
-										Viga empotrada de longitud \(R\)
-									</figcaption>
-								</figure>
-								<div class="three-column">
-									\[\scriptsize l=[0.5,5]\]
-								</div>
-								<div class="three-column">
-									\[\scriptsize R=[1,50]\]
-								</div>
-							</div>
-						</div>
-						<aside class="notes">
-							<strong>Notas presentación</strong><br />
-
-							- Análisis de frecuencias naturales de vibración<br />
-							- Probar con distintas geometrías<br />
-							- Se cambiarán los parámetros no locales<br />
-							- Se usarán distintos materiales<br />
-
-							<br /><br />
-							<strong>Notas extendido</strong><br />
-							<strong>Metodología</strong><br /><br />
-							Recalcar que se busca encontrar la frecuencia
-							natural de nanoestructuras de distintas geometrías.
-							Mostrar las distintas geometrías (modelos 3D) y
-							especificar donde se encuentra la longitud del
-							dominio.
-							<br />
-							Mencionar que los parámetros a variar se
-							especificarán en la sección de resultados
-						</aside>
-					</section>
-
-					<section data-auto-animate>
-						<div class="content-indicator">
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/introduccion-title"
-									>Introducción
-								</a>
-							</div>
-							<div class="content-indicator-item selected-ci">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/metodos-title"
-									>Métodos
-								</a>
-							</div>
-							<div class="content-indicator-item">
-								<a
-									data-id="not-animate"
-									class="hidden-link"
-									href="#/resultados-title"
-									>Resultados
-								</a>
-							</div>
-						</div>
-						<div class="slide">
-							<h3>Análisis de frecuencias normalizadas</h3>
+							<h3>Normalización de frecuencias</h3>
 							<p>
 								Para comparar entre resultados se usa la
 								frecuencia normalizada (\(\eta \) )
@@ -1386,7 +1127,7 @@
 								</li>
 								<li class="med-text">
 									Se calcula la diferencia relativa entre las
-									frecuencias
+									frecuencias naturales de vibración
 								</li>
 								<p>
 									$$\Delta=\left|\frac{\eta_{nl}-\eta_{l}}{\eta_{l}}\right|$$
@@ -1400,8 +1141,8 @@
 							<strong>Notas presentación</strong><br />
 
 							- Elimina la dependencia del tamaño en no local<br />
-							- Diferencias relativas entre frecuencias
-							normalizadas<br />
+							- Diferencias relativas entre frecuencias naturales
+							de vibración normalizadas<br />
 							- Si diferencia del 5% consideramos que el tamaño es
 							suficiente<br />
 
@@ -1417,6 +1158,200 @@
 							diferencia relativa sea menor al 5%. Para disminuir
 							esa diferencia se aumenta el tamaño de la
 							nanopartícula hasta lograr el objetivo
+						</aside>
+					</section>
+
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Simulaciones propuestas</h3>
+							<div style="width: 100%; float: left">
+								<figure class="three-column figure">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>Cubo de lado \(L\)</figcaption>
+								</figure>
+								<div class="three-column">
+									<p>\[ l/R=[0.02,2]\]</p>
+									<p>\[ \zeta_1=[0.1,0.9]\]</p>
+								</div>
+								<div class="three-column">
+									<p>\[ R=L/1.612\]</p>
+									<p>\[ \eta=\frac{\omega_1R}{C_t}\]</p>
+								</div>
+							</div>
+							<div style="width: 100%; float: left">
+								<figure class="three-column figure">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/esfera.json&menu=1"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>
+										Placa cuadrada de lado \(R\)
+									</figcaption>
+								</figure>
+								<div class="three-column">
+									<p>\[ l/R=[0.05,1.5]\]</p>
+									<p>\[ \zeta_1=[0.1,0.9]\]</p>
+								</div>
+								<div class="three-column">
+									<p>\[ \eta=\frac{\omega_1R}{C_t}\]</p>
+								</div>
+							</div>
+						</div>
+						<aside class="notes">
+							<strong>Notas presentación</strong><br />
+
+							- Análisis de frecuencias naturales de vibración<br />
+							- Probar con distintas geometrías<br />
+							- Se cambiarán los parámetros no locales<br />
+							- Se usarán distintos materiales<br />
+
+							<br /><br />
+							<strong>Notas extendido</strong><br />
+							<strong>Metodología</strong><br /><br />
+							Recalcar que se busca encontrar la frecuencia
+							natural de nanoestructuras de distintas geometrías.
+							Mostrar las distintas geometrías (modelos 3D) y
+							especificar donde se encuentra la longitud del
+							dominio.
+							<br />
+							Mencionar que los parámetros a variar se
+							especificarán en la sección de resultados
+						</aside>
+					</section>
+					<section>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
+							<h3>Simulaciones propuestas</h3>
+							<div style="width: 100%; float: left">
+								<figure class="three-column figure">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/placa.json&menu=1"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>Placa de lado \(L\)</figcaption>
+								</figure>
+								<div class="three-column">
+									<p>\[ l/R=[0.04,70]\]</p>
+									<p>\[ \zeta_1=[0.1,0.9]\]</p>
+								</div>
+								<div class="three-column">
+									<p>\[ t=R/10\]</p>
+									<p>\[ R=\sqrt[3]{\frac{3L^2t}{4\pi}}\]</p>
+									<p>\[ \eta=\frac{\omega_1R}{C_t}\]</p>
+								</div>
+							</div>
+							<div style="width: 100%; float: left">
+								<figure class="three-column figure">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/viga.json&menu=1"
+										scrolling="no"
+										frameborder="0"
+										height="220px"
+									></iframe>
+									<figcaption>
+										Viga de longitud \(R\)
+									</figcaption>
+								</figure>
+								<div class="three-column">
+									<p>\[ l/R=[0.05,0.2]\]</p>
+									<p>\[ \zeta_1=[0.1,0.9]\]</p>
+								</div>
+								<div class="three-column">
+									<p>\[ b=h=R/10\]</p>
+									<p>
+										\[
+										\eta=\omega_1R^2\sqrt{\frac{A\rho}{EI}}\]
+									</p>
+								</div>
+							</div>
+						</div>
+						<aside class="notes">
+							<strong>Notas presentación</strong><br />
+
+							- Análisis de frecuencias naturales de vibración<br />
+							- Probar con distintas geometrías<br />
+							- Se cambiarán los parámetros no locales<br />
+							- Se usarán distintos materiales<br />
+
+							<br /><br />
+							<strong>Notas extendido</strong><br />
+							<strong>Metodología</strong><br /><br />
+							Recalcar que se busca encontrar la frecuencia
+							natural de nanoestructuras de distintas geometrías.
+							Mostrar las distintas geometrías (modelos 3D) y
+							especificar donde se encuentra la longitud del
+							dominio.
+							<br />
+							Mencionar que los parámetros a variar se
+							especificarán en la sección de resultados
 						</aside>
 					</section>
 				</section>
@@ -1499,14 +1434,30 @@
 						</div>
 						<div class="slide">
 							<h3>Independencia del material</h3>
+							<iframe
+								data-preload
+								class="iframe-3d"
+								data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
+								scrolling="no"
+								frameborder="0"
+								height="220px"
+								allowtransparency="true"
+								style="
+									position: absolute;
+									z-index: 100;
+									top: 100px;
+									right: 50px;
+								"
+							></iframe>
 							<figure class="figure">
 								<div
 									id="grafica_res_1"
 									style="width: 100%; height: 430px"
 								></div>
 								<figcaption>
-									Frecuencias para cubos usando teoría no
-									local con \(l=2,\zeta_1=0.5\)
+									frecuencias naturales de vibración para
+									cubos usando teoría no local con
+									\(l=2,\zeta_1=0.5\)
 								</figcaption>
 							</figure>
 						</div>
@@ -1525,9 +1476,9 @@
 							<strong>Notas extendido</strong><br />
 							<strong>Resultados</strong><br /><br />
 							En esta gráfica apreciamos el comportamiento de las
-							frecuencias naturales normalizadas para los tres
-							materiales mencionados anteriormente. Se muestra la
-							frecuencia local.
+							frecuencias naturales de vibración normalizadas para
+							los tres materiales mencionados anteriormente. Se
+							muestra la frecuencia local.
 
 							<strong>Frase oligatoria</strong>
 							Al normalizar las frecuencia naturales, los tres
@@ -1537,7 +1488,7 @@
 						</aside>
 					</section>
 
-					<!-- Diferencias relativas entre frecuencias no locales -->
+					<!-- Diferencias relativas entre frecuencias naturales de vibración no locales -->
 					<section
 						data-auto-animate
 						data-state="graficas-pesadas-res-2"
@@ -1570,32 +1521,47 @@
 						</div>
 						<div class="slide">
 							<h4>
-								Diferencia relativa de frecuencias no locales
+								Diferencia relativa de frecuencias naturales de
+								vibración no locales
 							</h4>
-							<div style="width: 70%; float: left">
+							<div style="width: 65%; float: left">
 								<figure style="width: 100%">
 									<div
 										id="grafica_res_2"
 										style="width: 100%"
 									></div>
 									<figcaption>
-										Resultados para frecuencias normalizadas
-										de cubos (\(l=2,\zeta_1=0.5\))
+										Resultados para frecuencias naturales de
+										vibración normalizadas de cubos
+										(\(l=2,\zeta_1=0.5\))
 									</figcaption>
 								</figure>
 							</div>
+							<iframe
+								data-preload
+								class="iframe-3d"
+								data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
+								scrolling="no"
+								frameborder="0"
+								height="220px"
+								allowtransparency="true"
+								style="
+									position: absolute;
+									z-index: 100;
+									top: 100px;
+									right: -30px;
+								"
+							></iframe>
 							<div
 								style="
 									width: 27%;
 									position: absolute;
-									top: 25%;
+									top: 45%;
 									left: 75%;
 								"
 							>
 								<p>
-									Ajuste lineal con los primeros 5 puntos
-									$$\eta_{nl}(R)=1.73-2.84\frac{1}{R}$$ Con
-									\(\eta_{l}=1.78\) se tiene:
+									$$\eta_{nl}(R)=1.73-2.84\frac{1}{R}$$
 									$$\Delta=\left|\frac{\eta_{nl}(R)-\eta_{l}}{\eta_{l}}\right|\%$$
 									Para conseguir $\Delta=5\%$ es necesario:
 									$$R=34l$$
@@ -1613,11 +1579,12 @@
 							<br /><br />
 							<strong>Notas extendido</strong><br />
 							<strong>Resultados</strong><br /><br />
-							Hablar del comportamiento de las frecuencias locales
-							vs las no locales. Explicar que la lina recta es
-							gracias a la normalización y que la linea punteada
-							es la obtenida por Fernando usando dinamica
-							molecular para el carbono.
+							Hablar del comportamiento de las frecuencias
+							naturales de vibración locales vs las no locales.
+							Explicar que la lina recta es gracias a la
+							normalización y que la linea punteada es la obtenida
+							por Fernando usando dinamica molecular para el
+							carbono.
 
 							<br />
 							Explicar que los ultimos dos puntos pertenecen a 60
@@ -1659,16 +1626,32 @@
 						</div>
 						<div class="slide">
 							<h3 style="text-transform: none">
-								FRECUENCIAS CAMBIANDO \(l\)
+								FRECUENCIAS NATURALES DE VIBRACIÓN CAMBIANDO
+								\(l\)
 							</h3>
+							<iframe
+								data-preload
+								class="iframe-3d"
+								data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
+								scrolling="no"
+								frameborder="0"
+								height="100px"
+								allowtransparency="true"
+								style="
+									position: absolute;
+									z-index: 100;
+									top: 210px;
+									right: 130px;
+								"
+							></iframe>
 							<figure class="figure">
 								<div
 									style="width: 100%; height: 430px"
 									id="resultados-frecuencias-cambiando-l"
 								></div>
 								<figcaption>
-									Frecuencias para cubos cambiando el valor de
-									\(l\)
+									frecuencias naturales de vibración para
+									cubos cambiando el valor de \(l\)
 								</figcaption>
 							</figure>
 						</div>
@@ -1706,7 +1689,10 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>Comportamiento de frecuencias</h3>
+							<h3>
+								Comportamiento de frecuencias naturales de
+								vibración
+							</h3>
 							<div>
 								<div class="three-column">
 									<iframe
@@ -1813,15 +1799,19 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>Comportamiento de frecuencias</h3>
+							<h3>
+								Comportamiento de frecuencias naturales de
+								vibración
+							</h3>
 							<figure class="figure">
 								<div
 									style="width: 100%; height: 430px"
 									id="resultados-frecuencias-cambiando-l"
 								></div>
 								<figcaption>
-									Frecuencias para cubos normalizando el
-									tamaño con repecto a \(l\)
+									frecuencias naturales de vibración para
+									cubos normalizando el tamaño con repecto a
+									\(l\)
 								</figcaption>
 							</figure>
 							<p
@@ -1915,7 +1905,10 @@
 									style="width: 100%; height: 430px"
 									id="resultados-frecuencias-cubos"
 								></div>
-								<figcaption>Frecuencias para cubos</figcaption>
+								<figcaption>
+									frecuencias naturales de vibración para
+									cubos
+								</figcaption>
 							</figure>
 						</div>
 						<aside class="notes">
@@ -2024,7 +2017,7 @@
 								<div class="two-column">
 									<p>
 										Valor de \(\frac{l}{R}\) para el cual la
-										curva de \(\zeta_1=0\) esta por debajo
+										curva de \(\zeta_1=0.1\) esta por debajo
 										del 5% de la frecuencia local
 									</p>
 									<figure class="figure">
@@ -2136,7 +2129,8 @@
 									id="resultados-frecuencias-esferas"
 								></div>
 								<figcaption>
-									Frecuencias para esferas
+									frecuencias naturales de vibración para
+									esferas
 								</figcaption>
 							</figure>
 						</div>
@@ -2220,7 +2214,10 @@
 									style="width: 100%; height: 430px"
 									id="resultados-frecuencias-placas"
 								></div>
-								<figcaption>Frecuencias para placas</figcaption>
+								<figcaption>
+									frecuencias naturales de vibración para
+									placas
+								</figcaption>
 							</figure>
 						</div>
 						<aside class="notes">
@@ -2304,7 +2301,8 @@
 									id="resultados-frecuencias-vigas-voladizo"
 								></div>
 								<figcaption>
-									Frecuencias para vigas en voladizo
+									frecuencias naturales de vibración para
+									vigas en voladizo
 								</figcaption>
 							</figure>
 						</div>
@@ -2404,7 +2402,8 @@
 									id="resultados-frecuencias-vigas-fixed"
 								></div>
 								<figcaption>
-									Frecuencias para vigas empotradas
+									frecuencias naturales de vibración para
+									vigas empotradas
 								</figcaption>
 							</figure>
 						</div>
@@ -2565,7 +2564,8 @@
 									>
 								</li>
 								<li>
-									Simulaciones para frecuencias
+									Simulaciones para frecuencias naturales de
+									vibración
 									<span
 										class="fragment"
 										style="color: var(--red)"

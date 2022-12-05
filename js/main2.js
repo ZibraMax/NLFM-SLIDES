@@ -23,6 +23,9 @@ const config = {
 	showNotes: notes,
 	viewDistance: 1,
 	touch: false,
+	width: 1100,
+	height: 700,
+
 	navigationMode: "linear",
 	plugins: [RevealMath.KaTeX, RevealNotes, RevealZoom],
 };
