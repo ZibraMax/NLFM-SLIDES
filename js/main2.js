@@ -3,6 +3,7 @@ for (let i = 0; i < elems.length; i++) {
 	const element = elems[i];
 	element.innerHTML = `<strong>Fig ${i + 1}. </strong>` + element.innerHTML;
 }
+
 let notes = false;
 const config = {
 	history: true,
