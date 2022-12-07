@@ -757,6 +757,29 @@ const data_resultados_6 = [
 	},
 ];
 
+function limpiar_datos(x) {
+	let prev = x["x"][0];
+	let quitaos = [];
+	let tol = 1 * 10 ** -6;
+	for (let i = 1; i < x["x"].length; i++) {
+		err = Math.abs((x["x"][i] - prev) / prev);
+		if (err < tol) {
+			quitaos.push(i);
+		} else {
+			prev = x["x"][i];
+		}
+	}
+	quitaos.reverse();
+	for (let i = 0; i < quitaos.length; i++) {
+		x["x"].splice(quitaos[i], 1);
+		x["y"].splice(quitaos[i], 1);
+	}
+}
+
+data_resultados_6.map((x) => {
+	limpiar_datos(x);
+});
+
 const data_resultados_7 = [
 	{
 		type: "mesh3d",
@@ -1465,7 +1488,7 @@ for (let i = 1; i < data_raw_resultados_8.length; i++) {
 	const element = data_raw_resultados_8[i];
 	let trace = {
 		type: "lines",
-		x: data_raw_resultados_8[0],
+		x: [...data_raw_resultados_8[0]],
 		y: data_raw_resultados_8[i],
 		name: "ζ=0." + i,
 		line: { shape: "spline" },
@@ -1497,6 +1520,11 @@ data_resultados_8.push({
 	name: "5%",
 	line: { shape: "spline", dash: "dash" },
 });
+console.log("sph");
+data_resultados_8.map((x) => {
+	limpiar_datos(x);
+});
+console.log("sph");
 
 const data_raw_resultados_9 = [
 	[
@@ -1572,7 +1600,7 @@ for (let i = 1; i < data_raw_resultados_9.length; i++) {
 	const element = data_raw_resultados_9[i];
 	let trace = {
 		type: "lines",
-		x: data_raw_resultados_9[0],
+		x: [...data_raw_resultados_9[0]],
 		y: data_raw_resultados_9[i],
 		name: "ζ=0." + labels[i - 1],
 		line: { shape: "spline" },
@@ -1604,7 +1632,9 @@ data_resultados_9.push({
 	name: "5%",
 	line: { shape: "spline", dash: "dash" },
 });
-
+data_resultados_9.map((x) => {
+	limpiar_datos(x);
+});
 const data_raw_resultados_10 = [
 	[
 		0.005, 0.01, 0.0124070133124151, 0.0124070133124151, 0.0124070133124151,
@@ -1787,6 +1817,10 @@ data_resultados_10.push({
 	line: { shape: "spline", dash: "dash" },
 });
 
+data_resultados_10.map((x) => {
+	limpiar_datos(x);
+});
+
 const data_raw_resultados_11 = [
 	[0.005, 0.005, 0.01, 0.0125, 0.025, 0.025, 0.05, 0.05, 0.1, 0.1, 0.2, 0.2],
 	[
@@ -1872,6 +1906,10 @@ data_resultados_11.push({
 	],
 	name: "5%",
 	line: { shape: "spline", dash: "dash" },
+});
+
+data_resultados_11.map((x) => {
+	limpiar_datos(x);
 });
 
 atenu1_div.map((x) =>
