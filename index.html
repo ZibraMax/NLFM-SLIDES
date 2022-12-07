@@ -337,7 +337,7 @@
 									<iframe
 										data-preload
 										class="iframe-3d"
-										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/cube_fast.json&menu=1"
 										scrolling="no"
 										frameborder="0"
 										height="220px"
@@ -941,6 +941,59 @@
 							</div>
 						</div>
 						<div class="slide">
+							<h4 data-id="titulito">Integrales cruzadas</h4>
+							<figure class="figure">
+								<img
+									height="450px"
+									src="./resources/nolocal_cross.jpeg"
+								/>
+								<figcaption style="margin-top: -40px">
+									Interacción de largo alcance entre
+									elementos. Tomado de Pisano et al. (2009)
+								</figcaption>
+							</figure>
+						</div>
+
+						<aside class="notes">
+							<strong>Notas presentación</strong><br />
+
+							- Resumen<br />
+
+							<br /><br />
+							<strong>Notas extendido</strong><br />
+							<strong>FEM no local</strong><br /><br />
+							El proceso de elementos finitos se resume en le
+							siguiente proceso
+						</aside>
+					</section>
+					<section data-auto-animate>
+						<div class="content-indicator">
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/introduccion-title"
+									>Introducción
+								</a>
+							</div>
+							<div class="content-indicator-item selected-ci">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/metodos-title"
+									>Métodos
+								</a>
+							</div>
+							<div class="content-indicator-item">
+								<a
+									data-id="not-animate"
+									class="hidden-link"
+									href="#/resultados-title"
+									>Resultados
+								</a>
+							</div>
+						</div>
+						<div class="slide">
 							<h4 data-id="titulito">
 								Proceso de elementos finitos completo
 							</h4>
@@ -955,6 +1008,7 @@
 								</figcaption>
 							</figure>
 						</div>
+
 						<aside class="notes">
 							<strong>Notas presentación</strong><br />
 
@@ -1189,13 +1243,13 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>Simulaciones propuestas</h3>
+							<h3>Simulaciones propuestas (3D)</h3>
 							<div style="width: 100%; float: left">
 								<figure class="three-column figure">
 									<iframe
 										data-preload
 										class="iframe-3d"
-										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/cube_fast.json&menu=1"
 										scrolling="no"
 										frameborder="0"
 										height="220px"
@@ -1216,13 +1270,13 @@
 									<iframe
 										data-preload
 										class="iframe-3d"
-										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/esfera.json&menu=1"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.3&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/esfera.json&menu=1"
 										scrolling="no"
 										frameborder="0"
 										height="220px"
 									></iframe>
 									<figcaption>
-										Placa cuadrada de lado \(R\)
+										Esfera de radio \(R\)
 									</figcaption>
 								</figure>
 								<div class="three-column">
@@ -1283,7 +1337,7 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h3>Simulaciones propuestas</h3>
+							<h3>Simulaciones propuestas (2D)</h3>
 							<div style="width: 100%; float: left">
 								<figure class="three-column figure">
 									<iframe
@@ -1301,7 +1355,7 @@
 									<p>\[ \zeta_1=[0.1,0.9]\]</p>
 								</div>
 								<div class="three-column">
-									<p>\[ t=R/10\]</p>
+									<p>\[ t=L/10\]</p>
 									<p>\[ R=\sqrt[3]{\frac{3L^2t}{4\pi}}\]</p>
 									<p>\[ \eta=\frac{\omega_1R}{C_t}\]</p>
 								</div>
@@ -1439,7 +1493,7 @@
 								data-id="as"
 								data-preload
 								class="iframe-3d"
-								data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
+								data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/cube_fast.json&menu=1"
 								scrolling="no"
 								frameborder="0"
 								height="220px"
@@ -1457,7 +1511,7 @@
 									style="width: 100%; height: 430px"
 								></div>
 								<figcaption>
-									frecuencias naturales de vibración para
+									Frecuencias naturales de vibración para
 									cubos usando teoría no local con
 									\(l=2,\zeta_1=0.5\)
 								</figcaption>
@@ -1544,7 +1598,7 @@
 								data-id="asss"
 								data-preload
 								class="iframe-3d"
-								data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
+								data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/cube_fast.json&menu=1"
 								scrolling="no"
 								frameborder="0"
 								height="220px"
@@ -1638,7 +1692,7 @@
 								data-id="as"
 								data-preload
 								class="iframe-3d"
-								data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
+								data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/cube_fast.json&menu=1"
 								scrolling="no"
 								frameborder="0"
 								height="100px"
@@ -1657,8 +1711,9 @@
 									id="resultados-frecuencias-cambiando-l"
 								></div>
 								<figcaption>
-									frecuencias naturales de vibración para
-									cubos cambiando el valor de \(l\)
+									Frecuencias naturales de vibración para
+									cubos cambiando el valor de \(l\).
+									\(\zeta_1=0.5\)
 								</figcaption>
 							</figure>
 						</div>
@@ -1816,7 +1871,7 @@
 									id="resultados-frecuencias-cambiando-l"
 								></div>
 								<figcaption>
-									frecuencias naturales de vibración para
+									Frecuencias naturales de vibración para
 									cubos normalizando el tamaño con repecto a
 									\(l\)
 								</figcaption>
@@ -1866,11 +1921,45 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h2>
-								<span class="vertical-aligned-title"
-									>Resultados para cubos</span
-								>
-							</h2>
+							<h1>Resultados para cubos</h1>
+							<div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/cube_fast.json&menu=1&mode=6"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/cube_fast.json&menu=1&mode=9"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/cube_fast.json&menu=1&mode=14"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+							</div>
 						</div>
 					</section>
 
@@ -1913,7 +2002,7 @@
 									id="resultados-frecuencias-cubos"
 								></div>
 								<figcaption>
-									frecuencias naturales de vibración para
+									Frecuencias naturales de vibración para
 									cubos
 								</figcaption>
 							</figure>
@@ -2089,11 +2178,45 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h2>
-								<span class="vertical-aligned-title"
-									>Resultados para esferas</span
-								>
-							</h2>
+							<h1>Resultados para esferas</h1>
+							<div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.3&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/esfera.json&menu=1&mode=6"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.3&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/esfera.json&menu=1&mode=9"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.3&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/esfera.json&menu=1&mode=14"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+							</div>
 						</div>
 					</section>
 
@@ -2175,11 +2298,45 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h2>
-								<span class="vertical-aligned-title"
-									>Resultados para placas</span
-								>
-							</h2>
+							<h1>Resultados para placas</h1>
+							<div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/placa.json&menu=1&mode=6"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/placa.json&menu=1&mode=9"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.1&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/placa.json&menu=1&mode=14"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+							</div>
 						</div>
 					</section>
 
@@ -2261,11 +2418,45 @@
 							</div>
 						</div>
 						<div class="slide">
-							<h2>
-								<span class="vertical-aligned-title"
-									>Resultados para vigas en voladizo</span
-								>
-							</h2>
+							<h1>Resultados para vigas en voladizo</h1>
+							<div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=6&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/voladizo.json&menu=1&mode=0"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=6&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/voladizo.json&menu=1&mode=7"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=6&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/voladizo.json&menu=1&mode=12"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+							</div>
 						</div>
 					</section>
 
@@ -2347,26 +2538,45 @@
 							</div>
 						</div>
 						<div class="slide">
-							<iframe
-								data-preload
-								class="iframe-3d"
-								data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=10&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/CCube_l_2_000_z1_1_000_L_6_362_nx_8_o0_6.json&menu=1"
-								scrolling="no"
-								frameborder="0"
-								height="220px"
-								style="
-									position: absolute;
-									z-index: 0;
-									top: 300px;
-									left: 150px;
-								"
-							></iframe>
-
-							<h2>
-								<span class="vertical-aligned-title blend"
-									>Resultados para vigas empotradas</span
-								>
-							</h2>
+							<h1>Resultados para vigas empotradas</h1>
+							<div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.007&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/viga_empotrada.json&menu=1&mode=6"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.007&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/viga_empotrada.json&menu=1&mode=7"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+								<div class="three-column">
+									<iframe
+										data-preload
+										class="iframe-3d"
+										data-src="https://zibramax.github.io/masters-slides/docs/viewer/?magnif=0.007&mesh=https://raw.githubusercontent.com/ZibraMax/NLFM-SLIDES/main/resources/viga_empotrada.json&menu=1&mode=9"
+										scrolling="no"
+										frameborder="0"
+										height="250px"
+										width="100%"
+										style="z-index: 0"
+									></iframe>
+								</div>
+							</div>
 						</div>
 					</section>
 
@@ -2455,7 +2665,7 @@
 								<thead>
 									<tr>
 										<th>Geometría</th>
-										<th>\(\pmb{\eta}\)</th>
+										<th>\(\pmb{\eta_l}\)</th>
 										<th>
 											Regresión para \(\pmb{\eta_{nl}}\)
 										</th>
@@ -2469,7 +2679,7 @@
 										<td>Cubos</td>
 										<td>1.776</td>
 										<td>
-											\(1.776+2.648\frac{l}{R}(\zeta_1-1)\)
+											\(\eta_l+2.648\frac{l}{R}(\zeta_1-1)\)
 										</td>
 										<td>0.845</td>
 										<td>1/50</td>
@@ -2479,7 +2689,7 @@
 										<td>Esferas</td>
 										<td>2.505</td>
 										<td>
-											\(2.505+3.414\frac{l}{R}(\zeta_1-1)\)
+											\(\eta_l+3.414\frac{l}{R}(\zeta_1-1)\)
 										</td>
 										<td>0.883</td>
 										<td>1/52</td>
@@ -2489,7 +2699,7 @@
 										<td>Placas</td>
 										<td>1.126</td>
 										<td>
-											\(1.126+0.389\frac{l}{R}(\zeta_1-1)\)
+											\(\eta_l+0.389\frac{l}{R}(\zeta_1-1)\)
 										</td>
 										<td>0.954</td>
 										<td>1/10</td>
@@ -2499,7 +2709,7 @@
 										<td>Vigas voladizo</td>
 										<td>3.493</td>
 										<td>
-											\(3.493+43.21\frac{l}{R}(\zeta_1-1)\)
+											\(\eta_l+43.21\frac{l}{R}(\zeta_1-1)\)
 										</td>
 										<td>0.886</td>
 										<td>1/425</td>
@@ -2509,7 +2719,7 @@
 										<td>Vigas empotradas</td>
 										<td>21.064</td>
 										<td>
-											\(21.06+290.9\frac{l}{R}(\zeta_1-1)\)
+											\(\eta_l+290.9\frac{l}{R}(\zeta_1-1)\)
 										</td>
 										<td>0.890</td>
 										<td>1/460</td>
@@ -2555,62 +2765,60 @@
 						</div>
 						<div class="slide">
 							<h4>Conclusiones</h4>
-							<ol>
-								<li>
-									Programa<span
-										class="fragment"
-										data-fragment-index="1"
-										>✅</span
-									>
-								</li>
-								<li>
-									Validación<span
-										class="fragment"
-										data-fragment-index="2"
-										>✅</span
-									>
-								</li>
-								<li>
-									Simulaciones para frecuencias naturales de
-									vibración
-									<span
-										class="fragment"
-										style="color: var(--red)"
-										data-fragment-index="4"
-										>(1 mes)</span
-									>
-									<ul>
-										<li>
-											Cubos<span
-												class="fragment"
-												data-fragment-index="3"
-												>✅</span
-											>
-										</li>
-										<li>Tetraedros</li>
-										<li>Esferas</li>
-										<li>Placas</li>
-										<li>Vigas</li>
-									</ul>
-								</li>
-								<li>
-									Documento
-									<span
-										class="fragment"
-										style="color: var(--red)"
-										data-fragment-index="5"
-										>(1 mes)</span
-									>
-								</li>
-							</ol>
+							<div style="width: 85%">
+								<ol>
+									<li class="fragment">
+										La <b>Independencia del material</b> en
+										la frecuencias naturales de vibración
+										que se presenta en elasticidad clásica,
+										se mantiene en easlticidad no local
+									</li>
+									<li class="fragment">
+										La respuesta de frecuencias naturales de
+										vibración no depende del tamaño o de
+										\(l\), sino de la
+										<b>relación \(\pmb{\frac{l}{R}}\)</b>
+									</li>
+									<li class="fragment">
+										Como era esperado, las frecuencias
+										naturales de vibración no locales
+										tienden a la local cuando se aumenta el
+										tamaño \(\frac{l}{R}\to 0\)
+									</li>
+									<li class="fragment">
+										Existe un valor de \(\frac{l}{R}\) para
+										el cual, el comportamiento las
+										frecuencias naturales de vibración no
+										locales se vuelve
+										<b>constante al disminuir el tamaño</b>
+										y <b>lineal al aumentar el tamaño</b>
+									</li>
+									<li class="fragment">
+										Es posible caracterizar el
+										comportamiento de las frecuencias con
+										una
+										<b>regresión lineal múltiple</b>
+									</li>
+									<li class="fragment">
+										Cada nano estructura tiene un
+										<b>rango de aplicación</b> distinto
+										<ul>
+											<li>
+												Las estructuras 3D tienen un
+												rango similar
+											</li>
+											<li>
+												Las vigas tienen un rango
+												similar a pesar de tener
+												distintas<br />
+												condiciones de borde
+											</li>
+										</ul>
+									</li>
+								</ol>
+							</div>
 						</div>
-						<aside class="notes">
-							<strong>Notas presentación</strong><br />
-
-							- Terminamos <br />
-
-							<br /><br />
-						</aside>
+						<aside class="notes"></aside>
 					</section>
 
 					<section data-auto-animate>
