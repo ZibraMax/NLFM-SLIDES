@@ -26,6 +26,7 @@ const config = {
 	touch: false,
 	width: 1100,
 	height: 700,
+	progress: false,
 
 	navigationMode: "linear",
 	plugins: [RevealMath.KaTeX, RevealNotes, RevealZoom, RevealMenu],
