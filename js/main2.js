@@ -22,7 +22,7 @@ const config = {
 	transition: "fade",
 	preloadIframes: true,
 	showNotes: notes,
-	viewDistance: 2,
+	viewDistance: 1,
 	touch: false,
 	width: 1100,
 	height: 700,
