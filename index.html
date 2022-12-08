@@ -15,7 +15,7 @@
 		<script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
 		<link rel="stylesheet" href="css/reveal.css" />
-		<link rel="stylesheet" href="css/theme/white.css" />
+		<link rel="stylesheet" id="theme" href="css/theme/white.css" />
 
 		<link
 			rel="apple-touch-icon"
@@ -519,9 +519,8 @@
 						<div class="slide">
 							<h3>Modelo no local de 2 fases</h3>
 							<div data-id="a" class="vertical-aligned-eq">
-								\[\scriptsize{\sigma_{ij}={\color{lightgray}
-								\zeta_1} C_{ijkl}\varepsilon_{kl}+
-								{\color{lightgray}
+								\[\scriptsize{\sigma_{ij}={\color{gray} \zeta_1}
+								C_{ijkl}\varepsilon_{kl}+ {\color{gray}
 								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
 							</div>
 						</div>
@@ -567,9 +566,9 @@
 						<div class="slide">
 							<h3>Modelo no local de 2 fases</h3>
 							<div data-id="a" class="vertical-aligned-eq">
-								\[{\color{lightgray}\scriptsize{\sigma_{ij}=
-								\zeta_1 C_{ijkl}\varepsilon_{kl}+
-								\zeta_2{\color{black}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}}\]
+								\[\scriptsize{{\color{gray}\sigma_{ij}= \zeta_1
+								C_{ijkl}\varepsilon_{kl}+}
+								\zeta_2\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}\]
 							</div>
 						</div>
 						<aside class="notes">
@@ -623,8 +622,8 @@
 								style="top: 5%"
 							>
 								\[{\color{blacks}\scriptsize{\sigma_{ij}=
-								{\color{black}\zeta_1} C_{ijkl}\varepsilon_{kl}+
-								{\color{black}\zeta_2}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
+								{\zeta_1} C_{ijkl}\varepsilon_{kl}+
+								{\zeta_2}\int_{\Omega}A(\rho)C_{ijkl}\varepsilon'_{kl}dv'}}\]
 							</div>
 							<br />
 							<br />
@@ -3203,6 +3202,7 @@
 		<script src="plugin/math/math.js" type="text/javascript"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/menu/menu.js"></script>
 		<script src="js/reveal.js" type="text/javascript"></script>
 		<script src="js/main2.js" type="text/javascript"></script>
 	</body>

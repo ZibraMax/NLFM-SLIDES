@@ -46,8 +46,7 @@ h1 {
 	height: 40vh;
 	display: flex;
 	align-items: center;
-	color: var(--rednt);
-	mix-blend-mode: difference;
+	color: var(--red);
 }
 
 .vertical-aligned-eq {
@@ -140,7 +139,7 @@ body {
 	padding: 0.1em;
 	writing-mode: vertical-lr;
 	border: 1px;
-	border-color: white;
+	border-color: rgba(0, 0, 0, 0);
 	border-top-color: var(--not-selected-color);
 	border-bottom-color: var(--not-selected-color);
 	border-style: solid;
@@ -148,7 +147,7 @@ body {
 }
 
 .selected-ci {
-	background-color: var(--shades-w-1);
+	/* background-color: var(--shades-w-1); */
 	color: var(--red) !important;
 }
 .hidden-link:link {
@@ -177,7 +176,6 @@ a:hover {
 	float: left;
 	width: 92%;
 	height: 100%;
-	background-color: white;
 }
 
 .controls-arrow {

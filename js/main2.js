@@ -28,14 +28,40 @@ const config = {
 	height: 700,
 
 	navigationMode: "linear",
-	plugins: [RevealMath.KaTeX, RevealNotes, RevealZoom],
+	plugins: [RevealMath.KaTeX, RevealNotes, RevealZoom, RevealMenu],
+	menu: {
+		side: "left",
+		themes: true,
+		themesPath: "css/theme/",
+	},
 };
 Reveal.initialize(config);
+let queryString = window.location.search;
+let theme = "white";
+if (queryString != "") {
+	queryString = queryString.split("?")[1];
+	let parametros = new URLSearchParams(queryString);
+	let theme_param = parametros.get("theme");
+	if (theme_param) {
+		theme = theme_param;
+	}
+}
+function updateTheme() {
+	const theme_link = document.getElementById("theme");
+	theme_link.setAttribute("href", "css/theme/" + theme + ".css");
+}
+
+Reveal.addEventListener("menu-ready", function (event) {
+	updateTheme();
+});
+
 // Reveal.configure({ pdfMaxPagesPerSlide: 1, showNotes: true });
 
 const plots_config = { responsive: true, displayModeBar: false };
 const plots_layout = {
 	margin: { autoexpand: false, b: 0, l: 0, pad: 0, r: 0, t: 0 },
+	paper_bgcolor: "rgba(0,0,0,0)",
+	plot_bgcolor: "rgba(0,0,0,0)",
 };
 
 const atenu1_div = [...document.querySelectorAll("[id=atenuacion1]")];
@@ -1921,6 +1947,7 @@ resultados_1.map((x) =>
 		x,
 		data_resultados_1,
 		{
+			...plots_layout,
 			xaxis: {
 				title: "1/R",
 				gridcolor: "#dcdcdc",
@@ -1951,6 +1978,7 @@ resultados_2.map((x) =>
 		x,
 		data_resultados_2,
 		{
+			...plots_layout,
 			xaxis: {
 				title: "1/R",
 				gridcolor: "#dcdcdc",
@@ -2022,6 +2050,7 @@ function createGraph3() {
 			x,
 			JSON.parse(JSON.stringify(data_resultados_3)),
 			{
+				...plots_layout,
 				xaxis: {
 					title: "1/R",
 					gridcolor: "#dcdcdc",
@@ -2070,6 +2099,7 @@ function createGraph6(b) {
 			x,
 			data_resultados_6,
 			{
+				...plots_layout,
 				xaxis: xax,
 				yaxis: {
 					title: "η",
@@ -2124,6 +2154,7 @@ resultados_8.map((x) =>
 		x,
 		data_resultados_8,
 		{
+			...plots_layout,
 			xaxis: {
 				title: "ℓ/R",
 				gridcolor: "#dcdcdc",
@@ -2155,6 +2186,7 @@ resultados_9.map((x) =>
 		x,
 		data_resultados_9,
 		{
+			...plots_layout,
 			xaxis: {
 				range: [0, 3],
 				title: "ℓ/R",
@@ -2187,6 +2219,7 @@ resultados_10.map((x) =>
 		x,
 		data_resultados_10,
 		{
+			...plots_layout,
 			xaxis: {
 				title: "ℓ/R",
 				gridcolor: "#dcdcdc",
@@ -2218,6 +2251,7 @@ resultados_11.map((x) =>
 		x,
 		data_resultados_11,
 		{
+			...plots_layout,
 			xaxis: {
 				range: [0, 0.15],
 				title: "ℓ/R",
