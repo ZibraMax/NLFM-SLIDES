@@ -135,6 +135,9 @@ body {
 	float: left;
 	width: 8%;
 }
+.reveal-toolbar-button {
+	background-color: rgba(0, 0, 0, 0) !important;
+}
 .content-indicator-item {
 	padding: 0.1em;
 	writing-mode: vertical-lr;
