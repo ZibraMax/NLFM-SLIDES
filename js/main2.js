@@ -35,6 +35,8 @@ const config = {
 		themes: true,
 		themesPath: "css/theme/",
 	},
+	toolbar: { fullscreen: true },
+	dependencies: [{ src: "plugin/toolbar/toolbar.js" }],
 };
 Reveal.initialize(config);
 let queryString = window.location.search;
