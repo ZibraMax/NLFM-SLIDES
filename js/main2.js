@@ -392,7 +392,7 @@ const data_resultados_2 = [
 			1.303042353, 1.161137902,
 		],
 
-		name: "Ajuste lineal",
+		name: "Lineal fit",
 		line: { shape: "spline", color: "#8c8c8c", dash: "dash" },
 	},
 ];
